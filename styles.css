@@ -26,7 +26,7 @@ h1 {
     font-family: "Atlantis Headline";
     font-size: 180%;
     color: var(--se-light);
-    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-light);
+    text-shadow: 0.1em 0.1em 0 #0008, 0.1em 0.1em 0.5em var(--se-regular);
     -webkit-text-stroke: var(--se-bright) 0.0125em;
     animation: static 1.5s infinite;
 } 
