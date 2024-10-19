@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Atlantis Headline";
+    src: url(fonts/atlantis/AtlantisHeadline-Bold.otf) format("opentype"),
+         url(fonts/atlantis/AtlantisHeadline-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "SF Pixelate";
+    src: url(fonts/sf-pixelate/SFPixelate.ttf) format("truetype");
+}
+@font-face {
+    font-family: "SF Pixelate Oblique";
+    src: url(fonts/sf-pixelate/SFPixelate-Oblique.ttf) format("truetype");
+}
+:root {
+    --se-bright: #f4e0fd;
+    --se-light: #db62eb;
+    --se-regular: #9a10c8;
+    --se-moody: #611685;
+}
+body {
+    background: #000;
+    image-rendering: pixelated;
+    font-family: "SF Pixelate";
+}
+h1 {
+    font-family: "Atlantis Headline";
+    font-size: 180%;
+    color: var(--se-light);
+    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-light);
+    -webkit-text-stroke: var(--se-bright) 0.0125em;
+    animation: flickering 0.07s infinite, static 2s infinite;
+} 
+p {
+    font-size: 120%;
+    color: var(--se-regular);
+    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-regular);
+    -webkit-text-stroke: var(--se-light) 0.025em;
+    animation: flickering 0.07s infinite, static 2s infinite;
+}
+img {
+    animation: flickering 0.07s infinite, static 2s infinite;
+    filter: drop-shadow(0 0 20px var(--se-moody));
+}
+@keyframes flickering {
+    from {
+        filter: brightness(1.1);
+    }
+    to {
+        filter: brightness(0.9);
+    }
+}
+@keyframes static {
+    0% {
+        mask-image: url(animationResources/static0.png);
+        mask-size: 50px;
+    }
+    12.5% {
+        mask-image: url(animationResources/static1.png);
+    }
+    25% {
+        mask-image: url(animationResources/static2.png);
+    }
+    37.5% {
+        mask-image: url(animationResources/static3.png);
+    }
+    50% {
+        mask-image: url(animationResources/static4.png);
+    }
+    62.5% {
+        mask-image: url(animationResources/static5.png);
+    }
+    75% {
+        mask-image: url(animationResources/static6.png);
+    }
+    87.5% {
+        mask-image: url(animationResources/static7.png);
+    }
+    100% {
+        mask-image: url(animationResources/static0.png);
+        mask-size: 50px;
+
+    }
+}
