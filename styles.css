@@ -18,7 +18,8 @@
     --se-moody: #611685;
 
     /* --se-text-mobileSafari-dropshadow: LOOK IN app.js; */
-    --se-text-dropshadow: #db62eb;
+    --se-bright-dropshadow: #f4e0fd;
+    --se-light-dropshadow: #db62eb;
 }
 body {
     background: #000;
@@ -27,7 +28,7 @@ body {
 
     font-size: 120%;
     color: var(--se-regular);
-    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-text-dropshadow);
+    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-light-dropshadow);
     -webkit-text-stroke: var(--se-light) 0.025em;
     animation: static 1.5s infinite;
 }
@@ -35,14 +36,14 @@ h1 {
     font-family: "Atlantis Headline";
     font-size: 180%;
     color: var(--se-light);
-    text-shadow: 0.1em 0.1em 0 #0008, 0.1em 0.1em 0.5em var(--se-text-dropshadow);
+    text-shadow: 0.1em 0.1em 0 #0008, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
     -webkit-text-stroke: var(--se-bright) 0.0125em;
     animation: static 1.5s infinite;
 } 
 img {
     width: 200px;
     animation: static 1.5s infinite;
-    filter: drop-shadow(0 0 40px var(--se-text-dropshadow));
+    filter: drop-shadow(0 0 40px var(--se-regular));
 }
 .flickering {
     animation: flickering 0.07s infinite;
