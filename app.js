@@ -5,10 +5,38 @@ window.mobileCheck = function() {
 };
 
 
-function adjustMobileColors() {
+function adjustStylesForBrowser() {
     const isMobile = window.mobileCheck();
-    if (isMobile) {
+    var isOpera, isEdge, isChrome, isSafari, isFirefox, isIE, isUnknown;
+    isOpera = isEdge = isChrome = isSafari = isFirefox = isIE = isUnknown = false;
+
+    if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
+        isOpera = true;
+    } else if (navigator.userAgent.indexOf("Edg") != -1) {
+        isEdge = true;
+    } else if (navigator.userAgent.indexOf("Chrome") != -1) {
+        isChrome = true;
+    } else if (navigator.userAgent.indexOf("Safari") != -1) {
+        isSafari = true;
+    } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+        isFirefox = true;
+    } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) {
+        isIE = true;
+        // if IE > 10
+    } else {
+        isUnknown = true;
+    }
+
+
+
+    if (isMobile || isSafari) {
+        console.log("[ :c ] Styles adjusted: suboptimal browser detected.");
         const root = document.documentElement;
-        root.style.setProperty('--se-text-dropshadow', '#db62eb30');
+        root.style.setProperty('--se-bright-dropshadow', '#f4e0fd27');
+        root.style.setProperty('--se-light-dropshadow', '#db62eb80');
+    } else if (isUnknown) {
+        console.log("[ :/ ] Styles unchanged: browser unrecognized.");
+    } else {
+        console.log("[ :3 ] Styles unchanged: browser approved.");
     }
 }
