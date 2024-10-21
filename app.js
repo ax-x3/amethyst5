@@ -9,6 +9,6 @@ function adjustMobileColors() {
     const isMobile = window.mobileCheck();
     if (isMobile) {
         const root = document.documentElement;
-        root.style.setProperty('--se-text-dropshadow', '#db62eb3f');
+        root.style.setProperty('--se-text-dropshadow', '#db62eb30');
     }
 }
