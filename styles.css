@@ -17,7 +17,7 @@
     --se-regular: #9a10c8;
     --se-moody: #611685;
 
-    --se-text-mobileSafari-dropshadow: #db62eb3f;
+    /* --se-text-mobileSafari-dropshadow: LOOK IN app.js; */
     --se-text-dropshadow: #db62eb;
 }
 body {
