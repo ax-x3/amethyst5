@@ -1,4 +1,4 @@
-@font-face {
+e@font-face {
     font-family: "Atlantis Headline";
     src: url(fonts/atlantis/AtlantisHeadline-Bold.otf) format("opentype"),
          url(fonts/atlantis/AtlantisHeadline-Bold.ttf) format("truetype");
@@ -31,7 +31,7 @@
 body {
     background: #000;
     image-rendering: pixelated;
-/*     -webkit-text-size-adjust: none; */
+    -webkit-text-size-adjust: none;
     font-family: "SF Pixelate";
     display: inline;
     font-size: 120%;
