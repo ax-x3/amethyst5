@@ -114,24 +114,31 @@ table, tr {
     }
     12.5% {
         mask-image: url(animationResources/static1.png);
+        mask-size: 50px;
     }
     25% {
         mask-image: url(animationResources/static2.png);
+        mask-size: 50px;
     }
     37.5% {
         mask-image: url(animationResources/static3.png);
+        mask-size: 50px;
     }
     50% {
         mask-image: url(animationResources/static4.png);
+        mask-size: 50px;
     }
     62.5% {
         mask-image: url(animationResources/static5.png);
+        mask-size: 50px;
     }
     75% {
         mask-image: url(animationResources/static6.png);
+        mask-size: 50px;
     }
     87.5% {
         mask-image: url(animationResources/static7.png);
+        mask-size: 50px;
     }
     100% {
         mask-image: url(animationResources/static0.png);
