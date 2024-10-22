@@ -31,7 +31,9 @@
 body {
     background: #000;
     image-rendering: pixelated;
+    -webkit-text-size-adjust: none;
     font-family: "SF Pixelate";
+    display: inline;
     font-size: 120%;
     color: var(--se-bright);
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
