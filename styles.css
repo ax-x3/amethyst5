@@ -57,7 +57,7 @@ h2 {
     -webkit-text-stroke: var(--se-regular) 0.025em;
 }
 p {
-    margin: 10px 0 0 0;
+    margin: 16px 0 0 0;
     line-height: 150%;
 }
 img {
@@ -95,6 +95,7 @@ table, tr {
     padding: 12px;
     margin: 12px 3px
 }
+
 .flickering {
     animation: flickering 0.08s infinite;
 }
