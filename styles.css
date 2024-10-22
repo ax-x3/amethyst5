@@ -4,49 +4,99 @@
          url(fonts/atlantis/AtlantisHeadline-Bold.ttf) format("truetype");
 }
 @font-face {
-    font-family: "SF Pixelate";
-    src: url(fonts/sf-pixelate/SFPixelate.ttf) format("truetype");
+    font-family: "Atlantis Smallcaps";
+    src: url(fonts/atlantis/Atlantis-RegularSmallCaps.otf) format("opentype"),
+         url(fonts/atlantis/Atlantis-RegularSmallCaps.otf) format("truetype");
 }
 @font-face {
-    font-family: "SF Pixelate Oblique";
-    src: url(fonts/sf-pixelate/SFPixelate-Oblique.ttf) format("truetype");
+    font-family: "SF Pixelate";
+    src: url(fonts/sf-pixelate/SFPixelate.ttf) format("truetype");
 }
 :root {
     --se-bright: #f4e0fd;
     --se-light: #db62eb;
     --se-regular: #9a10c8;
     --se-moody: #611685;
-
-    /* --se-text-mobileSafari-dropshadow: LOOK IN app.js; */
-    --se-bright-dropshadow: #f4e0fd;
-    --se-light-dropshadow: #db62eb;
+    --se-warning: #f00;
+    --se-pop: #500;
+    /* FIND DEFAULT DROPSHADOW COLORS IN app.js. THESE ARE PREADJUSTED.*/
+    --se-bright-dropshadow: #f4e0fd83;
+    --se-light-dropshadow: #db62eb2c;
+    --se-regular-dropshadow: #9a10c836;
+}
+.contentColumn {
+    width: 1000px;
+    margin: 0 auto;
 }
 body {
     background: #000;
     image-rendering: pixelated;
     font-family: "SF Pixelate";
-
     font-size: 120%;
-    color: var(--se-regular);
-    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-light-dropshadow);
+    color: var(--se-bright);
+    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
     -webkit-text-stroke: var(--se-light) 0.025em;
     animation: static 1.5s infinite;
 }
 h1 {
+    margin: 0;
     font-family: "Atlantis Headline";
-    font-size: 180%;
-    color: var(--se-light);
-    text-shadow: 0.1em 0.1em 0 #0008, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
+    display: inline;
+    font-size: 250%;
+    color: var(--se-regular);
+    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-regular-dropshadow);
     -webkit-text-stroke: var(--se-bright) 0.0125em;
-    animation: static 1.5s infinite;
 } 
+h2 {
+    margin: 0;
+    font-family: "Atlantis Headline";
+    display: inline;
+    font-size: 120%;
+    color: var(--se-light);
+    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-light-dropshadow);
+    -webkit-text-stroke: var(--se-regular) 0.025em;
+}
+p {
+    margin: 10px 0 0 0;
+    line-height: 150%;
+}
 img {
-    width: 200px;
+    filter: drop-shadow(0 0 20px var(--se-regular));
+}
+table, tr {
+    vertical-align: top;
+}
+.dismissCard {
+    float: right;
+    transform: translate(14.5px, -14.5px);
+    background-color: #555;
+    border: 2.5px solid #fff5;
+    border-radius: 0 12px 0 0;
+    padding: 6px 24px;
+    font-family: "SF Pixelate";
+    font-size: 120%;
+    color: var(--se-bright);
+    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
+    -webkit-text-stroke: var(--se-warning) 0.025em;
     animation: static 1.5s infinite;
-    filter: drop-shadow(0 0 40px var(--se-regular));
+    &:hover {
+        background-color: var(--se-pop);
+    }
+    &:active {
+        background-color: var(--se-warning);
+    }
+}
+.warning {
+    background-color: var(--se-pop);
+}
+.card {
+    border: 2.5px solid #fff5;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 12px 3px
 }
 .flickering {
-    animation: flickering 0.07s infinite;
+    animation: flickering 0.08s infinite;
 }
 @keyframes flickering {
     from {
