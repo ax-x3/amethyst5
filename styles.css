@@ -1,4 +1,4 @@
-e@font-face {
+@font-face {
     font-family: "Atlantis Headline";
     src: url(fonts/atlantis/AtlantisHeadline-Bold.otf) format("opentype"),
          url(fonts/atlantis/AtlantisHeadline-Bold.ttf) format("truetype");
@@ -33,7 +33,6 @@ body {
     image-rendering: pixelated;
     -webkit-text-size-adjust: none;
     font-family: "SF Pixelate";
-    display: inline;
     font-size: 120%;
     color: var(--se-bright);
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
@@ -80,7 +79,6 @@ table, tr {
     color: var(--se-bright);
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
     -webkit-text-stroke: var(--se-warning) 0.025em;
-    animation: static 1.5s infinite;
     &:hover {
         background-color: var(--se-pop);
     }
