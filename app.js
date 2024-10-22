@@ -4,39 +4,62 @@ window.mobileCheck = function() {
     return check;
 };
 
-
 function adjustStylesForBrowser() {
+    // document.getElementById("JsDisabled").hidden = true;
     const isMobile = window.mobileCheck();
     var isOpera, isEdge, isChrome, isSafari, isFirefox, isIE, isUnknown;
     isOpera = isEdge = isChrome = isSafari = isFirefox = isIE = isUnknown = false;
-
-    if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
-        isOpera = true;
-    } else if (navigator.userAgent.indexOf("Edg") != -1) {
-        isEdge = true;
-    } else if (navigator.userAgent.indexOf("Chrome") != -1) {
-        isChrome = true;
-    } else if (navigator.userAgent.indexOf("Safari") != -1) {
-        isSafari = true;
-    } else if (navigator.userAgent.indexOf("Firefox") != -1) {
-        isFirefox = true;
-    } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) {
-        isIE = true;
-        // if IE > 10
-    } else {
-        isUnknown = true;
-    }
-
-
-
-    if (isMobile || isSafari) {
-        console.log("[ :c ] Styles adjusted: suboptimal browser detected.");
-        const root = document.documentElement;
-        root.style.setProperty('--se-bright-dropshadow', '#f4e0fd27');
-        root.style.setProperty('--se-light-dropshadow', '#db62eb80');
+    if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) 
+        {isOpera = true;} 
+    else if (navigator.userAgent.indexOf("Edg") != -1) 
+        {isEdge = true;} 
+    else if (navigator.userAgent.indexOf("Chrome") != -1)
+        {isChrome = true;} 
+    else if (navigator.userAgent.indexOf("Safari") != -1) 
+        {isSafari = true;} 
+    else if (navigator.userAgent.indexOf("Firefox") != -1) 
+        {isFirefox = true;} 
+    else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) // if IE > 10
+        {isIE = true;} 
+    else 
+        {isUnknown = true;}
+    const root = document.documentElement;
+    var stylesNeedChanging = false;
+    if (isMobile) {
+        console.log("[ :c ] Styles adjusted: You are using a mobile browser.");
+        stylesNeedChanging = true;
+        document.getElementById("usingMobile").hidden = false;
+    } else if (isSafari) {
+        console.log("[ :c ] Styles adjusted: Why are you using Safari?");
+        stylesNeedChanging = true;
     } else if (isUnknown) {
-        console.log("[ :/ ] Styles unchanged: browser unrecognized.");
+        console.log("[ :/ ] Styles unchanged: Couldn't recognize your browser.");
     } else {
-        console.log("[ :3 ] Styles unchanged: browser approved.");
+        console.log("[ :3 ] Styles unchanged: Browser approved.");
     }
+    if (!stylesNeedChanging) {
+        // Set styles to default.
+        root.style.setProperty('--se-bright-dropshadow', '#f4e0fd');
+        root.style.setProperty('--se-light-dropshadow', '#db62eb');
+        root.style.setProperty('--se-regular-dropshadow', '#9a10c8');
+    }
+}
+
+function greetUser() {
+    const hour = new Date().getHours;
+    const greetingEle = document.getElementById("greeting");
+    if (hour >= 4 && hour < 12) {
+        greetingEle.innerHTML = "Good morning!";
+        console.log("[ xP ] Good morning! Welcome to the console.");
+    } else if (hour < 19) {
+        greetingEle.innerHTML = "Good afternoon!";
+        console.log("[ :> ] Good afternoon! Welcome to the console.");
+    } else {
+        greetingEle.innerHTML = "Good evening!";
+        console.log("[ :D ] Good evening! Welcome to the console.");
+    }
+}
+
+function dismissCard(cardId) {
+    document.getElementById(cardId).hidden = true;
 }
