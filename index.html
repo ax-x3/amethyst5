@@ -12,10 +12,11 @@
     <div class="contentColumn flickering" style="transform: translateY(18px);">
         <img src="amethystcrystalPix.png" style="width: 80px; transform: translate(8px, 11px);">
         <h1>AM<span style="opacity: 0.75;">E</span>THYST<span style="opacity: 0.25;">X</span></h1>
+        <button name="developer mode" onclick="developerMode()">Developer Mode (unhide everything)</button>
     </div>
     <table class="contentColumn">
         <tr>
-            <td style="width: 70%">
+            <td style="width: 75%">
                 <div class="card warning" id="JsDisabled">
                     <button class="dismissCard" name="dismiss" onclick="dismissCard('JsDisabled')">x</button>
                     <h2 style="color: var(--se-warning);">Wait a minute!</h2>
@@ -24,7 +25,7 @@
                 <div class="card warning" id="usingMobile" hidden>
                     <button class="dismissCard" name="dismiss" onclick="dismissCard('usingMobile')">x</button>
                     <h2>Tip:</h2>
-                    <p>View this page on a computer for a better experience.</p>
+                    <p>View this page on desktop for a better experience.</p>
                 </div>
                 <div class="card">
                     <h2 id="greeting">Hello, traveller!</h2>
@@ -34,7 +35,8 @@
                     <h2>From Discord?</h2>
                     <p>I'm still available through DMs. Let me know how this page looks on your device.</p>
                 </div>
-                <div class="card">
+                <br>
+                <div>
                     <h2>Update Log:</h2>
                     <p>21 Oct : Added browser detection for consistent styling. Check Console.</p>
                     <p>22 Oct : Built main layout and added some nice warning cards.</p>
