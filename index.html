@@ -2,22 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <link rel="stylesheet" href="styles.css">
     <script src="app.js"></script>
     <link rel="icon" type="image/x-icon" href="amethystcrystal.png">
-    <title>Workin' on it!</title>
+    <title>AMETHYST</title>
 </head>
-<body onload="adjustStylesForBrowser()" style="text-align: center;">
-    <div class="flickering"><img src="amethystcrystalPix.png"></div>
-    <h1>This site is under construction.</h1>
-    <p>Please come back later!</p>
-    <div style="height: 20vh"></div>
-    <h1>Here from Discord?</h1>
-    <p>I'm still available through DMs.</p>
-    <p>Let me know how this page looks on your device.</p>
-    <br>
-    <p><i>Last modification: 21 OCT 2024 01:22 EST</i></p>
-    <p><i>Modification note: Added browser detection for consistent styling. Check Console.</i></p>
+<body onload="adjustStylesForBrowser(); greetUser();">
+    <div class="contentColumn flickering" style="transform: translateY(18px);">
+        <img src="amethystcrystalPix.png" style="width: 80px; transform: translate(8px, 11px);">
+        <h1>AM<span style="opacity: 0.75;">E</span>THYST<span style="opacity: 0.25;">X</span></h1>
+    </div>
+    <table class="contentColumn">
+        <tr>
+            <td style="width: 70%">
+                <div class="card warning" id="JsDisabled">
+                    <button class="dismissCard" name="dismiss" onclick="dismissCard('JsDisabled')">x</button>
+                    <h2 style="color: var(--se-warning);">Wait a minute!</h2>
+                    <p>It appears JavaScript may be <span style="color: var(--se-warning);">disabled</span> on your browser! Please enable JavaScript for a better experience.</p>
+                </div>
+                <div class="card warning" id="usingMobile" hidden>
+                    <button class="dismissCard" name="dismiss" onclick="dismissCard('usingMobile')">x</button>
+                    <h2>Tip:</h2>
+                    <p>View this page on a computer for a better experience.</p>
+                </div>
+                <div class="card">
+                    <h2 id="greeting">Hello, traveller!</h2>
+                    <p><i>This page is under construction.</i></p>
+                </div>
+                <div class="card">
+                    <h2>From Discord?</h2>
+                    <p>I'm still available through DMs. Let me know how this page looks on your device.</p>
+                </div>
+                <div class="card">
+                    <h2>Update Log:</h2>
+                    <p>21 Oct : Added browser detection for consistent styling. Check Console.</p>
+                    <p>22 Oct : Built main layout and added some nice warning cards.</p>
+                </div>
+            </td>
+            <td>
+                <div class="card">
+                    <h2 id="greeting">Column 2</h2>
+                    <p>Wow, two columns?? Incredible. I've never seen anything of the sort.</p>
+                </div>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
