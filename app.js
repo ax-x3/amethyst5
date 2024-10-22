@@ -5,7 +5,7 @@ window.mobileCheck = function() {
 };
 
 function adjustStylesForBrowser() {
-    // document.getElementById("JsDisabled").hidden = true;
+    document.getElementById("JsDisabled").hidden = true;
     const isMobile = window.mobileCheck();
     var isOpera, isEdge, isChrome, isSafari, isFirefox, isIE, isUnknown;
     isOpera = isEdge = isChrome = isSafari = isFirefox = isIE = isUnknown = false;
@@ -62,4 +62,9 @@ function greetUser() {
 
 function dismissCard(cardId) {
     document.getElementById(cardId).hidden = true;
+}
+
+function developerMode() {
+    document.getElementById("JsDisabled").hidden = false;
+    document.getElementById("usingMobile").hidden = false;
 }
