@@ -74,12 +74,12 @@ a {
     -webkit-text-stroke: var(--se-bright) 0.025em;
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-light-dropshadow);
     &:hover {
+        opacity: 0.7;
         color: var(--se-regular);
-        -webkit-text-stroke: var(--se-light) 0.025em;
         text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-regular-dropshadow);
     }
     &:active {
-        opacity: 0.6;
+        opacity: 0.4;
     }
 }
 ul {
