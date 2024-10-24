@@ -60,6 +60,24 @@ function greetUser() {
     }
 }
 
+function updateLocalTime() {
+    localTimeEle = document.getElementById("localTime");
+    const options = {
+        timeZone: 'America/New_York',
+        hour12: false,
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric'
+    },
+    formatter = new Intl.DateTimeFormat([], options);
+    localTime = formatter.format(Date.now());
+    localTimeEle.innerHTML = localTime;
+    setInterval(() => {
+        localTime = formatter.format(Date.now());
+        localTimeEle.innerHTML = localTime;
+    }, 1000);
+}
+
 function dismissCard(cardId) {
     document.getElementById(cardId).hidden = true;
 }
@@ -67,4 +85,5 @@ function dismissCard(cardId) {
 function developerMode() {
     document.getElementById("JsDisabled").hidden = false;
     document.getElementById("usingMobile").hidden = false;
+    document.getElementById("underConstruction").hidden = false;
 }
