@@ -51,7 +51,7 @@ function greetUser() {
     if (hour >= 4 && hour < 12) {
         greetingEle.innerHTML = "Good morning!";
         console.log("[ xP ] Good morning! Welcome to the console.");
-    } else if (hour < 19) {
+    } else if (hour >= 12 && hour < 19) {
         greetingEle.innerHTML = "Good afternoon!";
         console.log("[ :> ] Good afternoon! Welcome to the console.");
     } else {
