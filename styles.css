@@ -21,12 +21,12 @@
     --se-pop: #500;
     --se-faint: #222;
     /* FIND DEFAULT DROPSHADOW COLORS IN app.js. THESE ARE PREADJUSTED.*/
-    --se-bright-dropshadow: #f4e0fd83;
+    --se-bright-dropshadow: #f4e0fd33;
     --se-light-dropshadow: #db62eb2c;
     --se-regular-dropshadow: #9a10c836;
 }
 .contentColumn {
-    width: 1000px;
+    width: 1030px;
     margin: 0 auto;
 }
 body {
@@ -59,7 +59,7 @@ h2 {
     -webkit-text-stroke: var(--se-regular) 0.025em;
 }
 p {
-    margin: 16px 0 0 0;
+    margin: 20px 0 0 0;
     line-height: 150%;
 }
 img {
@@ -83,15 +83,17 @@ a {
     }
 }
 ul {
-    margin: 12px 0 0 5px;
+    margin: 16px 0 0 8px;
     padding: 0;
     line-height: 200%;
     list-style-type: none;
 }
+svg {
+    filter: drop-shadow(0 0 8px var(--se-bright));
+}
 svg.bullet {
     transform: translate(0, 4px);
     width: 22px;
-    filter: drop-shadow(0 0 8px var(--se-bright));
 }
 path.bullet {
     display: inline;
@@ -101,7 +103,7 @@ path.bullet {
 }
 .dismissCard {
     float: right;
-    transform: translate(14.5px, -14.5px);
+    transform: translate(14.5px, -14px);
     background-color: #555;
     border: 2.5px solid #fff5;
     border-radius: 0 12px 0 0;
@@ -118,10 +120,15 @@ path.bullet {
         background-color: var(--se-warning);
     }
 }
-.warning {
+.warningCard {
     background-color: var(--se-pop);
 }
-.sign {
+.warning {
+    color: var(--se-warning);
+    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
+    -webkit-text-stroke: var(--se-pop) 0.025em;
+}
+.signCard {
     background-color: var(--se-faint);
 }
 .card {
@@ -130,7 +137,11 @@ path.bullet {
     padding: 12px;
     margin: 12px 3px
 }
-
+.highlight {
+    color: var(--se-light);
+    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-light-dropshadow);
+    -webkit-text-stroke: var(--se-regular) 0.05em;
+}
 .flickering {
     animation: flickering 0.08s infinite;
 }
