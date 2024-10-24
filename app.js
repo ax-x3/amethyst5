@@ -46,7 +46,7 @@ function adjustStylesForBrowser() {
 }
 
 function greetUser() {
-    const hour = new Date().getHours;
+    const hour = new Date().getHours();
     const greetingEle = document.getElementById("greeting");
     if (hour >= 4 && hour < 12) {
         greetingEle.innerHTML = "Good morning!";
