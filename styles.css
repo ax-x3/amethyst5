@@ -89,7 +89,7 @@ ul {
     list-style-type: none;
 }
 svg {
-    filter: drop-shadow(0 0 8px var(--se-bright));
+    filter: drop-shadow(0 0 6px var(--se-bright));
 }
 svg.bullet {
     transform: translate(0, 4px);
