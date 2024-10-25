@@ -8,11 +8,23 @@
     <link rel="icon" type="image/x-icon" href="amethystcrystal.png">
     <title>AMETHYST</title>
 </head>
-<body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime();">
+<body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime(); developerMode()">
     <button name="developer mode" onclick="developerMode()">Developer Mode (unhide everything)</button>
-    <div class="flickering contentColumn" style="transform: translateY(18px);">
-        <img src="amethystcrystalPix.png" style="width: 80px; transform: translate(8px, 11px);">
-        <h1>AM<span style="opacity: 0.75;">E</span>THYST<span style="opacity: 0.25;">X</span></h1>
+    <button name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
+    <div class="flickering contentColumn">
+        <a href="index.html">
+            <img src="amethystcrystalPix.png" style="width: 80px; transform: translate(8px, 11px);">
+            <h1>AM<span style="opacity: 0.80">E</span>THYST<span style="opacity: 0.25;">X</span></h1>
+        </a>
+    </div>
+    <div class="contentColumn" style="transform: translateX(12px);">
+        <a href="index.html"><u>Index</u></a>
+        <a><u>About</u></a>
+        <a><u>Art&Commissions</u></a>
+        <a><u>Projects</u></a>
+        <a><u>Robotics</u></a>
+        <a><u>Links</u></a>
+        <a><u>Credits</u></a>
     </div>
     <table class="contentColumn">
         <tr>
@@ -20,7 +32,7 @@
                 <div class="card warningCard" id="underConstruction">
                     <button class="flickering dismissCard" name="dismiss" onclick="dismissCard('underConstruction')">x</button>
                     <h2>Construction in progress...</h2>
-                    <p><i>This site is still being built!</i> Come back later or check out the changelog.</p>
+                    <p><i>This site is still being built!</i> Come back later or check out the changelog. By the way, the links up in the navbar don't work yet.</p>
                     <p>If you came here from <a href="https://discord.com/users/802178124342493224"><u>Discord</u></a>, I'm still available through DMs. Let me know how this page runs on your device!</p> 
                 </div>
                 <div class="card warningCard" id="JsDisabled">
@@ -30,21 +42,23 @@
                 </div>
                 <div class="card warningCard" id="usingMobile" hidden>
                     <button class="flickering dismissCard" name="dismiss" onclick="dismissCard('usingMobile')">x</button>
-                    <h2 class="warning">Dear Mobile User,</h2>
-                    <p>This website is designed for <span class="warning">desktop viewing</span>. Since you seem to be on a mobile device, use landscape orientation.</p>
+                    <h2>Dear Mobile User,</h2>
+                    <p>This website is designed for <span class="highlight">desktop viewing</span>. Since you seem to be on a mobile device, use landscape orientation.</p>
                     <br>
-                    <svg style="width: 75px;" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                        <path class="bullet" d="m 51.4975,-28.5 a 15,15 0 0 0 -15,15 v 133.84 a 15,15 0 0 0 15,15 h 60.845 a 15,15 0 0 0 15,-15 V -13.5 a 15,15 0 0 0 -15,-15 z M 50.558125,0.421875 H 95.086875 102.21 113.28187 V 106.41813 H 109.205 c 0,-7.633321 -0.82888,-16.881326 -4.65438,-24.65438 C 100.72514,73.990696 93.279239,67.806875 81.92,67.806875 c -11.359241,0 -18.803257,6.183821 -22.62875,13.956875 C 55.465756,89.536804 54.635,98.784808 54.635,106.41813 H 50.558125 Z M 81.92,25.779375 c -9.892263,0 -17.980625,8.088362 -17.980625,17.980625 0,9.892262 8.088362,17.98 17.980625,17.98 9.892263,0 17.980625,-8.087738 17.980625,-17.98 0,-9.892263 -8.088362,-17.980625 -17.980625,-17.980625 z m 0,6.4 c 6.433457,0 11.58,5.147167 11.58,11.580625 0,6.433457 -5.146543,11.58 -11.58,11.58 -6.433458,0 -11.58,-5.146543 -11.58,-11.58 0,-6.433458 5.146542,-11.580625 11.58,-11.580625 z m 0,42.0275 c 9.21824,0 13.816454,4.140498 16.88875,10.383125 3.0723,6.242626 3.99625,14.701675 3.99625,21.82813 H 101.37188 94.131875 61.035 C 61.035,99.291675 61.960828,90.832626 65.033125,84.59 68.105422,78.347373 72.701759,74.206875 81.92,74.206875 Z" />
-                    </svg>
-                    <svg style="width: 75px; scale: 0.75; transform: translateX(-20px);" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                        <path class="bullet" d="M 81.92,-28.5 V 12.46 H 0 v 81.92 h 81.92 v 40.96 l 81.92,-81.92 z" />
-                    </svg>
-                    <svg style="width: 75px; transform: translateX(-10px);" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                        <path class="bullet" d="m 15,7.9975 a 15,15 0 0 0 -15,15 v 60.845 a 15,15 0 0 0 15,15 h 133.84 a 15,15 0 0 0 15,-15 v -60.845 a 15,15 0 0 0 -15,-15 z M 28.921875,22.058125 H 134.91813 v 44.52875 c -0.79439,0.467618 -2.01591,1.092023 -3.875,1.795625 -3.85995,1.460853 -10.10267,2.998125 -19.38125,2.998125 -18.124265,0 -37.846973,-10.321875 -58.40438,-10.321875 -10.081174,0 -17.284097,1.752089 -22.02125,3.57625 -0.852847,0.32841 -1.607297,0.66405 -2.314375,0.996875 z M 111.695,24.61125 c -8.25831,0 -15.023125,6.762933 -15.023125,15.02125 0,8.258318 6.764815,15.021875 15.023125,15.021875 8.25832,0 15.02187,-6.763557 15.02188,-15.021875 0,-8.258317 -6.76356,-15.02125 -15.02188,-15.02125 z m 0,6.400625 c 4.79951,0 8.62125,3.821119 8.62125,8.620625 0,4.799507 -3.82174,8.623125 -8.62125,8.623125 -4.79951,0 -8.6225,-3.823618 -8.6225,-8.623125 0,-4.799506 3.82299,-8.620625 8.6225,-8.620625 z M 53.2575,67.45875 c 18.29012,0 37.994394,10.3225 58.40438,10.3225 9.98854,0 17.03577,-1.669237 21.64687,-3.414375 0.57041,-0.215879 1.10619,-0.436181 1.60938,-0.656875 V 84.781875 H 28.921875 v -11.91 C 29.676101,72.367284 31.054729,71.562591 33.535,70.6075 37.529592,69.069282 43.914912,67.45875 53.2575,67.45875 Z" />
-                    </svg>
+                    <div style="width:fit-content; margin: 0 auto;">
+                        <svg style="width: 75px; transform: translateX(-15px);" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                            <path class="bullet" d="m 51.4975,-28.5 a 15,15 0 0 0 -15,15 v 133.84 a 15,15 0 0 0 15,15 h 60.845 a 15,15 0 0 0 15,-15 V -13.5 a 15,15 0 0 0 -15,-15 z M 50.558125,0.421875 H 95.086875 102.21 113.28187 V 106.41813 H 109.205 c 0,-7.633321 -0.82888,-16.881326 -4.65438,-24.65438 C 100.72514,73.990696 93.279239,67.806875 81.92,67.806875 c -11.359241,0 -18.803257,6.183821 -22.62875,13.956875 C 55.465756,89.536804 54.635,98.784808 54.635,106.41813 H 50.558125 Z M 81.92,25.779375 c -9.892263,0 -17.980625,8.088362 -17.980625,17.980625 0,9.892262 8.088362,17.98 17.980625,17.98 9.892263,0 17.980625,-8.087738 17.980625,-17.98 0,-9.892263 -8.088362,-17.980625 -17.980625,-17.980625 z m 0,6.4 c 6.433457,0 11.58,5.147167 11.58,11.580625 0,6.433457 -5.146543,11.58 -11.58,11.58 -6.433458,0 -11.58,-5.146543 -11.58,-11.58 0,-6.433458 5.146542,-11.580625 11.58,-11.580625 z m 0,42.0275 c 9.21824,0 13.816454,4.140498 16.88875,10.383125 3.0723,6.242626 3.99625,14.701675 3.99625,21.82813 H 101.37188 94.131875 61.035 C 61.035,99.291675 61.960828,90.832626 65.033125,84.59 68.105422,78.347373 72.701759,74.206875 81.92,74.206875 Z" />
+                        </svg>
+                        <svg style="width: 75px; scale: 0.75; transform: translateX(-25px);" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                            <path class="bullet" d="M 81.92,-28.5 V 12.46 H 0 v 81.92 h 81.92 v 40.96 l 81.92,-81.92 z" />
+                        </svg>
+                        <svg style="width: 75px; transform: translateX(-15px);" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                            <path class="bullet" d="m 15,7.9975 a 15,15 0 0 0 -15,15 v 60.845 a 15,15 0 0 0 15,15 h 133.84 a 15,15 0 0 0 15,-15 v -60.845 a 15,15 0 0 0 -15,-15 z M 28.921875,22.058125 H 134.91813 v 44.52875 c -0.79439,0.467618 -2.01591,1.092023 -3.875,1.795625 -3.85995,1.460853 -10.10267,2.998125 -19.38125,2.998125 -18.124265,0 -37.846973,-10.321875 -58.40438,-10.321875 -10.081174,0 -17.284097,1.752089 -22.02125,3.57625 -0.852847,0.32841 -1.607297,0.66405 -2.314375,0.996875 z M 111.695,24.61125 c -8.25831,0 -15.023125,6.762933 -15.023125,15.02125 0,8.258318 6.764815,15.021875 15.023125,15.021875 8.25832,0 15.02187,-6.763557 15.02188,-15.021875 0,-8.258317 -6.76356,-15.02125 -15.02188,-15.02125 z m 0,6.400625 c 4.79951,0 8.62125,3.821119 8.62125,8.620625 0,4.799507 -3.82174,8.623125 -8.62125,8.623125 -4.79951,0 -8.6225,-3.823618 -8.6225,-8.623125 0,-4.799506 3.82299,-8.620625 8.6225,-8.620625 z M 53.2575,67.45875 c 18.29012,0 37.994394,10.3225 58.40438,10.3225 9.98854,0 17.03577,-1.669237 21.64687,-3.414375 0.57041,-0.215879 1.10619,-0.436181 1.60938,-0.656875 V 84.781875 H 28.921875 v -11.91 C 29.676101,72.367284 31.054729,71.562591 33.535,70.6075 37.529592,69.069282 43.914912,67.45875 53.2575,67.45875 Z" />
+                        </svg>
+                    </div>
                 </div>
                 <div class="card">
-                    <h2 id="greeting">Hello, traveller!</h2>
+                    <h2 id="greeting">Welcome!</h2>
                     <p>My name is <span class="highlight">Amethyst</span>. School keeps me pretty busy, but in my free time I like to make <span class="highlight">art</span>, <span class="highlight">websites</span>, and <span class="highlight">robots</span>.</p>
                     <p>I also enjoy <span class="highlight">3D printing</span>, <span class="highlight">going places</span>, and <span class="highlight">my bed</span>. Despite that, I don't get enough sleep, and I spend too much time online.</p>
                     <p>This is the fourth time I've rebuilt my website, because every time I do, I get a newer, better idea.</p>
