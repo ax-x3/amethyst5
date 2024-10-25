@@ -4,6 +4,9 @@ window.mobileCheck = function() {
     return check;
 };
 
+const root = document.documentElement;
+var flickeringEnabled = true;
+
 function adjustStylesForBrowser() {
     document.getElementById("JsDisabled").hidden = true;
     const isMobile = window.mobileCheck();
@@ -23,7 +26,6 @@ function adjustStylesForBrowser() {
         {isIE = true;} 
     else 
         {isUnknown = true;}
-    const root = document.documentElement;
     var stylesNeedChanging = false;
     if (isMobile) {
         console.log("[ :c ] Styles adjusted: You are using a mobile browser.");
@@ -86,4 +88,17 @@ function developerMode() {
     document.getElementById("JsDisabled").hidden = false;
     document.getElementById("usingMobile").hidden = false;
     document.getElementById("underConstruction").hidden = false;
+}
+
+
+function toggleFlickering() {
+    if (flickeringEnabled) {
+        root.style.setProperty('--lu-flicker-on', 'brightness(0.7)');
+        root.style.setProperty('--lu-flicker-off', 'brightness(0.7)');
+        flickeringEnabled = false;
+    } else {
+        root.style.setProperty('--lu-flicker-on', 'brightness(1.1)');
+        root.style.setProperty('--lu-flicker-off', 'brightness(0.9)');
+        flickeringEnabled = true;
+    }
 }
