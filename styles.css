@@ -24,6 +24,8 @@
     --se-bright-dropshadow: #f4e0fd33;
     --se-light-dropshadow: #db62eb2c;
     --se-regular-dropshadow: #9a10c836;
+    --lu-flicker-off: brightness(0.9);
+    --lu-flicker-on: brightness(1.1);
 }
 .contentColumn {
     width: 1030px;
@@ -38,7 +40,7 @@ body {
     color: var(--se-bright);
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
     -webkit-text-stroke: var(--se-light) 0.025em;
-    animation: static 1.5s infinite;
+    animation: static 1.5s infinite, fadeIn 1.5s;
 }
 h1 {
     margin: 0;
@@ -77,6 +79,7 @@ a {
         opacity: 0.7;
         color: var(--se-regular);
         text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-regular-dropshadow);
+        cursor: pointer;
     }
     &:active {
         opacity: 0.4;
@@ -121,7 +124,7 @@ path.bullet {
     }
 }
 .warningCard {
-    background-color: var(--se-pop);
+    background-color: var(--se-pop) !important;
 }
 .warning {
     color: var(--se-warning);
@@ -129,10 +132,11 @@ path.bullet {
     -webkit-text-stroke: var(--se-pop) 0.025em;
 }
 .signCard {
-    background-color: var(--se-faint);
+    background-color: var(--se-faint) !important;
 }
 .card {
     border: 2.5px solid #fff5;
+    background-color: #111;
     border-radius: 12px;
     padding: 12px;
     margin: 12px 3px
@@ -147,10 +151,10 @@ path.bullet {
 }
 @keyframes flickering {
     from {
-        filter: brightness(1.1);
+        filter: var(--lu-flicker-on);
     }
     to {
-        filter: brightness(0.9);
+        filter: var(--lu-flicker-off);
     }
 }
 @keyframes static {
@@ -189,5 +193,16 @@ path.bullet {
     100% {
         mask-image: url(animationResources/static0.png);
         mask-size: 50px;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
