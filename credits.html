@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+    <link rel="icon" type="image/x-icon" href="amethystcrystal.png">
+    <title>ABOUT</title>
+</head>
+<body onload="adjustStylesForBrowser();">
+    <button name="developer mode" onclick="developerMode()">Developer Mode (unhide everything)</button>
+    <button name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
+    <div class="flickering contentColumn">
+        <a href="index.html">
+            <img src="amethystcrystalPix.png" style="width: 80px; transform: translate(8px, 11px); filter: drop-shadow(0 0 20px var(--se-regular));">
+            <h1>AM<span style="opacity: 0.80">E</span>THYST<span style="opacity: 0.25;">X</span></h1>
+        </a>
+    </div>
+    <div class="contentColumn" style="transform: translateX(18px);">
+        <a href="index.html"><u>Index</u></a>
+        <a href="about.html"><u>About</u></a>
+        <a><u>Art&Commissions</u></a>
+        <a><u>Projects</u></a>
+        <a><u>Robotics</u></a>
+        <a><u>Blog</u></a>
+        <a href="credits.html" style="opacity: 0.4;"><u>Credits</u></a>
+    </div>
+    <table class="contentColumn">
+        <tr>
+            <td style="width: 72%">
+                <div class="card">
+                    <h2>Software I've used:</h2>
+                    <p style="opacity: 0.6; position: absolute; transform-origin: 0; transform: rotate(-90deg) translate(-215px, 10px);">&lt;- rarely&nbsp;&nbsp;&nbsp;often -&gt;</p>
+                    <div style="margin: 0 0 0 24px">
+                        <ul>
+                            <li><span class="flickering"><img class="bullet" src="logos/vscode.png"></span>&nbsp;<span class="highlight">Visual Studio Code</span> to write code.</li>
+                            <li><span class="flickering"><img class="bullet" src="logos/krita.png"></span>&nbsp;<span class="highlight">Krita</span> to draw digital art.</li>
+                            <li><span class="flickering"><img class="bullet" src="logos/onshape.png"></span>&nbsp;<span class="highlight">OnShape</span> for 3D CAD.</li>
+                            <li><span class="flickering"><img class="bullet" src="logos/bambustudio.png"></span>&nbsp;<span class="highlight">Bambu Studio</span> to slice 3D models.</li>
+                            <li><span class="flickering"><img class="bullet" src="logos/inkscape.png"></span>&nbsp;<span class="highlight">InkScape</span> for vector graphics and art.</li>
+                            <li><span class="flickering"><img class="bullet" src="logos/sketchbook.png"></span>&nbsp;<span class="highlight">Sketchbook</span> to sketch and draw on my phone.</li>
+                            <li><span class="flickering"><img class="bullet" src="logos/gimp.png"></span>&nbsp;<span class="highlight">GIMP</span> to manipulate images.</li>
+                            <li><span class="flickering"><img class="bullet" src="logos/capcut.png"></span>&nbsp;<span class="highlight">CapCut</span> to edit video.</li>
+                            <li><span class="flickering"><img class="bullet" src="logos/meshmixer.png"></span>&nbsp;<span class="highlight">Meshmixer</span> to clean up 3D files.</li>
+                            <li><span class="flickering"><img class="bullet" src="logos/robloxstudio.png"></span>&nbsp;<span class="highlight">Roblox Studio</span> for environment references</li>
+                            <li><span class="flickering"><img class="bullet" src="logos/audacity.png"></span>&nbsp;<span class="highlight">Audacity</span> to manipulate audio.</li>
+                        </ul>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="card">
+                    <p>I promise I'll put something over here someday.</p>
+                    <br><br>
+                    <div style="font-size: 80%; font-family: 'Courier New', Courier, monospace; font-weight: bolder; color: var(--se-regular)">
+                        <nobr>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Z<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z<br>
+                            &nbsp;&nbsp;&nbsp;|\&nbsp;z&nbsp;&nbsp;&nbsp;&nbsp;_,,,---,,_<br>
+                            &nbsp;&nbsp;&nbsp;/,`.-'`'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-.&nbsp;&nbsp;;-;;,_<br>
+                            &nbsp;_/,4-&nbsp;&nbsp;)&nbsp;)-,_..;\&nbsp;(&nbsp;&nbsp;`'-'<br>
+                            '----''(_/--'&nbsp;&nbsp;`-'\_)<br>
+                        </nobr>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
