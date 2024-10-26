@@ -8,7 +8,6 @@ const root = document.documentElement;
 var flickeringEnabled = true;
 
 function adjustStylesForBrowser() {
-    document.getElementById("JsDisabled").hidden = true;
     const isMobile = window.mobileCheck();
     var isOpera, isEdge, isChrome, isSafari, isFirefox, isIE, isUnknown;
     isOpera = isEdge = isChrome = isSafari = isFirefox = isIE = isUnknown = false;
