@@ -32,7 +32,7 @@
     margin: 0 auto;
 }
 body {
-    background: #000;
+    background: #080808;
     image-rendering: pixelated;
     -webkit-text-size-adjust: none;
     font-family: "SF Pixelate";
@@ -40,7 +40,7 @@ body {
     color: var(--se-bright);
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
     -webkit-text-stroke: var(--se-light) 0.025em;
-    animation: static 1.5s infinite, fadeIn 1.5s;
+    animation: static 1.5s infinite;
 }
 h1 {
     margin: 0;
@@ -64,21 +64,17 @@ p {
     margin: 20px 0 0 0;
     line-height: 150%;
 }
-img {
-    filter: drop-shadow(0 0 20px var(--se-regular));
-}
 table, tr {
     vertical-align: top;
+    animation: fadeIn 1s;
 }
 a {
     text-decoration: inherit;
-    color: var(--se-light);
+    color: var(--se-regular);
     -webkit-text-stroke: var(--se-bright) 0.025em;
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-light-dropshadow);
     &:hover {
         opacity: 0.7;
-        color: var(--se-regular);
-        text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-regular-dropshadow);
         cursor: pointer;
     }
     &:active {
@@ -86,16 +82,19 @@ a {
     }
 }
 ul {
-    margin: 16px 0 0 8px;
+    margin: 16px 0 0 6px;
     padding: 0;
-    line-height: 200%;
+    line-height: 150%;
     list-style-type: none;
 }
+li {
+    margin: 0 0 16px 0;
+}
 svg {
-    filter: drop-shadow(0 0 6px var(--se-bright));
+    filter: drop-shadow(0 0 10px var(--se-bright));
 }
 svg.bullet {
-    transform: translate(0, 4px);
+    transform: translateY(4px);
     width: 22px;
 }
 path.bullet {
@@ -103,6 +102,11 @@ path.bullet {
     fill: var(--se-bright); 
     stroke-width: 0.25em; 
     stroke: var(--se-regular);
+}
+img.bullet {
+    transform: translateY(4px);
+    width: 22px;
+    filter: drop-shadow(0 0 10px var(--se-light)) saturate(1.5) brightness(1.5);
 }
 .dismissCard {
     float: right;
@@ -136,7 +140,7 @@ path.bullet {
 }
 .card {
     border: 2.5px solid #fff5;
-    background-color: #111;
+    background-color: #000;
     border-radius: 12px;
     padding: 12px;
     margin: 12px 3px
@@ -196,13 +200,10 @@ path.bullet {
     }
 }
 @keyframes fadeIn {
-    0% {
+    from {
         opacity: 0;
     }
-    20% {
-        opacity: 0;
-    }
-    100% {
+    to {
         opacity: 1;
     }
 }
