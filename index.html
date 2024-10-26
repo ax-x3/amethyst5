@@ -8,23 +8,23 @@
     <link rel="icon" type="image/x-icon" href="amethystcrystal.png">
     <title>AMETHYST</title>
 </head>
-<body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime();">
+<body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime(); dismissCard('JsDisabled');">
     <button name="developer mode" onclick="developerMode()">Developer Mode (unhide everything)</button>
     <button name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
     <div class="flickering contentColumn">
         <a href="index.html">
-            <img src="amethystcrystalPix.png" style="width: 80px; transform: translate(8px, 11px);">
+            <img src="amethystcrystalPix.png" style="width: 80px; transform: translate(8px, 11px); filter: drop-shadow(0 0 20px var(--se-regular));">
             <h1>AM<span style="opacity: 0.80">E</span>THYST<span style="opacity: 0.25;">X</span></h1>
         </a>
     </div>
-    <div class="contentColumn" style="transform: translateX(12px);">
-        <a href="index.html"><u>Index</u></a>
-        <a><u>About</u></a>
+    <div class="contentColumn" style="transform: translateX(18px);">
+        <a href="index.html" style="opacity: 0.4;"><u>Index</u></a>
+        <a href="about.html"><u>About</u></a>
         <a><u>Art&Commissions</u></a>
         <a><u>Projects</u></a>
         <a><u>Robotics</u></a>
-        <a><u>Links</u></a>
-        <a><u>Credits</u></a>
+        <a><u>Blog</u></a>
+        <a href="credits.html"><u>Credits</u></a>
     </div>
     <table class="contentColumn">
         <tr>
@@ -32,7 +32,7 @@
                 <div class="card warningCard" id="underConstruction">
                     <button class="flickering dismissCard" name="dismiss" onclick="dismissCard('underConstruction')">x</button>
                     <h2>Construction in progress...</h2>
-                    <p><i>This site is still being built!</i> Come back later or check out the changelog. By the way, the links up in the navbar don't work yet.</p>
+                    <p><i>This site is still being built!</i> Come back later or check out the changelog. By the way, some of the links up in the navbar don't work yet.</p>
                     <p>If you came here from <a href="https://discord.com/users/802178124342493224"><u>Discord</u></a>, I'm still available through DMs. Let me know how this page runs on your device!</p> 
                 </div>
                 <div class="card warningCard" id="JsDisabled">
@@ -67,11 +67,14 @@
                 <div class="card">
                     <h2>Changelog:</h2>
                     <p style="opacity: 0.6; position: absolute; transform-origin: 0; transform: rotate(-90deg) translate(-215px, 10px);">&lt;- older&nbsp;&nbsp;&nbsp;newer -&gt;</p>
-                    <div style="width: 95%; margin: 0 0 0 auto">
-                        <p><i class="highlight">23-Oct-2024:</i> Wrote greeting card and modified warning cards to be more easily understood. Added local time clock and social links for MakerWorld and Roblox.</p>
-                        <p><i class="highlight">22-Oct-2024:</i> Populated 2nd column with social links and <i>correctly</i> implemented SVGs. Temporarily added Dev Mode.</p>
-                        <p><i class="highlight">21-Oct-2024:</i> Built main layout and added some nice warning cards.</p>
-                        <p><i class="highlight">20-Oct-2024:</i> Added browser detection for consistent styling. Check Console.</p>
+                    <div style="margin: 0 0 0 24px">
+                        <ul>
+                            <li><i class="highlight">25-Oct-2024:</i> Made navbar and added some content to about.html and credits.html. Added option to toggle flickering effect.</li>
+                            <li><i class="highlight">23-Oct-2024:</i> Wrote greeting card and modified warning cards to be more easily understood. Added local time clock and social links for MakerWorld and Roblox.</li>
+                            <li><i class="highlight">22-Oct-2024:</i> Populated 2nd column with social links and <i>correctly</i> implemented SVGs. Temporarily added Dev Mode.</li>
+                            <li><i class="highlight">21-Oct-2024:</i> Built main layout and added some nice warning cards.</li>
+                            <li><i class="highlight">20-Oct-2024:</i> Added browser detection for consistent styling. Check Console.</li>
+                        </ul>
                     </div>
                 </div>
             </td>
