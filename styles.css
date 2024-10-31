@@ -17,8 +17,10 @@
     --se-light: #db62eb;
     --se-regular: #9a10c8;
     --se-moody: #611685;
+    --se-success: #0c0;
+    --se-success-pop: #030;
     --se-warning: #f00;
-    --se-pop: #500;
+    --se-warning-pop: #500;
     --se-faint: #222;
     /* FIND DEFAULT DROPSHADOW COLORS IN app.js. THESE ARE PREADJUSTED.*/
     --se-bright-dropshadow: #f4e0fd33;
@@ -61,7 +63,7 @@ h2 {
     -webkit-text-stroke: var(--se-regular) 0.025em;
 }
 p {
-    margin: 20px 0 0 0;
+    margin: 8px 0 8px 0;
     line-height: 150%;
 }
 table, tr {
@@ -100,7 +102,7 @@ svg.bullet {
 path.bullet {
     display: inline;
     fill: var(--se-bright); 
-    stroke-width: 0.25em; 
+    stroke-width: 3px; 
     stroke: var(--se-regular);
 }
 img.bullet {
@@ -121,19 +123,27 @@ img.bullet {
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
     -webkit-text-stroke: var(--se-warning) 0.025em;
     &:hover {
-        background-color: var(--se-pop);
+        background-color: var(--se-warning-pop);
     }
     &:active {
         background-color: var(--se-warning);
     }
 }
+.success{
+    color: var(--se-success);
+    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
+    -webkit-text-stroke: var(--se-success-pop) 0.025em;
+}
+.successCard {
+    background-color: var(--se-success-pop) !important;
+}
 .warningCard {
-    background-color: var(--se-pop) !important;
+    background-color: var(--se-warning-pop) !important;
 }
 .warning {
     color: var(--se-warning);
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
-    -webkit-text-stroke: var(--se-pop) 0.025em;
+    -webkit-text-stroke: var(--se-warning-pop) 0.025em;
 }
 .signCard {
     background-color: var(--se-faint) !important;
