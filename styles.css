@@ -42,6 +42,8 @@ body {
     color: var(--se-bright);
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
     -webkit-text-stroke: var(--se-light) 0.025em;
+}
+div:not(.paperCard):not(.flickering) {
     animation: static 1.5s infinite;
 }
 h1 {
@@ -63,7 +65,7 @@ h2 {
     -webkit-text-stroke: var(--se-regular) 0.025em;
 }
 p {
-    margin: 8px 0 8px 0;
+    margin: 8px 0 16px 0;
     line-height: 150%;
 }
 table, tr {
@@ -102,13 +104,13 @@ svg.bullet {
 path.bullet {
     display: inline;
     fill: var(--se-bright); 
-    stroke-width: 3px; 
+    stroke-width: 0.25em; 
     stroke: var(--se-regular);
 }
 img.bullet {
+    filter: drop-shadow(0.1em 0.1em 0 #000b) drop-shadow(0 0 10px var(--se-light));
     transform: translateY(4px);
     width: 22px;
-    filter: drop-shadow(0 0 10px var(--se-light)) saturate(1.5) brightness(1.5);
 }
 .dismissCard {
     float: right;
@@ -137,16 +139,27 @@ img.bullet {
 .successCard {
     background-color: var(--se-success-pop) !important;
 }
-.warningCard {
-    background-color: var(--se-warning-pop) !important;
-}
 .warning {
     color: var(--se-warning);
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
     -webkit-text-stroke: var(--se-warning-pop) 0.025em;
 }
+.warningCard {
+    background-color: var(--se-warning-pop) !important;
+}
 .signCard {
     background-color: var(--se-faint) !important;
+}
+.paperCard {
+    background-color: #e0e3d1 !important;
+    border-radius: 0 !important;
+    padding: 50px !important;
+    & > * {
+        color: #000;
+        filter: none !important;
+        text-shadow: none !important;
+        -webkit-text-stroke: black 0px !important;
+    }
 }
 .card {
     border: 2.5px solid #fff5;
