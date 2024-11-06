@@ -76,7 +76,7 @@ a {
     text-decoration: inherit;
     color: var(--se-regular);
     -webkit-text-stroke: var(--se-bright) 0.025em;
-    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-light-dropshadow);
+    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
     &:hover {
         opacity: 0.7;
         cursor: pointer;
@@ -126,6 +126,7 @@ img.bullet {
     -webkit-text-stroke: var(--se-warning) 0.025em;
     &:hover {
         background-color: var(--se-warning-pop);
+        cursor: pointer;
     }
     &:active {
         background-color: var(--se-warning);
@@ -151,7 +152,7 @@ img.bullet {
     background-color: var(--se-faint) !important;
 }
 .paperCard {
-    background-color: #e0e3d1 !important;
+    background-color: #eed !important;
     border-radius: 0 !important;
     padding: 50px !important;
     & > * {
