@@ -1,103 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <link rel="stylesheet" href="styles.css">
-    <script src="app.js"></script>
-    <link rel="icon" type="image/x-icon" href="amethystcrystal.png">
-    <title>ABOUT</title>
-</head>
-<body onload="adjustStylesForBrowser();">
-    <button name="developer mode" onclick="developerMode()">Developer Mode (unhide everything)</button>
-    <button name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
-    <div class="flickering contentColumn">
-        <div>
-            <a href="index.html">
-                <img src="amethystcrystalPix.png" style="width: 80px; transform: translate(8px, 11px); filter: drop-shadow(0 0 20px var(--se-regular));">
-                <h1>AM<span style="opacity: 0.80">E</span>THYST<span style="opacity: 0.25;">X</span></h1>
-            </a>
-        </div>
-    </div>
-    <div class="contentColumn" style="transform: translateX(18px);">
-        <a href="index.html"><u>Index</u></a>
-        <a href="about.html"><u>About</u></a>
-        <a href="art-n-commissions.html" style="opacity: 0.4;"><u>Art&Commissions</u></a>
-        <a><u>Projects</u></a>
-        <a><u>Robotics</u></a>
-        <a><u>Blog</u></a>
-        <a href="credits.html"><u>Credits</u></a>
-    </div>
-    <table class="contentColumn">
-        <tr>
-            <td style="width: 72%">
-                <div class="card">
-                    <h2>Commissions</h2>
-                    <p>I draw digitally <span class="highlight">as a hobby</span>. Most of my artwork is furry-related since that's what I have the most fun drawing.</p>
-                    <p>If the card on the right is <span class="success">green</span> and says '<span class="success">OPEN!</span>', then I'm available for commissions. Otherwise, I probably don't have time, or I'm burnt out or something.</p>
-                </div>
-                <div class="card paperCard noStatic">
-                    <h2 style="display: block; text-align: center;">
-                        <i>
-                            Terms
-                            <br>
-                            <img class="embellishment" style="width: 200px;" src="icons/embellishment.png">
-                            <span style="vertical-align: 70%;">of</span>
-                            <img class="embellishment" style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
-                            <br>
-                            Service
-                        </i>
-                    </h2>
-                    <br><br><br><br>
-                    <h2>General</h2>
-                    <p>I reserve the right to refuse a commission request and/or terminate a commission that was previously approved.</p>
-                    <br>
-                    <h2>Requests</h2>
-                    <p>There are limits to my abilities and to what I am willing to draw. Here are some (but not all) of the things that I will <i>not</i> accept:</p>
-                    <ul style="list-style-type: disc; padding: 0 0 0 48px;">
-                        <li>Sexual content</li>
-                        <li>Discriminatory content</li>
-                        <li>Gore</li>
-                        <li>Photorealism</li>
-                        <li>Extremely complex pieces</li>
-                        <li>Vague or no-ref prompts</li>
-                        <li>Copyrighted work</li>
-                    </ul>
-                    <p>My approval/denial of a commission is final for that specific commission.</p>
-                    <br>
-                    <h2>Contact</h2>
-                    <p>You can reach out to me on Discord with any questions. Discord is my preferred method of contact, as it is easy for me to find your references and the description of your commission.</p>
-                    <p>Please make your commission request as clear as possible to avoid any misunderstanding. Only commission me if you can make your requests in English. You can use a translation tool, but beware of mistranslations.</p>
-                    <p>I will try my best to keep you updated throughout the commissioning process. Do understand, however, that unforeseeable circumstances can emerge and cause delay or cancellation of a commission.</p>
-                    <br>
-                    <h2>Payment</h2>
-                    <p>Payments will be made through PayPal. For particularly large commissions, or if I haven't gotten to know you prior to the commission, one-half of the fee must be paid upfront. The other half will be paid after you recieve the final artwork.</p>
-                    <p>We can discuss payment as long as the commission is less than halfway complete.</p>
-                    <br>
-                    <h2>Usage</h2>
-                    <p>I reserve the right to display commission artwork in my portfolio(s), i.e. DeviantArt, my website, and other social media.</p>
-                    <p>You can also post my artwork to social media, as long as it is not used promotionally and proper credit is given.</p>
-                    <p>COMMISSIONED ARTWORK IS FOR PERSONAL USE ONLY. COMMERCIAL USE OF ANY KIND IS NOT ALLOWED.</p>
-                    <p>DO NOT RESELL MY ARTWORK OR CLAIM THAT YOU CREATED IT.</p>
-                </div>
-            </td>
-            <td>
-                <div class="card successCard">
-                    <p>Commissions are</p>
-                    <h2 class="flickering success" style="font-size: 200%;">OPEN!</h2>
-                </div>
-                <div class="card">
-                    <h2>ToS</h2>
-                    <p>Please read the Terms of Service before commissiong me.</p>
-                </div>
-                <div class="card signCard">
-                    <h2>Accessibility notice:</h2>
-                    <p>If this format is not accessible to you, a copy is available on Google Docs <a href="https://docs.google.com/document/d/1n_4nSqzhmKrMCQG9OwDd-HPAyRntM2ymu86URUHR8s8/mobilebasic"><u>here</u></a>.</p>
-                </div>
-            </td>
-        </tr>
-    </table>
-</body>
 <footer>
     <div style="height: 100px;"></div>
     <div style="text-align: center;">
@@ -108,14 +8,6 @@
                 <path class="flickering bullet" d="M 138.78804,0.62776778 C 128.18239,-4.3343422 116.84232,-7.9406122 104.98659,-9.9940525 c -1.45602,2.6324403 -3.15709,6.1731103 -4.32989,8.9897203 -12.602952,-1.89532 -25.090002,-1.89532 -37.461182,0 -1.17258,-2.81661 -2.91227,-6.35728 -4.38132,-8.9897203 -11.86853,2.0534403 -23.22164,5.6729603 -33.82728,10.64810028 C 3.5952209,32.979718 -2.2037191,64.502458 0.69576093,95.577595 14.88385,106.17292 28.633828,112.60928 42.151758,116.82103 c 3.33765,-4.59356 6.31438,-9.47663 8.87877,-14.62293 -4.88395,-1.8558 -9.56175,-4.145954 -13.98171,-6.804655 1.1726,-0.868719 2.31959,-1.776979 3.42772,-2.7115 26.95861,12.609225 56.24981,12.609225 82.886342,0 1.12117,0.934521 2.26792,1.842781 3.42773,2.7115 -4.43299,2.67173 -9.12358,4.961885 -14.00756,6.817905 2.56439,5.13304 5.52832,10.02935 8.87878,14.6227 13.53097,-4.21177 27.2937,-10.64787 41.48181,-21.256455 3.40211,-36.024007 -5.81176,-67.257257 -24.3556,-94.94982722 z M 54.703268,76.466666 c -8.09269,0 -14.72937,-7.555019 -14.72937,-16.755178 0,-9.20017 6.49496,-16.76822 14.72937,-16.76822 8.23465,0 14.8711,7.5548 14.72938,16.76822 0.0133,9.200159 -6.49473,16.755178 -14.72938,16.755178 z m 54.432872,0 c -8.09269,0 -14.729372,-7.555019 -14.729372,-16.755178 0,-9.20017 6.494742,-16.76822 14.729372,-16.76822 8.23443,0 14.8711,7.5548 14.72938,16.76822 0,9.200159 -6.49495,16.755178 -14.72938,16.755178 z" />
             </svg>
             <u>Discord</u>
-            </nobr>
-        </a>
-        <a href="https://bsky.app/profile/am3thystx.bsky.social">
-            <nobr>
-            <svg class="bullet" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                <path class="bullet" d="M 81.920482,49.040066 C 89.339001,33.696823 109.54205,5.1029554 128.32648,-8.9985011 141.87992,-19.173753 163.84,-27.046784 163.84,-1.9943821 c 0,5.0033051 -2.86859,42.0303631 -4.55105,48.0415611 -5.84821,20.899082 -27.15886,26.229501 -46.11504,23.003284 33.13503,5.639453 41.56427,24.319363 23.36034,42.999277 -34.57286,35.4768 -49.691252,-8.90126 -53.566893,-20.272542 -0.710157,-2.084626 -1.047355,-2.230584 -1.047355,-2.230584 0,0 -0.337197,0.145955 -1.047355,2.230584 C 76.998701,103.14848 61.880595,147.52767 27.305755,112.04974 9.1015421,93.369826 17.530497,74.688786 50.666095,69.050463 31.709353,72.27668 10.398413,66.946233 4.551054,46.047179 2.8685436,40.035416 8.5e-7,3.0083581 8.5e-7,-1.9943821 8.5e-7,-27.046784 21.960648,-19.173753 38.129499,-7.0352576 54.29835,5.1032379 74.502529,33.695693 81.920482,49.040066 Z" />
-            </svg>
-            <u>Bluesky</u>
             </nobr>
         </a>
         <a href="https://www.deviantart.com/am3thystx">
@@ -169,4 +61,3 @@
     </div>
     <div style="height: 100px;"></div>
 </footer>
-</html>

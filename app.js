@@ -87,6 +87,7 @@ function developerMode() {
     document.getElementById("JsDisabled").hidden = false;
     document.getElementById("usingMobile").hidden = false;
     document.getElementById("underConstruction").hidden = false;
+    document.getElementById("queerSafety").hidden = false;
 }
 
 
