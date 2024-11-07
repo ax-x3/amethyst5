@@ -35,6 +35,8 @@
 }
 body {
     background: #080808;
+    background-image: url(images/tilingBg.png);
+    background-size: 800px;
     image-rendering: pixelated;
     -webkit-text-size-adjust: none;
     font-family: "SF Pixelate";
@@ -43,7 +45,7 @@ body {
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
     -webkit-text-stroke: var(--se-light) 0.025em;
 }
-div:not(.paperCard):not(.flickering) {
+div:not(.noStatic):not(.flickering) {
     animation: static 1.5s infinite;
 }
 h1 {
@@ -116,7 +118,7 @@ img.bullet {
     float: right;
     transform: translate(14.5px, -14px);
     background-color: #555;
-    border: 2.5px solid #fff5;
+    border: 2px solid #fff5;
     border-radius: 0 12px 0 0;
     padding: 6px 24px;
     font-family: "SF Pixelate";
@@ -163,8 +165,8 @@ img.bullet {
     }
 }
 .card {
-    border: 2.5px solid #fff5;
-    background-color: #000;
+    border: 2px solid #fff5;
+    background-color: #000c;
     border-radius: 12px;
     padding: 12px;
     margin: 12px 3px
