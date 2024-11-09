@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="styles.css">
     <script src="app.js"></script>
     <link rel="icon" type="image/x-icon" href="amethystcrystal.png">
-    <title>ART</title>
+    <title>BLOG</title>
 </head>
-<body onload="adjustStylesForBrowser();">
+<body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime(); dismissCard('JsDisabled');">
     <button name="developer mode" onclick="developerMode()">Developer Mode (unhide everything)</button>
     <button name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
     <div class="flickering contentColumn">
@@ -22,81 +22,34 @@
     <div class="contentColumn" style="transform: translateX(18px);">
         <a href="index.html"><u>Index</u></a>
         <a href="about.html"><u>About</u></a>
-        <a href="art-n-commissions.html" style="opacity: 0.4;"><u>Art&Commissions</u></a>
+        <a href="art-n-commissions.html"><u>Art&Commissions</u></a>
         <a href="projects.html"><u>Projects</u></a>
         <a href="robotics.html"><u>Robotics</u></a>
-        <a href="blog.html"><u>Blog</u></a>
+        <a href="blog.html" style="opacity: 0.4;"><u>Blog</u></a>
         <a href="credits.html"><u>Credits</u></a>
     </div>
     <table class="contentColumn">
         <tr>
             <td style="width: 72%">
-                <div class="card">
-                    <h2>Commissions</h2>
-                    <p>I draw digitally <span class="highlight">as a hobby</span>. Most of my artwork is furry-related since that's what I have the most fun drawing.</p>
-                    <p>If the card on the right is <span class="success">green</span> and says '<span class="success">OPEN!</span>', then I'm available for commissions. Otherwise, I probably don't have time, or I'm burnt out or something.</p>
-                </div>
-                <div class="card paperCard noStatic">
-                    <h2 style="display: block; text-align: center;">
-                        <i>
-                            Terms
-                            <br>
-                            <img class="embellishment" style="width: 200px;" src="icons/embellishment.png">
-                            <span style="vertical-align: 70%;">of</span>
-                            <img class="embellishment" style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
-                            <br>
-                            Service
-                        </i>
-                    </h2>
-                    <br><br><br><br>
-                    <h2>General</h2>
-                    <p>I reserve the right to refuse a commission request and/or terminate a commission that was previously approved.</p>
-                    <br>
-                    <h2>Requests</h2>
-                    <p>There are limits to my abilities and to what I am willing to draw. Here are some (but not all) of the things that I will <i>not</i> accept:</p>
-                    <ul style="list-style-type: disc; padding: 0 0 0 48px;">
-                        <li>Sexual content</li>
-                        <li>Discriminatory content</li>
-                        <li>Gore</li>
-                        <li>Photorealism</li>
-                        <li>Extremely complex pieces</li>
-                        <li>Vague or no-ref prompts</li>
-                        <li>Copyrighted work</li>
-                    </ul>
-                    <p>My approval/denial of a commission is final for that specific commission.</p>
-                    <br>
-                    <h2>Contact</h2>
-                    <p>You can reach out to me on Discord with any questions. Discord is my preferred method of contact, as it is easy for me to find your references and the description of your commission.</p>
-                    <p>Please make your commission request as clear as possible to avoid any misunderstanding. Only commission me if you can make your requests in English. You can use a translation tool, but beware of mistranslations.</p>
-                    <p>I will try my best to keep you updated throughout the commissioning process. Do understand, however, that unforeseeable circumstances can emerge and cause delay or cancellation of a commission.</p>
-                    <br>
-                    <h2>Payment</h2>
-                    <p>Payments will be made through PayPal. For particularly large commissions, or if I haven't gotten to know you prior to the commission, one-half of the fee must be paid upfront. The other half will be paid after you recieve the final artwork.</p>
-                    <p>We can discuss payment as long as the commission is less than halfway complete.</p>
-                    <br>
-                    <h2>Usage</h2>
-                    <p>I reserve the right to display commission artwork in my portfolio(s), i.e. DeviantArt, my website, and other social media.</p>
-                    <p>You can also post my artwork to social media, as long as it is not used promotionally and proper credit is given.</p>
-                    <p>COMMISSIONED ARTWORK IS FOR PERSONAL USE ONLY. COMMERCIAL USE OF ANY KIND IS NOT ALLOWED.</p>
-                    <p>DO NOT RESELL MY ARTWORK OR CLAIM THAT YOU CREATED IT.</p>
-                </div>
+                
             </td>
             <td>
-                <div class="card successCard">
-                    <p>Commissions are</p>
-                    <h2 class="flickering success" style="font-size: 200%;">OPEN!</h2>
-                </div>
-                <div class="card">
-                    <h2>ToS</h2>
-                    <p>Please read the Terms of Service before commissiong me.</p>
-                </div>
-                <div class="card signCard">
-                    <h2>Accessibility notice:</h2>
-                    <p>If this format is not accessible to you, a copy is available on Google Docs <a href="https://docs.google.com/document/d/1n_4nSqzhmKrMCQG9OwDd-HPAyRntM2ymu86URUHR8s8/mobilebasic"><u>here</u></a>.</p>
-                </div>
+                
             </td>
         </tr>
     </table>
+    <div class="contentColumn" style="text-align: center;">
+        <div style="height: 50px;"></div>
+        <div class="card signCard">
+            <div style="height: 100px;"></div>
+            <h1 class="flickering">blog.html</h1>
+            <br><br>
+            <h2>is coming soon!</h2>
+            <div style="height: 40px;"></div>
+            <a href="index.html"><p><u>&lt;- Go Home</u></p></a>
+        <div style="height: 70px;"></div>
+    </div>
+    </div>
 </body>
 <footer>
     <div style="height: 100px;"></div>
