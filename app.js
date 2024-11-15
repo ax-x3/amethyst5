@@ -83,6 +83,14 @@ function dismissCard(cardId) {
     document.getElementById(cardId).hidden = true;
 }
 
+function revealContent(contentId) {
+    if (document.getElementById(contentId).hidden == true) {
+        document.getElementById(contentId).hidden = false;
+    } else {
+        document.getElementById(contentId).hidden = true;
+    }
+}
+
 function developerMode() {
     document.getElementById("JsDisabled").hidden = false;
     document.getElementById("usingMobile").hidden = false;
@@ -97,7 +105,7 @@ function toggleFlickering() {
         root.style.setProperty('--lu-flicker-off', 'brightness(0.7)');
         flickeringEnabled = false;
     } else {
-        root.style.setProperty('--lu-flicker-on', 'brightness(1.1)');
+        root.style.setProperty('--lu-flicker-on', 'brightness(1.05)');
         root.style.setProperty('--lu-flicker-off', 'brightness(0.9)');
         flickeringEnabled = true;
     }
