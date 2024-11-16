@@ -14,17 +14,17 @@
 }
 :root {
     --se-bright: #f4e0fd;
-    --se-light: #db62eb;
+    --se-link: #e7a4f0;
+    --se-light: #ca50da;
     --se-regular: #9a10c8;
     --se-moody: #611685;
     --se-success: #0c0;
     --se-success-pop: #030;
     --se-warning: #f00;
     --se-warning-pop: #500;
-    --se-faint: #222;
     /* FIND DEFAULT DROPSHADOW COLORS IN app.js. THESE ARE PREADJUSTED.*/
-    --se-bright-dropshadow: #f4e0fd33;
-    --se-light-dropshadow: #db62eb2c;
+    --se-bright-dropshadow: #f4e0fdf3;
+    --se-light-dropshadow: #ca50da21;
     --se-regular-dropshadow: #9a10c836;
     --lu-flicker-off: brightness(0.9);
     --lu-flicker-on: brightness(1.05);
@@ -42,11 +42,10 @@ body {
     font-family: "SF Pixelate";
     font-size: 120%;
     color: var(--se-bright);
-    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
-    -webkit-text-stroke: var(--se-light) 0.025em;
+    text-shadow: 0.1em 0.1em 0 #000b, 0 0 10px var(--se-bright-dropshadow);
 }
 div:not(.noStatic):not(.flickering) {
-    animation: static 1.5s infinite;
+    animation: static 3s infinite;
 }
 h1 {
     margin: 0;
@@ -54,7 +53,7 @@ h1 {
     display: inline;
     font-size: 250%;
     color: var(--se-regular);
-    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-regular-dropshadow);
+    text-shadow: 0.1em 0.1em 0 #000b, 0 0 24px var(--se-regular-dropshadow);
     -webkit-text-stroke: var(--se-bright) 0.0125em;
 } 
 h2 {
@@ -63,8 +62,8 @@ h2 {
     display: inline;
     font-size: 120%;
     color: var(--se-light);
-    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-light-dropshadow);
-    -webkit-text-stroke: var(--se-regular) 0.025em;
+    text-shadow: 0.1em 0.1em 0 #000b, 0 0 16px var(--se-light-dropshadow);
+    -webkit-text-stroke: var(--se-regular) 0.05em;
 }
 p {
     margin: 8px 0 16px 0;
@@ -76,9 +75,9 @@ table, tr {
 }
 a {
     text-decoration: inherit;
-    color: var(--se-regular);
-    -webkit-text-stroke: var(--se-bright) 0.025em;
-    text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-bright-dropshadow);
+    color: var(--se-link);
+    text-shadow: 0.1em 0.1em 0 #000b, 0 0 10px var(--se-light-dropshadow);
+    -webkit-text-stroke: var(--se-regular) 0.025em;
     &:hover {
         opacity: 0.7;
         cursor: pointer;
@@ -106,8 +105,6 @@ svg.bullet {
 path.bullet {
     display: inline;
     fill: var(--se-bright); 
-    stroke-width: 0.25em; 
-    stroke: var(--se-regular);
 }
 img.bullet {
     filter: drop-shadow(0.1em 0.1em 0 #000b) drop-shadow(0 0 10px var(--se-light));
@@ -151,7 +148,7 @@ img.bullet {
     background-color: var(--se-warning-pop) !important;
 }
 .signCard {
-    background-color: var(--se-faint) !important;
+    background-color: #222 !important;
 }
 .paperCard {
     background-color: #eed !important;
@@ -174,7 +171,7 @@ img.bullet {
 .highlight {
     color: var(--se-light);
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-light-dropshadow);
-    -webkit-text-stroke: var(--se-regular) 0.05em;
+    -webkit-text-stroke: var(--se-regular) 0.025em;
 }
 .flickering {
     animation: flickering 0.08s infinite;
@@ -190,39 +187,39 @@ img.bullet {
 @keyframes static {
     0% {
         mask-image: url(animationResources/static0.png);
-        mask-size: 50px;
+        mask-size: 40px;
     }
     12.5% {
         mask-image: url(animationResources/static1.png);
-        mask-size: 50px;
+        mask-size: 40px;
     }
     25% {
         mask-image: url(animationResources/static2.png);
-        mask-size: 50px;
+        mask-size: 40px;
     }
     37.5% {
         mask-image: url(animationResources/static3.png);
-        mask-size: 50px;
+        mask-size: 40px;
     }
     50% {
         mask-image: url(animationResources/static4.png);
-        mask-size: 50px;
+        mask-size: 40px;
     }
     62.5% {
         mask-image: url(animationResources/static5.png);
-        mask-size: 50px;
+        mask-size: 40px;
     }
     75% {
         mask-image: url(animationResources/static6.png);
-        mask-size: 50px;
+        mask-size: 40px;
     }
     87.5% {
         mask-image: url(animationResources/static7.png);
-        mask-size: 50px;
+        mask-size: 40px;
     }
     100% {
         mask-image: url(animationResources/static0.png);
-        mask-size: 50px;
+        mask-size: 40px;
     }
 }
 @keyframes fadeIn {

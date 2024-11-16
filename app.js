@@ -41,7 +41,7 @@ function adjustStylesForBrowser() {
     if (!stylesNeedChanging) {
         // Set styles to default.
         root.style.setProperty('--se-bright-dropshadow', '#f4e0fd');
-        root.style.setProperty('--se-light-dropshadow', '#db62eb');
+        root.style.setProperty('--se-light-dropshadow', '#ca50da');
         root.style.setProperty('--se-regular-dropshadow', '#9a10c8');
     }
 }
