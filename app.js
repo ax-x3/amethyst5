@@ -105,7 +105,7 @@ function toggleFlickering() {
         root.style.setProperty('--lu-flicker-off', 'brightness(0.7)');
         flickeringEnabled = false;
     } else {
-        root.style.setProperty('--lu-flicker-on', 'brightness(1.05)');
+        root.style.setProperty('--lu-flicker-on', 'brightness(1.1)');
         root.style.setProperty('--lu-flicker-off', 'brightness(0.9)');
         flickeringEnabled = true;
     }

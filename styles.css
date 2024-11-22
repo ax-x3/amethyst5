@@ -27,7 +27,7 @@
     --se-light-dropshadow: #ca50da21;
     --se-regular-dropshadow: #9a10c836;
     --lu-flicker-off: brightness(0.9);
-    --lu-flicker-on: brightness(1.05);
+    --lu-flicker-on: brightness(1.1);
 }
 .contentColumn {
     width: 1030px;
@@ -163,7 +163,7 @@ img.bullet {
 }
 .card {
     border: 2px solid #fff5;
-    background-color: #000c;
+    background-color: #000;
     border-radius: 12px;
     padding: 12px;
     margin: 12px 3px
@@ -173,8 +173,18 @@ img.bullet {
     text-shadow: 0.1em 0.1em 0 #000b, 0.1em 0.1em 0.5em var(--se-light-dropshadow);
     -webkit-text-stroke: var(--se-regular) 0.025em;
 }
+.thumbnail {
+    width: calc((100% + 24px) / 2);
+    transform: translate(-12px, -12px) scale(2);
+    transform-origin: 0 0;
+    border-radius: 5px 5px 0 0;
+    mask-image: url(images/fadeToBlack.png);
+    mask-type: alpha;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
 .flickering {
-    animation: flickering 0.08s infinite;
+    animation: flickering 0.075s infinite;
 }
 @keyframes flickering {
     from {
@@ -187,39 +197,39 @@ img.bullet {
 @keyframes static {
     0% {
         mask-image: url(animationResources/static0.png);
-        mask-size: 40px;
+        mask-size: 50px;
     }
     12.5% {
         mask-image: url(animationResources/static1.png);
-        mask-size: 40px;
+        mask-size: 50px;
     }
     25% {
         mask-image: url(animationResources/static2.png);
-        mask-size: 40px;
+        mask-size: 50px;
     }
     37.5% {
         mask-image: url(animationResources/static3.png);
-        mask-size: 40px;
+        mask-size: 50px;
     }
     50% {
         mask-image: url(animationResources/static4.png);
-        mask-size: 40px;
+        mask-size: 50px;
     }
     62.5% {
         mask-image: url(animationResources/static5.png);
-        mask-size: 40px;
+        mask-size: 50px;
     }
     75% {
         mask-image: url(animationResources/static6.png);
-        mask-size: 40px;
+        mask-size: 50px;
     }
     87.5% {
         mask-image: url(animationResources/static7.png);
-        mask-size: 40px;
+        mask-size: 50px;
     }
     100% {
         mask-image: url(animationResources/static0.png);
-        mask-size: 40px;
+        mask-size: 50px;
     }
 }
 @keyframes fadeIn {
