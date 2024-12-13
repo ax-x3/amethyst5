@@ -45,7 +45,7 @@ body {
     text-shadow: 0.1em 0.1em 0 #000b, 0 0 10px var(--se-bright-dropshadow);
 }
 div:not(.noStatic):not(.flickering) {
-    animation: static 3s infinite;
+    animation: static 2s infinite;
 }
 h1 {
     margin: 0;
@@ -197,39 +197,39 @@ img.bullet {
 @keyframes static {
     0% {
         mask-image: url(animationResources/static0.png);
-        mask-size: 50px;
+        mask-size: 60px;
     }
     12.5% {
         mask-image: url(animationResources/static1.png);
-        mask-size: 50px;
+        mask-size: 60px;
     }
     25% {
         mask-image: url(animationResources/static2.png);
-        mask-size: 50px;
+        mask-size: 60px;
     }
     37.5% {
         mask-image: url(animationResources/static3.png);
-        mask-size: 50px;
+        mask-size: 60px;
     }
     50% {
         mask-image: url(animationResources/static4.png);
-        mask-size: 50px;
+        mask-size: 60px;
     }
     62.5% {
         mask-image: url(animationResources/static5.png);
-        mask-size: 50px;
+        mask-size: 60px;
     }
     75% {
         mask-image: url(animationResources/static6.png);
-        mask-size: 50px;
+        mask-size: 60px;
     }
     87.5% {
         mask-image: url(animationResources/static7.png);
-        mask-size: 50px;
+        mask-size: 60px;
     }
     100% {
         mask-image: url(animationResources/static0.png);
-        mask-size: 50px;
+        mask-size: 60px;
     }
 }
 @keyframes fadeIn {
