@@ -23,7 +23,7 @@
     --se-warning: #f00;
     --se-warning-pop: #500;
     /* FIND DEFAULT DROPSHADOW COLORS IN app.js. THESE ARE PREADJUSTED.*/
-    --se-bright-dropshadow: #f4e0fdf3;
+    --se-bright-dropshadow: #f4e0fd2a;
     --se-light-dropshadow: #ca50da21;
     --se-regular-dropshadow: #9a10c836;
     --lu-flicker-off: brightness(0.9);
@@ -198,38 +198,47 @@ img.bullet {
     0% {
         mask-image: url(animationResources/static0.png);
         mask-size: 60px;
+        mask-mode: luminance;
     }
     12.5% {
         mask-image: url(animationResources/static1.png);
         mask-size: 60px;
+        mask-mode: luminance;
     }
     25% {
         mask-image: url(animationResources/static2.png);
         mask-size: 60px;
+        mask-mode: luminance;
     }
     37.5% {
         mask-image: url(animationResources/static3.png);
         mask-size: 60px;
+        mask-mode: luminance;
     }
     50% {
         mask-image: url(animationResources/static4.png);
         mask-size: 60px;
+        mask-mode: luminance;
     }
     62.5% {
         mask-image: url(animationResources/static5.png);
         mask-size: 60px;
+        mask-mode: luminance;
     }
     75% {
         mask-image: url(animationResources/static6.png);
         mask-size: 60px;
+        mask-mode: luminance;
     }
     87.5% {
         mask-image: url(animationResources/static7.png);
         mask-size: 60px;
+        mask-mode: luminance;
     }
     100% {
         mask-image: url(animationResources/static0.png);
         mask-size: 60px;
+        mask-mode: luminance;
     }
 }
 @keyframes fadeIn {
