@@ -12,6 +12,13 @@
     font-family: "SF Pixelate";
     src: url(fonts/sf-pixelate/SFPixelate.ttf) format("truetype");
 }
+#devToolbar{
+    background-color: white;
+    font: initial;
+    animation: none;
+    text-shadow: none;
+    color: black;
+}
 :root {
     --se-bright: #f4e0fd;
     --se-link: #e7a4f0;

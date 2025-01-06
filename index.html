@@ -9,11 +9,17 @@
     <title>AMETHYST</title>
 </head>
 <body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime(); dismissCard('JsDisabled');">
-    <button name="developer mode" onclick="developerMode()">Developer Mode (unhide everything)</button>
-    <button name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
-    <form style="display: inline-block;" action="https://am3thystx.pages.dev/">
-        <button>Href to site</button>
-    </form>
+    <div id="devToolbar">
+        Developer toolbar >>> you can ignore this (or mess around idc) >>>
+        <button name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
+        <button name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
+        <form style="display: inline-block;" action="https://am3thystx.pages.dev/">
+            <button>Href to deployment</button>
+        </form>
+        <form style="display: inline-block;" action="http://localhost:5500/projects.html">
+            <button>Href to localhost</button>
+        </form>
+    </div>
     <div class="flickering contentColumn">
         <div style="transform: translateY(-4px);">
             <a href="index.html">
@@ -91,6 +97,12 @@
                     <img class="noStatic" src="images/fadeToBlack.png" style="position: absolute; z-index: 100; width: 680px; transform: translateX(20px) translateY(-1px);">
                     <div style="margin: 0 0 0 24px; max-height: 585px; overflow-y: scroll;">
                         <ul>
+                            <div style="margin: 30px 0; text-align: center;">
+                                <img style="width: 200px;" src="icons/embellishment.png">
+                                <span class="highlight" style="vertical-align: 100%;">January 2025</span>
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
+                            </div>
+                            <li><i class="highlight">[05]</i> Labeled Developer Toolbar. It'll either go away or be integrated better in the future. Added "Last Updated" card. Added "To Do" card.</li>
                             <div style="margin: 30px 0; text-align: center;">
                                 <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 100%;">December 2024</span>
@@ -199,6 +211,10 @@
                         </li>
                     </ul>
                 </div>
+                <div class="card">
+                    <p>Last updated</p>
+                    <h2>Jan/05/2025</h2>
+                </div>
                 <div class="card successCard">
                     <h2 class="success">Site status:</h2>
                     <p>If you can read this, the site is <span class="success">ONLINE</span>.</p>
@@ -208,6 +224,17 @@
                     <p>Available until this site is complete. It can be found at</p>
                     <p><a><u>amethystx.pages.dev</u></a></p>
                     <img style="opacity: 0.8; position: absolute; transform: translate(30px, -80px); scale: 1.8;" src="images/redX.png">
+                </div>
+                <div class="card">
+                    <h2>To Do</h2>
+                    <ul>
+                        <li>Make "last updated" card show time since.</li>
+                        <li>Create/remove robotics page.</li>
+                        <li>Replace blog page.</li>
+                        <li>Buy a real domain??</li>
+                        <li>Pick a better header typeface.</li>
+                        <li>Add "news" card.</li>
+                    </ul>
                 </div>
             </td>
         </tr>
