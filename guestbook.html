@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="styles.css">
     <script src="app.js"></script>
     <link rel="icon" type="image/x-icon" href="amethystcrystal.png">
-    <title>ABOUT</title>
+    <title>ROBOTICS</title>
 </head>
-<body onload="adjustStylesForBrowser();">
+<body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime(); dismissCard('JsDisabled');">
     <div id="devToolbar">
         Developer toolbar >>> you can ignore this (or mess around idc) >>>
         <button name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
@@ -30,55 +30,45 @@
     </div>
     <div class="contentColumn" style="transform: translateX(18px);">
         <a href="index.html"><u>Index</u></a>
-        <a href="about.html" style="opacity: 0.4;"><u>About</u></a>
+        <a href="about.html"><u>About</u></a>
         <a href="art-n-commissions.html"><u>Art&Commissions</u></a>
         <a href="projects.html"><u>Projects</u></a>
-        <a href="guestbook.html"><u>Guestbook</u></a>
+        <a href="guestbook.html" style="opacity: 0.4;"><u>Guestbook</u></a>
         <a href="blog.html"><u>Blog</u></a>
         <a href="credits.html"><u>Credits</u></a>
     </div>
     <table class="contentColumn">
         <tr>
             <td style="width: 72%">
-                <div class="card">
-                    <h2>About me</h2>
-                    <br><br>
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="images/aiviTheHyena.png" style="width: 180px; border: 2px solid var(--se-light); background-color: var(--se-moody); margin-right: 20px;">
-                            </td>
-                            <td>
-                                <p>You already know my name. I'm <span class="highlight">Amethyst</span>. I'm a 16 year old living in the eastern United States waiting for the weekend to arrive. I like to <span class="highlight">draw</span> stuff, <span class="highlight">design</span> stuff, and <span class="highlight">build</span> stuff. Honestly, I just love creating things.</p>
-                            </td>
-                        </tr>
-                    </table>
-                    <p>And, of course, I like to make websites. It's so cool to me that you can leave random stuff on the internet for strangers to come across.</p>
+                <div class="card warningCard" id="usingMobile" hidden>
+                    <button class="dismissCard" name="dismiss" onclick="dismissCard('usingMobile')">x</button>
+                    <h2>Desktop viewing only</h2>
+                    <p>You seem to be on a mobile device. Open this page <span class="highlight">on a desktop computer</span> for the proper experience.</p>
                 </div>
-                <br>
-                <div>
-                    <h2>This web site</h2>
-                    <p>This is the <span class="highlight">fourth</span> iteration of my personal website. And as of its creation, it's also my favorite! It's inspired by several indie web sites I saw on Neocities. See the <a href="credits.html"><u>credits</u></a> for more details.</p>
-                    <p>Ever since I took a <span class="highlight">JavaScript & HTML</span> class in school, I've enjoyed writing code from the ground up and watching a site grow. This is the culmination of all the skills I've collected over the span of pretty much <span class="highlight">one year</span>.</p>
-                    <p>I used to keep the older verions of my site running whenever I updated, but I found it to be a hassle and not worth the time. They're all publicly available on <a href="https://github.com/ax-x3"><u>GitHub</u></a> anyway.</p>
-                </div> 
+                <div class="card">
+                    <h2>Guestbook</h2>
+                    <p>Leave your mark! Write whatever you want. <span class="highlight">Inappropiate entries & PII will be removed.</span></p>
+                    <br><br>
+                    <div class="noStatic" style="text-align:center;">
+                        <a href="https://docs.google.com/document/d/1gX5HDlQ2IhSc7PpdqXr2eqlmw5wiw0_aTIF0zo_jJJs/edit?usp=sharing">
+                            <span class="mainAction noStatic">
+                                <h2>Visit Guestbook</h2>
+                            </span>
+                        </a> 
+                        <p class="caption">docs.google.com</p>                 
+                    </div>
+                    <br>
+                </div>
             </td>
             <td>
-                <div class="card">
-                    <div style="font-size: 80%; font-family: 'Courier New', Courier, monospace; font-weight: bolder; color: var(--se-regular)">
-                        <nobr>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Z<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z<br>
-                            &nbsp;&nbsp;&nbsp;|\&nbsp;z&nbsp;&nbsp;&nbsp;&nbsp;_,,,---,,_<br>
-                            &nbsp;&nbsp;&nbsp;/,`.-'`'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-.&nbsp;&nbsp;;-;;,_<br>
-                            &nbsp;_/,4-&nbsp;&nbsp;)&nbsp;)-,_..;\&nbsp;(&nbsp;&nbsp;`'-'<br>
-                            '----''(_/--'&nbsp;&nbsp;`-'\_)<br>
-                        </nobr>
-                    </div>
+                <div class="card signCard">
+                    <h2>Welcome!</h2>
+                    <p>For now, the guestbook is only available off-site on Google Docs.</p>
                 </div>
             </td>
         </tr>
     </table>
+    </div>
 </body>
 <footer>
     <div style="height: 100px;"></div>
@@ -92,7 +82,7 @@
             <u>Discord</u>
             </nobr>
         </a>
-        <a href="https://bsky.app/profile/am3thystx.pages.dev">
+        <a href="https://bsky.app/profile/am3thystx.bsky.social">
             <nobr>
             <svg class="bullet" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
                 <path class="bullet" d="M 81.920482,49.040066 C 89.339001,33.696823 109.54205,5.1029554 128.32648,-8.9985011 141.87992,-19.173753 163.84,-27.046784 163.84,-1.9943821 c 0,5.0033051 -2.86859,42.0303631 -4.55105,48.0415611 -5.84821,20.899082 -27.15886,26.229501 -46.11504,23.003284 33.13503,5.639453 41.56427,24.319363 23.36034,42.999277 -34.57286,35.4768 -49.691252,-8.90126 -53.566893,-20.272542 -0.710157,-2.084626 -1.047355,-2.230584 -1.047355,-2.230584 0,0 -0.337197,0.145955 -1.047355,2.230584 C 76.998701,103.14848 61.880595,147.52767 27.305755,112.04974 9.1015421,93.369826 17.530497,74.688786 50.666095,69.050463 31.709353,72.27668 10.398413,66.946233 4.551054,46.047179 2.8685436,40.035416 8.5e-7,3.0083581 8.5e-7,-1.9943821 8.5e-7,-27.046784 21.960648,-19.173753 38.129499,-7.0352576 54.29835,5.1032379 74.502529,33.695693 81.920482,49.040066 Z" />
@@ -122,6 +112,14 @@
                 <path class="bullet" d="M 81.920002,-28.5 A 81.920004,81.920004 0 0 0 0,53.420004 81.920004,81.920004 0 0 0 81.920002,135.34001 81.920004,81.920004 0 0 0 163.84,53.420004 81.920004,81.920004 0 0 0 81.920002,-28.5 Z m 38.061878,46.296253 c 14.95505,0 24.10207,5.419339 25.29,18.6225 l -14.64313,1.77625 c -0.64396,-6.315599 -4.39182,-8.959375 -11.45937,-8.959375 -6.47559,0 -10.415,2.939942 -10.415,7.935625 0,4.395721 1.92003,7.039219 8.41562,8.523125 l 9.375,2.043751 c 12.5872,2.931813 19.375,9.103753 19.375,20.975 0,14.707063 -12.33103,20.270625 -30.52187,20.270625 -25.390393,0 -34.206298,-11.439404 -38.850003,-25.6825 L 71.904377,48.634378 C 68.3846,37.90306 64.300808,29.547503 51.405626,29.547503 c -8.955431,0 -18.05875,6.455896 -18.05875,24.498751 0,14.103104 7.183895,22.914375 17.33125,22.914375 11.435275,0 19.0825,-8.52375 19.0825,-8.52375 l 4.688126,12.771248 -0.0125,0.06438 c 0,0 -7.939176,7.771251 -24.498126,7.771251 -20.562694,0 -32.018125,-12.087541 -32.018125,-34.378127 0,-23.226524 11.455217,-36.829621 32.601875,-36.765625 19.542759,0 29.398268,7.06371 35.561876,26.1225 l 4.815625,14.666875 c 3.519777,10.72732 9.683313,18.499376 24.494373,18.499376 10.01937,0 15.31125,-2.248095 15.31125,-7.68375 0,-4.251731 -2.47609,-7.375613 -9.93562,-9.1475 l -9.935,-2.355625 C 98.67115,55.082064 93.855001,48.774369 93.855001,38.775003 c 0,-15.974985 12.895719,-20.97875 26.126879,-20.97875 z" />
             </svg>
             <u>Last.fm</u>
+            </nobr>
+        </a>
+        <a href="https://open.spotify.com/user/31e7sfq5u2g7cngl24jtyt2fxwle">
+            <nobr>
+            <svg class="bullet" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                <path class="bullet" d="M 81.919995,-28.5 C 36.675335,-28.5 5.0000001e-6,8.17534 5.0000001e-6,53.42 5.0000001e-6,98.66466 36.675335,135.34 81.919995,135.34 127.16466,135.34 163.84,98.66466 163.84,53.42 163.84,8.18094 127.16466,-28.4944 81.919995,-28.5 Z M 119.48973,89.64815 c -1.47015,2.41485 -4.61726,3.16948 -7.02092,1.69933 C 93.233965,79.59192 69.018505,76.93672 40.504425,83.44896 c -2.75023,0.63165 -5.48928,-1.09003 -6.11536,-3.84027 -0.63165,-2.75023 1.08445,-5.48928 3.84026,-6.11535 31.20284,-7.12713 57.97286,-4.05827 79.566655,9.13389 2.40367,1.48133 3.16948,4.61726 1.69375,7.02092 z m 10.0227,-22.29812 c -1.85027,3.00738 -5.78556,3.94647 -8.78733,2.10181 C 98.712065,55.91869 65.139125,52.00018 39.095765,59.90428 c -3.37629,1.02296 -6.94265,-0.88319 -7.97119,-4.25391 -1.01737,-3.37631 0.88879,-6.93706 4.2595,-7.9656 29.74945,-9.0277 66.737825,-4.6564 92.020955,10.88353 3.00737,1.85025 3.95765,5.77996 2.1074,8.78173 z M 130.37326,44.1184 C 103.96658,28.43873 60.410065,26.99654 35.199615,34.64353 c -4.0471,1.22977 -8.32895,-1.05649 -9.55315,-5.10358 -1.22418,-4.0471 1.05649,-8.32895 5.10918,-9.55873 28.93891,-8.78173 77.040015,-7.088 107.437895,10.9562 3.63903,2.1633 4.83526,6.86441 2.67757,10.49783 -2.15211,3.64462 -6.8644,4.84645 -10.49785,2.68315 z" />
+            </svg>
+            <u>Spotify</u>
             </nobr>
         </a>
         <a href="https://makerworld.com/en/@am3thystx">

@@ -33,6 +33,7 @@
     --se-bright-dropshadow: #f4e0fd2a;
     --se-light-dropshadow: #ca50da21;
     --se-regular-dropshadow: #9a10c836;
+    /* Flicker constants */
     --lu-flicker-off: brightness(0.9);
     --lu-flicker-on: brightness(1.1);
 }
@@ -93,6 +94,18 @@ a {
         opacity: 0.4;
     }
 }
+.mainAction {
+    background-color: var(--se-light);
+    /* width: fit-content; */
+    padding: 20px 27px 10px 20px;
+    border: 2px solid #fff5;
+    border-radius: 12px;
+}
+.mainAction h2 {
+    color: var(--se-bright);
+    text-shadow: 0.1em 0.1em 0 #000b, 0 0 10px var(--se-bright-dropshadow);
+    -webkit-text-stroke: var(--se-light) 0.025em;
+}
 ul {
     margin: 16px 0 0 6px;
     padding: 0;
@@ -137,6 +150,10 @@ img.bullet {
     &:active {
         background-color: var(--se-warning);
     }
+}
+.caption {
+    opacity: 0.6; 
+    font-size: 75%;
 }
 .success{
     color: var(--se-success);
