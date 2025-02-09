@@ -40,30 +40,24 @@
     <table class="contentColumn">
         <tr>
             <td style="width: 72%">
-                <div class="card warningCard" id="usingMobile" hidden>
+                <!-- <div class="card warningCard" id="usingMobile" hidden>
                     <button class="dismissCard" name="dismiss" onclick="dismissCard('usingMobile')">x</button>
                     <h2>Desktop viewing only</h2>
                     <p>You seem to be on a mobile device. Open this page <span class="highlight">on a desktop computer</span> for the proper experience.</p>
-                </div>
-                <div class="card">
+                </div> -->
+                <div class="card noStatic">
                     <h2>Guestbook</h2>
-                    <p>Leave your mark! Write whatever you want. <span class="highlight">Inappropiate entries & PII will be removed.</span></p>
-                    <br><br>
-                    <div class="noStatic" style="text-align:center;">
-                        <a href="https://docs.google.com/document/d/1gX5HDlQ2IhSc7PpdqXr2eqlmw5wiw0_aTIF0zo_jJJs/edit?usp=sharing">
-                            <span class="mainAction noStatic">
-                                <h2>Visit Guestbook</h2>
-                            </span>
-                        </a> 
-                        <p class="caption">docs.google.com</p>                 
-                    </div>
-                    <br>
+                    <iframe class="noStatic" id="guestbookEmbed" src="https://poisonaivi.atabook.org/"></iframe>
                 </div>
             </td>
             <td>
                 <div class="card signCard">
                     <h2>Welcome!</h2>
-                    <p>For now, the guestbook is only available off-site on Google Docs.</p>
+                    <p>Leave your mark! Write whatever you want. <span class="highlight">Inappropiate entries & PII will be removed.</span></p>
+                </div>
+                <div class="card">
+                    <h2>Retired Guestbook</h2>
+                    <p>New guestbook is on-site! This <a href="https://docs.google.com/document/d/1gX5HDlQ2IhSc7PpdqXr2eqlmw5wiw0_aTIF0zo_jJJs/edit?usp=sharing"><u>old guestbook</u></a> will no longer be updated.</p>
                 </div>
             </td>
         </tr>
