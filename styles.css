@@ -118,7 +118,7 @@ li {
 #guestbookEmbed {
     border: none;
     width: 100%;
-    height: 90vh;
+    height: 700px;
 }
 svg {
     filter: drop-shadow(0 0 10px var(--se-bright));
