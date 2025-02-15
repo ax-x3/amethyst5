@@ -37,6 +37,8 @@
         <a href="blog.html"><u>Blog</u></a>
         <a href="credits.html"><u>Credits</u></a>
     </div>
+    <audio id="squeak" src="sounds/squeak.mp3" preload="auto"></audio>
+    <button onclick="playSound('squeak')" style="position: absolute; scale: 1.5; transform: translate(800px, 1px); opacity: 0.4;"><img src="images/amogusRed.png"></button>
     <table class="contentColumn">
         <tr>
             <td style="width: 72%">
@@ -71,13 +73,13 @@
                     <br>
                     <div style="width:fit-content; margin: 0 auto;">
                         <svg style="width: 75px; transform: translateX(-15px);" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                            <path class="bullet" d="m 51.4975,-28.5 a 15,15 0 0 0 -15,15 v 133.84 a 15,15 0 0 0 15,15 h 60.845 a 15,15 0 0 0 15,-15 V -13.5 a 15,15 0 0 0 -15,-15 z M 50.558125,0.421875 H 95.086875 102.21 113.28187 V 106.41813 H 109.205 c 0,-7.633321 -0.82888,-16.881326 -4.65438,-24.65438 C 100.72514,73.990696 93.279239,67.806875 81.92,67.806875 c -11.359241,0 -18.803257,6.183821 -22.62875,13.956875 C 55.465756,89.536804 54.635,98.784808 54.635,106.41813 H 50.558125 Z M 81.92,25.779375 c -9.892263,0 -17.980625,8.088362 -17.980625,17.980625 0,9.892262 8.088362,17.98 17.980625,17.98 9.892263,0 17.980625,-8.087738 17.980625,-17.98 0,-9.892263 -8.088362,-17.980625 -17.980625,-17.980625 z m 0,6.4 c 6.433457,0 11.58,5.147167 11.58,11.580625 0,6.433457 -5.146543,11.58 -11.58,11.58 -6.433458,0 -11.58,-5.146543 -11.58,-11.58 0,-6.433458 5.146542,-11.580625 11.58,-11.580625 z m 0,42.0275 c 9.21824,0 13.816454,4.140498 16.88875,10.383125 3.0723,6.242626 3.99625,14.701675 3.99625,21.82813 H 101.37188 94.131875 61.035 C 61.035,99.291675 61.960828,90.832626 65.033125,84.59 68.105422,78.347373 72.701759,74.206875 81.92,74.206875 Z" />
+                            <path class="bullet flickering" d="m 51.4975,-28.5 a 15,15 0 0 0 -15,15 v 133.84 a 15,15 0 0 0 15,15 h 60.845 a 15,15 0 0 0 15,-15 V -13.5 a 15,15 0 0 0 -15,-15 z M 50.558125,0.421875 H 95.086875 102.21 113.28187 V 106.41813 H 109.205 c 0,-7.633321 -0.82888,-16.881326 -4.65438,-24.65438 C 100.72514,73.990696 93.279239,67.806875 81.92,67.806875 c -11.359241,0 -18.803257,6.183821 -22.62875,13.956875 C 55.465756,89.536804 54.635,98.784808 54.635,106.41813 H 50.558125 Z M 81.92,25.779375 c -9.892263,0 -17.980625,8.088362 -17.980625,17.980625 0,9.892262 8.088362,17.98 17.980625,17.98 9.892263,0 17.980625,-8.087738 17.980625,-17.98 0,-9.892263 -8.088362,-17.980625 -17.980625,-17.980625 z m 0,6.4 c 6.433457,0 11.58,5.147167 11.58,11.580625 0,6.433457 -5.146543,11.58 -11.58,11.58 -6.433458,0 -11.58,-5.146543 -11.58,-11.58 0,-6.433458 5.146542,-11.580625 11.58,-11.580625 z m 0,42.0275 c 9.21824,0 13.816454,4.140498 16.88875,10.383125 3.0723,6.242626 3.99625,14.701675 3.99625,21.82813 H 101.37188 94.131875 61.035 C 61.035,99.291675 61.960828,90.832626 65.033125,84.59 68.105422,78.347373 72.701759,74.206875 81.92,74.206875 Z" />
                         </svg>
                         <svg style="width: 75px; scale: 0.75; transform: translateX(-25px);" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                            <path class="bullet" d="M 81.92,-28.5 V 12.46 H 0 v 81.92 h 81.92 v 40.96 l 81.92,-81.92 z" />
+                            <path class="bullet flickering" d="M 81.92,-28.5 V 12.46 H 0 v 81.92 h 81.92 v 40.96 l 81.92,-81.92 z" />
                         </svg>
                         <svg style="width: 75px; transform: translateX(-15px);" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                            <path class="bullet" d="m 15,7.9975 a 15,15 0 0 0 -15,15 v 60.845 a 15,15 0 0 0 15,15 h 133.84 a 15,15 0 0 0 15,-15 v -60.845 a 15,15 0 0 0 -15,-15 z M 28.921875,22.058125 H 134.91813 v 44.52875 c -0.79439,0.467618 -2.01591,1.092023 -3.875,1.795625 -3.85995,1.460853 -10.10267,2.998125 -19.38125,2.998125 -18.124265,0 -37.846973,-10.321875 -58.40438,-10.321875 -10.081174,0 -17.284097,1.752089 -22.02125,3.57625 -0.852847,0.32841 -1.607297,0.66405 -2.314375,0.996875 z M 111.695,24.61125 c -8.25831,0 -15.023125,6.762933 -15.023125,15.02125 0,8.258318 6.764815,15.021875 15.023125,15.021875 8.25832,0 15.02187,-6.763557 15.02188,-15.021875 0,-8.258317 -6.76356,-15.02125 -15.02188,-15.02125 z m 0,6.400625 c 4.79951,0 8.62125,3.821119 8.62125,8.620625 0,4.799507 -3.82174,8.623125 -8.62125,8.623125 -4.79951,0 -8.6225,-3.823618 -8.6225,-8.623125 0,-4.799506 3.82299,-8.620625 8.6225,-8.620625 z M 53.2575,67.45875 c 18.29012,0 37.994394,10.3225 58.40438,10.3225 9.98854,0 17.03577,-1.669237 21.64687,-3.414375 0.57041,-0.215879 1.10619,-0.436181 1.60938,-0.656875 V 84.781875 H 28.921875 v -11.91 C 29.676101,72.367284 31.054729,71.562591 33.535,70.6075 37.529592,69.069282 43.914912,67.45875 53.2575,67.45875 Z" />
+                            <path class="bullet flickering" d="m 15,7.9975 a 15,15 0 0 0 -15,15 v 60.845 a 15,15 0 0 0 15,15 h 133.84 a 15,15 0 0 0 15,-15 v -60.845 a 15,15 0 0 0 -15,-15 z M 28.921875,22.058125 H 134.91813 v 44.52875 c -0.79439,0.467618 -2.01591,1.092023 -3.875,1.795625 -3.85995,1.460853 -10.10267,2.998125 -19.38125,2.998125 -18.124265,0 -37.846973,-10.321875 -58.40438,-10.321875 -10.081174,0 -17.284097,1.752089 -22.02125,3.57625 -0.852847,0.32841 -1.607297,0.66405 -2.314375,0.996875 z M 111.695,24.61125 c -8.25831,0 -15.023125,6.762933 -15.023125,15.02125 0,8.258318 6.764815,15.021875 15.023125,15.021875 8.25832,0 15.02187,-6.763557 15.02188,-15.021875 0,-8.258317 -6.76356,-15.02125 -15.02188,-15.02125 z m 0,6.400625 c 4.79951,0 8.62125,3.821119 8.62125,8.620625 0,4.799507 -3.82174,8.623125 -8.62125,8.623125 -4.79951,0 -8.6225,-3.823618 -8.6225,-8.623125 0,-4.799506 3.82299,-8.620625 8.6225,-8.620625 z M 53.2575,67.45875 c 18.29012,0 37.994394,10.3225 58.40438,10.3225 9.98854,0 17.03577,-1.669237 21.64687,-3.414375 0.57041,-0.215879 1.10619,-0.436181 1.60938,-0.656875 V 84.781875 H 28.921875 v -11.91 C 29.676101,72.367284 31.054729,71.562591 33.535,70.6075 37.529592,69.069282 43.914912,67.45875 53.2575,67.45875 Z" />
                         </svg>
                     </div>
                 </div>
@@ -90,14 +92,19 @@
                 </div>
                 <div class="card signCard">
                     <h2>News</h2>
-                    <p class="caption">Feb 08, 2025</p>
+                    <p class="caption">Feb 15, 2025</p>
+                    <p>To the very few who come to my website:</p>
+                    <p>I added more fun facts about myself to the bottom of the <a href="about.html"><u>About</u></a> page.</p>
+                    <p>If you ever wanted to know what songs i like or my general vibes...</p>
+                    <!-- <p class="caption">Feb 08, 2025</p>
                     <p>I know nobody's reading this, but it's fun for me anyways!!!</p>
-                    <p>I finally updated the <a href="guestbook.html">guestbook page</a> with a real, embedded, organized guestbook! It uses Atabook.org's free guestbook hosting and an iframe to display.</p>
-                    <p>i love it-- it looks really cool x3</p>
+                    <p>I finally updated the <a href="guestbook.html"><u>guestbook page</u></a> with a real, embedded, organized guestbook! It uses Atabook.org's free guestbook hosting and an iframe to display.</p>
+                    <p>i love it-- it looks really cool x3</p> -->
                 </div>
                 <div class="noStatic" style="transform: scale(1.12) translateY(3px);">
                     <img class="flickering" style="width: 100%;" src="images/streetlamp.png">
                 </div>
+                <button onclick="playSound('squeak')" style="position: absolute; scale: 1.5; transform: translate(130px, -41px); opacity: 0.4;"><img src="images/amogusBlu.png"></button>
                 <div class="card">
                     <h2>Changelog</h2>
                     <p class="caption" style="position: absolute; transform-origin: 0; transform: rotate(-90deg) translate(-515px, 10px);">&lt;- older</p>
@@ -111,6 +118,7 @@
                                 <span class="highlight" style="vertical-align: 100%;">February 2025</span>
                                 <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
+                            <li><i class="highlight">[15]</i> Added some more info about my likes/dislikes, as well as favorite artists/songs to about.html. Hid old site link completely. Added Bsky link to and reworded blog.html. Removed remaining mentions of Spotify. Adjusted 'caption' class. [AS] amogus</li>
                             <li><i class="highlight">[09]</i> Little styling updates to Atabook. Added Website optional field.</li>
                             <li><i class="highlight">[08]</i> Created Guestbook on Atabook.org and embedded into guestbook.html. Retired old Google Doc guestbook. Improved Javascript disabled warning and mobile device warning. Added News card on index.html to show site news and other important stuff.</li>
                             <div style="margin: 30px 0; text-align: center;">
@@ -156,7 +164,7 @@
                             <li><i class="highlight">[19]</i> First files published.</li>
                             <br><br>
                             <div style="text-align: center;">
-                                <h2>"what if i made an indie web site??"</h2>
+                                <h2>"i should make another website..."</h2>
                             </div>
                             <br><br>
                         </ul>
@@ -245,18 +253,18 @@
                 </div>
                 <div class="card">
                     <p>Last updated</p>
-                    <h2>Feb 09, 2025</h2>
+                    <h2>Feb 15, 2025</h2>
                 </div>
                 <div class="card successCard">
                     <h2 class="success">Site Status:</h2>
                     <p>If you can read this, the site is <span class="success">ONLINE</span>.</p>
                 </div>
-                <div class="card noStatic" style="opacity: 0.5;">
+                <!-- <div class="card noStatic" style="opacity: 0.5;">
                     <h2>Old site link</h2>
                     <p>Available until this site is complete. It can be found at</p>
                     <p><a><u>amethystx.pages.dev</u></a></p>
                     <img style="opacity: 0.9; position: absolute; transform: translate(30px, -85px); scale: 1.8;" src="images/redX.png">
-                </div>
+                </div> -->
                 <div class="card">
                     <h2>To Do</h2>
                     <ul>
@@ -267,6 +275,9 @@
                         <li>Pick a better header typeface.</li>
                         <li><s>Add "news" card.</s></li>
                     </ul>
+                </div>
+                <div>
+                    <h1 style="font-size: 500%; color: black; opacity: 0.15;">[AS]</h1>
                 </div>
             </td>
         </tr>

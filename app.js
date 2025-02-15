@@ -79,6 +79,11 @@ function updateLocalTime() {
     }, 1000);
 }
 
+function playSound(soundId) {
+    document.getElementById(soundId).play();
+    document.getElementById(soundId).currentTime = 0;
+}
+
 function dismissCard(cardId) {
     document.getElementById(cardId).hidden = true;
 }

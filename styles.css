@@ -94,6 +94,13 @@ a {
         opacity: 0.4;
     }
 }
+button {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 .mainAction {
     background-color: var(--se-light);
     /* width: fit-content; */
@@ -114,6 +121,12 @@ ul {
 }
 li {
     margin: 0 0 16px 0;
+}
+.captionList {
+    margin: 2px 0 0 16px;
+    & > li {
+        margin-bottom: 2px;
+    }
 }
 #guestbookEmbed {
     border: none;
