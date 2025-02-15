@@ -8,16 +8,18 @@
     <link rel="icon" type="image/x-icon" href="amethystcrystal.png">
     <title>PROJECTS</title>
 </head>
-<body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime(); dismissCard('JsDisabled');">
-    <div id="devToolbar">
-        Developer toolbar >>> you can ignore this (or mess around idc) >>>
-        <button name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
-        <button name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
-        <form style="display: inline-block;" action="https://am3thystx.pages.dev/">
-            <button>Href to deployment</button>
+<body onload="adjustStylesForBrowser(); dismissCard('JsDisabled');">
+    <a style="font-size: 60%; opacity: 0.75;" onclick="revealContent('devToolbar')"><u>Dev Tools [/]</u></a>
+    <div id="devToolbar" hidden>
+        Developer Tools >>> you can ignore this (or mess around idc) >>>
+        <button style="background-color: greenyellow;" name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
+        <button style="background-color: chocolate;" name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
+        <form style="display: inline-block;" action="https://am3thystx.pages.dev/projects.html">
+            <button>[GO DEPLOYMENT]</button>
         </form>
+        &nbsp;&nbsp;&nbsp;
         <form style="display: inline-block;" action="http://localhost:5500/projects.html">
-            <button>Href to localhost</button>
+            <button>[GO LOCAL]</button>
         </form>
     </div>
     <div class="flickering contentColumn">
@@ -40,6 +42,11 @@
     <table class="contentColumn">
         <tr>
             <td style="width: 72%">
+                <div class="card warningCard" id="JsDisabled">
+                    <button class="dismissCard" name="dismiss" onclick="dismissCard('JsDisabled')">x</button>
+                    <h2 class="warning">Please Enable JavaScript!</h2>
+                    <p>It appears <span class="warning">Javascript is disabled</span> on your browser. Many script-dependant features on this site will be broken until you enable and reload.</p>
+                </div>
                 <div class="card signCard" style="text-align: center;">                   
                     <img style="width: 200px; transform: translateY(10px);" src="icons/embellishment.png">
                     <span style="vertical-align: 200%;"><h2>Project Gallery</h2></span>

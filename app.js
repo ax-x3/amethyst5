@@ -7,6 +7,12 @@ window.mobileCheck = function() {
 const root = document.documentElement;
 var flickeringEnabled = true;
 
+document.addEventListener("keypress", function(event) {
+    if (event.key == "/") {
+        revealContent("devToolbar");
+    }
+  });
+
 function adjustStylesForBrowser() {
     const isMobile = window.mobileCheck();
     var isOpera, isEdge, isChrome, isSafari, isFirefox, isIE, isUnknown;
