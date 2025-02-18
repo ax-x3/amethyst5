@@ -62,7 +62,7 @@
                         <p>Remember that as queer people, existing in spite of oppression is a form of protest. For that reason, <span class="highlight">you must live. And by doing so, you must fight.</span> Despite their unbridled hatred, <span class="highlight">they cannot eradicate us because we are a naturally-occuring, inextinguishable, and permanent part of humanity.</span></p>
                     </div>
                 </div>
-                <div class="card warningCard" id="underConstruction">
+                <div class="card warningCard" id="underConstruction" hidden>
                     <button class="dismissCard" name="dismiss" onclick="dismissCard('underConstruction')">x</button>
                     <h2>Construction in Progress...</h2>
                     <p><i>This site is currently under testing! </i> Come back later!.</p>
@@ -285,16 +285,14 @@
     </table>
 </body>
 <footer>
-    <div id="footer-placeholder"></div>
-
+    <div id="footer-fetch">Loading Footer Content...</div>
     <script>
         fetch("footer.html")
             .then(response => response.text())
             .then(content => {
                 console.log(content);
-                document.getElementById("footer-placeholder").innerHTML = content;
+                document.getElementById("footer-fetch").innerHTML = content;
             });
     </script>
-
 </footer>
 </html>
