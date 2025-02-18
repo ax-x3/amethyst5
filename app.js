@@ -52,6 +52,12 @@ function adjustStylesForBrowser() {
     }
 }
 
+function redirect(url, delay) {
+    setTimeout(() => {
+        window.location.href = url;
+    }, delay);
+}
+
 function greetUser() {
     const hour = new Date().getHours();
     const greetingEle = document.getElementById("greeting");

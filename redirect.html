@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+    <link rel="icon" type="image/x-icon" href="amethystcrystal.png">
+    <title>ABOUT</title>
+</head>
+<body onload="adjustStylesForBrowser(); redirect('https://am3thystx.pages.dev/', 1000);">
+    <a style="font-size: 60%; opacity: 0.75;" onclick="revealContent('devToolbar')"><u>Dev Tools [/]</u></a>
+    <div id="devToolbar" hidden>
+        Developer Tools >>> you can ignore this (or mess around idc) >>>
+        <button style="background-color: greenyellow;" name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
+        <button style="background-color: chocolate;" name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
+        <form style="display: inline-block;" action="https://am3thystx.pages.dev/redirect.html">
+            <button>[GO DEPLOYMENT]</button>
+        </form>
+        &nbsp;&nbsp;&nbsp;
+        <form style="display: inline-block;" action="http://localhost:5500/redirect.html">
+            <button>[GO LOCAL]</button>
+        </form>
+    </div>
+
+    <div class="contentColumn" style="text-align: center;">
+        <div style="height: 100px;"></div>
+        <h2>Preparing to Teleport...</h2>
+        <br><br><br><br>
+        <!-- <p>Destination: <a href="https://am3thystx.pages.dev/"><u>am3thystx.pages.dev</u></a></p> -->
+        <p>Redirector not working? <a href="https://am3thystx.pages.dev/"><u>I'll just walk</u></a>.</p>
+        <div style="height: 100px;"></div>
+    </div>
+
+</body>
+<footer>
+    <div style="height: 100px;"></div>
+    <div style="text-align: center;">
+        <p>Copyright (c) 2025. All Rights Reserved.</p>
+    </div>
+    <div style="height: 100px;"></div>
+</footer>
+</html>
