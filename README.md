@@ -1,3 +1,3 @@
-Site moved to amethystx.net
+Site permanently moved to amethystx.net
 
 Thanks!
