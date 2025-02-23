@@ -22,15 +22,24 @@
             <button>[GO LOCAL]</button>
         </form>
     </div>
-    <div class="flickering contentColumn">
-        <div style="transform: translateY(-4px);">
-            <a href="index.html">
-                <img src="amethystcrystalPix.png" style="width: 80px; transform: translate(8px, 11px); filter: drop-shadow(0 0 20px var(--se-regular));">
-                <h1>AM<span style="opacity: 0.7">E</span>THYST<span style="opacity: 0.3;">X</span></h1>
-                <h2 class="success" style="opacity:0.9;">.net!</h2>
-            </a>
+    <header>
+        <div class="contentColumn">
+            <noscript>
+                <div class="card warningCard noStatic" id="JsDisabled">
+                    <h2 class="warning">Enable JavaScript!</h2>
+                    <p>It appears <span class="warning">Javascript is disabled</span> on your browser. You need to enable Javascript for this site to work.</p>
+                </div>
+            </noscript>
         </div>
-    </div>
+        <div id="header-fetch">Loading</div>
+        <script>
+            fetch("header.html")
+                .then(response => response.text())
+                .then(content => {
+                    document.getElementById("header-fetch").innerHTML = content;
+                });
+        </script>
+    </header>
     <div class="contentColumn" style="transform: translateX(18px);">
         <a href="index.html" style="opacity: 0.4;"><u>Index</u></a>
         <a href="about.html"><u>About</u></a>
@@ -43,11 +52,6 @@
     <table class="contentColumn">
         <tr>
             <td style="width: 72%">
-                <div class="card warningCard" id="JsDisabled">
-                    <button class="dismissCard" name="dismiss" onclick="dismissCard('JsDisabled')">x</button>
-                    <h2 class="warning">Please Enable JavaScript!</h2>
-                    <p>It appears <span class="warning">Javascript is disabled</span> on your browser. Many script-dependant features on this site will be broken until you enable and reload.</p>
-                </div>
                 <div class="card warningCard" id="queerSafety">
                     <button class="dismissCard" name="dismiss" onclick="dismissCard('queerSafety')">x</button>
                     <h2 class="warning">(!)&nbsp;&nbsp;&nbsp;A Genuine Warning&nbsp;&nbsp;&nbsp;(!)</h2>
@@ -96,7 +100,7 @@
                     <!-- <p class="caption">Feb 08, 2025</p>
                     <p>I know nobody's reading this, but it's fun for me anyways!!!</p>
                     <p>I finally updated the <a href="guestbook.html"><u>guestbook page</u></a> with a real, embedded, organized guestbook! It uses Atabook.org's free guestbook hosting and an iframe to display.</p>
-                    <p>i love it-- it looks really cool x3</p> -->
+                    <p>i love it- it looks really cool x3</p> -->
                 </div>
                 <div class="card">
                     <h2 id="greeting">Welcome!</h2>
@@ -122,7 +126,7 @@
                                 <span class="highlight" style="vertical-align: 100%;">February 2025</span>
                                 <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
-                            <li><i class="highlight">[22]</i> CONNECTED TO A REAL DOMAIN!!!!!!!</li>
+                            <li><i class="highlight">[22]</i> CONNECTED TO A REAL DOMAIN!!!!!!! Small visual changes. Applied better JavaScript detection to all pages.</li>
                             <li><i class="highlight">[20]</i> Fixed amogus. Added paper texture to art-n-commissions.html ToS.</li>
                             <li><i class="highlight">[19]</i> All off-site links now open in new tabs! Construction temporarily opened and closed. Reopened commissions.</li>
                             <li><i class="highlight">[18]</i> All footers are shared!! Footers are now fetched from a common footer.html file. Added redirect.html for future migration purposes.</li>
@@ -294,12 +298,11 @@
     </table>
 </body>
 <footer>
-    <div id="footer-fetch">Loading Footer Content...</div>
+    <div id="footer-fetch">Loading</div>
     <script>
         fetch("footer.html")
             .then(response => response.text())
             .then(content => {
-                console.log(content);
                 document.getElementById("footer-fetch").innerHTML = content;
             });
     </script>

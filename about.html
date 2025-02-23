@@ -22,15 +22,24 @@
             <button>[GO LOCAL]</button>
         </form>
     </div>
-    <div class="flickering contentColumn">
-        <div style="transform: translateY(-4px);">
-            <a href="index.html">
-                <img src="amethystcrystalPix.png" style="width: 80px; transform: translate(8px, 11px); filter: drop-shadow(0 0 20px var(--se-regular));">
-                <h1>AM<span style="opacity: 0.80">E</span>THYST<span style="opacity: 0.25;">X</span></h1>
-                <h2 class="success" style="opacity:0.9;">.net!</h2>
-            </a>
+    <header>
+        <div class="contentColumn">
+            <noscript>
+                <div class="card warningCard noStatic" id="JsDisabled">
+                    <h2 class="warning">Enable JavaScript!</h2>
+                    <p>It appears <span class="warning">Javascript is disabled</span> on your browser. You need to enable Javascript for this site to work.</p>
+                </div>
+            </noscript>
         </div>
-    </div>
+        <div id="header-fetch">Loading</div>
+        <script>
+            fetch("header.html")
+                .then(response => response.text())
+                .then(content => {
+                    document.getElementById("header-fetch").innerHTML = content;
+                });
+        </script>
+    </header>
     <div class="contentColumn" style="transform: translateX(18px);">
         <a href="index.html"><u>Index</u></a>
         <a href="about.html" style="opacity: 0.4;"><u>About</u></a>
@@ -228,12 +237,11 @@
     </table>
 </body>
 <footer>
-    <div id="footer-fetch"></div>
+    <div id="footer-fetch">Loading</div>
     <script>
         fetch("footer.html")
             .then(response => response.text())
             .then(content => {
-                console.log(content);
                 document.getElementById("footer-fetch").innerHTML = content;
             });
     </script>
