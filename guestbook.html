@@ -33,7 +33,7 @@
         </div>
         <div id="header-fetch">Loading</div>
         <script>
-            fetch("header.html")
+            fetch("/r/header.html")
                 .then(response => response.text())
                 .then(content => {
                     document.getElementById("header-fetch").innerHTML = content;
@@ -74,7 +74,7 @@
 <footer>
     <div id="footer-fetch">Loading</div>
     <script>
-        fetch("footer.html")
+        fetch("/r/footer.html")
             .then(response => response.text())
             .then(content => {
                 document.getElementById("footer-fetch").innerHTML = content;

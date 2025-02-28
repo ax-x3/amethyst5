@@ -33,7 +33,7 @@
         </div>
         <div id="header-fetch">Loading</div>
         <script>
-            fetch("header.html")
+            fetch("/r/header.html")
                 .then(response => response.text())
                 .then(content => {
                     document.getElementById("header-fetch").innerHTML = content;
@@ -104,9 +104,13 @@
                     <p>DO NOT RESELL MY ARTWORK OR CLAIM THAT YOU CREATED IT.</p>
                 </div>
                 <div class="card signCard">
-                    <h2>Done reading?</h2>
-                    <p>Shoot me a friend request on <a href="https://discord.com/users/802178124342493224" target="_blank" rel="noopener noreferrer"><u>Discord</u></a> to get started.</p>
-                    <p class="caption">If I don't respond, try tagging me on <a href="https://bsky.app/profile/amethystx.net" target="_blank" rel="noopener noreferrer"><u>Bluesky</u></a> instead.</p>
+                    <h2>Get Started</h2>
+                    <p>Done reading? <span class="success">Shoot me a DM request on <a href="https://discord.com/users/802178124342493224" target="_blank" rel="noopener noreferrer"><u>Discord</u></a>.</span></p>
+                    <p>Please make your intentions clear in the first DM, otherwise you may be filtered out as spam.</p>
+                    <p class="caption">Follow the <a href="https://nohello.net/en/" target="_blank" rel="noopener noreferrer"><u>No Hello</u></a> principle.</p>
+                    <br><br>
+                    <p>If I'm not responsive, try tagging me on <a href="https://bsky.app/profile/amethystx.net" target="_blank" rel="noopener noreferrer"><u>Bluesky</u></a>.</p>
+                    <p>If <i>that</i> doesn't work, then try <a href="mailto:admin@amethystx.net"><u>sending me an email</u></a>.</p>
                 </div>
             </td>
             <td>
@@ -134,11 +138,11 @@
                     <h2>Signature</h2>
                     <p>My stuff is always signed with one of these names:</p>
                     <ul class="success">
+                        <li>POISONAIVI</li>
                         <li>AM3THYSTX</li>
                         <li>AMETHYSTX</li>
                         <li>AMETHYST</li>
                         <li>AM3</li>
-                        <li>POISONAIVI</li>
                     </ul>
                 </div>
                 <div class="card signCard">
@@ -152,7 +156,7 @@
 <footer>
     <div id="footer-fetch">Loading</div>
     <script>
-        fetch("footer.html")
+        fetch("/r/footer.html")
             .then(response => response.text())
             .then(content => {
                 document.getElementById("footer-fetch").innerHTML = content;
