@@ -41,7 +41,6 @@ header {
 #headerContent {
     margin: 10vw;
     padding: 30px;
-    height: calc(100vh - 2 * 10vw - 2 * 30px);
     position: relative;
     background: linear-gradient(125deg, var(--se-bright), #0000, #0000);
 }

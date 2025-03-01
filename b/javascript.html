@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Enable JavaScript!</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Helvetica, sans-serif;
+            font-size: 18px;
+            margin: 50px;
+            line-height: 150%;
+        }
+        h1 {
+            font-size: 48px;
+            line-height: 120%;
+        }
+        h2 {
+            font-size: 32px;
+            line-height: 120%;
+        }
+        h3 {
+            font-size: 26px;
+            line-height: 120%;
+        }
+        a {
+            color: blue;
+            &:hover {
+                color: red;
+            }
+        }
+        td {
+            width: calc(100% / 6);
+        }
+        .container {
+            padding: 30px;
+        }
+        .section {
+            background-color: #eee;
+        }
+        .browserOption {
+            width: 90%;
+            margin: 0 auto;
+            padding: 30px 0;
+            text-align: center;
+            background-color: #eee;
+            &:hover {
+                background-color: #ccc;
+            }
+        }
+        .browserLogo {
+            height: 75px
+        }
+        #attributions {
+            font-size: 75%;
+            line-height: 120%;
+        }
+    </style>
+</head>
+<body id="top" onload="document.getElementById('jsEnabled').hidden = false;">
+    <noscript>
+        <div class="container" style="background-color: red; color: white;">
+            <p>JavaScript is currently <b>disabled</b> in your browser. Follow the steps below to enable JavaScript.</p>
+        </div>
+    </noscript>
+    <div class="container" id="jsEnabled" hidden style="background-color: green; color: white;">
+        <p>✅ JavaScript is <b>enabled</b> and functioning in your browser. You can ignore the steps below.</p>
+    </div>
+    <br>
+    <div>
+        <a href="#enabling">Enabling JavaScript</a> - <a href="#faqs">FAQs</a> - <a href="#developers">For Developers</a> - <a href="#attributions">Attributions</a>
+    </div>
+
+    <div id="enabling">
+        <br>
+        <h1>Enabling JavaScript</h1>
+        <br>
+        <h2>First, select your browser:</h2>
+        <table style="width: 100%;">
+        <tr>
+            <td>
+                <a href="#gc">
+                    <div class="browserOption">
+                        <img class="browserLogo" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg"><br>
+                        Google Chrome
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="#me">
+                    <div class="browserOption">
+                        <img class="browserLogo" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Microsoft_Edge_logo_%282019%29.svg"><br>
+                        Microsoft Edge
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="#mf">
+                    <div class="browserOption">
+                        <img class="browserLogo" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg"><br>
+                        Mozilla Firefox
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="#as">
+                    <div class="browserOption">
+                        <img class="browserLogo" src="https://upload.wikimedia.org/wikipedia/commons/5/52/Safari_browser_logo.svg"><br>
+                        Apple Safari
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="#op">
+                    <div class="browserOption">
+                        <img class="browserLogo" src="https://upload.wikimedia.org/wikipedia/commons/4/49/Opera_2015_icon.svg"><br>
+                        Opera
+                    </div>
+                </a>
+            </td>
+            <td>
+                <a href="#ie">
+                    <div class="browserOption">
+                        <img class="browserLogo" src="https://upload.wikimedia.org/wikipedia/commons/1/18/Internet_Explorer_10%2B11_logo.svg"><br>
+                        Internet Explorer*
+                    </div>
+                </a>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <br><hr>
+    <div style="height: 100px;"></div>
+
+    <div id="gc" class="container section">
+        <h2>Google Chrome:</h2>
+        <ol>
+            <li>Click the three vertical dots near the top right corner of Google Chrome.</li>
+            <li>Click <u>Settings</u>.</li>
+            <li>Choose <u>Privacy and security</u> in the menu on the left side.</li>
+            <li>Choose <u>Site settings</u> near the bottom of the page.</li>
+            <li>From the 'Content' section, click <u>JavaScript</u>.</li>
+            <li>Change the 'Default behavior' setting to <u>Sites can use JavaScript</u>.</li>
+            <li>Go back and reload the page to apply changes.</li>
+        </ol>
+        <br>
+        <h3>Shortcut method for Google Chrome:</h3>
+        <ol>
+            <li>Copy and paste <u>chrome://settings/content/javascript</u> into the address bar.</li>
+            <li>Change the 'Default behavior' setting to <u>Sites can use JavaScript</u>.</li>
+            <li>Go back and reload the page to apply changes.</li>
+        </ol>
+    </div>
+    <div style="height: 100px;"></div>
+    <div id="me" class="container section">
+        <h2>Microsoft Edge:</h2>
+        <ol>
+            <li>Click the three horizontal dots near the top right corner of Microsoft Edge.</li>
+            <li>Click <u>Settings</u>.</li>
+            <li>Choose <u>Cookies and site permissions</u> in the menu on the left side.</li>
+            <li>From the 'All permissions' section, click <u>JavaScript</u>.</li>
+            <li>Toggle the 'Allowed' setting to On.</li>
+            <li>Go back and reload the page to apply changes.</li>
+        </ol>
+        <br>
+        <h3>Shortcut method for Microsoft Edge:</h3>
+        <ol>
+            <li>Copy and paste <u>edge://settings/content/javascript</u> into the address bar.</li>
+            <li>Toggle the 'Allowed' setting to On.</li>
+            <li>Go back and reload the page to apply changes.</li>
+        </ol>
+    </div>
+    <div style="height: 100px;"></div>
+    <div id="mf" class="container section">
+        <h2>Mozilla Firefox:</h2>
+        <ol>
+            <li>Type <u>about:config</u> into the address bar.</li>
+            <li>Click <u>Accept the Risk and Continue</u>.</li>
+            <li>Type <u>javascript.enabled</u> into the preference name search bar. (Not the address bar)</li>
+            <li>Toggle the 'javascript.enabled' setting to On by double-clicking the setting or clicking the double arrow on the right side.</li>
+            <li>Go back and reload the page to apply changes.</li>
+        </ol>
+    </div>
+    <div style="height: 100px;"></div>
+    <div id="as" class="container section">
+        <h2>Apple Safari:</h2>
+        <ol>
+            <li>Click <u>Safari</u> in the Mac menu bar.</li>
+            <li>Click <u>Settings...</u>.</li>
+            <li>Choose <u>Security</u> at the top of the newly opened Settings window.</li>
+            <li>Turn on the <u>Enable JavaScript</u> setting by marking the checkbox next to it.</li>
+            <li>Go back and reload the page to apply changes.</li>
+        </ol>
+        <br>
+        <h3>Shortcut method for Apple Safari:</h3>
+        <ol>
+            <li>Press the 'command' and ',' keys at the same time.</li>
+            <li>Choose <u>Security</u> at the top of the newly opened settings window.</li>
+            <li>Turn on the <u>Enable JavaScript</u> setting by marking the checkbox next to it.</li>
+            <li>Go back and reload the page to apply changes.</li>
+        </ol>
+    </div>
+    <div style="height: 100px;"></div>
+    <div id="op" class="container section">
+        <h2>Opera:</h2>
+        <ol>
+            <li>Click the Opera logo in the top left corner of Opera.</li>
+            <li>Click <u>Settings</u>.</li>
+            <li>From the 'Privacy and security' section, click <u>Site settings</u>.</li>
+            <li>From the 'Content' section, click <u>JavaScript</u>.</li>
+            <li>Change the 'Default behavior' setting to <u>Sites can use JavaScript</u>.</li>
+            <li>Go back and reload the page to apply changes.</li>
+        </ol>
+        <br>
+        <h3>Shortcut method for Opera:</h3>
+        <ol>
+            <li>Copy and paste <u>opera://settings/content/javascript</u> into the address bar.</li>
+            <li>Change the 'Default behavior' setting to <u>Sites can use JavaScript</u>.</li>
+            <li>Go back and reload the page to apply changes.</li>
+        </ol>
+    </div>
+    <div style="height: 100px;"></div>
+    <div id="ie" class="container section">
+        <h2>Internet Explorer:</h2>
+        <p class="container" style="background-color: red; color: white;"><b>Notice:</b> Internet Explorer has been deprecated since June 15, 2022. It is outdated, insecure, slow, and largely incompatible with new web standards. It's highly recomended that you upgrade to a modern browser.</p>
+        <ol>
+            <li>Click the gear icon in the top right corner of Internet Explorer.</li>
+            <li>Click <u>Internet options</u>.</li>
+            <li>Choose <u>Security</u> at the top of the newly opened settings window.</li>
+            <li>Click the globe icon labeled <u>Internet</u>.</li>
+            <li>From the 'Security level for this zone' section, click <u>Custom level...</u>.</li>
+            <li>Scroll down to <u>Scripting</u> in the newly opened settings window.</li>
+            <li>Change the 'Active scripting' setting to <u>Enable</u>.</li>
+            <li>Go back and reload the page to apply changes.</li>
+        </ol>
+    </div>
+    <br><hr>
+    <div style="height: 100px;"></div>
+
+    <div id="faqs">
+        <br>
+        <h1>FAQs</h1>
+        <br>
+        <h2>What's JavaScript?</h2>
+        <p>JavaScript is a very common programming language used to build interactive websites. It usually runs behind-the-scenes to display dynamic content or provide interactive features. Most browsers have JavaScript enabled by default because of how widely used it is.</p>
+        <br>
+        <h2>Is JavaScript dangerous?</h2>
+        <p>No, JavaScript is almost never dangerous. Malicious sites can run bad code in the background to track and collect data on you, but modern browsers and tracking blockers can keep you safe while still permitting JavaScript. Sites should not be able to access local files, GPS location, camera, or microphone through JavaScript unless you give permission through your browser.</p>
+        <br>
+        <h2>Do I have to enable JavaScript?</h2>
+        <p>It's highly recomended. You technically dont <i>have to</i> enable JavaScript if you don't want to. However, almost everything on the web nowadays is script-dependent and needs JavaScript in some way. For example, you won't be able to perform a Google search with JavaScript disabled. To enable JavaScript on your browser, follow the steps above. <a href="#top">Back to Top.</a></p>
+    </div>
+    <br><hr>
+    <div style="height: 100px;"></div>
+
+    <div id="developers">
+        <br>
+        <h1>For Developers</h1>
+        <br>
+        <h3>Feel free to use this HTML to display a warning to your users who have JavaScript disabled:</h3>
+        <div class="container" style="text-align: left; background-color: #222; color: white; font-family: 'Courier New', Courier, monospace;">
+            <p>
+                &lt;noscript&gt;<br>
+                &lt;!&hyphen;&hyphen; You can rephrase the warning below. &hyphen;&hyphen;&gt;<br>
+                Some features on this page are unavailable because JavaScript is disabled.<br>
+                &lt;a href="https://www.amethystx.net/b/javascript.html"&gt;Learn More&lt;/a&gt;<br>
+                &lt;/noscript&gt;
+            </p>
+        </div>
+    </div>
+    <br><hr>
+    <div style="height: 100px;"></div>
+
+    <div id="attributions">
+        <br>
+        <h3>Attributions</h3>
+        <p>
+            Google Chrome logo from <a href="https://commons.wikimedia.org/wiki/File:Google_Chrome_icon_(February_2022).svg">Google</a>, Public domain, via Wikimedia Commons<br>
+            Microsoft Edge logo from <a href="https://commons.wikimedia.org/wiki/File:Microsoft_Edge_logo_(2019).svg">Microsoft Corporation</a>, <a href="http://opensource.org/licenses/mit-license.php">MIT</a>, via Wikimedia Commons<br>
+            Mozilla Firefox logo from <a href="https://commons.wikimedia.org/wiki/File:Firefox_logo,_2019.svg">Mozilla Corporation</a>, <a href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2</a>, via Wikimedia Commons<br>        Apple Safari logo from <a href="https://commons.wikimedia.org/wiki/File:Safari_browser_logo.svg">Apple Inc.Vectorization:  CMetalCore</a>, Public domain, via Wikimedia Commons<br>
+            Opera logo from <a href="https://commons.wikimedia.org/wiki/File:Opera_2015_icon.svg">Opera</a>, Public domain, via Wikimedia Commons<br>
+            Internet Explorer logo from <a href="https://commons.wikimedia.org/wiki/File:Internet_Explorer_10%2B11_logo.svg">Microsoft</a>, Public domain, via Wikimedia Commons
+        </p>
+    </div>
+    <br><hr>
+    <div style="height: 100px;"></div>
+    <p>Last updated February 28, 2025. This page is a part of <a href="https://amethystx.net">amethystx.net</a>. <a href="#top">Back to Top.</a></p>
+</body>
+</html>
