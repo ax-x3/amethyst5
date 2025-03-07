@@ -31,8 +31,8 @@
     --se-warning-pop: #500;
     /* FIND DEFAULT DROPSHADOW COLORS IN app.js. THESE ARE PREADJUSTED.*/
     --se-bright-dropshadow: #f4e0fd2a;
-    --se-light-dropshadow: #ca50da21;
-    --se-regular-dropshadow: #9a10c836;
+    --se-light-dropshadow: #ca50da16;
+    --se-regular-dropshadow: #9a10c828;
     /* Flicker constants */
     --lu-flicker-off: brightness(0.9);
     --lu-flicker-on: brightness(1.1);
