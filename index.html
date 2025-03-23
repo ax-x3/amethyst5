@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="app.js"></script>
+    <script src="scrobbler.js"></script>
     <link rel="icon" type="image/x-icon" href="amethystcrystal.png">
     <title>AMETHYST</title>
 </head>
@@ -125,6 +127,7 @@
                                 <span class="highlight" style="vertical-align: 100%;">March 2025</span>
                                 <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
+                            <li><i class="highlight">[22]</i> Added Now Playing/Last Played card using JQuery and API calls to Last.fm!!! I feel like a genius for figuring out how. Removed to-do list and guestbook card. Moved last updated card to bottom. Moved commissions status card to top.</li>
                             <li><i class="highlight">[20]</i> Updated profile picture in about.html</li>
                             <li><i class="highlight">[17]</i> Added a Cbox chatbox to index.html. Styling and sizing.</li>
                             <li><i class="highlight">[15]</i> Updated Contents in projects.html.</li>
@@ -206,6 +209,10 @@
                     <audio id="squeak" src="sounds/squeak.mp3" preload="auto"></audio>
                     <button onclick="playSound('squeak')" style="position: absolute; scale: 1.5; transform: translate(8px, 22px); opacity: 0.4;"><img src="images/amogusRed.png"></button>
                 </div>
+                <div class="card successCard">
+                    <p>Commissions are</p>
+                    <h2 class="flickering success" style="font-size: 200%;">OPEN!</h2>
+                </div>
                 <div class="card signCard">
                     <h2>Find me on:</h2>
                     <ul>
@@ -275,22 +282,26 @@
                         </li>
                     </ul>
                 </div>
-                <div class="card successCard">
-                    <p>Commissions are</p>
-                    <h2 class="flickering success" style="font-size: 200%;">OPEN!</h2>
+                <div class="card">
+                    <h2 id="listeningHeader">Now Playing:</h2>
+                    <br>
+                    <span class="caption" id="trackdate"></span>
+                    <a id="tracklink">
+                        <div class="noStatic">
+                            <div class="noStatic flickering" style="padding: 10px 35px">
+                                <img style="width: 100%; border: 2px solid var(--se-light); box-sizing: border-box; filter: contrast(0.9) saturate(2);" id="trackart">
+                            </div>
+                            <div>
+                                <p><u><span id="trackartist"></span> - <span id="tracktitle"></span></u></p>
+                            </div>
+                        </div>  
+                    </a>
+                    <span class="caption">Scrobbled with <a href="https://last.fm"><u>Last.fm</u></a>.</span>
                 </div>
                 <!-- <div class="card warningCard">
                     <p>Commissions are</p>
                     <h2 class="flickering warning" style="font-size: 200%;">CLOSED</h2>
                 </div> -->
-                <div class="card signCard">
-                    <h2>Guestbook</h2>
-                    <p><a href="guestbook.html"><u>Click me!!!!! Sign the Guestbook!!!</u></a></p>
-                </div>
-                <div class="card">
-                    <p>Last updated</p>
-                    <h2>Mar 20, 2025</h2>
-                </div>
                 <div class="card successCard">
                     <h2 class="success">Site Status:</h2>
                     <p>If you can read this, the site is <span class="success">ONLINE</span>.</p>
@@ -302,15 +313,8 @@
                     <img style="opacity: 0.9; position: absolute; transform: translate(30px, -85px); scale: 1.8;" src="images/redX.png">
                 </div> -->
                 <div class="card">
-                    <h2>To Do</h2>
-                    <ul>
-                        <li>Make "last updated" card show time since.</li>
-                        <li><s>Replace robotics page.</s></li>
-                        <li>Replace blog page.</li>
-                        <li><s>Buy a real domain??</s></li>
-                        <li>Pick a better header typeface.</li>
-                        <li><s>Add "news" card.</s></li>
-                    </ul>
+                    <p>Last updated</p>
+                    <h2>Mar 22, 2025</h2>
                 </div>
                 <div>
                     <h1 style="font-size: 500%; color: black; opacity: 0.1;">[AS]</h1>
