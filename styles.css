@@ -147,8 +147,9 @@ path.bullet {
 }
 img.bullet {
     filter: drop-shadow(0.1em 0.1em 0 #000b) drop-shadow(0 0 10px var(--se-light));
-    transform: translateY(4px);
+    transform: translateY(4px) translateX(-5px);
     width: 22px;
+    margin-right: 5px;
 }
 .dismissCard {
     float: right;
