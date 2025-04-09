@@ -19,6 +19,9 @@
     text-shadow: none;
     color: black;
 }
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --se-bright: #f4e0fd;
     --se-link: #e7a4f0;
@@ -104,10 +107,12 @@ button {
 }
 .mainAction {
     background-color: var(--se-light);
-    /* width: fit-content; */
-    padding: 20px 27px 10px 20px;
+    display: flex;
+    padding: 8px;
     border: 2px solid #fff5;
-    border-radius: 12px;
+    border-radius: 10px;
+    width: fit-content; 
+    box-shadow: 0.1em 0.1em 0 #000b, 0 0 10px var(--se-light-dropshadow);
 }
 .mainAction h2 {
     color: var(--se-bright);
@@ -144,6 +149,10 @@ svg.bullet {
 path.bullet {
     display: inline;
     fill: var(--se-bright); 
+}
+path.bulletColor {
+    display: inline;
+    fill: var(--se-light); 
 }
 img.bullet {
     filter: drop-shadow(0.1em 0.1em 0 #000b) drop-shadow(0 0 10px var(--se-light));
@@ -218,6 +227,8 @@ img.bullet {
     -webkit-text-stroke: var(--se-regular) 0.025em;
 }
 .thumbnail {
+    position: relative;
+    z-index: -1;
     width: calc((100% + 24px) / 2);
     transform: translate(-12px, -12px) scale(2);
     transform-origin: 0 0;

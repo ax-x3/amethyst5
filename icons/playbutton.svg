@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 
-<svg class="bullet" viewBox="-2 -30 170 167" version="1.1" preserveAspectRatio="xMidYMid" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-   <path class="bullet" d="M 81.92,-28.5 A 81.919998,81.919998 0 0 0 0,53.42 81.919998,81.919998 0 0 0 81.92,135.34 81.919998,81.919998 0 0 0 163.84,53.42 81.919998,81.919998 0 0 0 81.92,-28.5 Z M 51.143125,10.354375 125.73438,53.42 51.143125,96.485625 Z" />
+<svg class="bullet" viewBox="-2 -30 170 167"/>
+   <path d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
 </svg>
