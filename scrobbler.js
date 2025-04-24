@@ -2,7 +2,6 @@ var lastfmData = {
     baseURL:
     "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=",
     user: "am3thystx",
-    // FYI this is not my API key. I stole it from somewhere else lol.
     api_key: "c1797de6bf0b7e401b623118120cd9e1",
     additional: "&format=json&limit=1"
 };
