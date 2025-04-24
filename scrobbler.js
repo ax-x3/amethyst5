@@ -78,8 +78,8 @@ $.ajax({
             .html(timeFormatted);
     },
     error: function(resp) {
-        $("span#trackartist").html("<span class='warning'>Oops!</span>");
-        $("span#tracktitle").html("<span class='warning'>API call return error.</span>");
+        $("span#trackartist").html("<span class='warning'>API response error</span>");
+        $("span#tracktitle").html("");
         $("img#trackart").attr("src", "/amethystcrystalPix.png");
     }
     });
