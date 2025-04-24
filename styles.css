@@ -76,7 +76,7 @@ h2 {
     color: var(--se-light);
     text-shadow: 0.1em 0.1em 0 #000b, 0 0 16px var(--se-light-dropshadow);
     -webkit-text-stroke: var(--se-regular) 0.05em;
-    word-spacing: 0.2em;
+    word-spacing: 0.25em;
 }
 p {
     margin: 8px 0 16px 0;
