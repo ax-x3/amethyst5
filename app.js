@@ -4,6 +4,8 @@ window.mobileCheck = function() {
     return check;
 };
 
+// here is a test
+
 const root = document.documentElement;
 var flickeringEnabled = true;
 
