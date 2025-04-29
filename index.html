@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/amethystcrystal.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="app.js"></script>
-    <script src="scrobbler.js"></script>
-    <link rel="icon" type="image/x-icon" href="amethystcrystal.png">
+    <script src="/scrobbler.js"></script>
     <title>AMETHYST</title>
 </head>
 <body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime(); dismissCard('JsDisabled');">
@@ -133,7 +133,7 @@
                                 <span class="highlight" style="vertical-align: 100%;">April 2025</span>
                                 <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
-                            <li><i class="highlight">[29]</i> Removed fade-in so that no-css-animation browsers can still view content. Updated and added way more songs to about.html, totaling 97.</li>
+                            <li><i class="highlight">[29]</i> Removed fade-in so that no-css-animation browsers can still view content. Updated and added way more songs to about.html, totaling 97. Renamed /animationResources/ directory to /vfx/. Deleted unused images. Moved root images to /images/. Added slashes to URIs so that pages can reference parent directory files. Created Sitemap card, revealing previously unlinked pages. Created index.html in /archive/ as a directory map.</li>
                             <li><i class="highlight">[24]</i> Increased word-spacing of headers, fixing long existing issue of unreadable h2's.</li>
                             <li><i class="highlight">[23]</i> Fixed issue with long song titles resizing main table layout. Used marquee tag. Restyled textarea to be easier on the eyes.</li>
                             <li><i class="highlight">[14]</i> Added fade out overlay on chat.</li>
@@ -331,9 +331,26 @@
                     <p><a><u>amethystx.pages.dev</u></a></p>
                     <img style="opacity: 0.9; position: absolute; transform: translate(30px, -85px); scale: 1.8;" src="images/redX.png">
                 </div> -->
-                <div class="card">
+                <div class="card signCard">
                     <p>Last updated</p>
                     <h2>Apr 29, 2025</h2>
+                </div>
+                <div class="card">
+                    <h2>Sitemap</h2>
+                    <ul>
+                        <li><a href="/"><u>/</u></a> <span class="caption">(main site)</span></li>
+                        <li><a href="/archive/"><u>/archive/</u></a></li>
+                        <li><a href="/b/"><u>/b/</u></a></li>
+                        <div class="caption">
+                            <li>/fonts/</li>
+                            <li>/icons/</li>
+                            <li>/images/</li>
+                            <li>/logos/</li>
+                            <li>/r/</li>
+                            <li>/sounds/</li>
+                            <li>/vfx/</li>
+                        </div>
+                    </ul>
                 </div>
                 <div>
                     <h1 style="font-size: 500%; color: black; opacity: 0.1;">[AS]</h1>
