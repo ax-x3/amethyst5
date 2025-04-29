@@ -238,7 +238,7 @@ img.bullet {
     transform: translate(-12px, -12px) scale(2);
     transform-origin: 0 0;
     border-radius: 5px 5px 0 0;
-    mask-image: url(images/fadeToBlack.png);
+    mask-image: url(/vfx/fadeToBlack.png);
     mask-type: alpha;
     mask-repeat: no-repeat;
     mask-size: cover;
