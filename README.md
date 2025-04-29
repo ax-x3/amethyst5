@@ -3,7 +3,7 @@
 # AMETHYSTX.net
 
 ### Directories:
-
+`
 /archive/                    (prev. /a/) - Archived site pages.
 
 /b/                                      - Business/professional representation.
@@ -19,3 +19,4 @@
 /sounds/                                 - All site sound files.
 
 /vfx/       (prev. /animationResources/) - Graphics used for site VFX.
+`
