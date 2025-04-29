@@ -6,4 +6,4 @@ directories:
 
 /b/ - business/non-internet-persona-centric
 
-/r/ - resources html
+/r/ - reused page elements
