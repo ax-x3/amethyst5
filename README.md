@@ -3,20 +3,19 @@
 # AMETHYSTX.net
 
 ### Directories:
-`
-/archive/                    (prev. /a/) - Archived site pages.
 
-/b/                                      - Business/professional representation.
+`/archive/                    (prev. /a/) - Archived site pages.`
 
-/fonts/                                  - Non-universal site typefaces.
+`/b/                                      - Business/professional representation.`
 
-/icons/                                  - Non-logo site symbols.
+`/fonts/                                  - Non-universal site typefaces.`
 
-/images/                                 - All bitmap site images.
+`/icons/                                  - Non-logo site symbols.`
 
-/r/                                      - Reused site elements.
+`/images/                                 - All bitmap site images.`
 
-/sounds/                                 - All site sound files.
+`/r/                                      - Reused site elements.`
 
-/vfx/       (prev. /animationResources/) - Graphics used for site VFX.
-`
+`/sounds/                                 - All site sound files.`
+
+`/vfx/       (prev. /animationResources/) - Graphics used for site VFX.`
