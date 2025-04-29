@@ -47,7 +47,7 @@ html {
 }
 body {
     background: #080808;
-    background-image: url(images/tilingBg.png);
+    background-image: url(vfx/tilingBg.png);
     background-size: 800px;
     image-rendering: pixelated;
     -webkit-text-size-adjust: none;
