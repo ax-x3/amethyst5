@@ -84,7 +84,6 @@ p {
 }
 table, tr {
     vertical-align: top;
-    animation: fadeIn 1s;
 }
 a {
     text-decoration: inherit;
