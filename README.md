@@ -2,8 +2,8 @@ Site permanently moved to amethystx.net
 
 directories:
 
-/a/ - archive
+/a/ - archived pages
 
-/b/ - business/non-internet-persona-centric
+/b/ - business/professional representation
 
 /r/ - reused page elements
