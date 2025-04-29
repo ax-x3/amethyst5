@@ -4,18 +4,18 @@
 
 ### Directories:
 
-`/archive/                    (prev. /a/) - Archived site pages.`
+`/archive/                    (prev. /a/)` - Archived site pages.
 
-`/b/                                      - Business/professional representation.`
+`/b/                                     ` - Business/professional representation.
 
-`/fonts/                                  - Non-universal site typefaces.`
+`/fonts/                                 ` - Non-universal site typefaces.
 
-`/icons/                                  - Non-logo site symbols.`
+`/icons/                                 ` - Non-logo site symbols.
 
-`/images/                                 - All bitmap site images.`
+`/images/                                ` - All bitmap site images.
 
-`/r/                                      - Reused site elements.`
+`/r/                                     ` - Reused site elements.
 
-`/sounds/                                 - All site sound files.`
+`/sounds/                                ` - All site sound files.
 
-`/vfx/       (prev. /animationResources/) - Graphics used for site VFX.`
+`/vfx/       (prev. /animationResources/)` - Graphics used for site VFX.
