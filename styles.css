@@ -256,47 +256,47 @@ img.bullet {
 }
 @keyframes static {
     0% {
-        mask-image: url(animationResources/static0.png);
+        mask-image: url(vfx/static0.png);
         mask-size: 60px;
         mask-mode: luminance;
     }
     12.5% {
-        mask-image: url(animationResources/static1.png);
+        mask-image: url(vfx/static1.png);
         mask-size: 60px;
         mask-mode: luminance;
     }
     25% {
-        mask-image: url(animationResources/static2.png);
+        mask-image: url(vfx/static2.png);
         mask-size: 60px;
         mask-mode: luminance;
     }
     37.5% {
-        mask-image: url(animationResources/static3.png);
+        mask-image: url(vfx/static3.png);
         mask-size: 60px;
         mask-mode: luminance;
     }
     50% {
-        mask-image: url(animationResources/static4.png);
+        mask-image: url(vfx/static4.png);
         mask-size: 60px;
         mask-mode: luminance;
     }
     62.5% {
-        mask-image: url(animationResources/static5.png);
+        mask-image: url(vfx/static5.png);
         mask-size: 60px;
         mask-mode: luminance;
     }
     75% {
-        mask-image: url(animationResources/static6.png);
+        mask-image: url(vfx/static6.png);
         mask-size: 60px;
         mask-mode: luminance;
     }
     87.5% {
-        mask-image: url(animationResources/static7.png);
+        mask-image: url(vfx/static7.png);
         mask-size: 60px;
         mask-mode: luminance;
     }
     100% {
-        mask-image: url(animationResources/static0.png);
+        mask-image: url(vfx/static0.png);
         mask-size: 60px;
         mask-mode: luminance;
     }
