@@ -14,6 +14,8 @@
 
 `/images/                                ` - All bitmap site images.
 
+`/logos/                                 ` - Logo SVGs.
+
 `/r/                                     ` - Reused site elements.
 
 `/sounds/                                ` - All site sound files.
