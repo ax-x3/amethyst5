@@ -128,6 +128,49 @@ ul {
 li {
     margin: 0 0 16px 0;
 }
+.svgBullet::before {
+    display: inline-block;
+    height: 1.2em;
+    aspect-ratio: 1;
+    margin-right: 12px;
+    filter: drop-shadow(0 0 10px var(--se-bright));
+    transform: translateY(4px);
+}
+.svgBullet {
+    &.folder::before {
+        content: url('/icons/folder.svg');
+    }
+    &.file::before {
+        content: url('/icons/file.svg');
+    }
+    &.more::before {
+        content: url('/icons/more.svg');
+    }
+    &.Discord::before {
+        content: url('/logos/discord.svg');
+    }
+    &.Bluesky::before {
+        content: url('/logos/bluesky.svg');
+    }
+    &.Cara::before {
+        content: url('/logos/cara.svg');
+    }
+    &.DeviantArt::before {
+        content: url('/logos/deviantart.svg');
+    }
+    &.GitHub::before {
+        content: url('/logos/github.svg');
+    }
+    &.Lastfm::before {
+        content: url('/logos/lastfm.svg');
+    }
+    &.MakerWorld::before {
+        content: url('/logos/makerworld.svg');
+    }
+    &.Roblox::before {
+        content: url('/logos/roblox.svg');
+    }
+}
 textarea {
     background-color: #080808;
     color: var(--se-success);
@@ -147,17 +190,9 @@ textarea {
 svg {
     filter: drop-shadow(0 0 10px var(--se-bright));
 }
-svg.bullet {
-    transform: translateY(4px);
-    width: 22px;
-}
 path.bullet {
     display: inline;
     fill: var(--se-bright); 
-}
-path.bulletColor {
-    display: inline;
-    fill: var(--se-light); 
 }
 img.bullet {
     filter: drop-shadow(0.1em 0.1em 0 #000b) drop-shadow(0 0 10px var(--se-light));
