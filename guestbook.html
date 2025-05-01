@@ -32,7 +32,7 @@
                 </div>
             </noscript>
         </div>
-        <div id="header-fetch">Loading</div>
+        <div id="header-fetch" class="contentColumn">">Loading</div>
         <script>
             fetch("/r/header.html")
                 .then(response => response.text())
@@ -64,7 +64,7 @@
     </div>
 </body>
 <footer>
-    <div class="noStatic" id="footer-fetch">Loading</div>
+    <div class="noStatic contentColumn" id="footer-fetch">Loading</div>
     <script>
         fetch("/r/footer.html")
             .then(response => response.text())

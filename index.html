@@ -34,7 +34,7 @@
                 </div>
             </noscript>
         </div>
-        <div id="header-fetch">Loading</div>
+        <div id="header-fetch" class="contentColumn">Loading</div>
         <script>
             fetch("/r/header.html")
                 .then(response => response.text())
@@ -91,9 +91,9 @@
                     <h2>News</h2>
                     <p class="caption">Apr 03, 2025</p>
                     <p>88x31 buttons!! I finally made one. Hotlink me if you exist.</p>
-                    <a href="https://amethystx.net/"><img src="/images/88x31.gif"></a>
+                    <a href="https://amethystx.net/"><img src="/badges/88x31.gif"></a>
                     <br><br>
-                    <textarea class="noStatic" readonly style="resize:none; height: 80px; width: 240px;"><a href="https://amethystx.net/"><img src="https://amethystx.net/images/88x31.gif"></a></textarea>
+                    <textarea class="noStatic" readonly style="resize:none; height: 80px; width: 240px;"><a href="https://amethystx.net/"><img src="https://amethystx.net/badges/88x31.gif"></a></textarea>
                     <!-- <p class="caption">Mar 17, 2025</p>
                     <p>CHATBOX!! LIKE A BOX FOR CHATS!</p>
                     <p>Here, you can talk to nobody. Because nobody visits my site. :(</p>
@@ -130,10 +130,17 @@
                         <ul>
                             <div style="margin: 30px 0; text-align: center;">
                                 <img style="width: 200px;" src="icons/embellishment.png">
+                                <span class="highlight" style="vertical-align: 100%;">May 2025</span>
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
+                            </div>
+                            <li><i class="highlight">[01]</i> Improved "last played" album cover visuals. Added NavLink ads to /index.html. Added folder and file icons where needed. Moved 88x31 files to new /badges/ folder. Fixed header and footer not showing fully on small screens.</li>
+                            <div style="margin: 30px 0; text-align: center;">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 100%;">April 2025</span>
                                 <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
-                            <li><i class="highlight">[30]</i> Reformatted all SVGs. Replaced janky hardcoded SVGs with new svgBullet class. SVG files are now actually referenced. Reworded instructions in art-n-commissions.html. Improved gallery links. Oh—and I hid a few easter eggs.</li>
+                            <li><i class="highlight">[30]</i> Reformatted all SVGs. Replaced janky hardcoded SVGs with new svgBullet class. SVG files are now actually referenced. Reworded instructions in art-n-commissions.html. Improved art gallery links. Oh—and I hid a few easter eggs.</li>
+                            <li><i class="highlight">[30]</i> Reformatted all SVGs. Replaced janky hardcoded SVGs with new svgBullet class. SVG files are now actually referenced. Reworded instructions in art-n-commissions.html. Improved art gallery links. Oh—and I hid a few easter eggs.</li>
                             <li><i class="highlight">[29]</i> Removed fade-in so that no-css-animation browsers can still view content. Updated and added way more songs to about.html, totaling 97. Renamed /animationResources/ directory to /vfx/. Deleted unused images. Moved root images to /images/. Added slashes to URIs so that pages can reference parent directory files. Created Sitemap card, revealing previously unlinked pages. Created index.html in /archive/ as a directory map.</li>
                             <li><i class="highlight">[24]</i> Increased word-spacing of headers, fixing long existing issue of unreadable h2's.</li>
                             <li><i class="highlight">[23]</i> Fixed issue with long song titles resizing main table layout. Used marquee tag. Restyled textarea to be easier on the eyes.</li>
@@ -263,13 +270,13 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <h2 id="listeningHeader">Now Listening:</h2>
+                    <h2 id="listeningHeader">Now listening:</h2>
                     <br>
                     <span class="caption" id="trackdate"></span>
                     <a id="tracklink">
                         <div class="noStatic">
-                            <div class="noStatic flickering" style="padding: 10px 35px">
-                                <img style="width: 100%; aspect-ratio: 1; border: 2px solid var(--se-light); background-color: var(--se-moody); box-sizing: border-box; filter: contrast(0.9) saturate(2);" id="trackart">
+                            <div class="noStatic flickering" style="padding: 15px 50px 5px">
+                                <img style="width: 100%; aspect-ratio: 1; box-shadow: 0 0 30px #f4e0fda0; background-color: var(--se-moody); box-sizing: border-box; filter: contrast(0.9) saturate(2);" id="trackart">
                             </div>
                             <p>
                                 <marquee behavior="scroll"><u><span id="trackartist"><span class="warning">Awaiting server response</span></span> - <span id="tracktitle"></span></u></marquee>
@@ -283,13 +290,19 @@
                     <h2 class="flickering warning" style="font-size: 200%;">CLOSED</h2>
                 </div> -->
                 <div class="card successCard">
-                    <h2 class="success">Site Status:</h2>
+                    <h2 class="success">Site status:</h2>
                     <p>If you can read this, the site is <span class="success">ONLINE</span>.</p>
                 </div>
                 <div class="card signCard">
                     <!-- upds -->
                     <p>Last updated</p>
                     <h2>Apr 30, 2025</h2>
+                </div>
+                <div class="card">
+                    <div class="noStatic flickering" style="padding: 20px">
+                        <iframe width="100%" style="border: none; aspect-ratio: 1; box-shadow: 0 0 30px #f4e0fda0;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+                    </div>
+                    <span class="caption">Not a real ad. Powered by Dimden's <a href="https://dimden.dev/navlinkads/" target="_blank" rel="noopener noreferrer"><u>NavLink</u></a>.</span>
                 </div>
                 <div class="card">
                     <h2>Sitemap</h2>
@@ -316,7 +329,7 @@
     </table>
 </body>
 <footer>
-    <div class="noStatic" id="footer-fetch">Loading</div>
+    <div class="noStatic contentColumn" id="footer-fetch">Loading</div>
     <script>
         fetch("/r/footer.html")
             .then(response => response.text())

@@ -24,7 +24,7 @@ $.ajax({
         $("span#trackdate")
             .html(timeFormatted);
 
-        var headerFormatted = "Now Listening:";
+        var headerFormatted = "Now listening:";
         $("h2#listeningHeader")
             .html(headerFormatted);
 
@@ -49,7 +49,7 @@ $.ajax({
         var dateFormatted = recentTrack.date["uts"];
         // If code reaches here, assume recentTrack.date is available, thus nothing is playing.
 
-        var headerFormatted = "Last Played:";
+        var headerFormatted = "Last played:";
         $("h2#listeningHeader")
             .html(headerFormatted);
 

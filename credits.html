@@ -32,7 +32,7 @@
                 </div>
             </noscript>
         </div>
-        <div id="header-fetch">Loading</div>
+        <div id="header-fetch" class="contentColumn">">Loading</div>
         <script>
             fetch("/r/header.html")
                 .then(response => response.text())
@@ -57,7 +57,8 @@
                         <li>
                             <br>
                             <a href="https://lyra.horse/"><img src="badges/lyra.horse.png"></a>
-                            <br><a href="https://lyra.horse/antonymph/" target="_blank" rel="noopener noreferrer"><u>lyra.horse/antonymph</u></a>
+                            <br><a href="https://lyra.horse/" target="_blank" rel="noopener noreferrer"><u>lyra.horse</u></a>
+                            <br><a class="svgBullet folder" href="https://lyra.horse/antonymph/" target="_blank" rel="noopener noreferrer"><u>/antonymph/</u></a>
                             <br><span class="caption">The most amazing internet experience, set to the tune of Antonymph by Vylet Pony.</span>
                         </li>
                         <li>
@@ -114,7 +115,7 @@
     </table>
 </body>
 <footer>
-    <div class="noStatic" id="footer-fetch">Loading</div>
+    <div class="noStatic contentColumn" id="footer-fetch">Loading</div>
     <script>
         fetch("/r/footer.html")
             .then(response => response.text())
