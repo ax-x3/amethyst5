@@ -40,7 +40,9 @@ $.ajax({
 
         $("img#trackart")
             .attr("src", recentTrack.image[3]["#text"])
-            .attr("title", "Album : " + recentTrack.album["#text"]);
+            .attr("title", "Album : " + recentTrack.album["#text"])
+            .addClass("nowPlaying")
+            .removeClass("notPlaying");
 
         $("a#tracklink")
             .attr("target", "_blank")
@@ -50,8 +52,13 @@ $.ajax({
         // If code reaches here, assume recentTrack.date is available, thus nothing is playing.
 
         var headerFormatted = "Last played:";
+        
         $("h2#listeningHeader")
             .html(headerFormatted);
+
+        $("img#trackart")
+            .addClass("notPlaying")
+            .removeClass("nowPlaying");
 
         var currentDate = Math.floor(new Date().getTime() / 1000);
         var timeDiff = currentDate - dateFormatted;
@@ -80,7 +87,7 @@ $.ajax({
     error: function(resp) {
         $("span#trackartist").html("<span class='warning'>API response error</span>");
         $("span#tracktitle").html("");
-        $("img#trackart").attr("src", "/amethystcrystalPix.png");
+        $("img#trackart").attr("src", "/images/amethystcrystalPix.png");
     }
     });
 };
