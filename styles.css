@@ -151,6 +151,12 @@ li {
     &.file::before {
         content: url('/icons/file.svg');
     }
+    &.picture::before {
+        content: url('/icons/picture.svg');
+    }
+    &.link::before {
+        content: url('/icons/link.svg');
+    }
     &.more::before {
         content: url('/icons/more.svg');
     }
@@ -193,7 +199,7 @@ textarea {
 #guestbookEmbed {
     border: none;
     width: 100%;
-    height: 700px;
+    height: 1200px;
 }
 #trackart.nowPlaying {
     width: 100%;
@@ -279,7 +285,7 @@ img.bullet {
     }
 }
 .card {
-    border: 2px solid #fff5;
+    border: 2px solid #fff2;
     background-color: #000;
     border-radius: 12px;
     padding: 12px;
@@ -302,6 +308,11 @@ img.bullet {
     mask-repeat: no-repeat;
     mask-size: cover;
 }
+.imagePreview {
+    position: absolute;
+    right: 70px;
+    height: 31px;
+}
 .flickering {
     animation: flickering 0.075s infinite;
 }
@@ -316,47 +327,47 @@ img.bullet {
 @keyframes static {
     0% {
         mask-image: url(vfx/static0.png);
-        mask-size: 60px;
+        mask-size: 50px;
         mask-mode: luminance;
     }
     12.5% {
         mask-image: url(vfx/static1.png);
-        mask-size: 60px;
+        mask-size: 50px;
         mask-mode: luminance;
     }
     25% {
         mask-image: url(vfx/static2.png);
-        mask-size: 60px;
+        mask-size: 50px;
         mask-mode: luminance;
     }
     37.5% {
         mask-image: url(vfx/static3.png);
-        mask-size: 60px;
+        mask-size: 50px;
         mask-mode: luminance;
     }
     50% {
         mask-image: url(vfx/static4.png);
-        mask-size: 60px;
+        mask-size: 50px;
         mask-mode: luminance;
     }
     62.5% {
         mask-image: url(vfx/static5.png);
-        mask-size: 60px;
+        mask-size: 50px;
         mask-mode: luminance;
     }
     75% {
         mask-image: url(vfx/static6.png);
-        mask-size: 60px;
+        mask-size: 50px;
         mask-mode: luminance;
     }
     87.5% {
         mask-image: url(vfx/static7.png);
-        mask-size: 60px;
+        mask-size: 50px;
         mask-mode: luminance;
     }
     100% {
         mask-image: url(vfx/static0.png);
-        mask-size: 60px;
+        mask-size: 50px;
         mask-mode: luminance;
     }
 }

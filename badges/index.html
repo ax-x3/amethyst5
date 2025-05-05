@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.35">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/amethystcrystal.png">
+    <title>/badges/</title>
+</head>
+<body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime(); dismissCard('JsDisabled');">
+    <a style="font-size: 60%; opacity: 0.75;" onclick="revealContent('devToolbar')"><u>Dev Tools [/]</u></a>
+    <div id="devToolbar" hidden>
+        Developer Tools >>> you can ignore this (or mess around idc) >>>
+        <button style="background-color: greenyellow;" name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
+        <button style="background-color: chocolate;" name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
+        <form style="display: inline-block;" action="https://amethystx.net/badges/index.html">
+            <button>[GO DEPLOYMENT]</button>
+        </form>
+        &nbsp;&nbsp;&nbsp;
+        <form style="display: inline-block;" action="http://localhost:5500/badges/index.html">
+            <button>[GO LOCAL]</button>
+        </form>
+    </div>
+    <header>
+        <div class="contentColumn">
+            <noscript>
+                <div class="card warningCard noStatic" id="JsDisabled">
+                    <h2 class="warning">Enable JavaScript!</h2>
+                    <p>Javascript is disabled on your browser.</p>
+                    <p>I'm not here to steal your data. Navigating this site requires you to allow JavaScript. <a href="/b/javascript.html" target="_blank" rel="noopener noreferrer"><u>How?</u></a></p>
+                </div>
+            </noscript>
+        </div>
+        <div id="header-fetch" class="contentColumn">">Loading</div>
+        <script>
+            fetch("/r/badgesHeader.html")
+                .then(response => response.text())
+                .then(content => {
+                    document.getElementById("header-fetch").innerHTML = content;
+                });
+        </script>
+    </header>
+    <table class="contentColumn">
+        <tr>
+            <td>
+                <div class="card signCard">
+                    <h2>Directory of /badges/</h2>
+                    <br>
+                    <p class="caption">These files may not last forever. If you want to use them, I reccomend downloading rather than hotlinking them.</p>
+                    <div style="height: 20px;"></div>
+                    <ul style="transform: translateX(25px);">
+                        <li class="svgBullet folder"><a href="/.."><u>/..</u></a></li>
+                        <ul style="transform: translateX(25px);">
+                            <li class="svgBullet file"><a href="index.html" class="success"><u>index.html</u></a> <span class="caption">(You are here.)</span></li>
+                            <li class="svgBullet picture"><a href="88x31.gif"><u>88x31.gif</u></a><a href="https://amethystx.net/" target="_blank" rel="noopener noreferrer" class="imagePreview"><img class="badge" src="88x31.gif"></a></li>
+                            <li class="svgBullet picture"><a href="8831button.gif"><u>8831button.gif</u></a><span class="imagePreview"><img class="badge" src="8831button.gif"></span></li>
+                            <li class="svgBullet picture"><a href="best_chrome.gif"><u>best_chrome.gif</u></a><span class="imagePreview"><img class="badge" src="best_chrome.gif"></span></li>
+                            <li class="svgBullet picture"><a href="best_desktop.gif"><u>best_desktop.gif</u></a><span class="imagePreview"><img class="badge" src="best_desktop.gif"></span></li>
+                            <li class="svgBullet picture"><a href="copy_floppy.gif"><u>copy_floppy.gif</u></a><span class="imagePreview"><img class="badge" src="copy_floppy.gif"></span></li>
+                            <li class="svgBullet picture"><a href="css-is-difficult.gif"><u>css-is-difficult.gif</u></a><span class="imagePreview"><img class="badge" src="css-is-difficult.gif"></span></li>
+                            <li class="svgBullet picture"><a href="delete-twitter.gif"><u>delete-twitter.gif</u></a><a href="https://neocities.org/" target="_blank" rel="noopener noreferrer" class="imagePreview"><img class="badge" src="delete-twitter.gif"></a></li>
+                            <li class="svgBullet picture"><a href="lyra.horse.png"><u>lyra.horse.png</u></a><a href="https://lyra.horse/" target="_blank" rel="noopener noreferrer" class="imagePreview"><img class="badge" src="lyra.horse.png"></a></li>
+                            <li class="svgBullet picture"><a href="no_nft.gif"><u>no_nft.gif</u></a><span class="imagePreview"><img class="badge" src="no_nft.gif"></span></li>
+                            <li class="svgBullet picture"><a href="no-frames.gif"><u>no-frames.gif</u></a><span class="imagePreview"><img class="badge" src="no-frames.gif"></span></li>
+                            <li class="svgBullet picture"><a href="pilosophos-circle-88x31.png"><u>pilosophos-circle-88x31.png</u></a><a href="https://pilosophos.com/" target="_blank" rel="noopener noreferrer" class="imagePreview"><img class="badge" src="pilosophos-circle-88x31.png"></a></li>
+                            <li class="svgBullet picture"><a href="queer.png"><u>queer.png</u></a><span class="imagePreview"><img class="badge" src="queer.png"></span></li>
+                            <li class="svgBullet picture"><a href="say-no-to-web3.gif"><u>say-no-to-web3.gif</u></a><span class="imagePreview"><img class="badge" src="say-no-to-web3.gif"></span></li>
+                            <li class="svgBullet picture"><a href="trans_now.gif"><u>trans_now.gif</u></a><span class="imagePreview"><img class="badge" src="trans_now.gif"></span></li>
+                            <li class="svgBullet picture"><a href="web-design-passion.gif"><u>web-design-passion.gif</u></a><span class="imagePreview"><img class="badge" src="web-design-passion.gif"></span></li>
+                            <li class="svgBullet link"><a href="https://darkosparko.nekoweb.org/rocket-button.gif"><u>https://darkosparko.nekoweb.org/rocket-button.gif</u></a><a href="https://darkosparko.nekoweb.org/" target="_blank" rel="noopener noreferrer" class="imagePreview"><img class="badge" src="https://darkosparko.nekoweb.org/rocket-button.gif"></a></li>
+                            <li class="svgBullet link"><a href="https://dimden.dev/services/images/88x31.gif"><u>https://dimden.dev/services/images/88x31.gif</u></a><a href="https://dimden.dev/" target="_blank" rel="noopener noreferrer" class="imagePreview"><img class="badge" src="https://dimden.dev/services/images/88x31.gif"></a></li>
+                            <li class="svgBullet link"><a href="https://melankorin.net/assets/img/buttons/button-1.gif"><u>https://melankorin.net/assets/img/buttons/button-1.gif</u></a><a href="https://melankorin.net/" target="_blank" rel="noopener noreferrer" class="imagePreview"><img class="badge" src="https://melankorin.net/assets/img/buttons/button-1.gif"></a></li>
+                            <li class="svgBullet link"><a href="https://nekoweb.org/assets/buttons/button11.gif"><u>https://nekoweb.org/assets/buttons/button11.gif</u></a><a href="https://nekoweb.org/" target="_blank" rel="noopener noreferrer" class="imagePreview"><img class="badge" src="https://nekoweb.org/assets/buttons/button11.gif"></a></li>
+                            <li class="svgBullet link"><a href="https://nekoweb.org/assets/buttons/button5.gif"><u>https://nekoweb.org/assets/buttons/button5.gif</u></a><a href="https://nekoweb.org/" target="_blank" rel="noopener noreferrer" class="imagePreview"><img class="badge" src="https://nekoweb.org/assets/buttons/button5.gif"></a></li>
+                        </ul>
+                    </ul>
+                    <div style="height: 20px;"></div>
+                    <p class="svgBullet link caption">Hotlinked files are shown but not stored on this site.</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+<footer>
+    <div class="noStatic contentColumn" id="footer-fetch">Loading</div>
+    <script>
+        fetch("/r/footer.html")
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById("footer-fetch").innerHTML = content;
+            });
+    </script>
+</footer>
+</html>
