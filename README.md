@@ -1,4 +1,5 @@
 ### Site permanently moved to amethystx.net
+Remaining links to am3thystx.pages.dev will continue to work indefinitely
 
 # AMETHYSTX.net
 
