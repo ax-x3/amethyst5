@@ -4,8 +4,6 @@ window.mobileCheck = function() {
     return check;
 };
 
-// here is a test
-
 const root = document.documentElement;
 var flickeringEnabled = true;
 
@@ -112,7 +110,6 @@ function revealContent(contentId) {
 
 function developerMode() {
     document.getElementById("usingMobile").hidden = false;
-    // document.getElementById("JsDisabled").hidden = false;
     document.getElementById("underConstruction").hidden = false;
     document.getElementById("queerSafety").hidden = false;
 }

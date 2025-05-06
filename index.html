@@ -10,7 +10,7 @@
     <script src="/scrobbler.js"></script>
     <title>AMETHYST</title>
 </head>
-<body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime(); dismissCard('JsDisabled');">
+<body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime();">
     <a style="font-size: 60%; opacity: 0.75;" onclick="revealContent('devToolbar')"><u>Dev Tools [/]</u></a>
     <div id="devToolbar" hidden>
         Developer Tools >>> you can ignore this (or mess around idc) >>>
@@ -66,8 +66,9 @@
                 </div>
                 <div class="card warningCard" id="usingMobile" hidden>
                     <button class="dismissCard" name="dismiss" onclick="dismissCard('usingMobile')">x</button>
-                    <h2>Desktop Preferable</h2>
-                    <p>This website can work on small screens, but it's optimized for <span class="highlight">desktop viewing</span>. Since you seem to be on a mobile device, landscape orientation may be better.</p>
+                    <h2>Better on desktop!</h2>
+                    <p>This website works <span class="highlight">ok</span> on your <span class="highlight">mobile device</span>, but you'd have a much better experience using a <span class="highlight">monitor</span>.</p>
+                    <p>For now, flip your device onto its long side.</p>
                     <br>
                     <div style="width:fit-content; margin: 0 auto;">
                         <svg style="width: 75px; transform: translateX(-15px);" viewBox="-2 -30 170 167">
@@ -158,7 +159,7 @@
                                 <span class="highlight" style="vertical-align: 120%;">May 2025</span>
                                 <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
-                            <li><p><i class="highlight">[05]</i> Lightened card borders & scaled down static effect mask. Added 2 buttons. Improved guestbook sizing. Added and populated index.html in /badges/. Added /badges/ to sitemap. Changed wording of directories.</p></li>
+                            <li><p><i class="highlight">[05]</i> Lightened card borders & scaled down static effect mask. Added 2 buttons. Improved guestbook sizing. Added and populated index.html in /badges/. Added /badges/ to sitemap. Changed wording of directories. Removed obsolete javascript detection.</p></li>
                             <li><p><i class="highlight">[02]</i> Fixed and modernized line heights. Added more marquees to index.html. Added tons of 88x31 buttons. Added to credits.html, including a hardware section with specs. Added Nekoweb ads. Made the album art spin when actively scrobbling. Zoomed out on small screens. Added visitor counter; might remove if better counter is found.</p></li>
                             <li><p><i class="highlight">[01]</i> Improved "last played" album cover visuals. Added NavLink ads to /index.html. Added folder and file icons where needed. Moved 88x31 files to new /badges/ folder. Fixed header and footer not showing fully on small screens.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
@@ -323,7 +324,7 @@
                 <div class="card signCard">
                     <!-- upds -->
                     <span>Last updated</span>
-                    <br><br><h2>May 02, 2025</h2>
+                    <br><br><h2>May 05, 2025</h2>
                 </div>
                 <div class="card">
                     <div class="noStatic flickering" style="padding: 10px">
