@@ -282,16 +282,16 @@ img.bullet {
 .signCard {
     background-color: #222 !important;
 }
-.paperCard {
-    background-color: #eed !important;
+.paper {
+    background-color: #eeeeed !important;
     border-radius: 0 !important;
-    padding: 50px !important;
-    & > * {
+    padding: 0px !important;
+    /* & > * {
         color: #000;
         filter: none !important;
         text-shadow: none !important;
         -webkit-text-stroke: black 0px !important;
-    }
+    } */
 }
 .card {
     border: 2px solid #fff2;
