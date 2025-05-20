@@ -184,6 +184,15 @@ li {
     &.Roblox::before {
         content: url('/logos/roblox.svg');
     }
+    &.UDcredits::before {
+        content: url('/icons/UDcredits.svg');
+    }
+    &.UDmiles::before {
+        content: url('/icons/UDmiles.svg');
+    }
+    &.UDbounty::before {
+        content: url('/icons/UDbounty.svg');
+    }
 }
 textarea {
     background-color: #080808;
