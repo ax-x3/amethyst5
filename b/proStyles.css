@@ -84,3 +84,23 @@ h2 {
     opacity: 0.6; 
     font-size: 75%;
 }
+
+a {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.bigButton {
+    text-decoration: none;
+    padding: 20px;
+    font-size: 120%;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--se-link);
+    color: var(--se-moody);
+    transition: ease-in-out 50ms;
+    &:hover {
+        filter: brightness(1.2);
+    }
+}
