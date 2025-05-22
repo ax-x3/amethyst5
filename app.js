@@ -35,9 +35,9 @@ function adjustStylesForBrowser() {
     if (isMobile) {
         console.log("[ :c ] Styles adjusted: You are using a mobile browser.");
         stylesNeedChanging = true;
-        document.getElementById("usingMobile").hidden = false;
         root.style.setProperty('--lu-static', 'none');
         styleProfile.innerHTML = "mobile (minimal)";
+        document.getElementById("usingMobile").hidden = false;
     } else if (isSafari) {
         console.log("[ :c ] Styles adjusted: Why are you using Safari?");
         stylesNeedChanging = true;
