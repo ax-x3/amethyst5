@@ -11,7 +11,11 @@
     <title>AMETHYST</title>
 </head>
 <body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime();">
-    <a style="font-size: 60%; opacity: 0.75;" onclick="revealContent('devToolbar')"><u>Dev Tools [/]</u></a>
+    <div class="caption">
+        <a onclick="revealContent('devToolbar')"><u>Dev Tools [/]</u></a>
+        <span>profile:</span>
+        <span id="styleProfile">detecting</span>
+    </div>
     <div id="devToolbar" hidden>
         Developer Tools >>> you can ignore this (or mess around idc) >>>
         <button style="background-color: greenyellow;" name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
@@ -43,7 +47,7 @@
                 });
         </script>
     </header>
-    <a style="position:fixed;z-index:1339;top:55px;right:3px;" href="http://www.snazzyspace.com/generators/viewer-counter/" title="SnazzySpace.com Viewer Counter" target="_blank"><img src="http://www.snazzyspace.com/generators/viewer-counter/counter.php/fid=1746621313/style=0/counter.png" border="0"></a>    <table class="contentColumn">
+    <table class="contentColumn">
         <tr>
             <td style="width: 72%">
                 <div class="card warningCard" id="queerSafety">
@@ -65,20 +69,11 @@
                 </div>
                 <div class="card warningCard" id="usingMobile" hidden>
                     <button class="dismissCard" name="dismiss" onclick="dismissCard('usingMobile')">x</button>
-                    <h2>Better on desktop!</h2>
-                    <p>This website works <span class="highlight">ok</span> on your <span class="highlight">mobile device</span>, but you'd have a much better experience using a <span class="highlight">monitor</span>.</p>
-                    <p>For now, flip your device onto its long side.</p>
+                    <h2>Mobile detected!</h2>
+                    <p>I've optimized this website to work on your device, although you'd have a much better experience using a <span class="highlight">laptop</span> or <span class="highlight">monitor</span>.</p>
                     <br>
                     <div style="width:fit-content; margin: 0 auto;">
-                        <svg style="width: 75px; transform: translateX(-15px);" viewBox="-2 -30 170 167">
-                            <path class="bullet flickering" d="m 51.4975,-28.5 a 15,15 0 0 0 -15,15 v 133.84 a 15,15 0 0 0 15,15 h 60.845 a 15,15 0 0 0 15,-15 V -13.5 a 15,15 0 0 0 -15,-15 z M 50.558125,0.421875 H 95.086875 102.21 113.28187 V 106.41813 H 109.205 c 0,-7.633321 -0.82888,-16.881326 -4.65438,-24.65438 C 100.72514,73.990696 93.279239,67.806875 81.92,67.806875 c -11.359241,0 -18.803257,6.183821 -22.62875,13.956875 C 55.465756,89.536804 54.635,98.784808 54.635,106.41813 H 50.558125 Z M 81.92,25.779375 c -9.892263,0 -17.980625,8.088362 -17.980625,17.980625 0,9.892262 8.088362,17.98 17.980625,17.98 9.892263,0 17.980625,-8.087738 17.980625,-17.98 0,-9.892263 -8.088362,-17.980625 -17.980625,-17.980625 z m 0,6.4 c 6.433457,0 11.58,5.147167 11.58,11.580625 0,6.433457 -5.146543,11.58 -11.58,11.58 -6.433458,0 -11.58,-5.146543 -11.58,-11.58 0,-6.433458 5.146542,-11.580625 11.58,-11.580625 z m 0,42.0275 c 9.21824,0 13.816454,4.140498 16.88875,10.383125 3.0723,6.242626 3.99625,14.701675 3.99625,21.82813 H 101.37188 94.131875 61.035 C 61.035,99.291675 61.960828,90.832626 65.033125,84.59 68.105422,78.347373 72.701759,74.206875 81.92,74.206875 Z" />
-                        </svg>
-                        <svg style="width: 75px; scale: 0.75; transform: translateX(-25px);" viewBox="-2 -30 170 167">
-                            <path class="bullet flickering" d="M 81.92,-28.5 V 12.46 H 0 v 81.92 h 81.92 v 40.96 l 81.92,-81.92 z" />
-                        </svg>
-                        <svg style="width: 75px; transform: translateX(-15px);" viewBox="-2 -30 170 167">
-                            <path class="bullet flickering" d="m 15,7.9975 a 15,15 0 0 0 -15,15 v 60.845 a 15,15 0 0 0 15,15 h 133.84 a 15,15 0 0 0 15,-15 v -60.845 a 15,15 0 0 0 -15,-15 z M 28.921875,22.058125 H 134.91813 v 44.52875 c -0.79439,0.467618 -2.01591,1.092023 -3.875,1.795625 -3.85995,1.460853 -10.10267,2.998125 -19.38125,2.998125 -18.124265,0 -37.846973,-10.321875 -58.40438,-10.321875 -10.081174,0 -17.284097,1.752089 -22.02125,3.57625 -0.852847,0.32841 -1.607297,0.66405 -2.314375,0.996875 z M 111.695,24.61125 c -8.25831,0 -15.023125,6.762933 -15.023125,15.02125 0,8.258318 6.764815,15.021875 15.023125,15.021875 8.25832,0 15.02187,-6.763557 15.02188,-15.021875 0,-8.258317 -6.76356,-15.02125 -15.02188,-15.02125 z m 0,6.400625 c 4.79951,0 8.62125,3.821119 8.62125,8.620625 0,4.799507 -3.82174,8.623125 -8.62125,8.623125 -4.79951,0 -8.6225,-3.823618 -8.6225,-8.623125 0,-4.799506 3.82299,-8.620625 8.6225,-8.620625 z M 53.2575,67.45875 c 18.29012,0 37.994394,10.3225 58.40438,10.3225 9.98854,0 17.03577,-1.669237 21.64687,-3.414375 0.57041,-0.215879 1.10619,-0.436181 1.60938,-0.656875 V 84.781875 H 28.921875 v -11.91 C 29.676101,72.367284 31.054729,71.562591 33.535,70.6075 37.529592,69.069282 43.914912,67.45875 53.2575,67.45875 Z" />
-                        </svg>
+                        <svg viewBox="-2 -30 280.83701 145.86328" width="300"><path class="bullet" d="M 122.99805 -30 A 8 8 0 0 0 114.99805 -22 L 114.99805 80.591797 A 8 8 0 0 0 122.99805 88.591797 L 188.24805 88.591797 L 190.24805 109.00195 L 158.80078 111.00195 L 158.80078 115.86328 L 235.03516 115.86328 L 235.03516 111.00195 L 203.58789 109.00195 L 205.58789 88.591797 L 270.83789 88.591797 A 8 8 0 0 0 278.83789 80.591797 L 278.83789 -22 A 8 8 0 0 0 270.83789 -30 L 122.99805 -30 z M 126.44922 -18.548828 L 267.38672 -18.548828 L 267.38672 77.142578 L 126.44922 77.142578 L 126.44922 -18.548828 z M 5.5 -12.011719 C 1.3578681 -12.011719 -2 -8.653846 -2 -4.5117188 L -2 62.408203 C -2 66.55033 1.3578681 69.908203 5.5 69.908203 L 35.921875 69.908203 C 40.063997 69.908203 43.421875 66.55033 43.421875 62.408203 L 43.421875 -4.5117188 C 43.421875 -8.653846 40.063997 -12.011719 35.921875 -12.011719 L 5.5 -12.011719 z M 2.9277344 -0.62304688 L 38.494141 -0.62304688 L 38.494141 9.5820312 L 22.111328 12.177734 L 20.710938 21.013672 L 19.310547 12.177734 L 2.9277344 9.5820312 L 2.9277344 -0.62304688 z M 177.82422 9.3789062 L 169.69922 25.324219 L 196.89844 52.521484 L 224.0957 25.324219 L 215.97266 9.3789062 L 198.29688 12.177734 L 196.89844 21.015625 L 195.49805 12.177734 L 177.82422 9.3789062 z M 2.9277344 34.738281 L 20.710938 52.521484 L 38.494141 34.738281 L 38.494141 58.521484 L 2.9277344 58.521484 L 2.9277344 34.738281 z M 20.710938 60.759766 A 3.4550602 3.4550602 0 0 1 24.166016 64.214844 A 3.4550602 3.4550602 0 0 1 20.710938 67.669922 A 3.4550602 3.4550602 0 0 1 17.255859 64.214844 A 3.4550602 3.4550602 0 0 1 20.710938 60.759766 z M 250.52539 80.304688 A 2.5629756 2.5629756 0 0 1 253.08789 82.867188 A 2.5629756 2.5629756 0 0 1 250.52539 85.429688 A 2.5629756 2.5629756 0 0 1 247.96289 82.867188 A 2.5629756 2.5629756 0 0 1 250.52539 80.304688 z M 258.86133 80.304688 A 2.5629756 2.5629756 0 0 1 261.42383 82.867188 A 2.5629756 2.5629756 0 0 1 258.86133 85.429688 A 2.5629756 2.5629756 0 0 1 256.29688 82.867188 A 2.5629756 2.5629756 0 0 1 258.86133 80.304688 z M 267.19531 80.304688 A 2.5629756 2.5629756 0 0 1 269.75977 82.867188 A 2.5629756 2.5629756 0 0 1 267.19531 85.429688 A 2.5629756 2.5629756 0 0 1 264.63281 82.867188 A 2.5629756 2.5629756 0 0 1 267.19531 80.304688 z M 29.386719 82.791016 L 26.859375 85.068359 C 26.859375 85.068359 36.852591 96.263528 51.728516 98.970703 C 63.945751 101.19405 74.941073 98.070583 78.392578 96.923828 C 79.107931 99.66078 79.023614 102.63397 78.005859 105.52148 L 98.972656 87.160156 L 71.109375 87.765625 C 73.772291 89.196675 75.823882 91.294653 77.146484 93.75 C 73.807725 94.833141 63.547134 97.664903 52.337891 95.625 C 38.834146 93.167538 29.386719 82.791016 29.386719 82.791016 z " /></svg>
                     </div>
                 </div>
                 <div class="card">
@@ -163,6 +158,7 @@
                                 <span class="highlight" style="vertical-align: 120%;">May 2025</span>
                                 <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
+                            <li><p><i class="highlight">[21]</i> Created styleProfile indicator which displays style modificaion profile. Mobile devices now have no static animations. Updated mobile device alert with new graphics and message.</p></li>
                             <li><p><i class="highlight">[20]</i> Renamed art-n-commissions.html to art.html. Updated terms of service and added /b/terms.html. Added CC 88x31 badge. Made /b/index use anchors rather than forms for links. Added hidden page links to /b/.</p></li>
                             <li><p><i class="highlight">[19]</i> Added site creation date. Added UDU Stats card on about.html. Updated footer to copyright eternity.</p></li>
                             <li><p><i class="highlight">[08]</i> Improved some links. Added roll.html.</p></li>
@@ -331,7 +327,7 @@
                 <div class="card signCard">
                     <!-- upds -->
                     <span>Last updated</span>
-                    <br><br><h2>May 19, 2025</h2>
+                    <br><br><h2>May 21, 2025</h2>
                     <br><br>
                     <div class="noStatic caption">
                         <span>Created Oct 19, 2024</span>

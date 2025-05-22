@@ -39,6 +39,8 @@ html {
     /* Flicker constants */
     --lu-flicker-off: brightness(0.9);
     --lu-flicker-on: brightness(1.1);
+    /* Static */
+    --lu-static: static 2s infinite;
 }
 .contentColumn {
     width: 1030px;
@@ -59,7 +61,7 @@ body {
 
 }
 div:not(.noStatic):not(.flickering) {
-    animation: static 2s infinite;
+    animation: var(--lu-static);
 }
 h1 {
     margin: 0;

@@ -36,9 +36,12 @@ function adjustStylesForBrowser() {
         console.log("[ :c ] Styles adjusted: You are using a mobile browser.");
         stylesNeedChanging = true;
         document.getElementById("usingMobile").hidden = false;
+        root.style.setProperty('--lu-static', 'none');
+        styleProfile.innerHTML = "mobile (minimal)";
     } else if (isSafari) {
         console.log("[ :c ] Styles adjusted: Why are you using Safari?");
         stylesNeedChanging = true;
+        styleProfile.innerHTML = "Safari (modified)";
     } else if (isUnknown) {
         console.log("[ :/ ] Styles unchanged: Couldn't recognize your browser.");
     } else {
@@ -49,6 +52,7 @@ function adjustStylesForBrowser() {
         root.style.setProperty('--se-bright-dropshadow', '#f4e0fd');
         root.style.setProperty('--se-light-dropshadow', '#ca50da');
         root.style.setProperty('--se-regular-dropshadow', '#9a10c8');
+        styleProfile.innerHTML = "default (fancy)";
     }
 }
 
