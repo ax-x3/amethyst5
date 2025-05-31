@@ -58,7 +58,8 @@ body {
     color: var(--se-bright);
     text-shadow: 0.1em 0.1em 0 #000b, 0 0 10px var(--se-bright-dropshadow);
     line-height: 115%;
-
+    margin: 0;
+    padding: 0;
 }
 div:not(.noStatic):not(.flickering) {
     animation: var(--lu-static);
