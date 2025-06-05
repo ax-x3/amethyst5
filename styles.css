@@ -311,7 +311,6 @@ img.bullet {
 }
 .thumbnail {
     position: relative;
-    z-index: -1;
     width: calc((100% + 24px) / 2);
     transform: translate(-12px, -12px) scale(2);
     transform-origin: 0 0;
