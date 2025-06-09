@@ -58,12 +58,28 @@
             font-size: 75%;
         }
 
-        a {
+        a &:not(.main-button) {
             &:hover {
                 opacity: 0.5;
                 cursor: pointer;
             }
         }
+
+        .main-button {
+            background-color: var(--se-link); 
+            padding: 30px 50px; 
+            color: var(--se-moody); 
+            border-radius: 1000px; 
+            box-shadow: -12px -12px 24px white, 12px 12px 24px #0002;
+            font-size: 140%;
+            transition: 200ms;
+            &:hover {
+                box-shadow:  inset 12px 12px 24px #0002, inset -12px -12px 24px #fff6;
+                filter: brightness(0.95);
+                transition: 200ms;
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -72,12 +88,15 @@
         <div style="height: 50px;"></div>
         <h1>Summer Coding @ DS</h1>
         <div style="height: 50px;"></div>
-        <h2>Free coding classes hosted by captains of the DS Robotics Team</h2>
+        <h2>Free coding classes hosted by captains of the DSHS Robotics Team</h2>
         <div style="height: 100px;"></div>
     </div>
     <div style="text-align: center;">
-        <div style="height: 100px; background: linear-gradient(var(--se-bright), #fff0);"></div>
-        <div style="height: 100px;"></div>
+        <div style="height: 200px; background: linear-gradient(var(--se-bright), #fff0);"></div>
+        <div style="transform: translateY(-120px);">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScGktdDzRu75P-sMdul8KyB4RbuBcBT2efv8iPXJqwKYsuPAg/viewform?usp=preview" class="main-button" target="_blank"><b>Sign up</b> for Summer 2025</a>
+        </div>
+        <div style="height: 200px;"></div>
         <h2>Class dates and locations are not decided yet.</h2>
         <p><b>We'd love to know when our classes would best fit your busy schedule.</b></p>
         <div style="height: 50px;"></div>
@@ -121,6 +140,7 @@
             </tr>
         </table>
     </div>
+    <div style="height: 200px;"></div>
     
 
 
@@ -131,7 +151,7 @@
         <p><b>We want to hear from you!</b></p>
         <p>Reach out to <a href="mailto:x3amethyst@gmail.com"><u>x3amet<span style="display: none;"><i>k0zm5wlgf1</i></span>hyst@gm<span style="display: none;"><i>a9rj1of4qp</i></span>ail.com</u></a> with any questions or concerns.</p>
         <div style="height: 20px;"></div>
-        <p class="caption">Copyright (c) 2025. All Rights Reserved.</p>
+        <p class="caption">Copyright &copy; 2025. All Rights Reserved.</p>
     </div>
     <div style="height: 100px;"></div>
 </footer>
