@@ -12,7 +12,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
         :root {
-            --se-bright: #f4e0fd;
+            --se-bright: #edccfc;
             --se-link: #e7a4f0;
             --se-light: #ca50da;
             --se-regular: #9a10c8;
@@ -67,16 +67,19 @@
 
         .main-button {
             background-color: var(--se-link); 
-            padding: 30px 50px; 
+            text-decoration: none;
+            font-size: 120%;
+            border: 0px solid var(--se-moody);
+            padding: 30px 40px; 
             color: var(--se-moody); 
             border-radius: 1000px; 
-            box-shadow: -12px -12px 24px white, 12px 12px 24px #0002;
-            font-size: 140%;
-            transition: 200ms;
+            box-shadow: -12px -12px 24px #fff9, 12px 12px 24px #0005, inset 12px 12px 24px #0000, inset -12px -12px 24px #fff0;
+            transition: 150ms;
             &:hover {
-                box-shadow:  inset 12px 12px 24px #0002, inset -12px -12px 24px #fff6;
-                filter: brightness(0.95);
-                transition: 200ms;
+                box-shadow: -12px -12px 24px #fff0, 12px 12px 24px #0000, inset 12px 12px 24px #0002, inset -12px -12px 24px #fff6;
+                filter: brightness(1.1);
+                transition: 150ms;
+                border: 8px solid var(--se-moody);
             }
         }
         
@@ -89,53 +92,53 @@
         <h1>Summer Coding @ DS</h1>
         <div style="height: 50px;"></div>
         <h2>Free coding classes hosted by captains of the DSHS Robotics Team</h2>
-        <div style="height: 100px;"></div>
+        <div style="height: 120px;"></div>
     </div>
     <div style="text-align: center;">
-        <div style="height: 200px; background: linear-gradient(var(--se-bright), #fff0);"></div>
-        <div style="transform: translateY(-120px);">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScGktdDzRu75P-sMdul8KyB4RbuBcBT2efv8iPXJqwKYsuPAg/viewform?usp=preview" class="main-button" target="_blank"><b>Sign up</b> for Summer 2025</a>
+        <div style="height: 0;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScGktdDzRu75P-sMdul8KyB4RbuBcBT2efv8iPXJqwKYsuPAg/viewform" class="main-button" target="_blank"><b>Sign up</b> for Summer 2025</a>
         </div>
+        <div style="height: 200px; background: linear-gradient(var(--se-bright), #fff0);"></div>
         <div style="height: 200px;"></div>
-        <h2>Class dates and locations are not decided yet.</h2>
+        <h2>Class dates and locations are being determined.</h2>
         <p><b>We'd love to know when our classes would best fit your busy schedule.</b></p>
         <div style="height: 50px;"></div>
-        <p>Saturdays or Sundays at X:00 at the Dover or Sherborn Library.</p>
+        <p>Thursdays at 6:00 at the Dover, Sherborn, or Morse Institute (Natick) Library.</p>
         <br>
         <table style="width: 1000px; margin: 0 auto; line-height: 200%; box-shadow: 0 0 15px var(--se-bright);">
             <tr style="background-color: #eee;"">
                 <td style="width: 70px">Class</td>
-                <td>Date</td>
+                <td style="width: 200px">Date</td>
                 <td>Location</td>
             </tr>
             <tr>
                 <td>1</td>
-                <td>TBD</td>
+                <td>Thu, June 26</td>
                 <td>TBD</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>TBD</td>
+                <td>Thu, July 3</td>
                 <td>TBD</td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>TBD</td>
+                <td>Thu, July 17</td>
                 <td>TBD</td>
             </tr>
             <tr>
                 <td>4</td>
-                <td>TBD</td>
+                <td>Thu, July 24</td>
                 <td>TBD</td>
             </tr>
             <tr>
                 <td>5</td>
-                <td>TBD</td>
+                <td>Thu, July 31</td>
                 <td>TBD</td>
             </tr>
             <tr>
                 <td>6</td>
-                <td>TBD</td>
+                <td>Thu, August 1</td>
                 <td>TBD</td>
             </tr>
         </table>
