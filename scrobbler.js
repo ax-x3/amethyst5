@@ -47,7 +47,7 @@ $.ajax({
         $("a#tracklink")
             .attr("target", "_blank")
             .attr("href", recentTrack.url);
-
+        
         var dateFormatted = recentTrack.date["uts"];
         // If code reaches here, assume recentTrack.date is available, thus nothing is playing.
 
@@ -62,6 +62,7 @@ $.ajax({
 
         var currentDate = Math.floor(new Date().getTime() / 1000);
         var timeDiff = currentDate - dateFormatted;
+
         if (timeDiff <= 3600) {
             var timeFormatted = Math.floor(timeDiff / 60);
             if (timeFormatted == 1)
@@ -80,6 +81,35 @@ $.ajax({
                 timeFormatted += " day ago";
             else
                 timeFormatted += " days ago";
+            // ==================================================================================
+            // IF USING THIS CODE, IGNORE EVERYTHING FROM HERE UNTIL LABELED END
+            // ==================================================================================
+            if (timeDiff > 1209600) {
+                if (timeDiff <= 2592000) {
+                    var timeInactive = Math.floor(timeDiff / 604800)
+                    if (timeInactive == 1)
+                        timeInactive += " week ago";
+                    else
+                        timeInactive += " weeks ago";
+                } else if (timeDiff <= 31556926) {
+                    var timeInactive = Math.floor(timeDiff / 2592000)
+                    if (timeInactive == 1)
+                        timeInactive += " month ago";
+                    else
+                        timeInactive += " months ago";
+                } else {
+                    var timeInactive = Math.floor(timeDiff / 31556926)
+                    if (timeInactive == 1)
+                        timeInactive += " year ago";
+                    else
+                        timeInactive += " years ago";
+                }
+                $("span#inactiveDuration")
+                    .html(timeInactive);
+            }
+            // ==================================================================================
+            // END OF IGNORED SECTION
+            // ==================================================================================
         }
         $("span#trackdate")
             .html(timeFormatted);
