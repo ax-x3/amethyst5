@@ -116,6 +116,7 @@ function developerMode() {
     document.getElementById("usingMobile").hidden = false;
     document.getElementById("underConstruction").hidden = false;
     document.getElementById("queerSafety").hidden = false;
+    document.getElementById("inactiveNotice").hidden = false;
 }
 
 
