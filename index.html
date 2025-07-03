@@ -74,6 +74,13 @@
         <table class="contentColumn">
             <tr>
                 <td style="width: 72%">
+                    <div class="card warningCard" id="inactiveNotice" hidden>
+                        <h2>Last seen <span id="inactiveDuration">-- weeks ago</span>.</h2>
+                        <p>It seems I've been unreachable for quite a long time. Everything is most likely OK, but in the event of an emergency, I'll try to leave a message.</p>
+                        <p class="caption">Messages from Amethyst will appear below:</p>
+                        <!-- <p class="highlight"><i>No messages yet.</i></p> -->
+                        <p class="highlight">"This is a TEST MESSAGE. I'm running a test of this system. I am OK."</p>
+                    </div>
                     <div class="card warningCard" id="queerSafety">
                         <button class="dismissCard" name="dismiss" onclick="dismissCard('queerSafety')">x</button>
                         <h2 class="warning">(!)&nbsp;Stay safe out there.</h2>
@@ -85,14 +92,6 @@
                             <p>Now more than ever, <span class="highlight">your voice matters</span>. Use your priveledge to stand up for your community. Maintain medical necessities, know your rights, and remain vigilant of propaganda.</p>
                             <p>Remember that existing in spite of oppression is a form of protest. <span class="highlight">You must live.</span> We are on the right side of history, and we won't let bigots write our story.</p>
                         </div>
-                    </div>
-                    <div class="card warningCard" id="inactiveNotice" hidden>
-                        <button class="dismissCard" name="dismiss" onclick="dismissCard('inactiveNotice')">x</button>
-                        <h2>Amethyst not found.</h2>
-                        <p>It seems I've been unreachable for quite a long time. Everything is most likely OK, but in the event of an emergency, I'll try to leave a message.</p>
-                        <p class="highlight" ><i>Last seen <span id="inactiveDuration">-- weeks ago</span>.</i></p>
-                        <p class="caption">Messages from Amethyst will appear below:</p>
-                        <p>"This is a TEST MESSAGE. I'm running a test of this system. I am OK."</p>
                     </div>
                     <div class="card warningCard" id="underConstruction" hidden>
                         <button class="dismissCard" name="dismiss" onclick="dismissCard('underConstruction')">x</button>
