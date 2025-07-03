@@ -106,6 +106,8 @@ $.ajax({
                 }
                 $("span#inactiveDuration")
                     .html(timeInactive);
+                $("div#inactiveNotice")
+                    .show();
             }
             // ==================================================================================
             // END OF IGNORED SECTION

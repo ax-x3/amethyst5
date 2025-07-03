@@ -88,9 +88,11 @@
                     </div>
                     <div class="card warningCard" id="inactiveNotice" hidden>
                         <button class="dismissCard" name="dismiss" onclick="dismissCard('inactiveNotice')">x</button>
-                        <h2>Last active <span id="inactiveDuration">-- weeks ago</span>.</h2>
-                        <p>Amethyst can't get to her computer at the moment. Unfortunately, that means no responses, no commissions, and no updates for now. Sorry about that.</p>
-                        <p class="caption">This message appears during emergencies or if Amethyst is inactive for an extended period.</p>
+                        <h2>Amethyst not found.</h2>
+                        <p>It seems I've been unreachable for quite a long time. Everything is most likely OK, but in the event of an emergency, I'll try to leave a message.</p>
+                        <p class="highlight" ><i>Last seen <span id="inactiveDuration">-- weeks ago</span>.</i></p>
+                        <p class="caption">Messages from Amethyst will appear below:</p>
+                        <p>"This is a TEST MESSAGE. I'm running a test of this system. I am OK."</p>
                     </div>
                     <div class="card warningCard" id="underConstruction" hidden>
                         <button class="dismissCard" name="dismiss" onclick="dismissCard('underConstruction')">x</button>
@@ -185,6 +187,12 @@
                         <img class="noStatic" src="vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 680px; transform: translateX(20px);">
                         <div style="margin: 0 0 0 24px; max-height: 585px; overflow-y: scroll;">
                             <ul>
+                                <div style="margin: 30px 0; text-align: center;">
+                                    <img style="width: 200px;" src="icons/embellishment.png">
+                                    <span class="highlight" style="vertical-align: 120%;">July 2025</span>
+                                    <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
+                                </div>
+                                <li><p><i class="highlight">[03]</i> Revised inactivity card. Currently conducting a test.</p></li>
                                 <div style="margin: 30px 0; text-align: center;">
                                     <img style="width: 200px;" src="icons/embellishment.png">
                                     <span class="highlight" style="vertical-align: 120%;">June 2025</span>
@@ -374,7 +382,7 @@
                     <div class="card signCard">
                         <!-- upds -->
                         <span>Last updated</span>
-                        <br><br><h2>Jun 25, 2025</h2>
+                        <br><br><h2>Jul 3, 2025</h2>
                         <br><br>
                         <div class="noStatic caption">
                             <span>Created Oct 19, 2024</span>
