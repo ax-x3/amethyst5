@@ -18,7 +18,7 @@
 <br>
 `/images/                                ` - All bitmap site images.
 <br>
-`/logos/                                 ` - Logo SVGs.
+`/logos/                                 ` - Registered trademark elements.
 <br>
 `/r/                                     ` - Reused site elements.
 <br>
