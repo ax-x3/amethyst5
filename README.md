@@ -16,7 +16,7 @@
 <br>
 `/icons/                                 ` - General-purpose symbols.
 <br>
-`/images/                                ` - All bitmap site images.
+`/images/                                ` - Bitmap site images.
 <br>
 `/logos/                                 ` - Registered trademark elements.
 <br>
