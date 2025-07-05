@@ -10,11 +10,11 @@
 <br>
 `/b/                                     ` - Business/professional representation.
 <br>
-`/badges/                                ` - 88x31 and other retro badges.
+`/badges/                                ` - 88x31s and other retro badges.
 <br>
-`/fonts/                                 ` - Non-universal site typefaces.
+`/fonts/                                 ` - Specified typefaces.
 <br>
-`/icons/                                 ` - Non-logo site symbols.
+`/icons/                                 ` - General-purpose symbols.
 <br>
 `/images/                                ` - All bitmap site images.
 <br>
