@@ -1,7 +1,9 @@
 > [!NOTE]
-> Site permanently moved to amethystx.net. <br>Remaining links to am3thystx.pages.dev will continue to work indefinitely
+> Site permanently moved to amethystx.net as of February 2025. <br>'am3thystx.pages.dev' will continue to resolve.
 
-# AMETHYSTX.net
+# AMETHYSTX.net - Art, Projects, About Me, and More!
+
+## Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.
 
 ### Directories:
 
