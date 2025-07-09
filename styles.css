@@ -54,13 +54,14 @@ body {
     image-rendering: pixelated;
     -webkit-text-size-adjust: none;
     font-family: "SF Pixelate";
-    font-size: 120%;
+    font-size: 110%;
     color: var(--se-bright);
     text-shadow: 0.1em 0.1em 0 #000b, 0 0 10px var(--se-bright-dropshadow);
     line-height: 115%;
     margin: 0;
     padding: 0;
     animation: scrollbg 90s linear infinite;
+    word-spacing: -0.2em;
 }
 div:not(.noStatic):not(.flickering) {
     animation: var(--lu-static);
@@ -69,7 +70,7 @@ h1 {
     margin: 0;
     font-family: "Atlantis Headline";
     display: inline;
-    font-size: 250%;
+    font-size: 260%;
     color: var(--se-regular);
     text-shadow: 0.1em 0.1em 0 #000b, 0 0 24px var(--se-regular-dropshadow);
     -webkit-text-stroke: var(--se-bright) 0.0125em;
@@ -79,7 +80,7 @@ h2 {
     margin: 0;
     font-family: "Atlantis Headline";
     display: inline;
-    font-size: 120%;
+    font-size: 140%;
     color: var(--se-light);
     text-shadow: 0.1em 0.1em 0 #000b, 0 0 16px var(--se-light-dropshadow);
     -webkit-text-stroke: var(--se-regular) 0.05em;
