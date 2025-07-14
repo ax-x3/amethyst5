@@ -24,7 +24,7 @@ $.ajax({
         $("span#trackdate")
             .html(timeFormatted);
 
-        var headerFormatted = "Now listening:";
+        var headerFormatted = "Now listening";
         $("h2#listeningHeader")
             .html(headerFormatted);
 
@@ -36,11 +36,11 @@ $.ajax({
         var artistFormatted = recentTrack.artist["#text"];
         $("span#trackartist")
             .html(artistFormatted)
-            .attr("title", "Artist : " + recentTrack.artist["#text"]);
+            .attr("title", "Artist: " + recentTrack.artist["#text"]);
 
         $("img#trackart")
             .attr("src", recentTrack.image[3]["#text"])
-            .attr("title", "Album : " + recentTrack.album["#text"])
+            .attr("title", "Album: " + recentTrack.album["#text"])
             .addClass("nowPlaying")
             .removeClass("notPlaying");
 
@@ -51,7 +51,7 @@ $.ajax({
         var dateFormatted = recentTrack.date["uts"];
         // If code reaches here, assume recentTrack.date is available, thus nothing is playing.
 
-        var headerFormatted = "Last played:";
+        var headerFormatted = "Last played";
         
         $("h2#listeningHeader")
             .html(headerFormatted);
