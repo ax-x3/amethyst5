@@ -48,7 +48,7 @@
     <header>
         <div class="contentColumn">
             <noscript>
-                <div class="card warningCard noStatic" id="JsDisabled">
+                <div class="card warningCard" id="JsDisabled">
                     <h2 class="warning">Enable JavaScript!</h2>
                     <p>Javascript is disabled on your browser.</p>
                     <p>I'm not here to steal your data. Navigating this site requires you to allow JavaScript. <a href="/b/javascript.html" target="_blank" rel="noopener noreferrer"><u>How?</u></a></p>
@@ -86,432 +86,408 @@
 <!---->
                 <div class="card" id="driveud">
                     <img class="thumbnail" src="images/driveUD.png">
-                    <div class="noStatic">
-                        <div style="height: 100px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>driveUD</h2>
-                                    <span class="success">BETA</span>
-                                    <p class="caption">June 2025 • Python • Desktop</p>
-                                </td>
-                                <td>
-                                    <div class="noStatic" style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://github.com/ax-x3/driveUD/tree/main" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167">
-                                                    <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>Lane assist/self-driving designed for the Ultimate Driving game series.</p>
-                        <a class="svgBullet more" onclick="revealContent('driveUD')"><u>read more</u></a>
-                        <div class="noStatic" id="driveUD" hidden><p>This program is VERY simple and KINDA works. I've always wanted to make a self-driving script for UD, but I've since learned firsthand how hard that is.<br><br>This Python code scans portions of your screen, looking for lane markings in a range of weather conditions. It then calculates the optimal (not really optimal; I'm just using some magic constants here) PWM steering force to apply to correct for lane drift.<br><br>There is a 95% chance that this program will not work for you (sorry). This is caused by even the slightest differences in vehicle stats, screen resolution, computer, client, weather, etc. But if for some reason you really wanna see this crash and burn, here's what you'll need to do:</p><ol><li>Install Python and the pyautogui package, then enable screen capture and keypress permissions.</li><li>Clone the driveUD repository to your computer.</li><li>In UD, drive onto a long road with no intersections and look straight down.</li><li>Run the Python code and quickly switch back to the Roblox window before the one-second countdown is up.</li><li>Slowly accelerate and maintain 30 to 50 MPH. You can use the Y key to turn on cruise control.</li><li>Watch as nothing works.</li></ol><p>If all things go according to plan, you should see your car automatically steer to follow the curve of the road before losing control and crashing into the nearest tree. This is not an AFK grinding macro. It's a steering assist for low speeds.</p></div>
-                    </div>
+                    <div style="height: 100px;"></div>
+                    <table style="width: 100%; position: relative; z-index: 1;">
+                        <tr>
+                            <td>
+                                <h2>driveUD</h2>
+                                <span class="success">BETA</span>
+                                <p class="caption">June 2025 • Python • Desktop</p>
+                            </td>
+                            <td>
+                                <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
+                                    <a href="https://github.com/ax-x3/driveUD/tree/main" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167">
+                                                <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>Lane assist/self-driving designed for the Ultimate Driving game series.</p>
+                    <a class="svgBullet more" onclick="revealContent('driveUD')"><u>read more</u></a>
+                    <div id="driveUD" hidden><p>This program is VERY simple and KINDA works. I've always wanted to make a self-driving script for UD, but I've since learned firsthand how hard that is.<br><br>This Python code scans portions of your screen, looking for lane markings in a range of weather conditions. It then calculates the optimal (not really optimal; I'm just using some magic constants here) PWM steering force to apply to correct for lane drift.<br><br>There is a 95% chance that this program will not work for you (sorry). This is caused by even the slightest differences in vehicle stats, screen resolution, computer, client, weather, etc. But if for some reason you really wanna see this crash and burn, here's what you'll need to do:</p><ol><li>Install Python and the pyautogui package, then enable screen capture and keypress permissions.</li><li>Clone the driveUD repository to your computer.</li><li>In UD, drive onto a long road with no intersections and look straight down.</li><li>Run the Python code and quickly switch back to the Roblox window before the one-second countdown is up.</li><li>Slowly accelerate and maintain 30 to 50 MPH. You can use the Y key to turn on cruise control.</li><li>Watch as nothing works.</li></ol><p>If all things go according to plan, you should see your car automatically steer to follow the curve of the road before losing control and crashing into the nearest tree. This is not an AFK grinding macro. It's a steering assist for low speeds.</p></div>
                 </div>
 <!---->
                 <div class="card" id="mandelbrotter">
                     <img class="thumbnail" src="images/mandelbrotter.png">
-                    <div class="noStatic">
-                        <div style="height: 100px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>mandelbrotter</h2>
-                                    <p class="caption">September 2023 - June 2025 • Scratch 3 • All Devices</p>
-                                    <p class="success"><i>Artificial intelligence assisted with this project.</i></p>
-                                </td>
-                                <td>
-                                    <div class="noStatic" style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://turbowarp.org/895102733/fullscreen?turbo&fps=250" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167" >
-                                                    <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        &nbsp;
-                                        <a href="https://scratch.mit.edu/projects/895102733/editor/" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px" viewBox="-2 -30 170 167">
-                                                    <path class="bullet" d="m 103.78886,-28.495802 c -1.6005,-0.0287 -3.19811,0.0897 -4.772681,0.35953 -2.51932,0.39989 -4.79845,1.03973 -6.93786,1.95948 -1.67955,0.6998 -3.2591,1.53981 -4.7387,2.53953 -3.31912,-0.71979 -6.79837,-1.09958 -10.43738,-1.09958 -7.87787,0 -15.45553,1.79971 -22.51363,5.31876 -4.31883,2.17942 -10.25739,6.59792 -14.19633,15.4355398 -0.7398,1.59956 -1.27945,3.31891002 -2.95899,8.83742 -4.01891,12.8365302 -4.83877,17.9954502 -4.83877,22.1343302 v 10.19708 c -2e-5,4.17887 0.71946,8.25807 2.09908,12.11702 -4.01891,4.29884 -6.39798,9.6773 -7.15778,15.03585 -0.14002,1.01972 -0.21991,2.0595 -0.21991,3.09921 0,2.27939 0.35964,4.31845 0.83951,6.07796 -0.0999,1.63957 -0.1598,3.13962 -0.17978,4.47926 -0.31989,1.57956 -0.47999,3.15913 -0.47999,4.7387 v 9.67694 c 2e-5,1.59956 0.18026,3.17912 0.52016,4.7387 -0.02,0.61983 -0.0803,1.45984 -0.14017,2.53954 -0.14001,2.519322 -0.20015,4.338582 -0.20015,5.738212 0,20.55444 13.49691,29.91232 26.03352,29.91232 6.09835,0 12.27629,-2.05927 18.87451,-6.27812 2.5193,-1.61955 4.65894,-3.699 6.2985,-6.09834 1.25966,-0.0401 2.51947,-0.14032 3.79912,-0.30023 28.152371,-3.55902 45.707611,-14.43625 52.165881,-32.331402 2.07943,-5.5985 2.53923,-12.21649 1.63949,-23.43344 -0.0999,-1.29965 -0.31986,-2.57962 -0.65977,-3.83928 -0.87975,-3.3391 -1.87937,-6.07816 -3.05906,-8.45751 -1.25964,-2.99919 -3.09947,-6.45818 -5.79875,-9.91723 0.08,-0.25993 0.15973,-0.54022 0.2397,-0.84013 0.35989,-1.31964 0.58016,-2.67918 0.68012,-4.0388 0.23993,-3.55904 0.3002,-6.57799 0.14017,-9.27725 0.61984,-6.97812 1.07929,-12.25665 1.39918,-15.79569 0.0201,-0.1199 0.0201,-0.24017 0.0401,-0.36014 0.35991,-4.8786802 0.60009,-8.6178702 0.74006,-11.4171202 0.85976,-15.8756898 -6.13851,-23.5932598 -12.23686,-27.3122298 -4.34883,-2.6393 -9.18108,-4.05267 -13.98261,-4.13889 z m -0.30948,21.9891598 c 0.91239,0.0223 1.87509,0.34109 2.88732,0.95441 1.34563,0.82178 1.90306,3.28545 1.66915,7.38635 -0.11806,2.57929 -0.35171,6.21443 -0.70361,10.9031602 -0.35191,3.87094 -0.87809,9.79119 -1.5839,17.76504 0.23394,1.87549 0.23394,4.45673 0,7.73783 -0.58784,2.22741 -2.34693,3.34076 -5.27614,3.34076 -1.525581,0 -2.989471,-0.40954 -4.397101,-1.22931 -0.7038,-2.2254 -1.05386,-3.16696 -1.05386,-2.81505 0.23193,-3.16516 -0.4118,-7.38653 -1.93539,-12.6631 -1.29166,-2.69526 -3.07709,-6.53378 -5.36446,-11.51842 -2.2874,-4.9826502 -5.30636,-7.6521902 -9.05735,-8.0041002 -4.69072,-0.35191 -7.73806,1.23154 -9.14567,4.7485902 -0.46787,1.52558 -1.11577,3.75538 -1.93353,6.68459 -1.40763,4.33884 -2.2871,8.5015 -2.63901,12.48642 -0.1179,1.29165 -0.23615,1.81922 -0.3521,1.58328 0.35189,2.34738 0.7619,4.69073 1.23176,7.03609 0.58585,2.93121 2.02338,5.16115 4.30876,6.68274 2.28739,1.52557 6.65208,2.4613 13.10232,2.81319 15.82771,0.94174 25.616961,6.45199 29.369951,16.53326 0.58383,0.93975 1.16963,2.52133 1.75747,4.74673 0.58583,7.27204 0.46629,11.95889 -0.35149,14.07032 -3.40309,9.6154 -14.835861,15.65197 -34.294601,18.115302 -6.56822,0.82178 -13.13282,-2.285642 -19.70103,-9.321732 0,1.05571 0.2342,4.22108 0.70608,9.499652 0.3519,3.86894 0.29181,7.03398 -0.17606,9.49531 -2.93321,1.87549 -5.27657,2.81506 -7.03608,2.81506 -2.69928,0 -4.04499,-2.63718 -4.04499,-7.91576 0,-0.93774 0.0582,-2.43151 0.17606,-4.48295 0.11591,-2.049452 0.17606,-3.486982 0.17606,-4.308762 0,-1.99347 -0.17628,-3.39927 -0.52817,-4.22103 v -9.67324 c 0,-0.23394 0.0582,-0.49803 0.17605,-0.79193 0.11591,-0.29193 0.23415,-0.5554 0.35212,-0.79134 -0.11791,-1.63955 -0.0605,-4.16133 0.17543,-7.56241 0.23396,-2.11142 0.23396,-3.4565 0,-4.04434 -0.58784,-1.1697 -0.87719,-1.87367 -0.87719,-2.1096 0.46589,-3.2831 2.87286,-4.92463 7.20968,-4.92465 2.81322,0 4.51285,0.9978 5.10069,2.98926 0,1.8755 0.23374,4.63238 0.7036,8.26539 0.70582,4.22087 2.93162,8.44362 6.68461,12.66249 4.1029,4.80871 8.02967,7.0365 11.78467,6.6846 4.22085,-0.46587 8.44163,-1.46367 12.66249,-2.98926 5.8624,-2.11142 9.379821,-4.57311 10.553511,-7.38635 0.81776,-2.11142 1.22929,-4.33661 1.22931,-6.68396 0,-7.15008 -2.63733,-12.48682 -7.913901,-16.00387 -2.34738,-1.52358 -6.68418,-2.75498 -13.01646,-3.69473 -3.63502,-0.46586 -5.86433,-0.70359 -6.68212,-0.70359 -5.62848,0.1179 -10.87724,-1.69983 -15.74192,-5.45282 -4.8667,-3.75097 -7.29803,-8.09177 -7.29803,-13.01645 v -10.19955 c 0,-2.22538 1.2901,-7.44396 3.8714,-15.65174 1.16968,-3.8709502 1.81543,-5.9204802 1.93539,-6.1564102 1.05371,-2.46134 2.40095,-4.10287 4.0425,-4.92464998 3.98492,-1.99146002 8.20569,-2.98864002 12.66249,-2.98864002 8.67566,0 15.06613,3.51696002 19.17101,10.55105 0.35191,0.35191 0.93818,0.87946 1.75996,1.58327 0.11591,-1.63955 0.35171,-4.1607 0.70362,-7.56178 -0.11806,-1.52359998 -0.23617,-2.98947 -0.35212,-4.39709 0,-1.63956 0.81814,-2.75292 2.461701,-3.34075 0.46788,-0.23395 1.11361,-0.41021 1.93539,-0.52818 0.29292,-0.0585 0.59159,-0.084 0.89573,-0.0766 z">
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>Mandelbrot and Julia fractal rendering engine on Scratch - assisted by ChatGPT 3.0.</p>
-                        <a class="svgBullet more" onclick="revealContent('mandelbrotterDescription')"><u>read more</u></a>
-                        <p id="mandelbrotterDescription" hidden>ChatGPT taught me the basics, but I learned the most about fractal rendering by writing the code myself. It was also pretty fun to design the UI and viewport mechanics. As of June 2025, it can also render Julia Sets of arbitrary constants.<br><br>Keybinds:<br>W, A, S, D - pan<br>I, O - zoom<br>R, F - real slider<br>T, G - imaginary slider</p>
-                    </div>
+                    <div style="height: 100px;"></div>
+                    <table style="width: 100%; position: relative; z-index: 1;">
+                        <tr>
+                            <td>
+                                <h2>mandelbrotter</h2>
+                                <p class="caption">September 2023 - June 2025 • Scratch 3 • All Devices</p>
+                                <p class="success"><i>Artificial intelligence assisted with this project.</i></p>
+                            </td>
+                            <td>
+                                <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
+                                    <a href="https://turbowarp.org/895102733/fullscreen?turbo&fps=250" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167" >
+                                                <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://scratch.mit.edu/projects/895102733/editor/" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px" viewBox="-2 -30 170 167">
+                                                <path class="bullet" d="m 103.78886,-28.495802 c -1.6005,-0.0287 -3.19811,0.0897 -4.772681,0.35953 -2.51932,0.39989 -4.79845,1.03973 -6.93786,1.95948 -1.67955,0.6998 -3.2591,1.53981 -4.7387,2.53953 -3.31912,-0.71979 -6.79837,-1.09958 -10.43738,-1.09958 -7.87787,0 -15.45553,1.79971 -22.51363,5.31876 -4.31883,2.17942 -10.25739,6.59792 -14.19633,15.4355398 -0.7398,1.59956 -1.27945,3.31891002 -2.95899,8.83742 -4.01891,12.8365302 -4.83877,17.9954502 -4.83877,22.1343302 v 10.19708 c -2e-5,4.17887 0.71946,8.25807 2.09908,12.11702 -4.01891,4.29884 -6.39798,9.6773 -7.15778,15.03585 -0.14002,1.01972 -0.21991,2.0595 -0.21991,3.09921 0,2.27939 0.35964,4.31845 0.83951,6.07796 -0.0999,1.63957 -0.1598,3.13962 -0.17978,4.47926 -0.31989,1.57956 -0.47999,3.15913 -0.47999,4.7387 v 9.67694 c 2e-5,1.59956 0.18026,3.17912 0.52016,4.7387 -0.02,0.61983 -0.0803,1.45984 -0.14017,2.53954 -0.14001,2.519322 -0.20015,4.338582 -0.20015,5.738212 0,20.55444 13.49691,29.91232 26.03352,29.91232 6.09835,0 12.27629,-2.05927 18.87451,-6.27812 2.5193,-1.61955 4.65894,-3.699 6.2985,-6.09834 1.25966,-0.0401 2.51947,-0.14032 3.79912,-0.30023 28.152371,-3.55902 45.707611,-14.43625 52.165881,-32.331402 2.07943,-5.5985 2.53923,-12.21649 1.63949,-23.43344 -0.0999,-1.29965 -0.31986,-2.57962 -0.65977,-3.83928 -0.87975,-3.3391 -1.87937,-6.07816 -3.05906,-8.45751 -1.25964,-2.99919 -3.09947,-6.45818 -5.79875,-9.91723 0.08,-0.25993 0.15973,-0.54022 0.2397,-0.84013 0.35989,-1.31964 0.58016,-2.67918 0.68012,-4.0388 0.23993,-3.55904 0.3002,-6.57799 0.14017,-9.27725 0.61984,-6.97812 1.07929,-12.25665 1.39918,-15.79569 0.0201,-0.1199 0.0201,-0.24017 0.0401,-0.36014 0.35991,-4.8786802 0.60009,-8.6178702 0.74006,-11.4171202 0.85976,-15.8756898 -6.13851,-23.5932598 -12.23686,-27.3122298 -4.34883,-2.6393 -9.18108,-4.05267 -13.98261,-4.13889 z m -0.30948,21.9891598 c 0.91239,0.0223 1.87509,0.34109 2.88732,0.95441 1.34563,0.82178 1.90306,3.28545 1.66915,7.38635 -0.11806,2.57929 -0.35171,6.21443 -0.70361,10.9031602 -0.35191,3.87094 -0.87809,9.79119 -1.5839,17.76504 0.23394,1.87549 0.23394,4.45673 0,7.73783 -0.58784,2.22741 -2.34693,3.34076 -5.27614,3.34076 -1.525581,0 -2.989471,-0.40954 -4.397101,-1.22931 -0.7038,-2.2254 -1.05386,-3.16696 -1.05386,-2.81505 0.23193,-3.16516 -0.4118,-7.38653 -1.93539,-12.6631 -1.29166,-2.69526 -3.07709,-6.53378 -5.36446,-11.51842 -2.2874,-4.9826502 -5.30636,-7.6521902 -9.05735,-8.0041002 -4.69072,-0.35191 -7.73806,1.23154 -9.14567,4.7485902 -0.46787,1.52558 -1.11577,3.75538 -1.93353,6.68459 -1.40763,4.33884 -2.2871,8.5015 -2.63901,12.48642 -0.1179,1.29165 -0.23615,1.81922 -0.3521,1.58328 0.35189,2.34738 0.7619,4.69073 1.23176,7.03609 0.58585,2.93121 2.02338,5.16115 4.30876,6.68274 2.28739,1.52557 6.65208,2.4613 13.10232,2.81319 15.82771,0.94174 25.616961,6.45199 29.369951,16.53326 0.58383,0.93975 1.16963,2.52133 1.75747,4.74673 0.58583,7.27204 0.46629,11.95889 -0.35149,14.07032 -3.40309,9.6154 -14.835861,15.65197 -34.294601,18.115302 -6.56822,0.82178 -13.13282,-2.285642 -19.70103,-9.321732 0,1.05571 0.2342,4.22108 0.70608,9.499652 0.3519,3.86894 0.29181,7.03398 -0.17606,9.49531 -2.93321,1.87549 -5.27657,2.81506 -7.03608,2.81506 -2.69928,0 -4.04499,-2.63718 -4.04499,-7.91576 0,-0.93774 0.0582,-2.43151 0.17606,-4.48295 0.11591,-2.049452 0.17606,-3.486982 0.17606,-4.308762 0,-1.99347 -0.17628,-3.39927 -0.52817,-4.22103 v -9.67324 c 0,-0.23394 0.0582,-0.49803 0.17605,-0.79193 0.11591,-0.29193 0.23415,-0.5554 0.35212,-0.79134 -0.11791,-1.63955 -0.0605,-4.16133 0.17543,-7.56241 0.23396,-2.11142 0.23396,-3.4565 0,-4.04434 -0.58784,-1.1697 -0.87719,-1.87367 -0.87719,-2.1096 0.46589,-3.2831 2.87286,-4.92463 7.20968,-4.92465 2.81322,0 4.51285,0.9978 5.10069,2.98926 0,1.8755 0.23374,4.63238 0.7036,8.26539 0.70582,4.22087 2.93162,8.44362 6.68461,12.66249 4.1029,4.80871 8.02967,7.0365 11.78467,6.6846 4.22085,-0.46587 8.44163,-1.46367 12.66249,-2.98926 5.8624,-2.11142 9.379821,-4.57311 10.553511,-7.38635 0.81776,-2.11142 1.22929,-4.33661 1.22931,-6.68396 0,-7.15008 -2.63733,-12.48682 -7.913901,-16.00387 -2.34738,-1.52358 -6.68418,-2.75498 -13.01646,-3.69473 -3.63502,-0.46586 -5.86433,-0.70359 -6.68212,-0.70359 -5.62848,0.1179 -10.87724,-1.69983 -15.74192,-5.45282 -4.8667,-3.75097 -7.29803,-8.09177 -7.29803,-13.01645 v -10.19955 c 0,-2.22538 1.2901,-7.44396 3.8714,-15.65174 1.16968,-3.8709502 1.81543,-5.9204802 1.93539,-6.1564102 1.05371,-2.46134 2.40095,-4.10287 4.0425,-4.92464998 3.98492,-1.99146002 8.20569,-2.98864002 12.66249,-2.98864002 8.67566,0 15.06613,3.51696002 19.17101,10.55105 0.35191,0.35191 0.93818,0.87946 1.75996,1.58327 0.11591,-1.63955 0.35171,-4.1607 0.70362,-7.56178 -0.11806,-1.52359998 -0.23617,-2.98947 -0.35212,-4.39709 0,-1.63956 0.81814,-2.75292 2.461701,-3.34075 0.46788,-0.23395 1.11361,-0.41021 1.93539,-0.52818 0.29292,-0.0585 0.59159,-0.084 0.89573,-0.0766 z">
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>Mandelbrot and Julia fractal rendering engine on Scratch - assisted by ChatGPT 3.0.</p>
+                    <a class="svgBullet more" onclick="revealContent('mandelbrotterDescription')"><u>read more</u></a>
+                    <p id="mandelbrotterDescription" hidden>ChatGPT taught me the basics, but I learned the most about fractal rendering by writing the code myself. It was also pretty fun to design the UI and viewport mechanics. As of June 2025, it can also render Julia Sets of arbitrary constants.<br><br>Keybinds:<br>W, A, S, D - pan<br>I, O - zoom<br>R, F - real slider<br>T, G - imaginary slider</p>
                 </div>
 <!---->
                 <div class="card" id="3dpvr">
                     <img class="thumbnail" src="images/3DP-VR.png">
-                    <div class="noStatic">
-                        <div style="height: 100px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>3DP-VR</h2>
-                                    <p class="caption">May 2025 • CAD, 3D printing • Smartphones</p>
-                                </td>
-                                <td>
-                                    <div class="noStatic" style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://github.com/ax-x3/3DP-VR/tree/main" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167">
-                                                    <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>A simple VR viewer designed in a few hours with zero background knowledge.</p>
-                        <a class="svgBullet more" onclick="revealContent('3DPVRDescription')"><u>read more</u></a>
-                        <p id="3DPVRDescription" hidden>I had basically no experience with lenses and VR while making this project. But hey, it works! <br><br>I estimated the focal length of the lenses by measuring the distance between the glass and a piece of paper until the paper burned under the sunlight. <br><br>This project was intended to better my CAD design skills. While anybody can print the model, it does require somewhat specific lenses (50mm focal length, 36.6mm dia.) <br><br>This works similarly to <a href="https://arvr.google.com/cardboard/" target="_blank" rel="noopener noreferrer"><u>Google Cardboard</u></a>, and works with the Cardboard smartphone app. For more 3DP-VR-compatible content, search for "stereoscopic videos".</p>
-                    </div>
+                    <div style="height: 100px;"></div>
+                    <table style="width: 100%; position: relative; z-index: 1;">
+                        <tr>
+                            <td>
+                                <h2>3DP-VR</h2>
+                                <p class="caption">May 2025 • CAD, 3D printing • Smartphones</p>
+                            </td>
+                            <td>
+                                <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
+                                    <a href="https://github.com/ax-x3/3DP-VR/tree/main" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167">
+                                                <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>A simple VR viewer designed in a few hours with zero background knowledge.</p>
+                    <a class="svgBullet more" onclick="revealContent('3DPVRDescription')"><u>read more</u></a>
+                    <p id="3DPVRDescription" hidden>I had basically no experience with lenses and VR while making this project. But hey, it works! <br><br>I estimated the focal length of the lenses by measuring the distance between the glass and a piece of paper until the paper burned under the sunlight. <br><br>This project was intended to better my CAD design skills. While anybody can print the model, it does require somewhat specific lenses (50mm focal length, 36.6mm dia.) <br><br>This works similarly to <a href="https://arvr.google.com/cardboard/" target="_blank" rel="noopener noreferrer"><u>Google Cardboard</u></a>, and works with the Cardboard smartphone app. For more 3DP-VR-compatible content, search for "stereoscopic videos".</p>
                 </div>
 <!---->
                 <div class="card" id="enablejavascript">
                     <img class="thumbnail" src="images/enableJavascript.png">
-                    <div class="noStatic">
-                        <div style="height: 100px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>Enable JavaScript!</h2>
-                                    <p class="caption">March 2025 • HTML, JS, CSS • All Devices</p>
-                                </td>
-                                <td>
-                                    <div class="noStatic" style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://amethystx.net/b/javascript.html" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167" >
-                                                    <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        &nbsp;
-                                        <a href="https://github.com/ax-x3/amethyst5/blob/main/b/javascript.html" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167">
-                                                    <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>A helpful page with guides on how to enable JS on popular browsers.</p>
-                        <a class="svgBullet more" onclick="revealContent('enableJavaScriptDescription')"><u>read more</u></a>
-                        <p id="enableJavaScriptDescription" hidden>JavaScript is a very common programming language used to build interactive websites. It usually runs behind-the-scenes to display dynamic content or provide interactive features. Most browsers have JavaScript enabled by default because of how widely used it is. You technically dont have to enable JavaScript if you don't want to. However, almost everything on the web nowadays is script-dependent and needs JavaScript in some way. For example, you won't be able to perform a Google search with JavaScript disabled. To enable JavaScript on your browser, follow the steps above.</p>
-                    </div>
+                    <div style="height: 100px;"></div>
+                    <table style="width: 100%; position: relative; z-index: 1;">
+                        <tr>
+                            <td>
+                                <h2>Enable JavaScript!</h2>
+                                <p class="caption">March 2025 • HTML, JS, CSS • All Devices</p>
+                            </td>
+                            <td>
+                                <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
+                                    <a href="https://amethystx.net/b/javascript.html" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167" >
+                                                <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://github.com/ax-x3/amethyst5/blob/main/b/javascript.html" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167">
+                                                <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>A helpful page with guides on how to enable JS on popular browsers.</p>
+                    <a class="svgBullet more" onclick="revealContent('enableJavaScriptDescription')"><u>read more</u></a>
+                    <p id="enableJavaScriptDescription" hidden>JavaScript is a very common programming language used to build interactive websites. It usually runs behind-the-scenes to display dynamic content or provide interactive features. Most browsers have JavaScript enabled by default because of how widely used it is. You technically dont have to enable JavaScript if you don't want to. However, almost everything on the web nowadays is script-dependent and needs JavaScript in some way. For example, you won't be able to perform a Google search with JavaScript disabled. To enable JavaScript on your browser, follow the steps above.</p>
                 </div>
 <!---->
                 <div class="card" id="neumetronome">
                     <img class="thumbnail" src="images/neuMetronome.png">
-                    <div class="noStatic">
-                        <div style="height: 100px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>neuMetronome</h2>
-                                    <p class="caption">May 2024 • HTML, JS, CSS • Desktop</p>
-                                </td>
-                                <td>
-                                    <div class="noStatic" style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://neumetronome.pages.dev/" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167" >
-                                                    <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        &nbsp;
-                                        <a href="https://github.com/ax-x3/neumetronome" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167">
-                                                    <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>A JS metronome with a neumorphic aesthetic.</p>
-                        <a class="svgBullet more" onclick="revealContent('neuMetronomeDescription')"><u>read more</u></a>
-                        <p id="neuMetronomeDescription" hidden>Mobile browsers tend to hate JavaScript, rendering this tool impractical for work with actual instruments. On the pro side, with a stable internet connection, this metronome maintains a maximum drift of ±1 millisecond every 300,000 years. We love NTP.</p>
-                    </div>
+                    <div style="height: 100px;"></div>
+                    <table style="width: 100%; position: relative; z-index: 1;">
+                        <tr>
+                            <td>
+                                <h2>neuMetronome</h2>
+                                <p class="caption">May 2024 • HTML, JS, CSS • Desktop</p>
+                            </td>
+                            <td>
+                                <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
+                                    <a href="https://neumetronome.pages.dev/" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167" >
+                                                <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://github.com/ax-x3/neumetronome" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167">
+                                                <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>A JS metronome with a neumorphic aesthetic.</p>
+                    <a class="svgBullet more" onclick="revealContent('neuMetronomeDescription')"><u>read more</u></a>
+                    <p id="neuMetronomeDescription" hidden>Mobile browsers tend to hate JavaScript, rendering this tool impractical for work with actual instruments. On the pro side, with a stable internet connection, this metronome maintains a maximum drift of ±1 millisecond every 300,000 years. We love NTP.</p>
                 </div>
 <!---->
                 <div class="card" id="calculateud">
                     <img class="thumbnail" src="images/calculateUD.png">
-                    <div class="noStatic">
-                        <div style="height: 100px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>calculateUD v2</h2>
-                                    <p class="caption">February 2024 • HTML, JS, CSS • All Devices</p>
-                                </td>
-                                <td>
-                                    <div class="noStatic" style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://calculateud.pages.dev/" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167" >
-                                                    <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        &nbsp;
-                                        <a href="https://github.com/ax-x3/calculateUD" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167">
-                                                    <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>Ultimate Driving grinding calculator. (Please touch grass.)</p>
-                        <a class="svgBullet more" onclick="revealContent('calculateUDDescription')"><u>read more</u></a>
-                        <p id="calculateUDDescription" hidden>For you chronically online nerds who spend every hour of the day on I‑76, here's a tool to simplify your grinding experience. UDGC can solve for how many miles you need to drive in order to reach a rank or credit goal. (This also works with French cars.)</p>
-                    </div>
+                    <div style="height: 100px;"></div>
+                    <table style="width: 100%; position: relative; z-index: 1;">
+                        <tr>
+                            <td>
+                                <h2>calculateUD v2</h2>
+                                <p class="caption">February 2024 • HTML, JS, CSS • All Devices</p>
+                            </td>
+                            <td>
+                                <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
+                                    <a href="https://calculateud.pages.dev/" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167" >
+                                                <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://github.com/ax-x3/calculateUD" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167">
+                                                <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>Ultimate Driving grinding calculator. (Please touch grass.)</p>
+                    <a class="svgBullet more" onclick="revealContent('calculateUDDescription')"><u>read more</u></a>
+                    <p id="calculateUDDescription" hidden>For you chronically online nerds who spend every hour of the day on I‑76, here's a tool to simplify your grinding experience. UDGC can solve for how many miles you need to drive in order to reach a rank or credit goal. (This also works with French cars.)</p>
                 </div>
 <!---->
                 <div class="card" id="stupidcalculator">
                     <img class="thumbnail" src="images/stupidCalculator.png">
-                    <div class="noStatic">
-                        <div style="height: 100px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>stupidCalculator</h2>
-                                    <p class="caption">January 2024 • HTML, JS, CSS • All Devices</p>
-                                </td>
-                                <td>
-                                    <div class="noStatic" style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://stupidcalculator.pages.dev/" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167" >
-                                                    <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        &nbsp;
-                                        <a href="https://github.com/ax-x3/stupidcalculator" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167">
-                                                    <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>The world's most (least) advanced calculator.</p>
-                        <a class="svgBullet more" onclick="revealContent('stupidCalculatorDescription')"><u>read more</u></a>
-                        <p id="stupidCalculatorDescription" hidden>It's a command-line calculator, and its *really* fast (slow). What else can I say?</p>
-                    </div>
+                    <div style="height: 100px;"></div>
+                    <table style="width: 100%; position: relative; z-index: 1;">
+                        <tr>
+                            <td>
+                                <h2>stupidCalculator</h2>
+                                <p class="caption">January 2024 • HTML, JS, CSS • All Devices</p>
+                            </td>
+                            <td>
+                                <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
+                                    <a href="https://stupidcalculator.pages.dev/" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167" >
+                                                <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://github.com/ax-x3/stupidcalculator" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167">
+                                                <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>The world's most (least) advanced calculator.</p>
+                    <a class="svgBullet more" onclick="revealContent('stupidCalculatorDescription')"><u>read more</u></a>
+                    <p id="stupidCalculatorDescription" hidden>It's a command-line calculator, and its *really* fast (slow). What else can I say?</p>
                 </div>
 <!---->
                 <div class="card" id="stupidcalendar">
                     <img class="thumbnail" src="images/stupidCalendar.png">
-                    <div class="noStatic">
-                        <div style="height: 100px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>stupidCalendar</h2>
-                                    <p class="caption">January 2024 • HTML, JS, CSS • All Devices</p>
-                                </td>
-                                <td>
-                                    <div class="noStatic" style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://stupidcalendar.pages.dev/" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167" >
-                                                    <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        &nbsp;
-                                        <a href="https://github.com/ax-x3/stupidcalendar" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167">
-                                                    <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>It's like a smart display, except stupid.</p>
-                        <a class="svgBullet more" onclick="revealContent('stupidCalendarDescription')"><u>read more</u></a>
-                        <p id="stupidCalendarDescription" hidden>Ever wonder what time it is 4/9ths the way around the world? Want to know what day of June it is? If so, this is the calendar for you! StupidCalendar provides a static timestamp from a random timezone and a unusable date format. Now with dark mode.</p>
-                    </div>
+                    <div style="height: 100px;"></div>
+                    <table style="width: 100%; position: relative; z-index: 1;">
+                        <tr>
+                            <td>
+                                <h2>stupidCalendar</h2>
+                                <p class="caption">January 2024 • HTML, JS, CSS • All Devices</p>
+                            </td>
+                            <td>
+                                <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
+                                    <a href="https://stupidcalendar.pages.dev/" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167" >
+                                                <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://github.com/ax-x3/stupidcalendar" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167">
+                                                <path class="bullet" d="M 81.923286,-28.5 C 36.685217,-28.5 0,8.172047 0,53.416695 c 0,36.19836 23.474329,66.903145 56.021267,77.732385 4.092219,0.75661 5.598833,-1.77636 5.598833,-3.94089 0,-1.954 -0.079,-8.40813 -0.111854,-15.25041 -22.790085,4.95407 -27.59943,-9.66474 -27.59943,-9.66474 -3.723784,-9.467368 -9.098919,-11.98718 -9.098919,-11.98718 -7.434419,-5.085664 0.55921,-4.98039 0.55921,-4.98039 8.223918,0.578961 12.559555,8.441026 12.559555,8.441026 7.309415,12.526644 19.164994,8.901544 23.836183,6.809394 0.736856,-5.2962 2.855333,-8.90815 5.204089,-10.954264 -18.197869,-2.072415 -37.323401,-9.09892 -37.323401,-40.487936 0,-8.941034 3.197465,-16.250448 8.441036,-21.987436 -0.848711,-2.059275 -3.651422,-10.388446 0.796069,-21.6716444 0,0 6.881779,-2.2040098 22.533515,8.3949534 6.533067,-1.815825 13.53984,-2.723748 20.507133,-2.756639 6.960712,0.0329 13.974065,0.940814 20.520294,2.756639 15.63858,-10.5989632 22.50719,-8.3949534 22.50719,-8.3949534 4.46064,11.2831984 1.65136,19.6189604 0.80265,21.6782144 5.25015,5.736998 8.42787,13.046413 8.42787,21.987446 0,31.461389 -19.165,38.39579 -37.408926,40.422163 2.940876,2.539542 5.559366,7.526513 5.559366,15.171447 0,10.96083 -0.0921,19.78345 -0.0921,22.48088 0,2.1777 1.47373,4.73698 5.62515,3.92775 C 140.39857,120.30011 163.84,89.601905 163.84,53.416695 163.84,8.172047 127.16136,-28.5 81.923287,-28.5"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>It's like a smart display, except stupid.</p>
+                    <a class="svgBullet more" onclick="revealContent('stupidCalendarDescription')"><u>read more</u></a>
+                    <p id="stupidCalendarDescription" hidden>Ever wonder what time it is 4/9ths the way around the world? Want to know what day of June it is? If so, this is the calendar for you! StupidCalendar provides a static timestamp from a random timezone and a unusable date format. Now with dark mode.</p>
                 </div>
 <!---->
                 <div class="card" id="calculator">
                     <img class="thumbnail" src="images/calculator_.png">
-                    <div class="noStatic">
-                        <div style="height: 100px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>calculator_</h2>
-                                    <p class="caption">December 2023 • Scratch 3 • Desktop</p>
-                                </td>
-                                <td>
-                                    <div class="noStatic" style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://turbowarp.org/936913520/fullscreen" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167" >
-                                                    <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        &nbsp;
-                                        <a href="https://scratch.mit.edu/projects/936913520/editor/" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px" viewBox="-2 -30 170 167">
-                                                    <path class="bullet" d="m 103.78886,-28.495802 c -1.6005,-0.0287 -3.19811,0.0897 -4.772681,0.35953 -2.51932,0.39989 -4.79845,1.03973 -6.93786,1.95948 -1.67955,0.6998 -3.2591,1.53981 -4.7387,2.53953 -3.31912,-0.71979 -6.79837,-1.09958 -10.43738,-1.09958 -7.87787,0 -15.45553,1.79971 -22.51363,5.31876 -4.31883,2.17942 -10.25739,6.59792 -14.19633,15.4355398 -0.7398,1.59956 -1.27945,3.31891002 -2.95899,8.83742 -4.01891,12.8365302 -4.83877,17.9954502 -4.83877,22.1343302 v 10.19708 c -2e-5,4.17887 0.71946,8.25807 2.09908,12.11702 -4.01891,4.29884 -6.39798,9.6773 -7.15778,15.03585 -0.14002,1.01972 -0.21991,2.0595 -0.21991,3.09921 0,2.27939 0.35964,4.31845 0.83951,6.07796 -0.0999,1.63957 -0.1598,3.13962 -0.17978,4.47926 -0.31989,1.57956 -0.47999,3.15913 -0.47999,4.7387 v 9.67694 c 2e-5,1.59956 0.18026,3.17912 0.52016,4.7387 -0.02,0.61983 -0.0803,1.45984 -0.14017,2.53954 -0.14001,2.519322 -0.20015,4.338582 -0.20015,5.738212 0,20.55444 13.49691,29.91232 26.03352,29.91232 6.09835,0 12.27629,-2.05927 18.87451,-6.27812 2.5193,-1.61955 4.65894,-3.699 6.2985,-6.09834 1.25966,-0.0401 2.51947,-0.14032 3.79912,-0.30023 28.152371,-3.55902 45.707611,-14.43625 52.165881,-32.331402 2.07943,-5.5985 2.53923,-12.21649 1.63949,-23.43344 -0.0999,-1.29965 -0.31986,-2.57962 -0.65977,-3.83928 -0.87975,-3.3391 -1.87937,-6.07816 -3.05906,-8.45751 -1.25964,-2.99919 -3.09947,-6.45818 -5.79875,-9.91723 0.08,-0.25993 0.15973,-0.54022 0.2397,-0.84013 0.35989,-1.31964 0.58016,-2.67918 0.68012,-4.0388 0.23993,-3.55904 0.3002,-6.57799 0.14017,-9.27725 0.61984,-6.97812 1.07929,-12.25665 1.39918,-15.79569 0.0201,-0.1199 0.0201,-0.24017 0.0401,-0.36014 0.35991,-4.8786802 0.60009,-8.6178702 0.74006,-11.4171202 0.85976,-15.8756898 -6.13851,-23.5932598 -12.23686,-27.3122298 -4.34883,-2.6393 -9.18108,-4.05267 -13.98261,-4.13889 z m -0.30948,21.9891598 c 0.91239,0.0223 1.87509,0.34109 2.88732,0.95441 1.34563,0.82178 1.90306,3.28545 1.66915,7.38635 -0.11806,2.57929 -0.35171,6.21443 -0.70361,10.9031602 -0.35191,3.87094 -0.87809,9.79119 -1.5839,17.76504 0.23394,1.87549 0.23394,4.45673 0,7.73783 -0.58784,2.22741 -2.34693,3.34076 -5.27614,3.34076 -1.525581,0 -2.989471,-0.40954 -4.397101,-1.22931 -0.7038,-2.2254 -1.05386,-3.16696 -1.05386,-2.81505 0.23193,-3.16516 -0.4118,-7.38653 -1.93539,-12.6631 -1.29166,-2.69526 -3.07709,-6.53378 -5.36446,-11.51842 -2.2874,-4.9826502 -5.30636,-7.6521902 -9.05735,-8.0041002 -4.69072,-0.35191 -7.73806,1.23154 -9.14567,4.7485902 -0.46787,1.52558 -1.11577,3.75538 -1.93353,6.68459 -1.40763,4.33884 -2.2871,8.5015 -2.63901,12.48642 -0.1179,1.29165 -0.23615,1.81922 -0.3521,1.58328 0.35189,2.34738 0.7619,4.69073 1.23176,7.03609 0.58585,2.93121 2.02338,5.16115 4.30876,6.68274 2.28739,1.52557 6.65208,2.4613 13.10232,2.81319 15.82771,0.94174 25.616961,6.45199 29.369951,16.53326 0.58383,0.93975 1.16963,2.52133 1.75747,4.74673 0.58583,7.27204 0.46629,11.95889 -0.35149,14.07032 -3.40309,9.6154 -14.835861,15.65197 -34.294601,18.115302 -6.56822,0.82178 -13.13282,-2.285642 -19.70103,-9.321732 0,1.05571 0.2342,4.22108 0.70608,9.499652 0.3519,3.86894 0.29181,7.03398 -0.17606,9.49531 -2.93321,1.87549 -5.27657,2.81506 -7.03608,2.81506 -2.69928,0 -4.04499,-2.63718 -4.04499,-7.91576 0,-0.93774 0.0582,-2.43151 0.17606,-4.48295 0.11591,-2.049452 0.17606,-3.486982 0.17606,-4.308762 0,-1.99347 -0.17628,-3.39927 -0.52817,-4.22103 v -9.67324 c 0,-0.23394 0.0582,-0.49803 0.17605,-0.79193 0.11591,-0.29193 0.23415,-0.5554 0.35212,-0.79134 -0.11791,-1.63955 -0.0605,-4.16133 0.17543,-7.56241 0.23396,-2.11142 0.23396,-3.4565 0,-4.04434 -0.58784,-1.1697 -0.87719,-1.87367 -0.87719,-2.1096 0.46589,-3.2831 2.87286,-4.92463 7.20968,-4.92465 2.81322,0 4.51285,0.9978 5.10069,2.98926 0,1.8755 0.23374,4.63238 0.7036,8.26539 0.70582,4.22087 2.93162,8.44362 6.68461,12.66249 4.1029,4.80871 8.02967,7.0365 11.78467,6.6846 4.22085,-0.46587 8.44163,-1.46367 12.66249,-2.98926 5.8624,-2.11142 9.379821,-4.57311 10.553511,-7.38635 0.81776,-2.11142 1.22929,-4.33661 1.22931,-6.68396 0,-7.15008 -2.63733,-12.48682 -7.913901,-16.00387 -2.34738,-1.52358 -6.68418,-2.75498 -13.01646,-3.69473 -3.63502,-0.46586 -5.86433,-0.70359 -6.68212,-0.70359 -5.62848,0.1179 -10.87724,-1.69983 -15.74192,-5.45282 -4.8667,-3.75097 -7.29803,-8.09177 -7.29803,-13.01645 v -10.19955 c 0,-2.22538 1.2901,-7.44396 3.8714,-15.65174 1.16968,-3.8709502 1.81543,-5.9204802 1.93539,-6.1564102 1.05371,-2.46134 2.40095,-4.10287 4.0425,-4.92464998 3.98492,-1.99146002 8.20569,-2.98864002 12.66249,-2.98864002 8.67566,0 15.06613,3.51696002 19.17101,10.55105 0.35191,0.35191 0.93818,0.87946 1.75996,1.58327 0.11591,-1.63955 0.35171,-4.1607 0.70362,-7.56178 -0.11806,-1.52359998 -0.23617,-2.98947 -0.35212,-4.39709 0,-1.63956 0.81814,-2.75292 2.461701,-3.34075 0.46788,-0.23395 1.11361,-0.41021 1.93539,-0.52818 0.29292,-0.0585 0.59159,-0.084 0.89573,-0.0766 z">
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>Fully functional graphing calculator made on Scratch, Desmos-style.</p>
-                        <a class="svgBullet more" onclick="revealContent('calculator_Description')"><u>read more</u></a>
-                        <p id="calculator_Description" hidden>A fully-functional scientific graphing calculator built on Scratch. Calculator_ is capable of trigonometry, exponents, and radicals, providing it all in a clean, navigable GUI. This was my most ambitious project at over 4,000 blocks of code. <br><br>Holy shit, I actually used to know how to code... There's no way I could recreate this today.</p>
-                    </div>
+                    <div style="height: 100px;"></div>
+                    <table style="width: 100%; position: relative; z-index: 1;">
+                        <tr>
+                            <td>
+                                <h2>calculator_</h2>
+                                <p class="caption">December 2023 • Scratch 3 • Desktop</p>
+                            </td>
+                            <td>
+                                <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
+                                    <a href="https://turbowarp.org/936913520/fullscreen" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167" >
+                                                <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://scratch.mit.edu/projects/936913520/editor/" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px" viewBox="-2 -30 170 167">
+                                                <path class="bullet" d="m 103.78886,-28.495802 c -1.6005,-0.0287 -3.19811,0.0897 -4.772681,0.35953 -2.51932,0.39989 -4.79845,1.03973 -6.93786,1.95948 -1.67955,0.6998 -3.2591,1.53981 -4.7387,2.53953 -3.31912,-0.71979 -6.79837,-1.09958 -10.43738,-1.09958 -7.87787,0 -15.45553,1.79971 -22.51363,5.31876 -4.31883,2.17942 -10.25739,6.59792 -14.19633,15.4355398 -0.7398,1.59956 -1.27945,3.31891002 -2.95899,8.83742 -4.01891,12.8365302 -4.83877,17.9954502 -4.83877,22.1343302 v 10.19708 c -2e-5,4.17887 0.71946,8.25807 2.09908,12.11702 -4.01891,4.29884 -6.39798,9.6773 -7.15778,15.03585 -0.14002,1.01972 -0.21991,2.0595 -0.21991,3.09921 0,2.27939 0.35964,4.31845 0.83951,6.07796 -0.0999,1.63957 -0.1598,3.13962 -0.17978,4.47926 -0.31989,1.57956 -0.47999,3.15913 -0.47999,4.7387 v 9.67694 c 2e-5,1.59956 0.18026,3.17912 0.52016,4.7387 -0.02,0.61983 -0.0803,1.45984 -0.14017,2.53954 -0.14001,2.519322 -0.20015,4.338582 -0.20015,5.738212 0,20.55444 13.49691,29.91232 26.03352,29.91232 6.09835,0 12.27629,-2.05927 18.87451,-6.27812 2.5193,-1.61955 4.65894,-3.699 6.2985,-6.09834 1.25966,-0.0401 2.51947,-0.14032 3.79912,-0.30023 28.152371,-3.55902 45.707611,-14.43625 52.165881,-32.331402 2.07943,-5.5985 2.53923,-12.21649 1.63949,-23.43344 -0.0999,-1.29965 -0.31986,-2.57962 -0.65977,-3.83928 -0.87975,-3.3391 -1.87937,-6.07816 -3.05906,-8.45751 -1.25964,-2.99919 -3.09947,-6.45818 -5.79875,-9.91723 0.08,-0.25993 0.15973,-0.54022 0.2397,-0.84013 0.35989,-1.31964 0.58016,-2.67918 0.68012,-4.0388 0.23993,-3.55904 0.3002,-6.57799 0.14017,-9.27725 0.61984,-6.97812 1.07929,-12.25665 1.39918,-15.79569 0.0201,-0.1199 0.0201,-0.24017 0.0401,-0.36014 0.35991,-4.8786802 0.60009,-8.6178702 0.74006,-11.4171202 0.85976,-15.8756898 -6.13851,-23.5932598 -12.23686,-27.3122298 -4.34883,-2.6393 -9.18108,-4.05267 -13.98261,-4.13889 z m -0.30948,21.9891598 c 0.91239,0.0223 1.87509,0.34109 2.88732,0.95441 1.34563,0.82178 1.90306,3.28545 1.66915,7.38635 -0.11806,2.57929 -0.35171,6.21443 -0.70361,10.9031602 -0.35191,3.87094 -0.87809,9.79119 -1.5839,17.76504 0.23394,1.87549 0.23394,4.45673 0,7.73783 -0.58784,2.22741 -2.34693,3.34076 -5.27614,3.34076 -1.525581,0 -2.989471,-0.40954 -4.397101,-1.22931 -0.7038,-2.2254 -1.05386,-3.16696 -1.05386,-2.81505 0.23193,-3.16516 -0.4118,-7.38653 -1.93539,-12.6631 -1.29166,-2.69526 -3.07709,-6.53378 -5.36446,-11.51842 -2.2874,-4.9826502 -5.30636,-7.6521902 -9.05735,-8.0041002 -4.69072,-0.35191 -7.73806,1.23154 -9.14567,4.7485902 -0.46787,1.52558 -1.11577,3.75538 -1.93353,6.68459 -1.40763,4.33884 -2.2871,8.5015 -2.63901,12.48642 -0.1179,1.29165 -0.23615,1.81922 -0.3521,1.58328 0.35189,2.34738 0.7619,4.69073 1.23176,7.03609 0.58585,2.93121 2.02338,5.16115 4.30876,6.68274 2.28739,1.52557 6.65208,2.4613 13.10232,2.81319 15.82771,0.94174 25.616961,6.45199 29.369951,16.53326 0.58383,0.93975 1.16963,2.52133 1.75747,4.74673 0.58583,7.27204 0.46629,11.95889 -0.35149,14.07032 -3.40309,9.6154 -14.835861,15.65197 -34.294601,18.115302 -6.56822,0.82178 -13.13282,-2.285642 -19.70103,-9.321732 0,1.05571 0.2342,4.22108 0.70608,9.499652 0.3519,3.86894 0.29181,7.03398 -0.17606,9.49531 -2.93321,1.87549 -5.27657,2.81506 -7.03608,2.81506 -2.69928,0 -4.04499,-2.63718 -4.04499,-7.91576 0,-0.93774 0.0582,-2.43151 0.17606,-4.48295 0.11591,-2.049452 0.17606,-3.486982 0.17606,-4.308762 0,-1.99347 -0.17628,-3.39927 -0.52817,-4.22103 v -9.67324 c 0,-0.23394 0.0582,-0.49803 0.17605,-0.79193 0.11591,-0.29193 0.23415,-0.5554 0.35212,-0.79134 -0.11791,-1.63955 -0.0605,-4.16133 0.17543,-7.56241 0.23396,-2.11142 0.23396,-3.4565 0,-4.04434 -0.58784,-1.1697 -0.87719,-1.87367 -0.87719,-2.1096 0.46589,-3.2831 2.87286,-4.92463 7.20968,-4.92465 2.81322,0 4.51285,0.9978 5.10069,2.98926 0,1.8755 0.23374,4.63238 0.7036,8.26539 0.70582,4.22087 2.93162,8.44362 6.68461,12.66249 4.1029,4.80871 8.02967,7.0365 11.78467,6.6846 4.22085,-0.46587 8.44163,-1.46367 12.66249,-2.98926 5.8624,-2.11142 9.379821,-4.57311 10.553511,-7.38635 0.81776,-2.11142 1.22929,-4.33661 1.22931,-6.68396 0,-7.15008 -2.63733,-12.48682 -7.913901,-16.00387 -2.34738,-1.52358 -6.68418,-2.75498 -13.01646,-3.69473 -3.63502,-0.46586 -5.86433,-0.70359 -6.68212,-0.70359 -5.62848,0.1179 -10.87724,-1.69983 -15.74192,-5.45282 -4.8667,-3.75097 -7.29803,-8.09177 -7.29803,-13.01645 v -10.19955 c 0,-2.22538 1.2901,-7.44396 3.8714,-15.65174 1.16968,-3.8709502 1.81543,-5.9204802 1.93539,-6.1564102 1.05371,-2.46134 2.40095,-4.10287 4.0425,-4.92464998 3.98492,-1.99146002 8.20569,-2.98864002 12.66249,-2.98864002 8.67566,0 15.06613,3.51696002 19.17101,10.55105 0.35191,0.35191 0.93818,0.87946 1.75996,1.58327 0.11591,-1.63955 0.35171,-4.1607 0.70362,-7.56178 -0.11806,-1.52359998 -0.23617,-2.98947 -0.35212,-4.39709 0,-1.63956 0.81814,-2.75292 2.461701,-3.34075 0.46788,-0.23395 1.11361,-0.41021 1.93539,-0.52818 0.29292,-0.0585 0.59159,-0.084 0.89573,-0.0766 z">
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>Fully functional graphing calculator made on Scratch, Desmos-style.</p>
+                    <a class="svgBullet more" onclick="revealContent('calculator_Description')"><u>read more</u></a>
+                    <p id="calculator_Description" hidden>A fully-functional scientific graphing calculator built on Scratch. Calculator_ is capable of trigonometry, exponents, and radicals, providing it all in a clean, navigable GUI. This was my most ambitious project at over 4,000 blocks of code. <br><br>Holy shit, I actually used to know how to code... There's no way I could recreate this today.</p>
                 </div>
 <!---->
                 <div class="card" id="vegetablesamurai">
                     <img class="thumbnail" src="images/vegetablesamurai.png">
-                    <div class="noStatic">
-                        <div style="height: 100px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>Vegetable Samurai</h2>
-                                    <p class="caption">November 2023 • Scratch 3 • All Devices</p>
-                                </td>
-                                <td>
-                                    <div class="noStatic" style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://turbowarp.org/920568040/fullscreen" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167" >
-                                                    <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        &nbsp;
-                                        <a href="https://scratch.mit.edu/projects/920568040/editor/" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px" viewBox="-2 -30 170 167">
-                                                    <path class="bullet" d="m 103.78886,-28.495802 c -1.6005,-0.0287 -3.19811,0.0897 -4.772681,0.35953 -2.51932,0.39989 -4.79845,1.03973 -6.93786,1.95948 -1.67955,0.6998 -3.2591,1.53981 -4.7387,2.53953 -3.31912,-0.71979 -6.79837,-1.09958 -10.43738,-1.09958 -7.87787,0 -15.45553,1.79971 -22.51363,5.31876 -4.31883,2.17942 -10.25739,6.59792 -14.19633,15.4355398 -0.7398,1.59956 -1.27945,3.31891002 -2.95899,8.83742 -4.01891,12.8365302 -4.83877,17.9954502 -4.83877,22.1343302 v 10.19708 c -2e-5,4.17887 0.71946,8.25807 2.09908,12.11702 -4.01891,4.29884 -6.39798,9.6773 -7.15778,15.03585 -0.14002,1.01972 -0.21991,2.0595 -0.21991,3.09921 0,2.27939 0.35964,4.31845 0.83951,6.07796 -0.0999,1.63957 -0.1598,3.13962 -0.17978,4.47926 -0.31989,1.57956 -0.47999,3.15913 -0.47999,4.7387 v 9.67694 c 2e-5,1.59956 0.18026,3.17912 0.52016,4.7387 -0.02,0.61983 -0.0803,1.45984 -0.14017,2.53954 -0.14001,2.519322 -0.20015,4.338582 -0.20015,5.738212 0,20.55444 13.49691,29.91232 26.03352,29.91232 6.09835,0 12.27629,-2.05927 18.87451,-6.27812 2.5193,-1.61955 4.65894,-3.699 6.2985,-6.09834 1.25966,-0.0401 2.51947,-0.14032 3.79912,-0.30023 28.152371,-3.55902 45.707611,-14.43625 52.165881,-32.331402 2.07943,-5.5985 2.53923,-12.21649 1.63949,-23.43344 -0.0999,-1.29965 -0.31986,-2.57962 -0.65977,-3.83928 -0.87975,-3.3391 -1.87937,-6.07816 -3.05906,-8.45751 -1.25964,-2.99919 -3.09947,-6.45818 -5.79875,-9.91723 0.08,-0.25993 0.15973,-0.54022 0.2397,-0.84013 0.35989,-1.31964 0.58016,-2.67918 0.68012,-4.0388 0.23993,-3.55904 0.3002,-6.57799 0.14017,-9.27725 0.61984,-6.97812 1.07929,-12.25665 1.39918,-15.79569 0.0201,-0.1199 0.0201,-0.24017 0.0401,-0.36014 0.35991,-4.8786802 0.60009,-8.6178702 0.74006,-11.4171202 0.85976,-15.8756898 -6.13851,-23.5932598 -12.23686,-27.3122298 -4.34883,-2.6393 -9.18108,-4.05267 -13.98261,-4.13889 z m -0.30948,21.9891598 c 0.91239,0.0223 1.87509,0.34109 2.88732,0.95441 1.34563,0.82178 1.90306,3.28545 1.66915,7.38635 -0.11806,2.57929 -0.35171,6.21443 -0.70361,10.9031602 -0.35191,3.87094 -0.87809,9.79119 -1.5839,17.76504 0.23394,1.87549 0.23394,4.45673 0,7.73783 -0.58784,2.22741 -2.34693,3.34076 -5.27614,3.34076 -1.525581,0 -2.989471,-0.40954 -4.397101,-1.22931 -0.7038,-2.2254 -1.05386,-3.16696 -1.05386,-2.81505 0.23193,-3.16516 -0.4118,-7.38653 -1.93539,-12.6631 -1.29166,-2.69526 -3.07709,-6.53378 -5.36446,-11.51842 -2.2874,-4.9826502 -5.30636,-7.6521902 -9.05735,-8.0041002 -4.69072,-0.35191 -7.73806,1.23154 -9.14567,4.7485902 -0.46787,1.52558 -1.11577,3.75538 -1.93353,6.68459 -1.40763,4.33884 -2.2871,8.5015 -2.63901,12.48642 -0.1179,1.29165 -0.23615,1.81922 -0.3521,1.58328 0.35189,2.34738 0.7619,4.69073 1.23176,7.03609 0.58585,2.93121 2.02338,5.16115 4.30876,6.68274 2.28739,1.52557 6.65208,2.4613 13.10232,2.81319 15.82771,0.94174 25.616961,6.45199 29.369951,16.53326 0.58383,0.93975 1.16963,2.52133 1.75747,4.74673 0.58583,7.27204 0.46629,11.95889 -0.35149,14.07032 -3.40309,9.6154 -14.835861,15.65197 -34.294601,18.115302 -6.56822,0.82178 -13.13282,-2.285642 -19.70103,-9.321732 0,1.05571 0.2342,4.22108 0.70608,9.499652 0.3519,3.86894 0.29181,7.03398 -0.17606,9.49531 -2.93321,1.87549 -5.27657,2.81506 -7.03608,2.81506 -2.69928,0 -4.04499,-2.63718 -4.04499,-7.91576 0,-0.93774 0.0582,-2.43151 0.17606,-4.48295 0.11591,-2.049452 0.17606,-3.486982 0.17606,-4.308762 0,-1.99347 -0.17628,-3.39927 -0.52817,-4.22103 v -9.67324 c 0,-0.23394 0.0582,-0.49803 0.17605,-0.79193 0.11591,-0.29193 0.23415,-0.5554 0.35212,-0.79134 -0.11791,-1.63955 -0.0605,-4.16133 0.17543,-7.56241 0.23396,-2.11142 0.23396,-3.4565 0,-4.04434 -0.58784,-1.1697 -0.87719,-1.87367 -0.87719,-2.1096 0.46589,-3.2831 2.87286,-4.92463 7.20968,-4.92465 2.81322,0 4.51285,0.9978 5.10069,2.98926 0,1.8755 0.23374,4.63238 0.7036,8.26539 0.70582,4.22087 2.93162,8.44362 6.68461,12.66249 4.1029,4.80871 8.02967,7.0365 11.78467,6.6846 4.22085,-0.46587 8.44163,-1.46367 12.66249,-2.98926 5.8624,-2.11142 9.379821,-4.57311 10.553511,-7.38635 0.81776,-2.11142 1.22929,-4.33661 1.22931,-6.68396 0,-7.15008 -2.63733,-12.48682 -7.913901,-16.00387 -2.34738,-1.52358 -6.68418,-2.75498 -13.01646,-3.69473 -3.63502,-0.46586 -5.86433,-0.70359 -6.68212,-0.70359 -5.62848,0.1179 -10.87724,-1.69983 -15.74192,-5.45282 -4.8667,-3.75097 -7.29803,-8.09177 -7.29803,-13.01645 v -10.19955 c 0,-2.22538 1.2901,-7.44396 3.8714,-15.65174 1.16968,-3.8709502 1.81543,-5.9204802 1.93539,-6.1564102 1.05371,-2.46134 2.40095,-4.10287 4.0425,-4.92464998 3.98492,-1.99146002 8.20569,-2.98864002 12.66249,-2.98864002 8.67566,0 15.06613,3.51696002 19.17101,10.55105 0.35191,0.35191 0.93818,0.87946 1.75996,1.58327 0.11591,-1.63955 0.35171,-4.1607 0.70362,-7.56178 -0.11806,-1.52359998 -0.23617,-2.98947 -0.35212,-4.39709 0,-1.63956 0.81814,-2.75292 2.461701,-3.34075 0.46788,-0.23395 1.11361,-0.41021 1.93539,-0.52818 0.29292,-0.0585 0.59159,-0.084 0.89573,-0.0766 z">
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>This is not a knockoff of a certain fruit slicing game.</p>
-                        <a class="svgBullet more" onclick="revealContent('VegetableSamuraiDescription')"><u>read more</u></a>
-                        <p id="VegetableSamuraiDescription" hidden>This project scored me a 5 on the AP Compsci Principles exam. <br><br>I'm pretty proud of this one. It does all the UI rendering useing some old Scratch function packages I wrote long ago.</p>
-                    </div>
+                    <div style="height: 100px;"></div>
+                    <table style="width: 100%; position: relative; z-index: 1;">
+                        <tr>
+                            <td>
+                                <h2>Vegetable Samurai</h2>
+                                <p class="caption">November 2023 • Scratch 3 • All Devices</p>
+                            </td>
+                            <td>
+                                <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
+                                    <a href="https://turbowarp.org/920568040/fullscreen" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167" >
+                                                <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://scratch.mit.edu/projects/920568040/editor/" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px" viewBox="-2 -30 170 167">
+                                                <path class="bullet" d="m 103.78886,-28.495802 c -1.6005,-0.0287 -3.19811,0.0897 -4.772681,0.35953 -2.51932,0.39989 -4.79845,1.03973 -6.93786,1.95948 -1.67955,0.6998 -3.2591,1.53981 -4.7387,2.53953 -3.31912,-0.71979 -6.79837,-1.09958 -10.43738,-1.09958 -7.87787,0 -15.45553,1.79971 -22.51363,5.31876 -4.31883,2.17942 -10.25739,6.59792 -14.19633,15.4355398 -0.7398,1.59956 -1.27945,3.31891002 -2.95899,8.83742 -4.01891,12.8365302 -4.83877,17.9954502 -4.83877,22.1343302 v 10.19708 c -2e-5,4.17887 0.71946,8.25807 2.09908,12.11702 -4.01891,4.29884 -6.39798,9.6773 -7.15778,15.03585 -0.14002,1.01972 -0.21991,2.0595 -0.21991,3.09921 0,2.27939 0.35964,4.31845 0.83951,6.07796 -0.0999,1.63957 -0.1598,3.13962 -0.17978,4.47926 -0.31989,1.57956 -0.47999,3.15913 -0.47999,4.7387 v 9.67694 c 2e-5,1.59956 0.18026,3.17912 0.52016,4.7387 -0.02,0.61983 -0.0803,1.45984 -0.14017,2.53954 -0.14001,2.519322 -0.20015,4.338582 -0.20015,5.738212 0,20.55444 13.49691,29.91232 26.03352,29.91232 6.09835,0 12.27629,-2.05927 18.87451,-6.27812 2.5193,-1.61955 4.65894,-3.699 6.2985,-6.09834 1.25966,-0.0401 2.51947,-0.14032 3.79912,-0.30023 28.152371,-3.55902 45.707611,-14.43625 52.165881,-32.331402 2.07943,-5.5985 2.53923,-12.21649 1.63949,-23.43344 -0.0999,-1.29965 -0.31986,-2.57962 -0.65977,-3.83928 -0.87975,-3.3391 -1.87937,-6.07816 -3.05906,-8.45751 -1.25964,-2.99919 -3.09947,-6.45818 -5.79875,-9.91723 0.08,-0.25993 0.15973,-0.54022 0.2397,-0.84013 0.35989,-1.31964 0.58016,-2.67918 0.68012,-4.0388 0.23993,-3.55904 0.3002,-6.57799 0.14017,-9.27725 0.61984,-6.97812 1.07929,-12.25665 1.39918,-15.79569 0.0201,-0.1199 0.0201,-0.24017 0.0401,-0.36014 0.35991,-4.8786802 0.60009,-8.6178702 0.74006,-11.4171202 0.85976,-15.8756898 -6.13851,-23.5932598 -12.23686,-27.3122298 -4.34883,-2.6393 -9.18108,-4.05267 -13.98261,-4.13889 z m -0.30948,21.9891598 c 0.91239,0.0223 1.87509,0.34109 2.88732,0.95441 1.34563,0.82178 1.90306,3.28545 1.66915,7.38635 -0.11806,2.57929 -0.35171,6.21443 -0.70361,10.9031602 -0.35191,3.87094 -0.87809,9.79119 -1.5839,17.76504 0.23394,1.87549 0.23394,4.45673 0,7.73783 -0.58784,2.22741 -2.34693,3.34076 -5.27614,3.34076 -1.525581,0 -2.989471,-0.40954 -4.397101,-1.22931 -0.7038,-2.2254 -1.05386,-3.16696 -1.05386,-2.81505 0.23193,-3.16516 -0.4118,-7.38653 -1.93539,-12.6631 -1.29166,-2.69526 -3.07709,-6.53378 -5.36446,-11.51842 -2.2874,-4.9826502 -5.30636,-7.6521902 -9.05735,-8.0041002 -4.69072,-0.35191 -7.73806,1.23154 -9.14567,4.7485902 -0.46787,1.52558 -1.11577,3.75538 -1.93353,6.68459 -1.40763,4.33884 -2.2871,8.5015 -2.63901,12.48642 -0.1179,1.29165 -0.23615,1.81922 -0.3521,1.58328 0.35189,2.34738 0.7619,4.69073 1.23176,7.03609 0.58585,2.93121 2.02338,5.16115 4.30876,6.68274 2.28739,1.52557 6.65208,2.4613 13.10232,2.81319 15.82771,0.94174 25.616961,6.45199 29.369951,16.53326 0.58383,0.93975 1.16963,2.52133 1.75747,4.74673 0.58583,7.27204 0.46629,11.95889 -0.35149,14.07032 -3.40309,9.6154 -14.835861,15.65197 -34.294601,18.115302 -6.56822,0.82178 -13.13282,-2.285642 -19.70103,-9.321732 0,1.05571 0.2342,4.22108 0.70608,9.499652 0.3519,3.86894 0.29181,7.03398 -0.17606,9.49531 -2.93321,1.87549 -5.27657,2.81506 -7.03608,2.81506 -2.69928,0 -4.04499,-2.63718 -4.04499,-7.91576 0,-0.93774 0.0582,-2.43151 0.17606,-4.48295 0.11591,-2.049452 0.17606,-3.486982 0.17606,-4.308762 0,-1.99347 -0.17628,-3.39927 -0.52817,-4.22103 v -9.67324 c 0,-0.23394 0.0582,-0.49803 0.17605,-0.79193 0.11591,-0.29193 0.23415,-0.5554 0.35212,-0.79134 -0.11791,-1.63955 -0.0605,-4.16133 0.17543,-7.56241 0.23396,-2.11142 0.23396,-3.4565 0,-4.04434 -0.58784,-1.1697 -0.87719,-1.87367 -0.87719,-2.1096 0.46589,-3.2831 2.87286,-4.92463 7.20968,-4.92465 2.81322,0 4.51285,0.9978 5.10069,2.98926 0,1.8755 0.23374,4.63238 0.7036,8.26539 0.70582,4.22087 2.93162,8.44362 6.68461,12.66249 4.1029,4.80871 8.02967,7.0365 11.78467,6.6846 4.22085,-0.46587 8.44163,-1.46367 12.66249,-2.98926 5.8624,-2.11142 9.379821,-4.57311 10.553511,-7.38635 0.81776,-2.11142 1.22929,-4.33661 1.22931,-6.68396 0,-7.15008 -2.63733,-12.48682 -7.913901,-16.00387 -2.34738,-1.52358 -6.68418,-2.75498 -13.01646,-3.69473 -3.63502,-0.46586 -5.86433,-0.70359 -6.68212,-0.70359 -5.62848,0.1179 -10.87724,-1.69983 -15.74192,-5.45282 -4.8667,-3.75097 -7.29803,-8.09177 -7.29803,-13.01645 v -10.19955 c 0,-2.22538 1.2901,-7.44396 3.8714,-15.65174 1.16968,-3.8709502 1.81543,-5.9204802 1.93539,-6.1564102 1.05371,-2.46134 2.40095,-4.10287 4.0425,-4.92464998 3.98492,-1.99146002 8.20569,-2.98864002 12.66249,-2.98864002 8.67566,0 15.06613,3.51696002 19.17101,10.55105 0.35191,0.35191 0.93818,0.87946 1.75996,1.58327 0.11591,-1.63955 0.35171,-4.1607 0.70362,-7.56178 -0.11806,-1.52359998 -0.23617,-2.98947 -0.35212,-4.39709 0,-1.63956 0.81814,-2.75292 2.461701,-3.34075 0.46788,-0.23395 1.11361,-0.41021 1.93539,-0.52818 0.29292,-0.0585 0.59159,-0.084 0.89573,-0.0766 z">
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>This is not a knockoff of a certain fruit slicing game.</p>
+                    <a class="svgBullet more" onclick="revealContent('VegetableSamuraiDescription')"><u>read more</u></a>
+                    <p id="VegetableSamuraiDescription" hidden>This project scored me a 5 on the AP Compsci Principles exam. <br><br>I'm pretty proud of this one. It does all the UI rendering useing some old Scratch function packages I wrote long ago.</p>
                 </div>
 <!---->
                 <div class="card" id="sprintlite">
                     <img class="thumbnail" src="images/SPrintLite.png">
-                    <div class="noStatic">
-                        <div style="height: 100px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>SPrint Lite</h2>
-                                    <p class="caption">October 2023 • Scratch 3 • All Devices</p>
-                                </td>
-                                <td>
-                                    <div class="noStatic" style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://turbowarp.org/901951175/fullscreen" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167" >
-                                                    <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        &nbsp;
-                                        <a href="https://scratch.mit.edu/projects/901951175/editor/" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px" viewBox="-2 -30 170 167">
-                                                    <path class="bullet" d="m 103.78886,-28.495802 c -1.6005,-0.0287 -3.19811,0.0897 -4.772681,0.35953 -2.51932,0.39989 -4.79845,1.03973 -6.93786,1.95948 -1.67955,0.6998 -3.2591,1.53981 -4.7387,2.53953 -3.31912,-0.71979 -6.79837,-1.09958 -10.43738,-1.09958 -7.87787,0 -15.45553,1.79971 -22.51363,5.31876 -4.31883,2.17942 -10.25739,6.59792 -14.19633,15.4355398 -0.7398,1.59956 -1.27945,3.31891002 -2.95899,8.83742 -4.01891,12.8365302 -4.83877,17.9954502 -4.83877,22.1343302 v 10.19708 c -2e-5,4.17887 0.71946,8.25807 2.09908,12.11702 -4.01891,4.29884 -6.39798,9.6773 -7.15778,15.03585 -0.14002,1.01972 -0.21991,2.0595 -0.21991,3.09921 0,2.27939 0.35964,4.31845 0.83951,6.07796 -0.0999,1.63957 -0.1598,3.13962 -0.17978,4.47926 -0.31989,1.57956 -0.47999,3.15913 -0.47999,4.7387 v 9.67694 c 2e-5,1.59956 0.18026,3.17912 0.52016,4.7387 -0.02,0.61983 -0.0803,1.45984 -0.14017,2.53954 -0.14001,2.519322 -0.20015,4.338582 -0.20015,5.738212 0,20.55444 13.49691,29.91232 26.03352,29.91232 6.09835,0 12.27629,-2.05927 18.87451,-6.27812 2.5193,-1.61955 4.65894,-3.699 6.2985,-6.09834 1.25966,-0.0401 2.51947,-0.14032 3.79912,-0.30023 28.152371,-3.55902 45.707611,-14.43625 52.165881,-32.331402 2.07943,-5.5985 2.53923,-12.21649 1.63949,-23.43344 -0.0999,-1.29965 -0.31986,-2.57962 -0.65977,-3.83928 -0.87975,-3.3391 -1.87937,-6.07816 -3.05906,-8.45751 -1.25964,-2.99919 -3.09947,-6.45818 -5.79875,-9.91723 0.08,-0.25993 0.15973,-0.54022 0.2397,-0.84013 0.35989,-1.31964 0.58016,-2.67918 0.68012,-4.0388 0.23993,-3.55904 0.3002,-6.57799 0.14017,-9.27725 0.61984,-6.97812 1.07929,-12.25665 1.39918,-15.79569 0.0201,-0.1199 0.0201,-0.24017 0.0401,-0.36014 0.35991,-4.8786802 0.60009,-8.6178702 0.74006,-11.4171202 0.85976,-15.8756898 -6.13851,-23.5932598 -12.23686,-27.3122298 -4.34883,-2.6393 -9.18108,-4.05267 -13.98261,-4.13889 z m -0.30948,21.9891598 c 0.91239,0.0223 1.87509,0.34109 2.88732,0.95441 1.34563,0.82178 1.90306,3.28545 1.66915,7.38635 -0.11806,2.57929 -0.35171,6.21443 -0.70361,10.9031602 -0.35191,3.87094 -0.87809,9.79119 -1.5839,17.76504 0.23394,1.87549 0.23394,4.45673 0,7.73783 -0.58784,2.22741 -2.34693,3.34076 -5.27614,3.34076 -1.525581,0 -2.989471,-0.40954 -4.397101,-1.22931 -0.7038,-2.2254 -1.05386,-3.16696 -1.05386,-2.81505 0.23193,-3.16516 -0.4118,-7.38653 -1.93539,-12.6631 -1.29166,-2.69526 -3.07709,-6.53378 -5.36446,-11.51842 -2.2874,-4.9826502 -5.30636,-7.6521902 -9.05735,-8.0041002 -4.69072,-0.35191 -7.73806,1.23154 -9.14567,4.7485902 -0.46787,1.52558 -1.11577,3.75538 -1.93353,6.68459 -1.40763,4.33884 -2.2871,8.5015 -2.63901,12.48642 -0.1179,1.29165 -0.23615,1.81922 -0.3521,1.58328 0.35189,2.34738 0.7619,4.69073 1.23176,7.03609 0.58585,2.93121 2.02338,5.16115 4.30876,6.68274 2.28739,1.52557 6.65208,2.4613 13.10232,2.81319 15.82771,0.94174 25.616961,6.45199 29.369951,16.53326 0.58383,0.93975 1.16963,2.52133 1.75747,4.74673 0.58583,7.27204 0.46629,11.95889 -0.35149,14.07032 -3.40309,9.6154 -14.835861,15.65197 -34.294601,18.115302 -6.56822,0.82178 -13.13282,-2.285642 -19.70103,-9.321732 0,1.05571 0.2342,4.22108 0.70608,9.499652 0.3519,3.86894 0.29181,7.03398 -0.17606,9.49531 -2.93321,1.87549 -5.27657,2.81506 -7.03608,2.81506 -2.69928,0 -4.04499,-2.63718 -4.04499,-7.91576 0,-0.93774 0.0582,-2.43151 0.17606,-4.48295 0.11591,-2.049452 0.17606,-3.486982 0.17606,-4.308762 0,-1.99347 -0.17628,-3.39927 -0.52817,-4.22103 v -9.67324 c 0,-0.23394 0.0582,-0.49803 0.17605,-0.79193 0.11591,-0.29193 0.23415,-0.5554 0.35212,-0.79134 -0.11791,-1.63955 -0.0605,-4.16133 0.17543,-7.56241 0.23396,-2.11142 0.23396,-3.4565 0,-4.04434 -0.58784,-1.1697 -0.87719,-1.87367 -0.87719,-2.1096 0.46589,-3.2831 2.87286,-4.92463 7.20968,-4.92465 2.81322,0 4.51285,0.9978 5.10069,2.98926 0,1.8755 0.23374,4.63238 0.7036,8.26539 0.70582,4.22087 2.93162,8.44362 6.68461,12.66249 4.1029,4.80871 8.02967,7.0365 11.78467,6.6846 4.22085,-0.46587 8.44163,-1.46367 12.66249,-2.98926 5.8624,-2.11142 9.379821,-4.57311 10.553511,-7.38635 0.81776,-2.11142 1.22929,-4.33661 1.22931,-6.68396 0,-7.15008 -2.63733,-12.48682 -7.913901,-16.00387 -2.34738,-1.52358 -6.68418,-2.75498 -13.01646,-3.69473 -3.63502,-0.46586 -5.86433,-0.70359 -6.68212,-0.70359 -5.62848,0.1179 -10.87724,-1.69983 -15.74192,-5.45282 -4.8667,-3.75097 -7.29803,-8.09177 -7.29803,-13.01645 v -10.19955 c 0,-2.22538 1.2901,-7.44396 3.8714,-15.65174 1.16968,-3.8709502 1.81543,-5.9204802 1.93539,-6.1564102 1.05371,-2.46134 2.40095,-4.10287 4.0425,-4.92464998 3.98492,-1.99146002 8.20569,-2.98864002 12.66249,-2.98864002 8.67566,0 15.06613,3.51696002 19.17101,10.55105 0.35191,0.35191 0.93818,0.87946 1.75996,1.58327 0.11591,-1.63955 0.35171,-4.1607 0.70362,-7.56178 -0.11806,-1.52359998 -0.23617,-2.98947 -0.35212,-4.39709 0,-1.63956 0.81814,-2.75292 2.461701,-3.34075 0.46788,-0.23395 1.11361,-0.41021 1.93539,-0.52818 0.29292,-0.0585 0.59159,-0.084 0.89573,-0.0766 z">
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>A lightweight pen-based text rendering script for Scratch.</p>
-                        <a class="svgBullet more" onclick="revealContent('SPrintLiteDescription')"><u>read more</u></a>
-                        <p id="SPrintLiteDescription" hidden>SPrint Lite is a completely reimagined edition of the original BetterText engine. This engine incorporates the official Helvetica typeface for a more professional look, with the Unicode placeholder for unavailable characters. SPrint Lite can render characters instantly to match up with your framerate. Designed for efficiency, SPrint Lite can beautify Scratch variable displays with ease.</p>
-                    </div>
+                    <div style="height: 100px;"></div>
+                    <table style="width: 100%; position: relative; z-index: 1;">
+                        <tr>
+                            <td>
+                                <h2>SPrint Lite</h2>
+                                <p class="caption">October 2023 • Scratch 3 • All Devices</p>
+                            </td>
+                            <td>
+                                <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
+                                    <a href="https://turbowarp.org/901951175/fullscreen" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167" >
+                                                <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://scratch.mit.edu/projects/901951175/editor/" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px" viewBox="-2 -30 170 167">
+                                                <path class="bullet" d="m 103.78886,-28.495802 c -1.6005,-0.0287 -3.19811,0.0897 -4.772681,0.35953 -2.51932,0.39989 -4.79845,1.03973 -6.93786,1.95948 -1.67955,0.6998 -3.2591,1.53981 -4.7387,2.53953 -3.31912,-0.71979 -6.79837,-1.09958 -10.43738,-1.09958 -7.87787,0 -15.45553,1.79971 -22.51363,5.31876 -4.31883,2.17942 -10.25739,6.59792 -14.19633,15.4355398 -0.7398,1.59956 -1.27945,3.31891002 -2.95899,8.83742 -4.01891,12.8365302 -4.83877,17.9954502 -4.83877,22.1343302 v 10.19708 c -2e-5,4.17887 0.71946,8.25807 2.09908,12.11702 -4.01891,4.29884 -6.39798,9.6773 -7.15778,15.03585 -0.14002,1.01972 -0.21991,2.0595 -0.21991,3.09921 0,2.27939 0.35964,4.31845 0.83951,6.07796 -0.0999,1.63957 -0.1598,3.13962 -0.17978,4.47926 -0.31989,1.57956 -0.47999,3.15913 -0.47999,4.7387 v 9.67694 c 2e-5,1.59956 0.18026,3.17912 0.52016,4.7387 -0.02,0.61983 -0.0803,1.45984 -0.14017,2.53954 -0.14001,2.519322 -0.20015,4.338582 -0.20015,5.738212 0,20.55444 13.49691,29.91232 26.03352,29.91232 6.09835,0 12.27629,-2.05927 18.87451,-6.27812 2.5193,-1.61955 4.65894,-3.699 6.2985,-6.09834 1.25966,-0.0401 2.51947,-0.14032 3.79912,-0.30023 28.152371,-3.55902 45.707611,-14.43625 52.165881,-32.331402 2.07943,-5.5985 2.53923,-12.21649 1.63949,-23.43344 -0.0999,-1.29965 -0.31986,-2.57962 -0.65977,-3.83928 -0.87975,-3.3391 -1.87937,-6.07816 -3.05906,-8.45751 -1.25964,-2.99919 -3.09947,-6.45818 -5.79875,-9.91723 0.08,-0.25993 0.15973,-0.54022 0.2397,-0.84013 0.35989,-1.31964 0.58016,-2.67918 0.68012,-4.0388 0.23993,-3.55904 0.3002,-6.57799 0.14017,-9.27725 0.61984,-6.97812 1.07929,-12.25665 1.39918,-15.79569 0.0201,-0.1199 0.0201,-0.24017 0.0401,-0.36014 0.35991,-4.8786802 0.60009,-8.6178702 0.74006,-11.4171202 0.85976,-15.8756898 -6.13851,-23.5932598 -12.23686,-27.3122298 -4.34883,-2.6393 -9.18108,-4.05267 -13.98261,-4.13889 z m -0.30948,21.9891598 c 0.91239,0.0223 1.87509,0.34109 2.88732,0.95441 1.34563,0.82178 1.90306,3.28545 1.66915,7.38635 -0.11806,2.57929 -0.35171,6.21443 -0.70361,10.9031602 -0.35191,3.87094 -0.87809,9.79119 -1.5839,17.76504 0.23394,1.87549 0.23394,4.45673 0,7.73783 -0.58784,2.22741 -2.34693,3.34076 -5.27614,3.34076 -1.525581,0 -2.989471,-0.40954 -4.397101,-1.22931 -0.7038,-2.2254 -1.05386,-3.16696 -1.05386,-2.81505 0.23193,-3.16516 -0.4118,-7.38653 -1.93539,-12.6631 -1.29166,-2.69526 -3.07709,-6.53378 -5.36446,-11.51842 -2.2874,-4.9826502 -5.30636,-7.6521902 -9.05735,-8.0041002 -4.69072,-0.35191 -7.73806,1.23154 -9.14567,4.7485902 -0.46787,1.52558 -1.11577,3.75538 -1.93353,6.68459 -1.40763,4.33884 -2.2871,8.5015 -2.63901,12.48642 -0.1179,1.29165 -0.23615,1.81922 -0.3521,1.58328 0.35189,2.34738 0.7619,4.69073 1.23176,7.03609 0.58585,2.93121 2.02338,5.16115 4.30876,6.68274 2.28739,1.52557 6.65208,2.4613 13.10232,2.81319 15.82771,0.94174 25.616961,6.45199 29.369951,16.53326 0.58383,0.93975 1.16963,2.52133 1.75747,4.74673 0.58583,7.27204 0.46629,11.95889 -0.35149,14.07032 -3.40309,9.6154 -14.835861,15.65197 -34.294601,18.115302 -6.56822,0.82178 -13.13282,-2.285642 -19.70103,-9.321732 0,1.05571 0.2342,4.22108 0.70608,9.499652 0.3519,3.86894 0.29181,7.03398 -0.17606,9.49531 -2.93321,1.87549 -5.27657,2.81506 -7.03608,2.81506 -2.69928,0 -4.04499,-2.63718 -4.04499,-7.91576 0,-0.93774 0.0582,-2.43151 0.17606,-4.48295 0.11591,-2.049452 0.17606,-3.486982 0.17606,-4.308762 0,-1.99347 -0.17628,-3.39927 -0.52817,-4.22103 v -9.67324 c 0,-0.23394 0.0582,-0.49803 0.17605,-0.79193 0.11591,-0.29193 0.23415,-0.5554 0.35212,-0.79134 -0.11791,-1.63955 -0.0605,-4.16133 0.17543,-7.56241 0.23396,-2.11142 0.23396,-3.4565 0,-4.04434 -0.58784,-1.1697 -0.87719,-1.87367 -0.87719,-2.1096 0.46589,-3.2831 2.87286,-4.92463 7.20968,-4.92465 2.81322,0 4.51285,0.9978 5.10069,2.98926 0,1.8755 0.23374,4.63238 0.7036,8.26539 0.70582,4.22087 2.93162,8.44362 6.68461,12.66249 4.1029,4.80871 8.02967,7.0365 11.78467,6.6846 4.22085,-0.46587 8.44163,-1.46367 12.66249,-2.98926 5.8624,-2.11142 9.379821,-4.57311 10.553511,-7.38635 0.81776,-2.11142 1.22929,-4.33661 1.22931,-6.68396 0,-7.15008 -2.63733,-12.48682 -7.913901,-16.00387 -2.34738,-1.52358 -6.68418,-2.75498 -13.01646,-3.69473 -3.63502,-0.46586 -5.86433,-0.70359 -6.68212,-0.70359 -5.62848,0.1179 -10.87724,-1.69983 -15.74192,-5.45282 -4.8667,-3.75097 -7.29803,-8.09177 -7.29803,-13.01645 v -10.19955 c 0,-2.22538 1.2901,-7.44396 3.8714,-15.65174 1.16968,-3.8709502 1.81543,-5.9204802 1.93539,-6.1564102 1.05371,-2.46134 2.40095,-4.10287 4.0425,-4.92464998 3.98492,-1.99146002 8.20569,-2.98864002 12.66249,-2.98864002 8.67566,0 15.06613,3.51696002 19.17101,10.55105 0.35191,0.35191 0.93818,0.87946 1.75996,1.58327 0.11591,-1.63955 0.35171,-4.1607 0.70362,-7.56178 -0.11806,-1.52359998 -0.23617,-2.98947 -0.35212,-4.39709 0,-1.63956 0.81814,-2.75292 2.461701,-3.34075 0.46788,-0.23395 1.11361,-0.41021 1.93539,-0.52818 0.29292,-0.0585 0.59159,-0.084 0.89573,-0.0766 z">
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>A lightweight pen-based text rendering script for Scratch.</p>
+                    <a class="svgBullet more" onclick="revealContent('SPrintLiteDescription')"><u>read more</u></a>
+                    <p id="SPrintLiteDescription" hidden>SPrint Lite is a completely reimagined edition of the original BetterText engine. This engine incorporates the official Helvetica typeface for a more professional look, with the Unicode placeholder for unavailable characters. SPrint Lite can render characters instantly to match up with your framerate. Designed for efficiency, SPrint Lite can beautify Scratch variable displays with ease.</p>
                 </div>
 <!---->
                 <div class="card" id="sprintpro">
                     <img class="thumbnail" src="images/SPrintPro.png">
-                    <div class="noStatic">
-                        <div style="height: 100px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>SPrint Pro</h2>
-                                    <p class="caption">September 2023 • Scratch 3 • All Devices</p>
-                                </td>
-                                <td>
-                                    <div class="noStatic" style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://turbowarp.org/897395928/fullscreen" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px;" viewBox="-2 -30 170 167" >
-                                                    <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        &nbsp;
-                                        <a href="https://scratch.mit.edu/projects/897395928/editor/" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction noStatic">
-                                                <svg style="width: 35px" viewBox="-2 -30 170 167">
-                                                    <path class="bullet" d="m 103.78886,-28.495802 c -1.6005,-0.0287 -3.19811,0.0897 -4.772681,0.35953 -2.51932,0.39989 -4.79845,1.03973 -6.93786,1.95948 -1.67955,0.6998 -3.2591,1.53981 -4.7387,2.53953 -3.31912,-0.71979 -6.79837,-1.09958 -10.43738,-1.09958 -7.87787,0 -15.45553,1.79971 -22.51363,5.31876 -4.31883,2.17942 -10.25739,6.59792 -14.19633,15.4355398 -0.7398,1.59956 -1.27945,3.31891002 -2.95899,8.83742 -4.01891,12.8365302 -4.83877,17.9954502 -4.83877,22.1343302 v 10.19708 c -2e-5,4.17887 0.71946,8.25807 2.09908,12.11702 -4.01891,4.29884 -6.39798,9.6773 -7.15778,15.03585 -0.14002,1.01972 -0.21991,2.0595 -0.21991,3.09921 0,2.27939 0.35964,4.31845 0.83951,6.07796 -0.0999,1.63957 -0.1598,3.13962 -0.17978,4.47926 -0.31989,1.57956 -0.47999,3.15913 -0.47999,4.7387 v 9.67694 c 2e-5,1.59956 0.18026,3.17912 0.52016,4.7387 -0.02,0.61983 -0.0803,1.45984 -0.14017,2.53954 -0.14001,2.519322 -0.20015,4.338582 -0.20015,5.738212 0,20.55444 13.49691,29.91232 26.03352,29.91232 6.09835,0 12.27629,-2.05927 18.87451,-6.27812 2.5193,-1.61955 4.65894,-3.699 6.2985,-6.09834 1.25966,-0.0401 2.51947,-0.14032 3.79912,-0.30023 28.152371,-3.55902 45.707611,-14.43625 52.165881,-32.331402 2.07943,-5.5985 2.53923,-12.21649 1.63949,-23.43344 -0.0999,-1.29965 -0.31986,-2.57962 -0.65977,-3.83928 -0.87975,-3.3391 -1.87937,-6.07816 -3.05906,-8.45751 -1.25964,-2.99919 -3.09947,-6.45818 -5.79875,-9.91723 0.08,-0.25993 0.15973,-0.54022 0.2397,-0.84013 0.35989,-1.31964 0.58016,-2.67918 0.68012,-4.0388 0.23993,-3.55904 0.3002,-6.57799 0.14017,-9.27725 0.61984,-6.97812 1.07929,-12.25665 1.39918,-15.79569 0.0201,-0.1199 0.0201,-0.24017 0.0401,-0.36014 0.35991,-4.8786802 0.60009,-8.6178702 0.74006,-11.4171202 0.85976,-15.8756898 -6.13851,-23.5932598 -12.23686,-27.3122298 -4.34883,-2.6393 -9.18108,-4.05267 -13.98261,-4.13889 z m -0.30948,21.9891598 c 0.91239,0.0223 1.87509,0.34109 2.88732,0.95441 1.34563,0.82178 1.90306,3.28545 1.66915,7.38635 -0.11806,2.57929 -0.35171,6.21443 -0.70361,10.9031602 -0.35191,3.87094 -0.87809,9.79119 -1.5839,17.76504 0.23394,1.87549 0.23394,4.45673 0,7.73783 -0.58784,2.22741 -2.34693,3.34076 -5.27614,3.34076 -1.525581,0 -2.989471,-0.40954 -4.397101,-1.22931 -0.7038,-2.2254 -1.05386,-3.16696 -1.05386,-2.81505 0.23193,-3.16516 -0.4118,-7.38653 -1.93539,-12.6631 -1.29166,-2.69526 -3.07709,-6.53378 -5.36446,-11.51842 -2.2874,-4.9826502 -5.30636,-7.6521902 -9.05735,-8.0041002 -4.69072,-0.35191 -7.73806,1.23154 -9.14567,4.7485902 -0.46787,1.52558 -1.11577,3.75538 -1.93353,6.68459 -1.40763,4.33884 -2.2871,8.5015 -2.63901,12.48642 -0.1179,1.29165 -0.23615,1.81922 -0.3521,1.58328 0.35189,2.34738 0.7619,4.69073 1.23176,7.03609 0.58585,2.93121 2.02338,5.16115 4.30876,6.68274 2.28739,1.52557 6.65208,2.4613 13.10232,2.81319 15.82771,0.94174 25.616961,6.45199 29.369951,16.53326 0.58383,0.93975 1.16963,2.52133 1.75747,4.74673 0.58583,7.27204 0.46629,11.95889 -0.35149,14.07032 -3.40309,9.6154 -14.835861,15.65197 -34.294601,18.115302 -6.56822,0.82178 -13.13282,-2.285642 -19.70103,-9.321732 0,1.05571 0.2342,4.22108 0.70608,9.499652 0.3519,3.86894 0.29181,7.03398 -0.17606,9.49531 -2.93321,1.87549 -5.27657,2.81506 -7.03608,2.81506 -2.69928,0 -4.04499,-2.63718 -4.04499,-7.91576 0,-0.93774 0.0582,-2.43151 0.17606,-4.48295 0.11591,-2.049452 0.17606,-3.486982 0.17606,-4.308762 0,-1.99347 -0.17628,-3.39927 -0.52817,-4.22103 v -9.67324 c 0,-0.23394 0.0582,-0.49803 0.17605,-0.79193 0.11591,-0.29193 0.23415,-0.5554 0.35212,-0.79134 -0.11791,-1.63955 -0.0605,-4.16133 0.17543,-7.56241 0.23396,-2.11142 0.23396,-3.4565 0,-4.04434 -0.58784,-1.1697 -0.87719,-1.87367 -0.87719,-2.1096 0.46589,-3.2831 2.87286,-4.92463 7.20968,-4.92465 2.81322,0 4.51285,0.9978 5.10069,2.98926 0,1.8755 0.23374,4.63238 0.7036,8.26539 0.70582,4.22087 2.93162,8.44362 6.68461,12.66249 4.1029,4.80871 8.02967,7.0365 11.78467,6.6846 4.22085,-0.46587 8.44163,-1.46367 12.66249,-2.98926 5.8624,-2.11142 9.379821,-4.57311 10.553511,-7.38635 0.81776,-2.11142 1.22929,-4.33661 1.22931,-6.68396 0,-7.15008 -2.63733,-12.48682 -7.913901,-16.00387 -2.34738,-1.52358 -6.68418,-2.75498 -13.01646,-3.69473 -3.63502,-0.46586 -5.86433,-0.70359 -6.68212,-0.70359 -5.62848,0.1179 -10.87724,-1.69983 -15.74192,-5.45282 -4.8667,-3.75097 -7.29803,-8.09177 -7.29803,-13.01645 v -10.19955 c 0,-2.22538 1.2901,-7.44396 3.8714,-15.65174 1.16968,-3.8709502 1.81543,-5.9204802 1.93539,-6.1564102 1.05371,-2.46134 2.40095,-4.10287 4.0425,-4.92464998 3.98492,-1.99146002 8.20569,-2.98864002 12.66249,-2.98864002 8.67566,0 15.06613,3.51696002 19.17101,10.55105 0.35191,0.35191 0.93818,0.87946 1.75996,1.58327 0.11591,-1.63955 0.35171,-4.1607 0.70362,-7.56178 -0.11806,-1.52359998 -0.23617,-2.98947 -0.35212,-4.39709 0,-1.63956 0.81814,-2.75292 2.461701,-3.34075 0.46788,-0.23395 1.11361,-0.41021 1.93539,-0.52818 0.29292,-0.0585 0.59159,-0.084 0.89573,-0.0766 z">
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <p>A feature-rich text rendering engine for Scratch.</p>
-                        <a class="svgBullet more" onclick="revealContent('SPrintProDescription')"><u>read more</u></a>
-                        <p id="SPrintProDescription" hidden>SPrint Pro is a completely reimagined edition of the original BetterText engine. This engine incorporates the official Helvetica typeface for a more professional look, with the Unicode placeholder for unavailable characters. SPrint Pro takes advantage of the included S.prepare function to load in fonts, enabling pixel-by-pixel rendering, which allows for a higher level of text manipulation that is otherwise impossible on Scratch.</p>
-                    </div>
+                    <div style="height: 100px;"></div>
+                    <table style="width: 100%; position: relative; z-index: 1;">
+                        <tr>
+                            <td>
+                                <h2>SPrint Pro</h2>
+                                <p class="caption">September 2023 • Scratch 3 • All Devices</p>
+                            </td>
+                            <td>
+                                <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
+                                    <a href="https://turbowarp.org/897395928/fullscreen" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px;" viewBox="-2 -30 170 167" >
+                                                <path class="bullet" d="M 10.975769,-28.500002 152.86423,53.419994 10.975769,135.34 Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    &nbsp;
+                                    <a href="https://scratch.mit.edu/projects/897395928/editor/" target="_blank" rel="noopener noreferrer">
+                                        <div class="mainAction">
+                                            <svg style="width: 35px" viewBox="-2 -30 170 167">
+                                                <path class="bullet" d="m 103.78886,-28.495802 c -1.6005,-0.0287 -3.19811,0.0897 -4.772681,0.35953 -2.51932,0.39989 -4.79845,1.03973 -6.93786,1.95948 -1.67955,0.6998 -3.2591,1.53981 -4.7387,2.53953 -3.31912,-0.71979 -6.79837,-1.09958 -10.43738,-1.09958 -7.87787,0 -15.45553,1.79971 -22.51363,5.31876 -4.31883,2.17942 -10.25739,6.59792 -14.19633,15.4355398 -0.7398,1.59956 -1.27945,3.31891002 -2.95899,8.83742 -4.01891,12.8365302 -4.83877,17.9954502 -4.83877,22.1343302 v 10.19708 c -2e-5,4.17887 0.71946,8.25807 2.09908,12.11702 -4.01891,4.29884 -6.39798,9.6773 -7.15778,15.03585 -0.14002,1.01972 -0.21991,2.0595 -0.21991,3.09921 0,2.27939 0.35964,4.31845 0.83951,6.07796 -0.0999,1.63957 -0.1598,3.13962 -0.17978,4.47926 -0.31989,1.57956 -0.47999,3.15913 -0.47999,4.7387 v 9.67694 c 2e-5,1.59956 0.18026,3.17912 0.52016,4.7387 -0.02,0.61983 -0.0803,1.45984 -0.14017,2.53954 -0.14001,2.519322 -0.20015,4.338582 -0.20015,5.738212 0,20.55444 13.49691,29.91232 26.03352,29.91232 6.09835,0 12.27629,-2.05927 18.87451,-6.27812 2.5193,-1.61955 4.65894,-3.699 6.2985,-6.09834 1.25966,-0.0401 2.51947,-0.14032 3.79912,-0.30023 28.152371,-3.55902 45.707611,-14.43625 52.165881,-32.331402 2.07943,-5.5985 2.53923,-12.21649 1.63949,-23.43344 -0.0999,-1.29965 -0.31986,-2.57962 -0.65977,-3.83928 -0.87975,-3.3391 -1.87937,-6.07816 -3.05906,-8.45751 -1.25964,-2.99919 -3.09947,-6.45818 -5.79875,-9.91723 0.08,-0.25993 0.15973,-0.54022 0.2397,-0.84013 0.35989,-1.31964 0.58016,-2.67918 0.68012,-4.0388 0.23993,-3.55904 0.3002,-6.57799 0.14017,-9.27725 0.61984,-6.97812 1.07929,-12.25665 1.39918,-15.79569 0.0201,-0.1199 0.0201,-0.24017 0.0401,-0.36014 0.35991,-4.8786802 0.60009,-8.6178702 0.74006,-11.4171202 0.85976,-15.8756898 -6.13851,-23.5932598 -12.23686,-27.3122298 -4.34883,-2.6393 -9.18108,-4.05267 -13.98261,-4.13889 z m -0.30948,21.9891598 c 0.91239,0.0223 1.87509,0.34109 2.88732,0.95441 1.34563,0.82178 1.90306,3.28545 1.66915,7.38635 -0.11806,2.57929 -0.35171,6.21443 -0.70361,10.9031602 -0.35191,3.87094 -0.87809,9.79119 -1.5839,17.76504 0.23394,1.87549 0.23394,4.45673 0,7.73783 -0.58784,2.22741 -2.34693,3.34076 -5.27614,3.34076 -1.525581,0 -2.989471,-0.40954 -4.397101,-1.22931 -0.7038,-2.2254 -1.05386,-3.16696 -1.05386,-2.81505 0.23193,-3.16516 -0.4118,-7.38653 -1.93539,-12.6631 -1.29166,-2.69526 -3.07709,-6.53378 -5.36446,-11.51842 -2.2874,-4.9826502 -5.30636,-7.6521902 -9.05735,-8.0041002 -4.69072,-0.35191 -7.73806,1.23154 -9.14567,4.7485902 -0.46787,1.52558 -1.11577,3.75538 -1.93353,6.68459 -1.40763,4.33884 -2.2871,8.5015 -2.63901,12.48642 -0.1179,1.29165 -0.23615,1.81922 -0.3521,1.58328 0.35189,2.34738 0.7619,4.69073 1.23176,7.03609 0.58585,2.93121 2.02338,5.16115 4.30876,6.68274 2.28739,1.52557 6.65208,2.4613 13.10232,2.81319 15.82771,0.94174 25.616961,6.45199 29.369951,16.53326 0.58383,0.93975 1.16963,2.52133 1.75747,4.74673 0.58583,7.27204 0.46629,11.95889 -0.35149,14.07032 -3.40309,9.6154 -14.835861,15.65197 -34.294601,18.115302 -6.56822,0.82178 -13.13282,-2.285642 -19.70103,-9.321732 0,1.05571 0.2342,4.22108 0.70608,9.499652 0.3519,3.86894 0.29181,7.03398 -0.17606,9.49531 -2.93321,1.87549 -5.27657,2.81506 -7.03608,2.81506 -2.69928,0 -4.04499,-2.63718 -4.04499,-7.91576 0,-0.93774 0.0582,-2.43151 0.17606,-4.48295 0.11591,-2.049452 0.17606,-3.486982 0.17606,-4.308762 0,-1.99347 -0.17628,-3.39927 -0.52817,-4.22103 v -9.67324 c 0,-0.23394 0.0582,-0.49803 0.17605,-0.79193 0.11591,-0.29193 0.23415,-0.5554 0.35212,-0.79134 -0.11791,-1.63955 -0.0605,-4.16133 0.17543,-7.56241 0.23396,-2.11142 0.23396,-3.4565 0,-4.04434 -0.58784,-1.1697 -0.87719,-1.87367 -0.87719,-2.1096 0.46589,-3.2831 2.87286,-4.92463 7.20968,-4.92465 2.81322,0 4.51285,0.9978 5.10069,2.98926 0,1.8755 0.23374,4.63238 0.7036,8.26539 0.70582,4.22087 2.93162,8.44362 6.68461,12.66249 4.1029,4.80871 8.02967,7.0365 11.78467,6.6846 4.22085,-0.46587 8.44163,-1.46367 12.66249,-2.98926 5.8624,-2.11142 9.379821,-4.57311 10.553511,-7.38635 0.81776,-2.11142 1.22929,-4.33661 1.22931,-6.68396 0,-7.15008 -2.63733,-12.48682 -7.913901,-16.00387 -2.34738,-1.52358 -6.68418,-2.75498 -13.01646,-3.69473 -3.63502,-0.46586 -5.86433,-0.70359 -6.68212,-0.70359 -5.62848,0.1179 -10.87724,-1.69983 -15.74192,-5.45282 -4.8667,-3.75097 -7.29803,-8.09177 -7.29803,-13.01645 v -10.19955 c 0,-2.22538 1.2901,-7.44396 3.8714,-15.65174 1.16968,-3.8709502 1.81543,-5.9204802 1.93539,-6.1564102 1.05371,-2.46134 2.40095,-4.10287 4.0425,-4.92464998 3.98492,-1.99146002 8.20569,-2.98864002 12.66249,-2.98864002 8.67566,0 15.06613,3.51696002 19.17101,10.55105 0.35191,0.35191 0.93818,0.87946 1.75996,1.58327 0.11591,-1.63955 0.35171,-4.1607 0.70362,-7.56178 -0.11806,-1.52359998 -0.23617,-2.98947 -0.35212,-4.39709 0,-1.63956 0.81814,-2.75292 2.461701,-3.34075 0.46788,-0.23395 1.11361,-0.41021 1.93539,-0.52818 0.29292,-0.0585 0.59159,-0.084 0.89573,-0.0766 z">
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>A feature-rich text rendering engine for Scratch.</p>
+                    <a class="svgBullet more" onclick="revealContent('SPrintProDescription')"><u>read more</u></a>
+                    <p id="SPrintProDescription" hidden>SPrint Pro is a completely reimagined edition of the original BetterText engine. This engine incorporates the official Helvetica typeface for a more professional look, with the Unicode placeholder for unavailable characters. SPrint Pro takes advantage of the included S.prepare function to load in fonts, enabling pixel-by-pixel rendering, which allows for a higher level of text manipulation that is otherwise impossible on Scratch.</p>
                 </div>
 <!---->
                 <div class="card signCard" style="text-align: center;">     
@@ -559,7 +535,7 @@
     </table>
 </body>
 <footer>
-    <div class="noStatic contentColumn" id="footer-fetch">Loading</div>
+    <div class="contentColumn" id="footer-fetch">Loading</div>
     <script>
         fetch("/r/footer.html")
             .then(response => response.text())

@@ -48,7 +48,7 @@
     <header>
         <div class="contentColumn">
             <noscript>
-                <div class="card warningCard noStatic" id="JsDisabled">
+                <div class="card warningCard" id="JsDisabled">
                     <h2 class="warning">Enable JavaScript!</h2>
                     <p>Javascript is disabled on your browser.</p>
                     <p>I'm not here to steal your data. Navigating this site requires you to allow JavaScript. <a href="/b/javascript.html" target="_blank" rel="noopener noreferrer"><u>How?</u></a></p>
@@ -76,9 +76,9 @@
                 </div>
                 <div class="card noStatic">
                     <div>
-                        <h2>Terms of Service</h2>
+                        <h2 class="static">Terms of Service</h2>
                         <br><br>
-                        <table style="width: 100%">
+                        <table class="static" style="width: 100%">
                             <tr>
                                 <td width="50%">
                                     <a class="caption svgBullet more" href="/b/terms.html" target="_blank" rel="noopener noreferrer"><u>Open in new tab</u></a>
@@ -90,7 +90,7 @@
                         </table>
                     </div>
                     <br>
-                    <div class="noStatic">
+                    <div>
                         <iframe src="/b/terms.html" style="border: none; width: 100%; height: 750px; background-image: url(images/seamlesspaper.jpg);"></iframe>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
     </table>
 </body>
 <footer>
-    <div class="noStatic contentColumn" id="footer-fetch">Loading</div>
+    <div class="contentColumn" id="footer-fetch">Loading</div>
     <script>
         fetch("/r/footer.html")
             .then(response => response.text())

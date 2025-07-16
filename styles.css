@@ -31,7 +31,7 @@ html {
     --se-success: #0c0;
     --se-success-pop: #030;
     --se-warning: #f00;
-    --se-warning-pop: #500;
+    --se-warning-pop: #400;
     /* FIND DEFAULT DROPSHADOW COLORS IN app.js. THESE ARE PREADJUSTED.*/
     --se-bright-dropshadow: #f4e0fd2a;
     --se-light-dropshadow: #ca50da16;
@@ -60,10 +60,14 @@ body {
     line-height: 115%;
     margin: 0;
     padding: 0;
-    animation: scrollbg 90s linear infinite;
+    animation: scrollbg 120s linear infinite;
     word-spacing: -0.2em;
 }
-div:not(.noStatic):not(.flickering) {
+footer {
+    margin: 0;
+    padding: 0;
+}
+div.card:not(.noStatic), .static {
     animation: var(--lu-static);
 }
 h1 {
@@ -201,8 +205,9 @@ li {
 }
 textarea {
     background-color: #080808;
-    color: var(--se-success);
+    color: var(--se-light);
     font-family: monospace;
+    resize: none;
 }
 .captionList {
     margin: 2px 0 0 16px;

@@ -50,7 +50,7 @@
     <header>
         <div class="contentColumn">
             <noscript>
-                <div class="card warningCard noStatic" id="JsDisabled">
+                <div class="card warningCard" id="JsDisabled">
                     <h2 class="warning">Enable JavaScript!</h2>
                     <p>Javascript is disabled on your browser.</p>
                     <p>I'm not here to steal your data. Navigating this site requires you to allow JavaScript. <a href="/b/javascript.html" target="_blank" rel="noopener noreferrer"><u>How?</u></a></p>
@@ -66,11 +66,11 @@
                 });
         </script>
     </header>
-    <div class="contentColumn noStatic" style="transform: translateY(12px) scale(1.13); transform-origin: top;">
-        <img src="/images/SELF-aivi-horiz-banner.png" style="width: 90%; aspect-ratio: 3.4; object-fit: cover; object-position: bottom; display: flex; margin: 0 auto; border-radius: 28px 28px 0 0;">
+    <div class="contentColumn" style="transform: translateY(20px) scale(1.13); transform-origin: top;">
+        <img src="/images/SELF-aivi-horiz-banner.png" style="width: 90%; aspect-ratio: 3.6; object-fit: cover; object-position: bottom; display: flex; margin: 0 auto; border-radius: 28px 28px 0 0;">
         <img src="/vfx/fadeToBlack.png" style=" width: 90%; aspect-ratio: 16; position: absolute; transform: translate(5.55%, -100%) rotate(180deg);">
     </div>
-    <div class="noStatic" style="position: relative; width: 100%; margin: 0; padding: 0;">
+    <div style="position: relative; width: 100%; margin: 0; padding: 0;">
         <table class="contentColumn">
             <tr>
                 <td style="width: 72%">
@@ -123,7 +123,7 @@
                             <li><a href="badges/index.html"><u>Download free badges</u></a></li>
                         </ul>
                     </div>
-                    <div class="noStatic">
+                    <div>
                         <marquee onmouseover="this.stop();" onmouseout="this.start();">
                             <a class="badge" href="https://amethystx.net/"><img src="/badges/88x31.gif"></a>
                             <a class="badge" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer"><img src="/badges/CC-BY-NC-ND-88x31.png"></a>
@@ -150,7 +150,7 @@
                         </marquee>
                     </div>
                     <div class="card signCard">
-                        <h2>Site news</h2>
+                        <h2>New(s)</h2>
                         <p class="caption">May 05, 2025</p>
                         <p>I made a VR headset so that's pretty cool.</p>
                         <p>Read more <a href="/projects.html#3dpvr"><u>here</u></a>.</p>
@@ -159,7 +159,7 @@
                         <p>88x31 buttons!! I finally made one. Hotlink me if you exist.</p>
                         <a class="badge" href="https://amethystx.net/"><img src="/badges/88x31.gif"></a>
                         <br><br>
-                        <textarea class="noStatic" readonly style="resize:none; height: 80px; width: 240px;"><a href="https://amethystx.net/"><img src="https://amethystx.net/badges/88x31.gif"></a></textarea> -->
+                        <textarea readonly style="resize:none; height: 80px; width: 240px;"><a href="https://amethystx.net/"><img src="https://amethystx.net/badges/88x31.gif"></a></textarea> -->
                         <!-- <p class="caption">Mar 17, 2025</p>
                         <p>CHATBOX!! LIKE A BOX FOR CHATS!</p>
                         <p>Here, you can talk to nobody. Because nobody visits my site. :(</p>
@@ -177,13 +177,39 @@
                         <p>I finally updated the <a href="guestbook.html"><u>guestbook page</u></a> with a real, embedded, organized guestbook! It uses Atabook.org's free guestbook hosting and an iframe to display.</p>
                         <p>i love it- it looks really cool x3</p> -->
                     </div>
-                    <div class="noStatic" style="transform: scale(1.12) translateY(3px);">
+                    <div class="card">
+                        <h2>My buttons!!!</h2>
+                        <br>
+                        <span class="caption">Sharing is caring!</span>
+                        <br><br>
+                        <table>
+                            <tr>
+                                <td style="width: 40%; padding: 0 40px 0 20px">
+                                    <p>Steal my buttons to share my site!</p>
+                                    <p>Hotlink or download!</p>
+                                </td>
+                                <td>
+                                    <a class="badge" href="https://amethystx.net/"><img src="/badges/88x31.gif"></a>&nbsp;
+                                    <textarea readonly style="line-break: anywhere; width: 290px; height: 31px; box-sizing: border-box;"><a href="https://amethystx.net/" target="_blank"><img src="https://amethystx.net/badges/88x31.gif"></a></textarea>
+                                    <br>
+                                    <div style="display: inline-block; width: 88px; height: 31px; border: 3px dashed #222; box-sizing: border-box;"></div>&nbsp;
+                                    <textarea readonly style="color:#777; line-break: anywhere; width: 290px; height: 31px; box-sizing: border-box;">i'll make more at some point (not a promise)</textarea>
+                                    <br>
+                                    <div style="display: inline-block; width: 88px; height: 31px; border: 3px dashed #222; box-sizing: border-box;"></div>&nbsp;
+                                    <textarea readonly style="color:#777; line-break: anywhere; width: 290px; height: 31px; box-sizing: border-box;">coming Soon™</textarea>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <span class="caption">Want a <a href="/badges/index.html"><u>catalog of every badge on my site</u></a>?</span>
+                    </div>
+                    <div style="transform: scale(1.12) translateY(3px);">
                         <img class="flickering" style="width: 100%;" src="images/streetlamp.png">
                     </div>
                     <button onclick="playSound('squeak')" style="position: absolute; scale: 1.5; transform: translate(130px, -43px); opacity: 0.4;"><img src="images/amogusBlu.png"></button>
                     <div class="card">
                         <h2>Chat</h2>
-                        <img class="noStatic" src="vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 710px; transform: translateX(-85px) translateY(30px);">
+                        <img src="vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 710px; transform: translateX(-85px) translateY(30px);">
                         <iframe src="https://www3.cbox.ws/box/?boxid=3545093&boxtag=rRmvwj" width="100%" height="500" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
                     </div>
                     <div class="card">
@@ -191,7 +217,7 @@
                         <p class="caption" style="position: absolute; transform-origin: 0; transform: rotate(-90deg) translate(-515px, 10px);">&lt;- older</p>
                         <p class="caption" style="position: absolute; transform-origin: 0; transform: rotate(-90deg) translate(-140px, 10px);">newer -&gt;</p>
                         <br>
-                        <img class="noStatic" src="vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 680px; transform: translateX(20px);">
+                        <img src="vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 680px; transform: translateX(20px);">
                         <div style="margin: 0 0 0 24px; max-height: 585px; overflow-y: scroll;">
                             <ul>
                                 <div style="margin: 30px 0; text-align: center;">
@@ -199,6 +225,7 @@
                                     <span class="highlight" style="vertical-align: 120%;">July 2025</span>
                                     <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                                 </div>
+                                <li><p><i class="highlight">[15]</i> Slower bg scroll, moved hotlink code to dedicated buttons card and reformatted footer. Made static default for all .card divs. Removed noStatic where no longer necessary.</p></li>
                                 <li><p><i class="highlight">[14]</i> Rewrote entire about me and welcome card. Normalized card title formatting on index.html. Made commissions card clickable.</p></li>
                                 <li><p><i class="highlight">[09]</i> Rewrote Welcome card text, About This Website text, and project labels. Made all text slightly smaller.</p></li>
                                 <li><p><i class="highlight">[05]</i> Improved and added links to welcome card. Added driveUD to projects list. Added Ubuntu Linux to hardware specs.</p></li>
@@ -320,7 +347,7 @@
                                 <br><br>
                             </ul>
                         </div>
-                        <img class="noStatic" src="vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 680px; transform: translateX(20px) translateY(-100%) rotate(180deg);">
+                        <img src="vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 680px; transform: translateX(20px) translateY(-100%) rotate(180deg);">
                     </div>
                 </td>
                 <td>
@@ -368,19 +395,20 @@
                     </div>
                     <div class="card">
                         <h2 id="listeningHeader">Now listening</h2>
+                        <div class="caption">Scrobbled <span id="trackdate"></span> on <a href="https://last.fm" target="_blank" rel="noopener noreferrer"><u>Last.fm</u></a>.</div>
                         <br>
-                        <span class="caption">Scrobbled using <a href="https://last.fm" target="_blank" rel="noopener noreferrer"><u>Last.fm</u></a>.</span>
-                        <span class="caption" id="trackdate"></span>
                         <a id="tracklink">
-                            <div class="noStatic">
-                                <div class="noStatic flickering" style="padding: 15px 45px 5px">
+                            <div>
+                                <div class="flickering" style="padding: 15px 45px 5px">
                                     <img class="nowPlaying" id="trackart">
                                 </div>
+                                <br>
                                 <span>
                                     <marquee onmouseover="this.stop();" onmouseout="this.start();"><u><span id="trackartist"><span class="warning">Awaiting server response</span></span> - <span id="tracktitle"></span></u></marquee>
                                 </span>
                             </div>  
                         </a>
+                        <br>
                     </div>
                     <!-- <div class="card warningCard">
                         <p>Commissions are</p>
@@ -393,14 +421,12 @@
                     <div class="card signCard">
                         <!-- upds -->
                         <span>Last updated</span>
-                        <br><br><h2>Jul 14, 2025</h2>
+                        <br><br><h2>Jul 15, 2025</h2>
                         <br><br>
-                        <div class="noStatic caption">
-                            <span>Created Oct 19, 2024</span>
-                        </div>
+                        <span class="caption">Created Oct 19, 2024</span>
                     </div>
                     <div class="card">
-                        <div class="noStatic flickering" style="padding: 10px">
+                        <div class="flickering" style="padding: 10px">
                             <iframe width="100%" style="border: none; aspect-ratio: 1; box-shadow: 0 0 30px #f4e0fda0;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
                             <br><br>
                             <iframe width="100%" style="border: none; aspect-ratio: 1; box-shadow: 0 0 30px #f4e0fda0;" src="https://rubybulbs.net/neko.html"></iframe>
@@ -438,7 +464,7 @@
     </div>
 </body>
 <footer>
-    <div class="noStatic contentColumn" id="footer-fetch">Loading</div>
+    <div class="contentColumn" id="footer-fetch">Loading</div>
     <script>
         fetch("/r/footer.html")
             .then(response => response.text())
