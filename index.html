@@ -184,7 +184,7 @@
                             <tr>
                                 <td>
                                     <h2>gay cat</h2>
-                                    <p class="caption">July 22, 2025 • CSP • Digital</p>
+                                    <p class="caption">July 22, 2025 • CSP • Digital Art</p>
                                 </td>
                                 <td>
                                     <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
@@ -197,8 +197,10 @@
                                 </td>
                             </tr>
                         </table>
-                        <p>(I know what you are)</p>
-                        <a class="svgBullet more" href="art.html"><u>more art</u></a>
+                        <div style="position: relative; z-index: 1;">
+                            <p>(I know what you are)</p>
+                            <a class="svgBullet more" href="art.html"><u>more art</u></a>
+                        </div>
                     </div>
                     <div class="card">
                         <h2>My buttons!!!</h2>
@@ -248,7 +250,7 @@
                                     <span class="highlight" style="vertical-align: 120%;">July 2025</span>
                                     <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                                 </div>
-                                <li><p><i class="highlight">[22]</i> Changed likes and dislikes. Reorganized art.html. Added latest artwork to index.html. Removed News card.</p></li>
+                                <li><p><i class="highlight">[22]</i> Improved Now Playing card. Changed likes and dislikes. Reorganized art.html. Added latest artwork to index.html. Removed News card.</p></li>
                                 <li><p><i class="highlight">[15]</i> Slower bg scroll, moved hotlink code to dedicated buttons card and reformatted footer. Made static default for all .card divs. Removed noStatic where no longer necessary.</p></li>
                                 <li><p><i class="highlight">[14]</i> Rewrote entire about me and welcome card. Normalized card title formatting on index.html. Made commissions card clickable.</p></li>
                                 <li><p><i class="highlight">[09]</i> Rewrote Welcome card text, About This Website text, and project labels. Made all text slightly smaller.</p></li>
@@ -388,6 +390,12 @@
                             <br><br><h2 class="flickering success" style="font-size: 200%;">OPEN!</h2>
                         </div>
                     </a>
+                    <!-- <a href="art.html">
+                        <div class="card warningCard">
+                            <span style="color: var(--se-bright); -webkit-text-stroke: 0;">Commissions are</span>
+                            <br><br><h2 class="flickering warning" style="font-size: 200%;">CLOSED</h2>
+                        </div>
+                    </a> -->
                     <div class="card signCard">
                         <h2>Find me on</h2>
                         <ul>
@@ -418,26 +426,17 @@
                         </ul>
                     </div>
                     <div class="card">
-                        <h2 id="listeningHeader">Now listening</h2>
-                        <div class="caption">Scrobbled <span id="trackdate"></span> on <a href="https://last.fm" target="_blank" rel="noopener noreferrer"><u>Last.fm</u></a>.</div>
-                        <br>
-                        <a id="tracklink">
-                            <div>
-                                <div class="flickering" style="padding: 15px 45px 5px">
-                                    <img class="nowPlaying" id="trackart">
-                                </div>
-                                <br>
-                                <span>
-                                    <marquee onmouseover="this.stop();" onmouseout="this.start();"><u><span id="trackartist"><span class="warning">Awaiting server response</span></span> - <span id="tracktitle"></span></u></marquee>
-                                </span>
-                            </div>  
-                        </a>
-                        <br>
+                        <img class="nowPlaying thumbnail" id="trackart">
+                        <div style="height: 80px;"></div>
+                        <div style="position: relative; z-index: 10;">
+                            <marquee onmouseover="this.stop();" onmouseout="this.start();"><a id="tracklink"><u><span id="tracktitle"><span class="warning">Waiting for server</span></span></u></a></marquee>
+                            <div class="caption" style="text-align: center;">
+                                <span id="listeningHeader">Listening now</span> <span id="trackdate"></span>
+                                <br><span id="trackartist"></span>
+                                <br><span id="trackalbum"></span>
+                            </div>
+                        </div>
                     </div>
-                    <!-- <div class="card warningCard">
-                        <p>Commissions are</p>
-                        <h2 class="flickering warning" style="font-size: 200%;">CLOSED</h2>
-                    </div> -->
                     <div class="card successCard">
                         <h2 class="success">Site status</h2>
                         <br><br><span>If you can read this, the site is <span class="success">ONLINE</span>.</span>

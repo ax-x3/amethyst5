@@ -24,25 +24,28 @@ $.ajax({
         $("span#trackdate")
             .html(timeFormatted);
 
-        var headerFormatted = "Now listening";
-        $("h2#listeningHeader")
+        var headerFormatted = "Listening now";
+        $("span#listeningHeader")
             .html(headerFormatted);
 
         var titleFormatted = recentTrack.name;
         $("span#tracktitle")
             .html(titleFormatted)
-            .attr("title", recentTrack.name + " by " + recentTrack.artist["#text"]);
+            .attr("title", "Title: " + recentTrack.name);
 
         var artistFormatted = recentTrack.artist["#text"];
         $("span#trackartist")
             .html(artistFormatted)
             .attr("title", "Artist: " + recentTrack.artist["#text"]);
 
+        var albumFormatted = recentTrack.album["#text"];
+        $("span#trackalbum")
+            .html(albumFormatted)
+            .attr("title", "Album: " + recentTrack.album["#text"]);
+
         $("img#trackart")
             .attr("src", recentTrack.image[3]["#text"])
             .attr("title", "Album: " + recentTrack.album["#text"])
-            .addClass("nowPlaying")
-            .removeClass("notPlaying");
 
         $("a#tracklink")
             .attr("target", "_blank")
@@ -51,14 +54,10 @@ $.ajax({
         var dateFormatted = recentTrack.date["uts"];
         // If code reaches here, assume recentTrack.date is available, thus nothing is playing.
 
-        var headerFormatted = "Last played";
+        var headerFormatted = "Played";
         
-        $("h2#listeningHeader")
+        $("span#listeningHeader")
             .html(headerFormatted);
-
-        $("img#trackart")
-            .addClass("notPlaying")
-            .removeClass("nowPlaying");
 
         var currentDate = Math.floor(new Date().getTime() / 1000);
         var timeDiff = currentDate - dateFormatted;
@@ -117,8 +116,10 @@ $.ajax({
             .html(timeFormatted);
     },
     error: function(resp) {
-        $("span#trackartist").html("<span class='warning'>API response error</span>");
-        $("span#tracktitle").html("");
+        $("span#tracktitle").html("No Title");
+        $("span#listeningHeader").html("<span class='warning'>API error</span>");
+        $("span#trackartist").html("No Artist");
+        $("span#trackalbum").html("No Album");
         $("img#trackart").attr("src", "/images/amethystcrystalPix.png");
     }
     });

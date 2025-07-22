@@ -220,21 +220,9 @@ textarea {
     width: 100%;
     height: 1200px;
 }
-#trackart.nowPlaying {
-    width: 100%;
+#trackart {
     aspect-ratio: 1;
     box-shadow: 0 0 30px #f4e0fda0;
-    background-color: var(--se-moody);
-    border-radius: 50%;
-    animation: spin 4s infinite linear;
-}
-#trackart.notPlaying {
-    width: 100%;
-    aspect-ratio: 1;
-    box-shadow: 0 0 30px #f4e0fda0;
-    background-color: var(--se-moody);
-    rotate: 0;
-    animation: none;
 }
 svg {
     filter: drop-shadow(0 0 10px var(--se-bright));
@@ -318,9 +306,8 @@ img.bullet {
 .thumbnail {
     position: relative;
     z-index: 0;
-    width: calc((100% + 24px) / 2);
-    transform: translate(-12px, -12px) scale(2);
-    transform-origin: 0 0;
+    width: calc(50% + 12px);
+    transform: translate(calc(-12px + 50%), calc(-12px + 50%)) scale(2);
     border-radius: 5px 5px 0 0;
     mask-image: url(/vfx/fadeToBlack.png);
     mask-type: alpha;
