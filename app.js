@@ -36,12 +36,12 @@ function adjustStylesForBrowser() {
         console.log("[ :c ] Styles adjusted: You are using a mobile browser.");
         stylesNeedChanging = true;
         root.style.setProperty('--lu-static', 'none');
-        styleProfile.innerHTML = "mobile (minimal)";
+        styleProfile.innerHTML = "basic (mobile)";
         document.getElementById("usingMobile").hidden = false;
     } else if (isSafari) {
         console.log("[ :c ] Styles adjusted: Why are you using Safari?");
         stylesNeedChanging = true;
-        styleProfile.innerHTML = "Safari (modified)";
+        styleProfile.innerHTML = "alternate (Safari)";
     } else if (isUnknown) {
         console.log("[ :/ ] Styles unchanged: Couldn't recognize your browser.");
     } else {

@@ -117,7 +117,8 @@
                         <p>Here's a mini-navigator to get started.</p>
                         <ul style="list-style-type:'- '; padding-left: 20px;">
                             <li><a href="about.html"><u>Read all about me</u></a></li>
-                            <li><a href="art.html"><u>Commission some art</u></a></li>
+                            <li><a href="art/index.html"><u>Look at my drawings</u></a></li>
+                            <li><a href="commissions.html"><u>Commission me</u></a></li>
                             <li><a href="projects.html"><u>Play with past projects</u></a></li>
                             <li><a href="guestbook.html"><u>Sign the guestbook</u></a></li>
                             <li><a href="badges/index.html"><u>Download free badges</u></a></li>
@@ -199,7 +200,7 @@
                         </table>
                         <div style="position: relative; z-index: 1;">
                             <p>(I know what you are)</p>
-                            <a class="svgBullet more" href="art.html"><u>more art</u></a>
+                            <a class="svgBullet more" href="art/index.html"><u>more art</u></a>
                         </div>
                     </div>
                     <div class="card">
@@ -232,6 +233,7 @@
                         <img class="flickering" style="width: 100%;" src="images/streetlamp.png">
                     </div>
                     <button onclick="playSound('squeak')" style="position: absolute; scale: 1.5; transform: translate(130px, -43px); opacity: 0.4;"><img src="images/amogusBlu.png"></button>
+                    <!-- <iframe width="468" height="60" style="border:none" src="https://hbaguette.neocities.org/bannerlink/embed.html" name="bannerlink"></iframe> -->
                     <div class="card">
                         <h2>Chat</h2>
                         <img src="vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 710px; transform: translateX(-85px) translateY(30px);">
@@ -250,6 +252,7 @@
                                     <span class="highlight" style="vertical-align: 120%;">July 2025</span>
                                     <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                                 </div>
+                                <li><p><i class="highlight">[23]</i> Changed art.html into commissions.html. Added /art/ directory for gallery and hosting. Removed blog and index from navbar.</p></li>
                                 <li><p><i class="highlight">[22]</i> Improved Now Playing card. Changed likes and dislikes. Reorganized art.html. Added latest artwork to index.html. Removed News card.</p></li>
                                 <li><p><i class="highlight">[15]</i> Slower bg scroll, moved hotlink code to dedicated buttons card and reformatted footer. Made static default for all .card divs. Removed noStatic where no longer necessary.</p></li>
                                 <li><p><i class="highlight">[14]</i> Rewrote entire about me and welcome card. Normalized card title formatting on index.html. Made commissions card clickable.</p></li>
@@ -384,13 +387,13 @@
                         <audio id="squeak" src="sounds/squeak.mp3" preload="auto"></audio>
                         <button onclick="playSound('squeak')" style="position: absolute; scale: 1.5; transform: translate(8px, 18px); opacity: 0.4;"><img src="images/amogusRed.png"></button>
                     </div>
-                    <a href="art.html">
+                    <a href="/art/commissions.html">
                         <div class="card successCard">
                             <span style="color: var(--se-bright); -webkit-text-stroke: 0;">Commissions are</span>
                             <br><br><h2 class="flickering success" style="font-size: 200%;">OPEN!</h2>
                         </div>
                     </a>
-                    <!-- <a href="art.html">
+                    <!-- <a href="/art/commissions.html">
                         <div class="card warningCard">
                             <span style="color: var(--se-bright); -webkit-text-stroke: 0;">Commissions are</span>
                             <br><br><h2 class="flickering warning" style="font-size: 200%;">CLOSED</h2>
@@ -429,11 +432,11 @@
                         <img class="nowPlaying thumbnail" id="trackart">
                         <div style="height: 80px;"></div>
                         <div style="position: relative; z-index: 10;">
-                            <marquee onmouseover="this.stop();" onmouseout="this.start();"><a id="tracklink"><u><span id="tracktitle"><span class="warning">Waiting for server</span></span></u></a></marquee>
+                            <marquee onmouseover="this.stop();" onmouseout="this.start();"><a id="tracklink"><u><span id="tracktitle">No Title</span></u></a></marquee>
                             <div class="caption" style="text-align: center;">
-                                <span id="listeningHeader">Listening now</span> <span id="trackdate"></span>
-                                <br><span id="trackartist"></span>
-                                <br><span id="trackalbum"></span>
+                                <span id="listeningHeader"><span class="warning">waiting for server</span></span> <span id="trackdate"></span>
+                                <br><span id="trackartist">No Artist</span>
+                                <br><span id="trackalbum">No Album</span>
                             </div>
                         </div>
                     </div>
@@ -444,7 +447,7 @@
                     <div class="card signCard">
                         <!-- upds -->
                         <span>Last updated</span>
-                        <br><br><h2>Jul 22, 2025</h2>
+                        <br><br><h2>Jul 23, 2025</h2>
                         <br><br>
                         <span class="caption">Created Oct 19, 2024</span>
                     </div>
@@ -464,6 +467,7 @@
                         <ul>
                             <li class="svgBullet folder"><a href="/"><u>/</u></a> <span class="caption">(main site)</span></li>
                             <li class="svgBullet folder"><a href="/archive/"><u>/archive/</u></a></li>
+                            <li class="svgBullet folder"><a href="/art/"><u>/art/</u></a></li>
                             <li class="svgBullet folder"><a href="/b/"><u>/b/</u></a></li>
                             <li class="svgBullet folder"><a href="/badges/"><u>/badges/</u><span class="flickering" style="position: absolute; color: yellow; background-color: var(--se-warning); width:fit-content; padding: 0 2px; font-size: 75%; transform: rotate(25deg) translate(-24px, 7px);">FREE!</span></a></li>
                             <div class="caption">

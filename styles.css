@@ -73,7 +73,7 @@ div.card:not(.noStatic), .static {
 h1 {
     margin: 0;
     font-family: "Atlantis Headline";
-    display: inline;
+    display: inline-block;
     font-size: 260%;
     color: var(--se-regular);
     text-shadow: 0.1em 0.1em 0 #000b, 0 0 24px var(--se-regular-dropshadow);
@@ -83,7 +83,7 @@ h1 {
 h2 {
     margin: 0;
     font-family: "Atlantis Headline";
-    display: inline;
+    display: inline-block;
     font-size: 140%;
     color: var(--se-light);
     text-shadow: 0.1em 0.1em 0 #000b, 0 0 16px var(--se-light-dropshadow);
