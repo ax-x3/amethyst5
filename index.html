@@ -117,7 +117,7 @@
                         <p>Here's a mini-navigator to get started.</p>
                         <ul style="list-style-type:'- '; padding-left: 20px;">
                             <li><a href="about.html"><u>Read all about me</u></a></li>
-                            <li><a href="art/index.html"><u>Look at my drawings</u></a></li>
+                            <li><a href="art.html"><u>Look at my drawings</u></a></li>
                             <li><a href="commissions.html"><u>Commission me</u></a></li>
                             <li><a href="projects.html"><u>Play with past projects</u></a></li>
                             <li><a href="guestbook.html"><u>Sign the guestbook</u></a></li>
@@ -150,7 +150,7 @@
                             <img src="/badges/copy_floppy.gif">
                         </marquee>
                     </div>
-                    <!-- <div class="card signCard">
+                    <!-- <div class="card highlightCard">
                         <h2>New(s)</h2>
                         <p class="caption">May 05, 2025</p>
                         <p>I made a VR headset so that's pretty cool.</p>
@@ -200,7 +200,7 @@
                         </table>
                         <div style="position: relative; z-index: 1;">
                             <p>(I know what you are)</p>
-                            <a class="svgBullet more" href="/art/index.html"><u>more art</u></a>
+                            <a class="svgBullet more" href="/art.html"><u>more art</u></a>
                         </div>
                     </div>
                     <div class="card">
@@ -252,6 +252,7 @@
                                     <span class="highlight" style="vertical-align: 120%;">July 2025</span>
                                     <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                                 </div>
+                                <li><p><i class="highlight">[27]</i> Redid text effects in response to Chrome changes affecting &#8209;webkit&#8209;text&#8209;stroke. Removed Safari profile. Fixed paragraph margins. Class naming changes and CSS optimization. Corrected color on success and warning h2's.</p></li>
                                 <li><p><i class="highlight">[23]</i> Changed art.html into commissions.html. Added /art/ directory for gallery and hosting. Removed blog and index from navbar.</p></li>
                                 <li><p><i class="highlight">[22]</i> Improved Now Playing card. Changed likes and dislikes. Reorganized art.html. Added latest artwork to index.html. Removed News card.</p></li>
                                 <li><p><i class="highlight">[15]</i> Slower bg scroll, moved hotlink code to dedicated buttons card and reformatted footer. Made static default for all .card divs. Removed noStatic where no longer necessary.</p></li>
@@ -381,25 +382,25 @@
                 </td>
                 <td>
                     <div class="card">
-                        It's
+                        <span>It's</span>
                         <h2 id="localTime"><span class="warning">––:––:––</span></h2>
-                        EST
+                        <span>EST</span>
                         <audio id="squeak" src="sounds/squeak.mp3" preload="auto"></audio>
                         <button onclick="playSound('squeak')" style="position: absolute; scale: 1.5; transform: translate(8px, 18px); opacity: 0.4;"><img src="images/amogusRed.png"></button>
                     </div>
                     <a href="/commissions.html">
                         <div class="card successCard">
-                            <span style="color: var(--se-bright); -webkit-text-stroke: 0;">Commissions are</span>
-                            <br><br><h2 class="flickering success" style="font-size: 200%;">OPEN!</h2>
+                            <p>Commissions are</p>
+                            <br><h2 class="flickering success" style="font-size: 200%;">OPEN!</h2>
                         </div>
                     </a>
                     <!-- <a href="/commissions.html">
                         <div class="card warningCard">
-                            <span style="color: var(--se-bright); -webkit-text-stroke: 0;">Commissions are</span>
-                            <br><br><h2 class="flickering warning" style="font-size: 200%;">CLOSED</h2>
+                            <p>Commissions are</p>
+                            <br><h2 class="flickering warning" style="font-size: 200%;">CLOSED</h2>
                         </div>
                     </a> -->
-                    <div class="card signCard">
+                    <div class="card highlightCard">
                         <h2>Find me on</h2>
                         <ul>
                             <li>
@@ -441,13 +442,12 @@
                         </div>
                     </div>
                     <div class="card successCard">
-                        <h2 class="success">Site status</h2>
-                        <br><br><span>If you can read this, the site is <span class="success">ONLINE</span>.</span>
+                        <p>If you can read this, the site is <span class="success">ONLINE</span>.</p>
                     </div>
-                    <div class="card signCard">
+                    <div class="card highlightCard">
                         <!-- upds -->
-                        <span>Last updated</span>
-                        <br><br><h2>Jul 23, 2025</h2>
+                        <p>Last updated</p>
+                        <br><h2>Jul 27, 2025</h2>
                         <br><br>
                         <span class="caption">Created Oct 19, 2024</span>
                     </div>
@@ -469,7 +469,7 @@
                             <li class="svgBullet folder"><a href="/archive/"><u>/archive/</u></a></li>
                             <li class="svgBullet folder"><a href="/art/"><u>/art/</u></a></li>
                             <li class="svgBullet folder"><a href="/b/"><u>/b/</u></a></li>
-                            <li class="svgBullet folder"><a href="/badges/"><u>/badges/</u><span class="flickering" style="position: absolute; color: yellow; background-color: var(--se-warning); width:fit-content; padding: 0 2px; font-size: 75%; transform: rotate(25deg) translate(-24px, 7px);">FREE!</span></a></li>
+                            <li class="svgBullet folder"><a href="/badges/"><u>/badges/</u><span class="flickering" style="position: absolute; color: yellow; background-color: var(--se-warning); width:fit-content; padding: 0 2px; font-size: 75%; transform: rotate(25deg) translate(-24px, 3px);">FREE!</span></a></li>
                             <div class="caption">
                                 <li class="svgBullet folder">/fonts/</li>
                                 <li class="svgBullet folder">/icons/</li>

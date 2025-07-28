@@ -33,25 +33,15 @@ function adjustStylesForBrowser() {
         {isUnknown = true;}
     var stylesNeedChanging = false;
     if (isMobile) {
-        console.log("[ :c ] Styles adjusted: You are using a mobile browser.");
-        stylesNeedChanging = true;
+        console.log("Mobile profile loaded.\nChanges applied:\n Removed static effect.");
         root.style.setProperty('--lu-static', 'none');
-        styleProfile.innerHTML = "basic (mobile)";
+        styleProfile.innerHTML = "lightweight (mobile)";
         document.getElementById("usingMobile").hidden = false;
-    } else if (isSafari) {
-        console.log("[ :c ] Styles adjusted: Why are you using Safari?");
-        stylesNeedChanging = true;
-        styleProfile.innerHTML = "alternate (Safari)";
     } else if (isUnknown) {
-        console.log("[ :/ ] Styles unchanged: Couldn't recognize your browser.");
+        console.log("Browser detection failed.\nChanges applied:\n None");
+        styleProfile.innerHTML = "default (unknown)";
     } else {
-        console.log("[ :3 ] Styles unchanged: Browser approved.");
-    }
-    if (!stylesNeedChanging) {
-        // Set styles to default.
-        root.style.setProperty('--se-bright-dropshadow', '#f4e0fd');
-        root.style.setProperty('--se-light-dropshadow', '#ca50da');
-        root.style.setProperty('--se-regular-dropshadow', '#9a10c8');
+        console.log("Fancy profile loaded.\nChanges applied:\n None");
         styleProfile.innerHTML = "default (fancy)";
     }
 }
@@ -67,13 +57,13 @@ function greetUser() {
     const greetingEle = document.getElementById("greeting");
     if (hour >= 4 && hour < 12) {
         greetingEle.innerHTML = "Good morning!";
-        console.log("[ xP ] Good morning! Welcome to the console.");
+        console.log("Detected time of day:\n Morning");
     } else if (hour >= 12 && hour < 19) {
         greetingEle.innerHTML = "Good afternoon!";
-        console.log("[ :> ] Good afternoon! Welcome to the console.");
+        console.log("Detected time of day:\n Afternoon");
     } else {
         greetingEle.innerHTML = "Good evening!";
-        console.log("[ :D ] Good evening! Welcome to the console.");
+        console.log("Detected time of day:\n Evening");
     }
 }
 
