@@ -50,6 +50,7 @@ body {
     color: var(--se-bright);
     font-family: "SF Pixelate";
     line-height: 110%;
+    background-color: #000;
     background-image: url(vfx/tilingBg.png);
     background-size: 600px;
     -webkit-text-size-adjust: none;
