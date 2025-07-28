@@ -33,15 +33,16 @@ function adjustStylesForBrowser() {
         {isUnknown = true;}
     var stylesNeedChanging = false;
     if (isMobile) {
-        console.log("Mobile profile loaded.\nChanges applied:\n Removed static effect.");
-        root.style.setProperty('--lu-static', 'none');
-        styleProfile.innerHTML = "lightweight (mobile)";
         document.getElementById("usingMobile").hidden = false;
+        root.style.setProperty("--lu-static", "none");
+        document.body.style.setProperty("animation", "none");
+        console.log("Mobile profile loaded.\nChanges applied:\n Revealed desktop recomendation card\n Removed static effect\n Removed background scroll");
+        styleProfile.innerHTML = "lightweight (mobile)";
     } else if (isUnknown) {
-        console.log("Browser detection failed.\nChanges applied:\n None");
+        console.log("Browser detection failed.\nDefault profile loaded.\nChanges applied:\n None");
         styleProfile.innerHTML = "default (unknown)";
     } else {
-        console.log("Fancy profile loaded.\nChanges applied:\n None");
+        console.log("Default profile loaded.\nChanges applied:\n None");
         styleProfile.innerHTML = "default (fancy)";
     }
 }
