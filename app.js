@@ -31,7 +31,6 @@ function adjustStylesForBrowser() {
         {isIE = true;} 
     else 
         {isUnknown = true;}
-    var stylesNeedChanging = false;
     if (isMobile) {
         document.getElementById("usingMobile").hidden = false;
         root.style.setProperty("--lu-static", "none");
