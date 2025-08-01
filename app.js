@@ -16,7 +16,8 @@ document.addEventListener("keypress", function(event) {
 
 addEventListener("load", (event) => {
     optimizeForBrowser();
-    if (window.location.pathname == "/index.html") {
+    path = window.location.pathname;
+    if (path == "/index.html" || path == "/") {
         greetUser();
         updateLocalTime();
     }
