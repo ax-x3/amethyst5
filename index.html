@@ -29,7 +29,7 @@
     <script src="/scrobbler.js"></script>
     <title>AMETHYST</title>
 </head>
-<body onload="adjustStylesForBrowser(); greetUser(); updateLocalTime();">
+<body>
     <div class="caption">
         <a onclick="revealContent('devToolbar')"><u>Dev Tools [/]</u></a>
         <span>profile:</span>
@@ -233,7 +233,6 @@
                         <img class="flickering" style="width: 100%;" src="/images/streetlamp.png">
                     </div>
                     <button onclick="playSound('squeak')" style="position: absolute; scale: 1.5; transform: translate(130px, -43px); opacity: 0.4;"><img src="images/amogusBlu.png"></button>
-                    <!-- <iframe width="468" height="60" style="border:none" src="https://hbaguette.neocities.org/bannerlink/embed.html" name="bannerlink"></iframe> -->
                     <div class="card">
                         <h2>Chat</h2>
                         <img src="/vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 710px; transform: translateX(-85px) translateY(30px);">
@@ -247,6 +246,12 @@
                         <img src="/vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 680px; transform: translateX(20px);">
                         <div style="margin: 0 0 0 24px; max-height: 585px; overflow-y: scroll;">
                             <ul>
+                                <div style="margin: 30px 0; text-align: center;">
+                                    <img style="width: 200px;" src="icons/embellishment.png">
+                                    <span class="highlight" style="vertical-align: 120%;">August 2025</span>
+                                    <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
+                                </div>
+                                <li><p><i class="highlight">[01]</i> Replaced onload code with eventlistener. JavaScript issue resolved. Cleaned up console logs.</p></li>
                                 <div style="margin: 30px 0; text-align: center;">
                                     <img style="width: 200px;" src="icons/embellishment.png">
                                     <span class="highlight" style="vertical-align: 120%;">July 2025</span>
@@ -449,7 +454,7 @@
                     <div class="card highlightCard">
                         <!-- upds -->
                         <p>Last updated</p>
-                        <br><h2>Jul 31, 2025</h2>
+                        <br><h2>Aug 1, 2025</h2>
                         <br><br>
                         <span class="caption">Created Oct 19, 2024</span>
                     </div>
