@@ -26,10 +26,14 @@ addEventListener("load", (event) => {
 
 function optimizeForBrowser() {
     if (isMobile()) {
-        document.getElementById("usingMobile").hidden = false;
+        var mobileCard = document.getElementById("usingMobile");
+        if (mobileCard != null) {
+            mobileCard.hidden = false;
+        }
         root.style.setProperty("--lu-static", "none");
         document.body.style.setProperty("animation", "none");
-        console.log("Browser: Mobile\nOptimization profile: Mobile\nChanges:\n Revealed mobile card\n Removed static effect\n Disabled background scroll");
+        consoleTitle = "AMETHYSTX.net";
+        console.log("Browser: Mobile\nOptimization profile: Mobile\nChanges:\n Revealed mobile card\n Removed static effect\n Disabled background scroll\n Replaced console title");
         styleProfile.innerHTML = "lightweight (mobile)";
     } else if (navigator.userAgent.indexOf("Chrome") != -1){
         console.log("Browser: Chrome\nOptimization profile: Default\nChanges:\n None");
