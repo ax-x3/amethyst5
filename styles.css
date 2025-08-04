@@ -92,7 +92,7 @@ p, li {
 p {
     color: var(--se-bright);
     margin: 0 0 1em 0;
-    &:last-of-type {
+    &:last-child {
         margin: 0;
     }
 }
@@ -120,8 +120,14 @@ a {
         opacity: 0.4;
     }
 }
-table, tr {
+table, tr, td {
     vertical-align: top;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    &.horizontal {
+        margin-bottom: 12px;
+    }
 }
 button {
     margin: 0;
@@ -142,6 +148,7 @@ marquee {
     border-radius: 16px;
     width: fit-content; 
     box-shadow: 0.2em 0.2em 0 #000b, 0 0 16px var(--se-regular);
+    transform: translateY(-5px);
 }
 .svgBullet::before {
     display: inline-block;
@@ -245,7 +252,17 @@ img.bullet {
     background-color: #000;
     border-radius: 12px;
     padding: 12px;
-    margin: 12px 3px
+    margin: 12px 6px;
+    box-sizing: border-box;
+    &:first-child {
+        margin-top: 6px;
+    }
+    &:last-child {
+        margin-bottom: 6px;
+    }
+    &.horizontal {
+        margin: 0 6px;
+    }
 }
 .dismissCard {
     float: right;
@@ -297,11 +314,11 @@ img.bullet {
     padding: 0px !important;
 }
 .thumbnail {
-    position: relative;
     z-index: 0;
-    width: calc(50% + 12px);
-    transform: translate(calc(-12px + 50%), calc(-12px + 50%)) scale(2);
-    border-radius: 5px 5px 0 0;
+    width: calc(100% + 24px);
+    margin-bottom: -80px;
+    transform: translate(-12px, -12px);
+    border-radius: 10px 10px 0 0;
     mask-image: url(/vfx/fadeToBlack.png);
     mask-type: alpha;
     mask-repeat: no-repeat;

@@ -66,9 +66,9 @@
                 });
         </script>
     </header>
-    <div class="contentColumn" style="transform: translateY(20px) scale(1.13); transform-origin: top;">
-        <img src="/images/SELF-aivi-horiz-banner.png" style="width: 90%; aspect-ratio: 3.6; object-fit: cover; object-position: bottom; display: flex; margin: 0 auto; border-radius: 28px 28px 0 0;">
-        <img src="/vfx/fadeToBlack.png" style=" width: 90%; aspect-ratio: 16; position: absolute; transform: translate(5.55%, -100%) rotate(180deg);">
+    <div class="contentColumn" style="transform: translateY(5px) scale(1.2); transform-origin: top;">
+        <img src="/images/SELF-aivi-horiz-banner.png" style="width: 85%; aspect-ratio: 3.3; object-fit: cover; object-position: bottom; display: flex; margin: 0 auto; border-radius: 28px 28px 0 0;">
+        <img src="/vfx/fadeToBlack.png" style=" width: 90%; aspect-ratio: 10; position: absolute; transform: translate(5.55%, -100%) rotate(180deg);">
     </div>
     <div style="position: relative; width: 100%; margin: 0; padding: 0;">
         <table class="contentColumn">
@@ -179,31 +179,6 @@
                         <p>i love it- it looks really cool x3</p>
                     </div> -->
                     <div class="card">
-                        <img class="thumbnail" src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ouvu3umdjiwzywo53srxspur/bafkreib2tcs7a7rl4edmfpwcst7hrobyahy3w563mwuu463pp32ex6xyba@jpeg">
-                        <div style="height: 250px;"></div>
-                        <table style="width: 100%; position: relative; z-index: 1;">
-                            <tr>
-                                <td>
-                                    <h2>geometric hair</h2>
-                                    <p class="caption">August 2, 2025 • CSP • Digital Art</p>
-                                </td>
-                                <td>
-                                    <div style="display: flex; width: fit-content; margin-left: auto; margin-right: 0;">
-                                        <a href="https://bsky.app/profile/amethystx.net/post/3lvjilo2yo22n" target="_blank" rel="noopener noreferrer">
-                                            <div class="mainAction">
-                                                <svg viewBox="-2 -30 170 167" style="width: 35px; fill: #f4e0fd;"><path class="bullet" d="M 81.920482,49.040066 C 89.339001,33.696823 109.54205,5.1029554 128.32648,-8.9985011 141.87992,-19.173753 163.84,-27.046784 163.84,-1.9943821 c 0,5.0033051 -2.86859,42.0303631 -4.55105,48.0415611 -5.84821,20.899082 -27.15886,26.229501 -46.11504,23.003284 33.13503,5.639453 41.56427,24.319363 23.36034,42.999277 -34.57286,35.4768 -49.691252,-8.90126 -53.566893,-20.272542 -0.710157,-2.084626 -1.047355,-2.230584 -1.047355,-2.230584 0,0 -0.337197,0.145955 -1.047355,2.230584 C 76.998701,103.14848 61.880595,147.52767 27.305755,112.04974 9.1015421,93.369826 17.530497,74.688786 50.666095,69.050463 31.709353,72.27668 10.398413,66.946233 4.551054,46.047179 2.8685436,40.035416 8.5e-7,3.0083581 8.5e-7,-1.9943821 8.5e-7,-27.046784 21.960648,-19.173753 38.129499,-7.0352576 54.29835,5.1032379 74.502529,33.695693 81.920482,49.040066 Z" /></svg>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <div style="position: relative; z-index: 1;">
-                            <p>geometric stare</p>
-                            <a class="svgBullet more" href="/art.html"><u>more art</u></a>
-                        </div>
-                    </div>
-                    <div class="card">
                         <h2>My buttons!!!</h2>
                         <br>
                         <span class="caption">Sharing is caring!</span>
@@ -251,6 +226,7 @@
                                     <span class="highlight" style="vertical-align: 120%;">August 2025</span>
                                     <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                                 </div>
+                                <li><p><i class="highlight">[04]</i> Added all viewable artwork to art.html. Reworked table layout code. Removed unnecessary tables from and automatically sized thumbnail cards.</p></li>
                                 <li><p><i class="highlight">[03]</i> Fixed unclickable link in projects.</p></li>
                                 <li><p><i class="highlight">[02]</i> Fix issue preventing optimization from completing on non-index pages on mobile.</p></li>
                                 <li><p><i class="highlight">[01]</i> Replaced onload code with eventlistener. JavaScript issue resolved. Cleaned up console logs.</p></li>
@@ -390,6 +366,7 @@
                     </div>
                 </td>
                 <td>
+                    <div class="card" hidden>this child is for padding</div>
                     <div class="card">
                         <span>It's</span>
                         <h2 id="localTime"><span class="warning">––:––:––</span></h2>
@@ -440,7 +417,6 @@
                     </div>
                     <div class="card">
                         <img class="nowPlaying thumbnail" id="trackart">
-                        <div style="height: 80px;"></div>
                         <div style="position: relative; z-index: 10;">
                             <marquee onmouseover="this.stop();" onmouseout="this.start();"><a id="tracklink"><u><span id="tracktitle">No Title</span></u></a></marquee>
                             <div class="caption" style="text-align: center;">
@@ -456,7 +432,7 @@
                     <div class="card highlightCard">
                         <!-- upds -->
                         <p>Last updated</p>
-                        <br><h2>Aug 3, 2025</h2>
+                        <br><h2>Aug 4, 2025</h2>
                         <br><br>
                         <span class="caption">Created Oct 19, 2024</span>
                     </div>
@@ -476,7 +452,7 @@
                         <ul>
                             <li class="svgBullet folder"><a href="/"><u>/</u></a> <span class="caption">(main site)</span></li>
                             <li class="svgBullet folder"><a href="/archive/"><u>/archive/</u></a></li>
-                            <li class="svgBullet folder"><a href="/art/"><u>/art/</u></a></li>
+                            <!-- <li class="svgBullet folder"><a href="/art/"><u>/art/</u></a></li> -->
                             <li class="svgBullet folder"><a href="/b/"><u>/b/</u></a></li>
                             <li class="svgBullet folder"><a href="/badges/"><u>/badges/</u><span class="flickering" style="position: absolute; color: yellow; background-color: var(--se-warning); width:fit-content; padding: 0 2px; font-size: 75%; transform: rotate(25deg) translate(-24px, 3px);">FREE!</span></a></li>
                             <div class="caption">
