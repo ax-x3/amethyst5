@@ -319,10 +319,11 @@ img.bullet {
     margin-bottom: -80px;
     transform: translate(-12px, -12px);
     border-radius: 10px 10px 0 0;
-    mask-image: url(/vfx/fadeToBlack.png);
-    mask-type: alpha;
+    mask-image: url(/vfx/maskToBlack.png);
+    mask-type: luminance;
     mask-repeat: no-repeat;
-    mask-size: cover;
+    mask-position: bottom;
+    mask-size: 100% 100%;
 }
 .imagePreview {
     position: absolute;
