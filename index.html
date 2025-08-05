@@ -59,17 +59,13 @@
         </div>
         <div id="header-fetch" class="contentColumn">Loading</div>
         <script>
-            fetch("/r/header.html")
+            fetch("/r/indexHeader.html")
                 .then(response => response.text())
                 .then(content => {
                     document.getElementById("header-fetch").innerHTML = content;
                 });
         </script>
     </header>
-    <div class="contentColumn" style="transform: translateY(5px) scale(1.2); transform-origin: top;">
-        <img src="/images/aivi-horiz-banner.png" style="width: 85%; aspect-ratio: 3.3; object-fit: cover; object-position: bottom; display: flex; margin: 0 auto; border-radius: 28px 28px 0 0;">
-        <img src="/vfx/fadeToBlack.png" style=" width: 90%; aspect-ratio: 10; position: absolute; transform: translate(5.55%, -100%) rotate(180deg);">
-    </div>
     <div style="position: relative; width: 100%; margin: 0; padding: 0;">
         <table class="contentColumn">
             <tr>
@@ -109,20 +105,33 @@
                     
                     <div class="card">
                         <h2 id="greeting">Welcome!</h2>
-                        <p class="caption"><i>While traversing the vast world-wide web, you stumble across... me?</i></p>
+                        <p class="caption"><i>While traversing the vast internet, you stumble across... me?</i></p>
                         <p>Oh- hi there!</p>
-                        <p>Welcome to my homepage. You can call me <span class="highlight"><i>Amethyst</i></span> or <span class="highlight"><i>Aivi</i></span> <span class="caption">(eye-vee)</span>. I use this website to talk <a href="about.html"><u>about myself</u></a> and my many, many interests.</p>
+                        <p>Welcome to my homepage! You can call me <span class="highlight"><i>Amethyst</i></span> or <span class="highlight"><i>Aivi</i></span> <span class="caption">(eye-vee)</span>. I use this website to talk <a href="about.html"><u>about myself</u></a> and my many, many interests.</p>
                         <p>Click buttons! Explore this place! There's a lot of interesting stuff and a couple easter eggs hidden around here. Enjoy your stay!</p>
                         <br>
-                        <p>Here's a mini-navigator to get started.</p>
-                        <ul style="list-style-type:'- '; padding-left: 20px;">
-                            <li><a href="about.html"><u>Read all about me</u></a></li>
-                            <li><a href="art.html"><u>Look at my drawings</u></a></li>
-                            <li><a href="commissions.html"><u>Commission me</u></a></li>
-                            <li><a href="projects.html"><u>Play with past projects</u></a></li>
-                            <li><a href="guestbook.html"><u>Sign the guestbook</u></a></li>
-                            <li><a href="badges/index.html"><u>Download free badges</u></a></li>
-                        </ul>
+                        <p>If you're new here, check out some of these!</p>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="width: 50%;">
+                                    <ul style="list-style-type:'- '; padding-left: 20px;">
+                                        <li><a href="about.html"><u>About myself</u></a></li>
+                                        <li><a href="art.html"><u>Art gallery</u></a></li>
+                                        <li><a href="commissions.html"><u>Commission info</u></a></li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul style="list-style-type:'- '; padding-left: 20px;">
+                                        <li><a href="projects.html"><u>Stuff I've coded</u></a></li>
+                                        <li><a href="guestbook.html"><u>Guestbook</u></a> <span class="success">(pls sign!)</span></li>
+                                        <li><a href="badges/index.html"><u>Badge collection</u></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <p>If you've been to this site before, press <span class="highlight">Control/Command + Shift + R</span>.</p>
+                        <span class="caption">This removes outdated resources from your browser cache.</span>
                     </div>
                     <div>
                         <marquee onmouseover="this.stop();" onmouseout="this.start();">
@@ -179,14 +188,14 @@
                         <p>i love it- it looks really cool x3</p>
                     </div> -->
                     <div class="card">
-                        <h2>My buttons!!!</h2>
+                        <h2>Hotlinks</h2>
                         <br>
                         <span class="caption">Sharing is caring!</span>
                         <br><br>
                         <table>
                             <tr>
                                 <td style="width: 40%; padding: 0 40px 0 20px">
-                                    <p>Steal my buttons to share my site!</p>
+                                    <p>Link a button to share my site!</p>
                                     <p>Hotlink or download!</p>
                                 </td>
                                 <td>
@@ -226,7 +235,7 @@
                                     <span class="highlight" style="vertical-align: 120%;">August 2025</span>
                                     <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                                 </div>
-                                <li><p><i class="highlight">[05]</i> Smoothened and shrunk gradient images. Improved color and visibility of thumbnails. Restored and shrunk opengraph image.</p></li>
+                                <li><p><i class="highlight">[05]</i> Reworked page headers and compacted index.html. Smoothened and shrunk gradient images. Improved color and visibility of thumbnails. Restored and shrunk opengraph image.</p></li>
                                 <li><p><i class="highlight">[04]</i> Added all viewable artwork to art.html. Reworked table layout code. Removed unnecessary tables from and automatically sized thumbnail cards.</p></li>
                                 <li><p><i class="highlight">[03]</i> Fixed unclickable link in projects.</p></li>
                                 <li><p><i class="highlight">[02]</i> Fix issue preventing optimization from completing on non-index pages on mobile.</p></li>
