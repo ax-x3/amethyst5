@@ -92,7 +92,7 @@ p, li {
 p {
     color: var(--se-bright);
     margin: 0 0 1em 0;
-    &:last-child {
+    &:last-of-type {
         margin: 0;
     }
 }
