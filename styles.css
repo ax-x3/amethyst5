@@ -54,7 +54,7 @@ body {
     background-image: url(vfx/tilingBg.png);
     background-size: 600px;
     -webkit-text-size-adjust: none;
-    animation: scrollbg 120s linear infinite;
+    animation: 120s linear infinite;
 }
 footer {
     margin: 0;
@@ -84,12 +84,12 @@ h2 {
     text-shadow: 0.03em 0.03em var(--se-moody), -0.03em 0.03em var(--se-moody), -0.03em -0.03em var(--se-moody), 0.03em -0.03em var(--se-moody), 0.1em 0.1em #000b, 0 0 24px var(--se-light);
     word-spacing: 0.25em;
 }
-p, li {
+p, li, .plaintext {
     text-shadow: 0.1em 0.1em #000b, 0 0 16px var(--se-bright);
     word-spacing: -0.2em;
     line-height: 150%;
 }
-p {
+p, .plaintext {
     color: var(--se-bright);
     margin: 0 0 1em 0;
     &:last-of-type {
@@ -250,7 +250,7 @@ img.bullet {
 .card {
     border: 2px solid #fff2;
     background-color: #000;
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 12px;
     margin: 12px 6px;
     box-sizing: border-box;
@@ -318,7 +318,7 @@ img.bullet {
     width: calc(100% + 24px);
     margin-bottom: -80px;
     transform: translate(-12px, -12px);
-    border-radius: 10px 10px 0 0;
+    border-radius: 8px 8px 0 0;
     mask-image: url(/vfx/maskToBlack.png);
     mask-type: luminance;
     mask-repeat: no-repeat;
