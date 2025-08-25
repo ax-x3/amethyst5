@@ -22,17 +22,41 @@
 html {
     scroll-behavior: smooth;
     image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
 }
 :root {
+    /* TERRIBLE LIGHT MODE COLORS */
+    --se-bright-l: #6f0c9d;
+    --se-link-l: #d407ef;
+    --se-light-l: #8c0b9d;
+    --se-regular-l: #671582;
+    --se-moody-l: #67367e;
+    --se-border-l: #0002;
+    --se-gray-l: #222;
+    --se-black-l: #d6d6d6;
+    --zp-fade-l: vfx/fadeToBlack.png;
+    --se-success-l: #060;
+    --se-success-pop-l: #5a5;
+    --se-warning-l: #600;
+    --se-warning-pop-l: #c33;
+    /* IGNORE THE TERRIBLE LIGHT MODE COLORS ABOVE */
+
     --se-bright: #f4e0fd;
     --se-link: #e7a4f0;
     --se-light: #ca50da;
     --se-regular: #9a10c8;
     --se-moody: #611685;
+    --se-border: #fff2;
+    --se-gray: #222;
+    --se-black: #000;
+    --zp-fade: vfx/fadeToBlack.png;
     --se-success: #0c0;
     --se-success-pop: #030;
     --se-warning: #f00;
     --se-warning-pop: #400;
+
+
     /* Flicker constants */
     --lu-flicker-off: brightness(0.9);
     --lu-flicker-on: brightness(1.1);
@@ -54,7 +78,7 @@ body {
     background-image: url(vfx/tilingBg.png);
     background-size: 600px;
     -webkit-text-size-adjust: none;
-    animation: 120s linear infinite;
+    animation: scrollbg 120s linear infinite;
 }
 footer {
     margin: 0;
@@ -81,11 +105,11 @@ h1 {
 h2 {
     font-size: 140%;
     color: var(--se-light);
-    text-shadow: 0.03em 0.03em var(--se-moody), -0.03em 0.03em var(--se-moody), -0.03em -0.03em var(--se-moody), 0.03em -0.03em var(--se-moody), 0.1em 0.1em #000b, 0 0 24px var(--se-light);
+    text-shadow: 0.03em 0.03em var(--se-moody), -0.03em 0.03em var(--se-moody), -0.03em -0.03em var(--se-moody), 0.03em -0.03em var(--se-moody), 0.1em 0.1em var(--se-black), 0 0 24px var(--se-light);
     word-spacing: 0.25em;
 }
 p, li, .plaintext {
-    text-shadow: 0.1em 0.1em #000b, 0 0 16px var(--se-bright);
+    text-shadow: 0.1em 0.1em var(--se-black), 0 0 16px var(--se-bright);
     word-spacing: -0.2em;
     line-height: 150%;
 }
@@ -111,7 +135,7 @@ span {
 a {
     text-decoration: inherit;
     color: var(--se-link);
-    text-shadow: 0.03em 0.03em var(--se-regular), -0.03em 0.03em var(--se-regular), -0.03em -0.03em var(--se-regular), 0.03em -0.03em var(--se-regular), 0.1em 0.1em #000b, 0 0 16px var(--se-light);
+    text-shadow: 0.03em 0.03em var(--se-regular), -0.03em 0.03em var(--se-regular), -0.03em -0.03em var(--se-regular), 0.03em -0.03em var(--se-regular), 0.1em 0.1em var(--se-black), 0 0 16px var(--se-light);
     &:hover {
         opacity: 0.7;
         cursor: pointer;
@@ -209,7 +233,7 @@ marquee {
     }
 }
 textarea {
-    background-color: #222;
+    background-color: var(--se-gray);
     border-radius: 0;
     border: 0px;
     color: var(--se-light);
@@ -248,8 +272,8 @@ img.bullet {
     margin-right: 5px;
 }
 .card {
-    border: 2px solid #fff2;
-    background-color: #000;
+    border: 2px solid var(--se-border);
+    background-color: var(--se-black);
     border-radius: 10px;
     padding: 12px;
     margin: 12px 6px;
@@ -273,7 +297,7 @@ img.bullet {
     padding: 6px 24px;
     font-family: "SF Pixelate";
     font-size: 120%;
-    text-shadow: 0.03em 0.03em var(--se-warning-pop), -0.03em 0.03em var(--se-warning-pop), -0.03em -0.03em var(--se-warning-pop), 0.03em -0.03em var(--se-warning-pop), 0.1em 0.1em #000b, 0 0 24px var(--se-warning);
+    text-shadow: 0.03em 0.03em var(--se-warning-pop), -0.03em 0.03em var(--se-warning-pop), -0.03em -0.03em var(--se-warning-pop), 0.03em -0.03em var(--se-warning-pop), 0.1em 0.1em var(--se-black), 0 0 24px var(--se-warning);
     color: var(--se-warning);
     &:hover {
         background-color: var(--se-warning-pop);
@@ -289,24 +313,24 @@ img.bullet {
 }
 .success{
     color: var(--se-success);
-    text-shadow: 0.03em 0.03em var(--se-success-pop), -0.03em 0.03em var(--se-success-pop), -0.03em -0.03em var(--se-success-pop), 0.03em -0.03em var(--se-success-pop), 0.1em 0.1em #000b, 0 0 24px var(--se-success);
+    text-shadow: 0.03em 0.03em var(--se-success-pop), -0.03em 0.03em var(--se-success-pop), -0.03em -0.03em var(--se-success-pop), 0.03em -0.03em var(--se-success-pop), 0.1em 0.1em var(--se-black), 0 0 24px var(--se-success);
 }
 .successCard {
     background-color: var(--se-success-pop) !important;
 }
 .warning {
     color: var(--se-warning);
-    text-shadow: 0.03em 0.03em var(--se-warning-pop), -0.03em 0.03em var(--se-warning-pop), -0.03em -0.03em var(--se-warning-pop), 0.03em -0.03em var(--se-warning-pop), 0.1em 0.1em #000b, 0 0 24px var(--se-warning);
+    text-shadow: 0.03em 0.03em var(--se-warning-pop), -0.03em 0.03em var(--se-warning-pop), -0.03em -0.03em var(--se-warning-pop), 0.03em -0.03em var(--se-warning-pop), 0.1em 0.1em var(--se-black), 0 0 24px var(--se-warning);
 }
 .warningCard {
     background-color: var(--se-warning-pop) !important;
 }
 .highlight {
     color: var(--se-light);
-    text-shadow: 0.03em 0.03em var(--se-moody), -0.03em 0.03em var(--se-moody), -0.03em -0.03em var(--se-moody), 0.03em -0.03em var(--se-moody), 0.1em 0.1em #000b, 0 0 16px var(--se-light);
+    text-shadow: 0.03em 0.03em var(--se-moody), -0.03em 0.03em var(--se-moody), -0.03em -0.03em var(--se-moody), 0.03em -0.03em var(--se-moody), 0.1em 0.1em var(--se-black), 0 0 16px var(--se-light);
 }
 .highlightCard {
-    background-color: #222 !important;
+    background-color: var(--se-gray) !important;
 }
 .paper {
     background-color: #eeeeed !important;
