@@ -89,10 +89,10 @@ function updateLocalTime() {
     },
     formatter = new Intl.DateTimeFormat([], options);
     localTime = formatter.format(Date.now());
-    localTimeEle.innerHTML = localTime;
+    localTimeEle.innerHTML = "<u>" + localTime + "</u>";
     setInterval(() => {
         localTime = formatter.format(Date.now());
-        localTimeEle.innerHTML = localTime;
+        localTimeEle.innerHTML = "<u>" + localTime + "</u>";
     }, 1000);
 }
 
