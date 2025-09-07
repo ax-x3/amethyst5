@@ -3,6 +3,8 @@
 
 # AMETHYSTX.net - Art, Projects, About Me, and More!
 ![site banner](./images/aivi-horiz-banner.png)
+
+![site button](./badges/88x31.gif)
 ## Directories:
 
 `/archive/                    (prev. /a/)` - Archived site pages.
