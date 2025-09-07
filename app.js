@@ -105,14 +105,6 @@ function dismissCard(cardId) {
     document.getElementById(cardId).hidden = true;
 }
 
-function revealContent(contentId) {
-    if (document.getElementById(contentId).hidden == true) {
-        document.getElementById(contentId).hidden = false;
-    } else {
-        document.getElementById(contentId).hidden = true;
-    }
-}
-
 function developerMode() {
     document.getElementById("usingMobile").hidden = false;
     document.getElementById("underConstruction").hidden = false;

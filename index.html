@@ -108,13 +108,13 @@
                         <button class="dismissCard" name="dismiss" onclick="dismissCard('queerSafety')">x</button>
                         <h2 class="warning">(!)&nbsp;Stay safe out there.</h2>
                         <p class="caption"><i>CW: politics</i></p>
-                        <a class="svgBullet more" onclick="revealContent('queerSafetyContent')"><u>view message</u></a>
-                        <div id="queerSafetyContent" hidden>
+                        <details>
+                            <summary><a><u>view message</u></a></summary>
                             <p class="warning">(click again to close)</p>
                             <p>In the United States, transgender people, among many other minority groups, are having their humanity and rights <span class="highlight">stripped away</span>. Simultaneously, unconstitutional measures are being taken to systematically persecute those who fight back. <span class="highlight">This administration is blatantly abusing its power.</span></p>
                             <p>Now more than ever, <span class="highlight">your voice matters</span>. Use your privilege to stand up for your community. Maintain medical necessities, know your rights, and stay vigilant.</p>
                             <p>Remember that existing in spite of oppression is a form of protest. <span class="highlight">You must live.</span> We won't let this stand, and we especially won't let bigots write our story.</p>
-                        </div>
+                        </details>
                     </div>
                     <div>
                         <marquee onmouseover="this.stop();" onmouseout="this.start();">
@@ -132,7 +132,8 @@
                             <img src="/badges/queer.png">
                             <a class="badge" href="https://dimden.dev/" target="_blank" rel="noopener noreferrer"><img src="https://dimden.dev/services/images/88x31.gif"></a>
                             <a class="badge" href="https://lyra.horse/" target="_blank" rel="noopener noreferrer"><img src="badges/lyra.horse.png"></a>
-                            <a class="badge" href="https://melankorin.net/" target="_blank" rel="noopener noreferrer"><img src="https://melankorin.net/assets/img/buttons/button-1.gif" alt=""></a>
+                            <a class="badge" href="https://melankorin.net/" target="_blank" rel="noopener noreferrer"><img src="https://melankorin.net/assets/img/buttons/button-1.gif"></a>
+                            <a class="badge" href="https://toasty.place" title="Toasty.place" target="_blank" rel="noopener noreferrer"><img src="https://toasty.place/images/buttons/sitebutton.gif"></a>
                             <a class="badge" href="https://darkosparko.nekoweb.org" target="_blank" rel="noopener noreferrer"><img src="https://darkosparko.nekoweb.org/rocket-button.gif" alt="Rocket into the Spark-Web!"></a>
                             <a class="badge" href="https://pilosophos.com/" target="_blank" rel="noopener noreferrer"><img src="badges/pilosophos-circle-88x31.png"></a><!-- button by max.nekoweb.org -->
                             <a class="badge" href="https://nekoweb.org/" target="_blank" rel="noopener noreferrer"><img src="https://nekoweb.org/assets/buttons/button11.gif"></a><!-- button by milkyway.moe -->
@@ -218,6 +219,7 @@
                                     <span class="highlight" style="vertical-align: 120%;">September 2025</span>
                                     <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                                 </div>
+                                <li><p><i class="highlight">[07]</i> Replaced show/hide JavaScript with correct details and summary tag.</p></li>
                                 <li><p><i class="highlight">[06]</i> Fixed tab navigation; rewrote welcome and warning card. Re-aligned bullet images. Underlined clock. Added programming languages to credits. Moved hardware and software to about.html.</p></li>
                                 <div style="margin: 30px 0; text-align: center;">
                                     <img style="width: 200px;" src="icons/embellishment.png">
@@ -434,7 +436,7 @@
                     <div class="card highlightCard">
                         <!-- upds -->
                         <p>Last updated</p>
-                        <br><h2>Sept 6, 2025</h2>
+                        <br><h2>Sept 7, 2025</h2>
                         <br><br>
                         <span class="caption">Created Oct 19, 2024</span>
                     </div>

@@ -174,7 +174,19 @@ marquee {
     box-shadow: 0.2em 0.2em 0 #000b, 0 0 16px var(--se-regular);
     transform: translateY(-5px);
 }
-.svgBullet::before {
+details > summary {
+    list-style-type: '';
+    &::before {
+        content: url('/icons/more.svg');
+    }
+}
+details[open] > summary {
+    list-style-type: '';
+    &::before {
+        content: url('/icons/close.svg');
+    }
+}
+.svgBullet::before, details > summary::before {
     display: inline-block;
     height: 1.2em;
     aspect-ratio: 1;
