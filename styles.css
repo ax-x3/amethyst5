@@ -27,65 +27,105 @@ html {
 }
 :root {
     /* TERRIBLE LIGHT MODE COLORS */
-    --se-bright-l: #6f0c9d;
-    --se-link-l: #d407ef;
-    --se-light-l: #8c0b9d;
-    --se-regular-l: #671582;
-    --se-moody-l: #67367e;
-    --se-border-l: #0002;
-    --se-gray-l: #222;
-    --se-black-l: #d6d6d6;
-    --zp-fade-l: vfx/fadeToBlack.png;
-    --se-success-l: #060;
-    --se-success-pop-l: #5a5;
-    --se-warning-l: #600;
-    --se-warning-pop-l: #c33;
-    /* IGNORE THE TERRIBLE LIGHT MODE COLORS ABOVE */
-
-    --se-bright: #f4e0fd;
-    --se-link: #e7a4f0;
-    --se-light: #ca50da;
-    --se-regular: #9a10c8;
-    --se-moody: #611685;
-    --se-border: #fff2;
-    --se-gray: #222;
-    --se-black: #000;
-    --zp-fade: vfx/fadeToBlack.png;
-    --se-success: #0c0;
-    --se-success-pop: #030;
-    --se-warning: #f00;
-    --se-warning-pop: #400;
-
+    --text-l: #3a0453;
+    --link-l: #580463;
+    --accent-l: #a715ba;
+    --title-l: #cc32ff;
+    --accent-shadow-l: #cf9fe6;
+    --border-l: #0002;
+    --notice-l: #bbb;
+    --text-shadow-l: #fff;
+    --background-image-l: url(/vfx/tilingBgL.png);
+    --gradient-image-l: url(/vfx/fadeToWhite.png);
+    --success-l: #070;
+    --success-accent-l: #7d7;
+    --danger-l: #700;
+    --danger-accent-l: #e66;
+    /* GOOD DARK MODE COLORS */
+    --text-d: #f4e0fd;
+    --link-d: #e7a4f0;
+    --accent-d: #ca50da;
+    --title-d: #9a10c8;
+    --accent-shadow-d: #611685;
+    --border-d: #fff2;
+    --notice-d: #222;
+    --text-shadow-d: #000;
+    --background-image-d: url(/vfx/tilingBg.png);
+    --gradient-image-d: url(/vfx/fadeToBlack.png);
+    --success-d: #0c0;
+    --success-accent-d: #030;
+    --danger-d: #f00;
+    --danger-accent-d: #400;
+    /* DEFAULTS */
+    --text: var(--text-d);
+    --link: var(--link-d);
+    --accent: var(--accent-d);
+    --title: var(--title-d);
+    --accent-shadow: var(--accent-shadow-d);
+    --border: var(--border-d);
+    --notice: var(--notice-d);
+    --text-shadow: var(--text-shadow-d);
+    --background-image: var(--background-image-d);
+    --gradient-image: var(--gradient-image-d);
+    --success: var(--success-d);
+    --success-accent: var(--success-accent-d);
+    --danger: var(--danger-d);
+    --danger-accent: var(--danger-accent-d);
 
     /* Flicker constants */
-    --lu-flicker-off: brightness(0.9);
-    --lu-flicker-on: brightness(1.1);
+    --flicker-low-vfx: brightness(0.9);
+    --flicker-high-vfx: brightness(1.1);
     /* Static */
-    --lu-static: static 2s infinite;
+    --static-vfx: static 2s infinite;
+}
+#theme-switcher {
+    display: block;
+    z-index: 100;
+    position: absolute;
+    right: 0;
+}
+#theme-switcher:checked ~ #page { 
+    --text: var(--text-l);
+    --link: var(--link-l);
+    --accent: var(--accent-l);
+    --title: var(--title-l);
+    --accent-shadow: var(--accent-shadow-l);
+    --border: var(--border-l);
+    --notice: var(--notice-l);
+    --text-shadow: var(--text-shadow-l);
+    --background-image: var(--background-image-l);
+    --gradient-image: var(--gradient-image-l);
+    --success: var(--success-l);
+    --success-accent: var(--success-accent-l);
+    --danger: var(--danger-l);
+    --danger-accent: var(--danger-accent-l);
 }
 .contentColumn {
     width: 1030px;
     margin: 0 auto;
     padding: 2px 0 0 0;
 }
+#page {
+    color: var(--text);
+    background-color: (--text-shadow);
+    background-image: var(--background-image);
+    background-size: 600px;
+    animation: scrollbg 120s linear infinite;
+    min-height: 100vh;
+}
 body {
     margin: 0;
     padding: 0;
-    color: var(--se-bright);
-    font-family: "SF Pixelate";
-    line-height: 110%;
-    background-color: #000;
-    background-image: url(vfx/tilingBg.png);
-    background-size: 600px;
     -webkit-text-size-adjust: none;
-    animation: scrollbg 120s linear infinite;
+    line-height: 110%;
+    font-family: "SF Pixelate";
 }
 footer {
     margin: 0;
     padding: 0;
 }
 div.card:not(.noStatic), .static {
-    animation: var(--lu-static);
+    animation: var(--static-vfx);
 }
 h1, h2, p {
     line-height: 150%;
@@ -99,22 +139,22 @@ h1, h2 {
 h1 {
     padding-right: 4px;
     font-size: 260%;
-    color: var(--se-regular);
-    text-shadow: 0.02em 0.02em var(--se-bright), -0.02em 0.02em var(--se-bright), -0.02em -0.02em var(--se-bright), 0.02em -0.02em var(--se-bright), 0 0 40px var(--se-light);
+    color: var(--title);
+    text-shadow: 0.02em 0.02em var(--text), -0.02em 0.02em var(--text), -0.02em -0.02em var(--text), 0.02em -0.02em var(--text), 0 0 40px var(--accent);
 } 
 h2 {
     font-size: 140%;
-    color: var(--se-light);
-    text-shadow: 0.03em 0.03em var(--se-moody), -0.03em 0.03em var(--se-moody), -0.03em -0.03em var(--se-moody), 0.03em -0.03em var(--se-moody), 0.1em 0.1em var(--se-black), 0 0 24px var(--se-light);
+    color: var(--accent);
+    text-shadow: 0.03em 0.03em var(--accent-shadow), -0.03em 0.03em var(--accent-shadow), -0.03em -0.03em var(--accent-shadow), 0.03em -0.03em var(--accent-shadow), 0.1em 0.1em var(--text-shadow), 0 0 24px var(--accent);
     word-spacing: 0.25em;
 }
 p, li, .plaintext {
-    text-shadow: 0.1em 0.1em var(--se-black), 0 0 16px var(--se-bright);
+    text-shadow: 0.1em 0.1em var(--text-shadow), 0 0 16px var(--text);
     word-spacing: -0.2em;
     line-height: 150%;
 }
 p, .plaintext {
-    color: var(--se-bright);
+    color: var(--text);
     margin: 0 0 1em 0;
     &:last-of-type {
         margin: 0;
@@ -134,8 +174,8 @@ span {
 }
 a {
     text-decoration: inherit;
-    color: var(--se-link);
-    text-shadow: 0.03em 0.03em var(--se-regular), -0.03em 0.03em var(--se-regular), -0.03em -0.03em var(--se-regular), 0.03em -0.03em var(--se-regular), 0.1em 0.1em var(--se-black), 0 0 16px var(--se-light);
+    color: var(--link);
+    text-shadow: 0.03em 0.03em var(--title), -0.03em 0.03em var(--title), -0.03em -0.03em var(--title), 0.03em -0.03em var(--title), 0.1em 0.1em var(--text-shadow), 0 0 16px var(--accent);
     &:hover {
         opacity: 0.7;
         cursor: pointer;
@@ -165,23 +205,22 @@ marquee {
     transform: translateY(4px);
 }
 .mainAction {
-    background-color: var(--se-regular);
+    background-color: var(--title);
     display: flex;
     padding: 8px;
-    border: 2px solid #fff5;
+    border: 2px solid var(--border);
     border-radius: 16px;
     width: fit-content; 
-    box-shadow: 0.2em 0.2em 0 #000b, 0 0 16px var(--se-regular);
+    box-shadow: 0.1em 0.1em 0 var(--accent-shadow), 0 0 16px var(--title);
     transform: translateY(-5px);
 }
 details > summary {
-    list-style-type: '';
+    list-style-type: none;
     &::before {
         content: url('/icons/more.svg');
     }
 }
 details[open] > summary {
-    list-style-type: '';
     &::before {
         content: url('/icons/close.svg');
     }
@@ -191,7 +230,7 @@ details[open] > summary {
     height: 1.2em;
     aspect-ratio: 1;
     margin-right: 12px;
-    filter: drop-shadow(0 0 10px var(--se-bright));
+    filter: drop-shadow(0 0 10px var(--text));
     transform: translateY(4px);
 }
 .svgBullet {
@@ -245,10 +284,10 @@ details[open] > summary {
     }
 }
 textarea {
-    background-color: var(--se-gray);
+    background-color: var(--notice);
     border-radius: 0;
     border: 0px;
-    color: var(--se-light);
+    color: var(--accent);
     font-family: monospace;
     font-size: 80%;
     resize: none;
@@ -271,21 +310,21 @@ textarea {
     box-shadow: 0 0 30px #f4e0fda0;
 }
 svg {
-    filter: drop-shadow(0 0 10px var(--se-bright));
+    filter: drop-shadow(0 0 10px var(--text));
 }
-path.bullet {
+path {
     display: inline;
-    fill: var(--se-bright); 
+    fill: var(--text); 
 }
 img.bullet {
-    filter: drop-shadow(0.1em 0.1em 0 #000b) drop-shadow(0 0 10px var(--se-light));
+    filter: drop-shadow(0.1em 0.1em 0 #000b) drop-shadow(0 0 10px var(--accent));
     transform: translateY(6px) translateX(-5px);
     width: 22px;
     margin-right: 5px;
 }
 .card {
-    border: 2px solid var(--se-border);
-    background-color: var(--se-black);
+    border: 2px solid var(--border);
+    background-color: var(--text-shadow);
     border-radius: 10px;
     padding: 12px;
     margin: 12px 6px;
@@ -303,20 +342,20 @@ img.bullet {
 .dismissCard {
     float: right;
     transform: translate(14.5px, -14px);
-    background-color: #555;
-    border: 2px solid #777;
+    background-color: var(--notice);
+    border: 2px solid var(--border);
     border-radius: 0 10px 0 0;
     padding: 6px 24px;
     font-family: "SF Pixelate";
     font-size: 120%;
-    text-shadow: 0.03em 0.03em var(--se-warning-pop), -0.03em 0.03em var(--se-warning-pop), -0.03em -0.03em var(--se-warning-pop), 0.03em -0.03em var(--se-warning-pop), 0.1em 0.1em var(--se-black), 0 0 24px var(--se-warning);
-    color: var(--se-warning);
+    text-shadow: 0.03em 0.03em var(--danger-accent), -0.03em 0.03em var(--danger-accent), -0.03em -0.03em var(--danger-accent), 0.03em -0.03em var(--danger-accent), 0.1em 0.1em var(--text-shadow), 0 0 24px var(--danger);
+    color: var(--danger);
     &:hover {
-        background-color: var(--se-warning-pop);
+        background-color: var(--danger-accent);
         cursor: pointer;
     }
     &:active {
-        background-color: var(--se-warning);
+        background-color: var(--danger);
     }
 }
 .caption {
@@ -324,25 +363,25 @@ img.bullet {
     font-size: 75%;
 }
 .success{
-    color: var(--se-success);
-    text-shadow: 0.03em 0.03em var(--se-success-pop), -0.03em 0.03em var(--se-success-pop), -0.03em -0.03em var(--se-success-pop), 0.03em -0.03em var(--se-success-pop), 0.1em 0.1em var(--se-black), 0 0 24px var(--se-success);
+    color: var(--success);
+    text-shadow: 0.03em 0.03em var(--success-accent), -0.03em 0.03em var(--success-accent), -0.03em -0.03em var(--success-accent), 0.03em -0.03em var(--success-accent), 0.1em 0.1em var(--text-shadow), 0 0 24px var(--success);
 }
 .successCard {
-    background-color: var(--se-success-pop) !important;
+    background-color: var(--success-accent) !important;
 }
 .warning {
-    color: var(--se-warning);
-    text-shadow: 0.03em 0.03em var(--se-warning-pop), -0.03em 0.03em var(--se-warning-pop), -0.03em -0.03em var(--se-warning-pop), 0.03em -0.03em var(--se-warning-pop), 0.1em 0.1em var(--se-black), 0 0 24px var(--se-warning);
+    color: var(--danger);
+    text-shadow: 0.03em 0.03em var(--danger-accent), -0.03em 0.03em var(--danger-accent), -0.03em -0.03em var(--danger-accent), 0.03em -0.03em var(--danger-accent), 0.1em 0.1em var(--text-shadow), 0 0 24px var(--danger);
 }
 .warningCard {
-    background-color: var(--se-warning-pop) !important;
+    background-color: var(--danger-accent) !important;
 }
 .highlight {
-    color: var(--se-light);
-    text-shadow: 0.03em 0.03em var(--se-moody), -0.03em 0.03em var(--se-moody), -0.03em -0.03em var(--se-moody), 0.03em -0.03em var(--se-moody), 0.1em 0.1em var(--se-black), 0 0 16px var(--se-light);
+    color: var(--accent);
+    text-shadow: 0.03em 0.03em var(--accent-shadow), -0.03em 0.03em var(--accent-shadow), -0.03em -0.03em var(--accent-shadow), 0.03em -0.03em var(--accent-shadow), 0.1em 0.1em var(--text-shadow), 0 0 16px var(--accent);
 }
 .highlightCard {
-    background-color: var(--se-gray) !important;
+    background-color: var(--notice) !important;
 }
 .paper {
     background-color: #eeeeed !important;
@@ -355,7 +394,7 @@ img.bullet {
     margin-bottom: -80px;
     transform: translate(-12px, -12px);
     border-radius: 8px 8px 0 0;
-    mask-image: url(/vfx/maskToBlack.png);
+    mask-image: url(/vfx/gradientMask.png);
     mask-type: luminance;
     mask-repeat: no-repeat;
     mask-position: bottom;
@@ -371,10 +410,10 @@ img.bullet {
 }
 @keyframes flickering {
     from {
-        filter: var(--lu-flicker-on);
+        filter: var(--flicker-high-vfx);
     }
     to {
-        filter: var(--lu-flicker-off);
+        filter: var(--flicker-low-vfx);
     }
 }
 @keyframes static {

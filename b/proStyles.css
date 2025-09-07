@@ -7,22 +7,22 @@
 }
 
 :root {
-    --se-bright: #f4e0fd;
-    --se-link: #e7a4f0;
-    --se-light: #ca50da;
-    --se-regular: #9a10c8;
-    --se-moody: #611685;
-    --se-success: #0c0;
-    --se-success-pop: #030;
-    --se-warning: #f00;
-    --se-warning-pop: #500;
+    --text: #f4e0fd;
+    --link: #e7a4f0;
+    --accent: #ca50da;
+    --title: #9a10c8;
+    --accent-shadow: #611685;
+    --success: #0c0;
+    --success-accent: #030;
+    --danger: #f00;
+    --danger-accent: #500;
     /* FIND DEFAULT DROPSHADOW COLORS IN app.js. THESE ARE PREADJUSTED.*/
-    --se-bright-dropshadow: #f4e0fd2a;
-    --se-light-dropshadow: #ca50da21;
-    --se-regular-dropshadow: #9a10c836;
+    --text-dropshadow: #f4e0fd2a;
+    --accent-dropshadow: #ca50da21;
+    --title-dropshadow: #9a10c836;
     /* Flicker constants */
-    --lu-flicker-off: brightness(0.9);
-    --lu-flicker-on: brightness(1.1);
+    --flicker-low-vfx: brightness(0.9);
+    --flicker-high-vfx: brightness(1.1);
 }
 
 body {
@@ -42,7 +42,7 @@ header {
     margin: 10vw;
     padding: 30px;
     position: relative;
-    background: linear-gradient(125deg, var(--se-bright), #0000, #0000);
+    background: linear-gradient(125deg, var(--text), #0000, #0000);
 }
 
 #scrollArr {
@@ -59,7 +59,7 @@ header {
     }
     67% {
         transform: translateY(12px);
-        text-shadow: 0 0 20px var(--se-regular);
+        text-shadow: 0 0 20px var(--title);
     }
     100% {
         transform: translateY(0px);
@@ -69,13 +69,13 @@ header {
 
 
 h1 {
-    color: var(--se-moody);
+    color: var(--accent-shadow);
     font-size: 500%;
     margin: 10px 0 0 0;
 }
 
 h2 {
-    color: var(--se-regular);
+    color: var(--title);
     font-size: 240%;
     margin: 0;
 }
@@ -97,8 +97,8 @@ a {
     font-size: 120%;
     border-radius: 100px;
     border: none;
-    background-color: var(--se-link);
-    color: var(--se-moody);
+    background-color: var(--link);
+    color: var(--accent-shadow);
     transition: ease-in-out 50ms;
     &:hover {
         filter: brightness(1.2);

@@ -29,24 +29,30 @@
     <script src="/scrobbler.js"></script>
     <title>AMETHYST</title>
 </head>
+<input id="theme-switcher" type="checkbox">
+<div id="page">
 <body>
     <div class="caption">
-        <a onclick="revealContent('devToolbar')"><u>Dev Tools [/]</u></a>
         <span>profile:</span>
         <span id="styleProfile">detecting</span>
     </div>
-    <div id="devToolbar" hidden>
-        Developer Tools >>> you can ignore this (or mess around idc) >>>
-        <button style="background-color: greenyellow;" name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
-        <button style="background-color: chocolate;" name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
-        <form style="display: inline-block;" action="https://amethystx.net/index.html">
-            <button>[GO DEPLOYMENT]</button>
-        </form>
-        &nbsp;&nbsp;&nbsp;
-        <form style="display: inline-block;" action="http://localhost:5500/index.html">
-            <button>[GO LOCAL]</button>
-        </form>
-    </div>
+    <details>
+        <summary class="caption">
+            <a><u>Dev Tools</u></a>
+        </summary>
+        <div style="background-color: white; color: black">
+            Developer Tools >>> you can ignore this (or mess around idc) >>>
+            <button style="background-color: greenyellow;" name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
+            <button style="background-color: chocolate;" name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
+            <form style="display: inline-block;" action="https://amethystx.net/index.html">
+                <button>[GO DEPLOYMENT]</button>
+            </form>
+            &nbsp;&nbsp;&nbsp;
+            <form style="display: inline-block;" action="http://localhost:5500/index.html">
+                <button>[GO LOCAL]</button>
+            </form>
+        </div>
+    </details>
     <header>
         <div class="contentColumn">
             <noscript>
@@ -105,6 +111,9 @@
                         </div>
                     </div>
                     <div class="card warningCard" id="queerSafety">
+                        <script>
+                            document.getElementById("queerSafety").hidden = localStorage.getItem("queerSafety");
+                        </script>
                         <button class="dismissCard" name="dismiss" onclick="dismissCard('queerSafety')">x</button>
                         <h2 class="warning">(!)&nbsp;Stay safe out there.</h2>
                         <p class="caption"><i>CW: politics</i></p>
@@ -188,11 +197,11 @@
                                     <a class="badge" href="https://amethystx.net/"><img src="/badges/88x31.gif"></a>&nbsp;
                                     <textarea readonly style="line-break: anywhere; width: 290px; height: 31px; box-sizing: border-box;"><a href="https://amethystx.net/" target="_blank"><img src="https://amethystx.net/badges/88x31.gif"></a></textarea>
                                     <br>
-                                    <div style="display: inline-block; width: 88px; height: 31px; border: 3px dashed #222; box-sizing: border-box;"></div>&nbsp;
-                                    <textarea readonly style="color:#777; line-break: anywhere; width: 290px; height: 31px; box-sizing: border-box;">i'll make more at some point (not a promise)</textarea>
+                                    <div style="display: inline-block; width: 88px; height: 31px; border: 3px dashed var(--border); box-sizing: border-box;"></div>&nbsp;
+                                    <textarea readonly style="color: var(--notice); line-break: anywhere; width: 290px; height: 31px; box-sizing: border-box;">i'll make more at some point (not a promise)</textarea>
                                     <br>
-                                    <div style="display: inline-block; width: 88px; height: 31px; border: 3px dashed #222; box-sizing: border-box;"></div>&nbsp;
-                                    <textarea readonly style="color:#777; line-break: anywhere; width: 290px; height: 31px; box-sizing: border-box;">coming Soon™</textarea>
+                                    <div style="display: inline-block; width: 88px; height: 31px; border: 3px dashed var(--border); box-sizing: border-box;"></div>&nbsp;
+                                    <textarea readonly style="color: var(--notice); line-break: anywhere; width: 290px; height: 31px; box-sizing: border-box;">coming Soon™</textarea>
                                 </td>
                             </tr>
                         </table>
@@ -205,7 +214,7 @@
                     <button onclick="playSound('squeak')" style="position: absolute; scale: 1.5; transform: translate(130px, -43px); opacity: 0.4;"><img style="filter: hue-rotate(240deg) brightness(0.5);" src="images/amogusRed.png"></button>
                     <div class="card">
                         <h2>Chat</h2>
-                        <img src="/vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 710px; aspect-ratio: 7; transform: translateX(-85px) translateY(30px);">
+                        <div style="background-image: var(--gradient-image); background-repeat: repeat-x; position: absolute; z-index: 100; width: 710px; aspect-ratio: 7;"></div>
                         <iframe src="https://www3.cbox.ws/box/?boxid=3545093&boxtag=rRmvwj" width="100%" height="500" allowtransparency="yes" tabindex="-1" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
                     </div>
                     <div class="card">
@@ -213,7 +222,7 @@
                         <p class="caption" style="position: absolute; transform-origin: 0; transform: rotate(-90deg) translate(-515px, 10px);">&lt;- older</p>
                         <p class="caption" style="position: absolute; transform-origin: 0; transform: rotate(-90deg) translate(-140px, 10px);">newer -&gt;</p>
                         <br>
-                        <img src="/vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 680px; aspect-ratio: 7; transform: translateX(20px);">
+                        <div style="background-image: var(--gradient-image); background-repeat: repeat-x; position: absolute; z-index: 100; width: 680px; aspect-ratio: 7; transform: translateX(20px);"></div>
                         <div style="margin: 0 0 0 24px; max-height: 585px; overflow-y: scroll;">
                             <ul>
                                 <div style="margin: 30px 0; text-align: center;">
@@ -221,7 +230,7 @@
                                     <span class="highlight" style="vertical-align: 120%;">September 2025</span>
                                     <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                                 </div>
-                                <li><p><i class="highlight">[07]</i> Replaced show/hide JavaScript with correct details and summary tag. Move some stuff around.</p></li>
+                                <li><p><i class="highlight">[07]</i> Replaced show/hide JavaScript with correct details and summary tag. Moved some stuff around. Completely reworked css variables and added an experimental light theme. Made dismissable elements stay hidden using localStorage. Fixed devtools. Corrected footer format. Renamed lots of things for clarity.</p></li>
                                 <li><p><i class="highlight">[06]</i> Fixed tab navigation; rewrote welcome and warning card. Re-aligned bullet images. Underlined clock. Added programming languages to credits. Moved hardware and software to about.html.</p></li>
                                 <div style="margin: 30px 0; text-align: center;">
                                     <img style="width: 200px;" src="icons/embellishment.png">
@@ -369,7 +378,7 @@
                                 <br><br>
                             </ul>
                         </div>
-                        <img src="/vfx/fadeToBlack.png" style="position: absolute; z-index: 100; width: 680px; aspect-ratio: 7; transform: translateX(20px) translateY(-100%) rotate(180deg);">
+                        <div style="background-image: var(--gradient-image); background-repeat: repeat-x; position: absolute; z-index: 100; width: 680px; aspect-ratio: 7; transform: translateX(20px) translateY(-100%) rotate(180deg);"></div>
                     </div>
                 </td>
                 <td>
@@ -459,7 +468,7 @@
                             <li class="svgBullet folder"><a href="/"><u>/</u></a> <span class="caption">(main site)</span></li>
                             <li class="svgBullet folder"><a href="/archive/"><u>/archive/</u></a></li>
                             <li class="svgBullet folder"><a href="/b/"><u>/b/</u></a></li>
-                            <li class="svgBullet folder"><a href="/badges/"><u>/badges/</u><span class="flickering" style="position: absolute; color: yellow; background-color: var(--se-warning); width:fit-content; padding: 0 2px; font-size: 75%; transform: rotate(25deg) translate(-24px, 3px);">FREE!</span></a></li>
+                            <li class="svgBullet folder"><a href="/badges/"><u>/badges/</u><span class="flickering" style="position: absolute; color: yellow; background-color: red; width:fit-content; padding: 0 2px; font-size: 75%; transform: rotate(25deg) translate(-24px, 3px);">FREE!</span></a></li>
                             <div class="caption">
                                 <li class="svgBullet folder">/fonts/</li>
                                 <li class="svgBullet folder">/icons/</li>
@@ -479,8 +488,7 @@
             </tr>
         </table>
     </div>
-</body>
-<footer>
+    <footer>
     <div class="contentColumn" id="footer-fetch">Loading</div>
     <script>
         fetch("/r/footer.html")
@@ -490,4 +498,6 @@
             });
     </script>
 </footer>
+</body>
+</div>
 </html>

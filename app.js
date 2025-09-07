@@ -8,14 +8,9 @@ const root = document.documentElement;
 var flickeringEnabled = true;
 var consoleTitle = "____ _  _ ____ ___ _  _ _   _ ____ ___ _  _  _  _ ____ ___\n|__| |\\/| |___  |  |__|  \\_/  [__   |   \\/   |\\ | |___  |\n|  | |  | |___  |  |  |   |   ___]  |  _/\\_ .| \\| |___  |";
 
-document.addEventListener("keypress", function(event) {
-    if (event.key == "/") {
-        revealContent("devToolbar");
-    }
-});
-
 addEventListener("load", (event) => {
     optimizeForBrowser();
+    applyTheme();
     path = window.location.pathname;
     if (path == "/index.html" || path == "/") {
         greetUser();
@@ -24,13 +19,25 @@ addEventListener("load", (event) => {
     console.log(consoleTitle);
 });
 
+function applyTheme() {
+    const themeSwitch = document.getElementById("theme-switcher");
+    themeSwitch.checked = localStorage.getItem("lightTheme");
+    themeSwitch.addEventListener("change", function (e) {
+    if (e.currentTarget.checked === true) {
+            localStorage.setItem("lightTheme", true);
+        } else {
+            localStorage.removeItem("lightTheme");
+        }
+    });
+}
+
 function optimizeForBrowser() {
     if (isMobile()) {
         var mobileCard = document.getElementById("usingMobile");
-        if (mobileCard != null) {
+        if (mobileCard != null && !localStorage.getItem("usingMobile")) {
             mobileCard.hidden = false;
         }
-        root.style.setProperty("--lu-static", "none");
+        root.style.setProperty("--static-vfx", "none");
         document.body.style.setProperty("animation", "none");
         consoleTitle = "AMETHYSTX.net";
         console.log("Browser: Mobile\nOptimization profile: Mobile\nChanges:\n Revealed mobile card\n Removed static effect\n Disabled background scroll\n Replaced console title");
@@ -103,24 +110,27 @@ function playSound(soundId) {
 
 function dismissCard(cardId) {
     document.getElementById(cardId).hidden = true;
+    localStorage.setItem(cardId, true);
 }
 
 function developerMode() {
     document.getElementById("usingMobile").hidden = false;
+    localStorage.removeItem("usingMobile");
     document.getElementById("underConstruction").hidden = false;
     document.getElementById("queerSafety").hidden = false;
+    localStorage.removeItem("queerSafety");
     document.getElementById("inactiveNotice").hidden = false;
 }
 
 
 function toggleFlickering() {
     if (flickeringEnabled) {
-        root.style.setProperty('--lu-flicker-on', 'brightness(1)');
-        root.style.setProperty('--lu-flicker-off', 'brightness(1)');
+        root.style.setProperty('--flicker-high-vfx', 'brightness(1)');
+        root.style.setProperty('--flicker-low-vfx', 'brightness(1)');
         flickeringEnabled = false;
     } else {
-        root.style.setProperty('--lu-flicker-on', 'brightness(1.1)');
-        root.style.setProperty('--lu-flicker-off', 'brightness(0.9)');
+        root.style.setProperty('--flicker-high-vfx', 'brightness(1.1)');
+        root.style.setProperty('--flicker-low-vfx', 'brightness(0.9)');
         flickeringEnabled = true;
     }
 }

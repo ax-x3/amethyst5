@@ -12,22 +12,22 @@
         @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
         :root {
-            --se-bright: #edccfc;
-            --se-link: #e7a4f0;
-            --se-light: #ca50da;
-            --se-regular: #9a10c8;
-            --se-moody: #611685;
-            --se-success: #0c0;
-            --se-success-pop: #030;
-            --se-warning: #f00;
-            --se-warning-pop: #500;
+            --text: #edccfc;
+            --link: #e7a4f0;
+            --accent: #ca50da;
+            --title: #9a10c8;
+            --accent-shadow: #611685;
+            --success: #0c0;
+            --success-accent: #030;
+            --danger: #f00;
+            --danger-accent: #500;
             /* FIND DEFAULT DROPSHADOW COLORS IN app.js. THESE ARE PREADJUSTED.*/
-            --se-bright-dropshadow: #f4e0fd2a;
-            --se-light-dropshadow: #ca50da21;
-            --se-regular-dropshadow: #9a10c836;
+            --text-dropshadow: #f4e0fd2a;
+            --accent-dropshadow: #ca50da21;
+            --title-dropshadow: #9a10c836;
             /* Flicker constants */
-            --lu-flicker-off: brightness(0.9);
-            --lu-flicker-on: brightness(1.1);
+            --flicker-low-vfx: brightness(0.9);
+            --flicker-high-vfx: brightness(1.1);
         }
 
         body {
@@ -45,14 +45,14 @@
         }
 
         h1 {
-            color: var(--se-regular);
+            color: var(--title);
             font-size: 550%;
             margin: 10px 0 0 0;
             font-family: Inconsolata, monospace;
         }
 
         h2 {
-            color: var(--se-moody);
+            color: var(--accent-shadow);
             font-size: 220%;
             margin: 0;
             font-family: Inconsolata, monospace;
@@ -71,12 +71,12 @@
         }
 
         .main-button {
-            background-color: var(--se-link); 
+            background-color: var(--link); 
             text-decoration: none;
             font-size: 120%;
-            border: 0px solid var(--se-moody);
+            border: 0px solid var(--accent-shadow);
             padding: 30px 40px; 
-            color: var(--se-moody); 
+            color: var(--accent-shadow); 
             border-radius: 1000px; 
             box-shadow: -12px -12px 24px #fff9, 12px 12px 24px #0005, inset 12px 12px 24px #0000, inset -12px -12px 24px #fff0;
             transition: 150ms;
@@ -84,15 +84,17 @@
                 box-shadow: -12px -12px 24px #fff0, 12px 12px 24px #0000, inset 12px 12px 24px #0002, inset -12px -12px 24px #fff6;
                 filter: brightness(1.1);
                 transition: 150ms;
-                border: 8px solid var(--se-moody);
+                border: 8px solid var(--accent-shadow);
             }
         }
         
     </style>
 </head>
+<input id="theme-switcher" type="checkbox">
+<div id="page">
 <body>
 
-    <div style="text-align: center; background-color: var(--se-bright);">
+    <div style="text-align: center; background-color: var(--text);">
         <div style="height: 100px;"></div>
         <h1>Summer Coding Classes</h1>
         <div style="height: 100px;"></div>
@@ -102,7 +104,7 @@
             <a class="main-button" onclick="alert('Sorry, we are not accepting new students at this time.')"><b>The 2025 registration period is over!</b></a>
         </div>
     </div>
-    <div style="height: 200px; background: linear-gradient(var(--se-bright), #fff0);"></div>
+    <div style="height: 200px; background: linear-gradient(var(--text), #fff0);"></div>
     <div style="height: 200px;"></div>
     <div style="text-align: center; max-width: 1000px; margin: 0 auto;">
         <h2>Class Schedule</h2>
@@ -110,7 +112,7 @@
         Thursdays from 6:00 to 7:30 at [redacted].
         <br>
         <br>
-        <table style="width: 1000px; margin: 0 auto; line-height: 200%; box-shadow: 0 0 15px var(--se-bright);">
+        <table style="width: 1000px; margin: 0 auto; line-height: 200%; box-shadow: 0 0 15px var(--text);">
             <tr style="background-color: #eee;"">
                 <td style="width: 70px">Class</td>
                 <td style="width: 200px">Date</td>
@@ -161,7 +163,7 @@
     </div>
     <div style="height: 150px;"></div>
 </body>
-<footer style="background: linear-gradient(#fff0, var(--se-bright));">
+<footer style="background: linear-gradient(#fff0, var(--text));">
     <div style="height: 100px;"></div>
     <div style="text-align: center;" onload="hideHidingElements();">
         <span><b>We want to hear from you!</b></span>
