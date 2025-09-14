@@ -107,7 +107,6 @@ html {
 }
 #page {
     color: var(--text);
-    background-color: (--text-shadow);
     background-image: var(--background-image);
     background-size: 600px;
     animation: scrollbg 120s linear infinite;
@@ -116,6 +115,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: black;
     -webkit-text-size-adjust: none;
     line-height: 110%;
     font-family: "SF Pixelate";
