@@ -101,15 +101,12 @@ function startClock() {
     setTimeout(() => {
         clockStatusEle.innerHTML = "Correcting desync...";
         setTimeout(() => {
-            clockStatusEle.innerHTML = "Success!";
+            clockStatusEle.innerHTML = "Success! Accuracy: ±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms.";
             setTimeout(() => {
-                clockStatusEle.innerHTML = "Accuracy: ±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms.";
-                setTimeout(() => {
-                    setInterval(() => {
-                        clockStatusEle.innerHTML = "±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms";
-                    }, 2000);
-                }, 3000);
-            }, 1000);
+                setInterval(() => {
+                    clockStatusEle.innerHTML = "±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms";
+                }, 2000);
+            }, 3000);
         }, 1000);
         setInterval(() => {
             localTime = formatter.format(Date.now() + 500);
