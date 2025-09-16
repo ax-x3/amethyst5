@@ -108,7 +108,7 @@ function startClock() {
                     setInterval(() => {
                         clockStatusEle.innerHTML = "±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms";
                     }, 2000);
-                }, 4000);
+                }, 3000);
             }, 1000);
         }, 1000);
         setInterval(() => {
