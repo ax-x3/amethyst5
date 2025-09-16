@@ -216,6 +216,9 @@ marquee {
 }
 details > summary {
     list-style-type: none;
+    &::-webkit-details-marker {
+        display: none;
+    }
     &::before {
         content: url('/icons/more.svg');
     }

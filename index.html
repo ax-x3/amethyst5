@@ -182,6 +182,17 @@
                         <p>I finally updated the <a href="guestbook.html"><u>guestbook page</u></a> with a real, embedded, organized guestbook! It uses Atabook.org's free guestbook hosting and an iframe to display.</p>
                         <p>i love it- it looks really cool x3</p>
                     </div> -->
+                    <div class="card" style="height: 100%">
+                        <img class="thumbnail" src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ouvu3umdjiwzywo53srxspur/bafkreibvcchd3xw7zog2ptbpjl674ft27gsqhzavhfrme33karq7vn4wka@jpeg">
+                        <div style="position: relative; z-index: 1; bottom: 0;">
+                            <span class="success">LATEST ARTWORK</span>
+                            <br><h2>highway</h2>
+                            <p class="caption">September 15, 2025 • CSP • <a href="https://bsky.app/profile/amethystx.net/post/3lyurn2akbc2n" target="_blank" rel="noopener noreferrer"><u>Bluesky</u></a></p>
+                            <p>sneak peek at the piece i'm working on :3</p>
+                            <br>
+                            <a class="svgBullet more" href="art.html"><u>See more art!</u></a>
+                        </div>
+                    </div>
                     <div class="card">
                         <h2>Buttons</h2>
                         <br>
@@ -230,6 +241,7 @@
                                     <span class="highlight" style="vertical-align: 120%;">September 2025</span>
                                     <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                                 </div>
+                                <li><p><i class="highlight">[15]</i> Added latest art back to index. Made local time clock autmatically synchronize upon loading.</p></li>
                                 <li><p><i class="highlight">[09]</i> Moved Enable Javascript! to a subdomain. Old file in /b/ still works just in case.</p></li>
                                 <li><p><i class="highlight">[07]</i> Replaced show/hide JavaScript with correct details and summary tag. Moved some stuff around. Completely reworked css variables and added an experimental light theme. Made dismissable elements stay hidden using localStorage. Fixed devtools. Corrected footer format. Renamed lots of things for clarity.</p></li>
                                 <li><p><i class="highlight">[06]</i> Fixed tab navigation; rewrote welcome and warning card. Re-aligned bullet images. Underlined clock. Added programming languages to credits. Moved hardware and software to about.html.</p></li>
@@ -386,8 +398,10 @@
                     <a href="https://stupidcalendar.pages.dev/" target="_blank" rel="noopener noreferrer">
                         <div class="card">
                             <span class="plaintext">It's</span>
-                            <h2 id="localTime"><span class="warning">––:––:––</span></h2>
+                            <h2 id="localTime"><span class="warning">----:----:----</span></h2>
                             <span class="plaintext">EST.</span>
+                            <br>
+                            <span id="clockStatus" class="caption plaintext">Loading clock...</span>
                         </div>
                     </a>
                     <div style="height: 0.01px;"></div>
@@ -448,7 +462,7 @@
                     <div class="card highlightCard">
                         <!-- upds -->
                         <p>Last updated</p>
-                        <br><h2>Sept 9, 2025</h2>
+                        <br><h2>Sept 15, 2025</h2>
                         <br><br>
                         <span class="caption">Created Oct 19, 2024</span>
                     </div>

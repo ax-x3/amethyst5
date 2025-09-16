@@ -9,12 +9,12 @@ var flickeringEnabled = true;
 var consoleTitle = "____ _  _ ____ ___ _  _ _   _ ____ ___ _  _  _  _ ____ ___\n|__| |\\/| |___  |  |__|  \\_/  [__   |   \\/   |\\ | |___  |\n|  | |  | |___  |  |  |   |   ___]  |  _/\\_ .| \\| |___  |";
 
 addEventListener("load", (event) => {
-    optimizeForBrowser();
     applyTheme();
+    optimizeForBrowser();
     path = window.location.pathname;
     if (path == "/index.html" || path == "/") {
         greetUser();
-        updateLocalTime();
+        startClock();
     }
     console.log(consoleTitle);
 });
@@ -85,22 +85,37 @@ function greetUser() {
     }
 }
 
-function updateLocalTime() {
-    localTimeEle = document.getElementById("localTime");
-    const options = {
+function startClock() {
+    const localTimeEle = document.getElementById("localTime");
+    const clockStatusEle = document.getElementById("clockStatus");
+    const clockOptions = {
         timeZone: 'America/New_York',
         hour12: false,
         hour: 'numeric',
         minute: 'numeric',
         second: 'numeric'
-    },
-    formatter = new Intl.DateTimeFormat([], options);
-    localTime = formatter.format(Date.now());
-    localTimeEle.innerHTML = "<u>" + localTime + "</u>";
-    setInterval(() => {
-        localTime = formatter.format(Date.now());
-        localTimeEle.innerHTML = "<u>" + localTime + "</u>";
-    }, 1000);
+    }, formatter = new Intl.DateTimeFormat([], clockOptions);
+    var localTime = formatter.format(Date.now() + 100);
+    localTimeEle.innerHTML = "<u>" + localTime.substring(0, 5) + "</u>" + '<span class="warning">:----</span>';
+    clockStatusEle.innerHTML = "Calibrating...";
+    setTimeout(() => {
+        clockStatusEle.innerHTML = "Correcting desync...";
+        setTimeout(() => {
+            clockStatusEle.innerHTML = "Success!";
+            setTimeout(() => {
+                clockStatusEle.innerHTML = "Accuracy: ±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms.";
+                setTimeout(() => {
+                    setInterval(() => {
+                        clockStatusEle.innerHTML = "±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms";
+                    }, 2000);
+                }, 4000);
+            }, 1000);
+        }, 1000);
+        setInterval(() => {
+            localTime = formatter.format(Date.now() + 500);
+            localTimeEle.innerHTML = "<u>" + localTime + "</u>";
+        }, 1000);
+    }, 998 - Date.now() % 1000);
 }
 
 function playSound(soundId) {
