@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.35">
+    <meta content="#9A10C8" name="theme-color">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/amethystcrystal.png">
+    <title>TENSEGRITY</title>
+</head>
+<input id="theme-switcher" type="checkbox">
+<div id="page">
+<body>
+    <div class="caption">
+        <span>profile:</span>
+        <span id="styleProfile">detecting</span>
+    </div>
+    <details>
+        <summary class="caption">
+            <a><u>Dev Tools</u></a>
+        </summary>
+        <div style="background-color: white; color: black">
+            Developer Tools >>> you can ignore this (or mess around idc) >>>
+            <button style="background-color: greenyellow;" name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
+            <button style="background-color: chocolate;" name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
+            <form style="display: inline-block;" action="https://amethystx.net/industrial-tech/tensegrity.html">
+                <button>[GO DEPLOYMENT]</button>
+            </form>
+            &nbsp;&nbsp;&nbsp;
+            <form style="display: inline-block;" action="http://localhost:5500/industrial-tech/tensegrity.html">
+                <button>[GO LOCAL]</button>
+            </form>
+        </div>
+    </details>
+    <header>
+        <div class="contentColumn">
+            <noscript>
+                <div class="card warningCard" id="JsDisabled">
+                    <h2 class="warning">Enable JavaScript!</h2>
+                    <p>Javascript is disabled on your browser.</p>
+                    <p>I'm not here to steal your data. Navigating this site requires you to allow JavaScript. <a href="https://javascript.amethystx.net/" target="_blank" rel="noopener noreferrer"><u>How?</u></a></p>
+                </div>
+            </noscript>
+        </div>
+        <div class="flickering contentColumn">
+            <a href="index.html"><u>&lt;- Back</u></a>
+            <br>
+            <h1 class="static"><span class=caption>p1</span> TENSEGRITY</h1>
+        </div>
+    </header>
+    <table class="contentColumn">
+        <tr>
+            <td style="width: 72%">
+                <div class="card highlightCard" style="text-align: center;">                   
+                    <img style="width: 200px;" src="/icons/embellishment.png">
+                    <span style="vertical-align: 150%;"><h2>Project Timeline</h2></span>
+                    <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                    <br>
+                </div>
+<!---->
+                <div class="card" id="3dmodeling">
+                    <img class="thumbnail" src="images/tensegrity001.png">
+                    <div style="position: relative; z-index: 1;">
+                        <h2>3D modeling</h2>
+                        <p class="caption">September 15, 2025 • UPD 01</p>
+                        <p>Disappointed by the availability of plans, I decided to make my own.</p>
+                        <details>
+                            <summary><a><u>read more</u></a></summary>
+                            <p>I made this 3d model in OnShape. The design is heavily based on <a href="https://youtu.be/LZvlNqjSPcA" target="_blank" rel="noopener noreferrer"><u>this YouTube video</u></a>, but I made some changes to improve the strength of the tensegrity arms. I also replaced the edge fillets with chamfers because they looked more angular and futuristic.</p>
+                        </details>
+                        </details>
+                    </div>
+                </div>
+<!---->
+                <div class="card" id="technicaldrawing">
+                    <img class="thumbnail" src="images/tensegrity002.png">
+                    <div style="position: relative; z-index: 1;">
+                        <h2>technical drawing</h2>
+                        <p class="caption">September 17, 2025 • UPD 02</p>
+                        <p>The next step was to draw usable plans from my design.</p>
+                        <details>
+                            <summary><a><u>read more</u></a></summary>
+                            <p>Also using OnShape, I pulled out each of the main components and made a cut list with precise measurements. Unlike the 3d model, these can be printed out and referenced easily while cutting the wood.</p>
+                        </details>
+                        </details>
+                    </div>
+                </div>
+<!---->
+                <div class="card" id="makingtemplates">
+                    <!-- <img class="thumbnail" src="images/tensegrity003.png"> -->
+                    <div style="position: relative; z-index: 1;">
+                        <span class="warning">NO IMAGE YET!</span>
+                        <br>
+                        <h2>making templates</h2>
+                        <p class="caption">September 18, 2025 • UPD 03</p>
+                        <p>To make a pair of arms, I made a template out of plywood.</p>
+                        <details>
+                            <summary><a><u>read more</u></a></summary>
+                            <p>(I'm pretty sure it's not called plywood.) I wanted to make sure each tensegrity arm was exactly the same size and shape, so I cut out a template on the bandsaw after measuring everthing out with a ruler and protractor.</p>
+                        </details>
+                        </details>
+                    </div>
+                </div>
+<!---->
+            </td>
+            <td>
+                <div class="card">
+                    <h2>I mean,</h2>
+                    <p>who doesn't want a <i>levitating table</i>? I chose this project because it looks really cool and I've always wanted to have one. That's really it.</p>
+                </div>
+                <div class="card highlightCard" style="position: sticky; top: 10px">
+                    <h2>Contents</h2>
+                    <ul>
+                        <li><a href="#3dmodeling"><u>01 - 3D modeling</u></a></li>
+                        <li><a href="#technicaldrawing"><u>02 - technical drawing</u></a></li>
+                        <li><a href="#makingtemplates"><u>03 - making templates</u></a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <footer>
+    <div class="contentColumn" id="footer-fetch">Loading</div>
+    <script>
+        fetch("/r/footer.html")
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById("footer-fetch").innerHTML = content;
+            });
+    </script>
+</footer>
+</body>
+</div>
+</html>
