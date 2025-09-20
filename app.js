@@ -103,9 +103,7 @@ function startClock() {
         setTimeout(() => {
             clockStatusEle.innerHTML = "Success! Accuracy: ±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms.";
             setTimeout(() => {
-                setInterval(() => {
-                    clockStatusEle.innerHTML = "±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms";
-                }, 2000);
+                clockStatusEle.hidden = true;
             }, 3000);
         }, 1000);
         setInterval(() => {

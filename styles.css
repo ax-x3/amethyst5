@@ -419,50 +419,77 @@ img.bullet {
         filter: var(--flicker-low-vfx);
     }
 }
+/* @keyframes static {
+    0% {
+        mask-image: url(vfx/stat0.png);
+        mask-size: 64px;
+        mask-mode: luminance;
+    }
+    25% {
+        mask-image: url(vfx/stat1.png);
+        mask-size: 64px;
+        mask-mode: luminance;
+    }
+    50% {
+        mask-image: url(vfx/stat2.png);
+        mask-size: 64px;
+        mask-mode: luminance;
+    }
+    75% {
+        mask-image: url(vfx/stat3.png);
+        mask-size: 64px;
+        mask-mode: luminance;
+    }
+    100% {
+        mask-image: url(vfx/stat0.png);
+        mask-size: 64px;
+        mask-mode: luminance;
+    }
+} */
 @keyframes static {
     0% {
         mask-image: url(vfx/static0.png);
-        mask-size: 50px;
+        mask-size: 6px;
         mask-mode: luminance;
     }
     12.5% {
         mask-image: url(vfx/static1.png);
-        mask-size: 50px;
+        mask-size: 6px;
         mask-mode: luminance;
     }
     25% {
         mask-image: url(vfx/static2.png);
-        mask-size: 50px;
+        mask-size: 6px;
         mask-mode: luminance;
     }
     37.5% {
         mask-image: url(vfx/static3.png);
-        mask-size: 50px;
+        mask-size: 6px;
         mask-mode: luminance;
     }
     50% {
         mask-image: url(vfx/static4.png);
-        mask-size: 50px;
+        mask-size: 6px;
         mask-mode: luminance;
     }
     62.5% {
         mask-image: url(vfx/static5.png);
-        mask-size: 50px;
+        mask-size: 6px;
         mask-mode: luminance;
     }
     75% {
         mask-image: url(vfx/static6.png);
-        mask-size: 50px;
+        mask-size: 6px;
         mask-mode: luminance;
     }
     87.5% {
         mask-image: url(vfx/static7.png);
-        mask-size: 50px;
+        mask-size: 6px;
         mask-mode: luminance;
     }
     100% {
         mask-image: url(vfx/static0.png);
-        mask-size: 50px;
+        mask-size: 6px;
         mask-mode: luminance;
     }
 }
