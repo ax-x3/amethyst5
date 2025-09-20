@@ -78,13 +78,13 @@ html {
     /* Static */
     --static-vfx: static 2s infinite;
 }
-#theme-switcher {
+#theme-switcher:not(.specialInline) {
     display: block;
     z-index: 100;
     position: absolute;
     right: 0;
 }
-#theme-switcher:checked ~ #page { 
+#theme-switcher:checked + #page { 
     --text: var(--text-l);
     --link: var(--link-l);
     --accent: var(--accent-l);

@@ -54,16 +54,38 @@
     <table class="contentColumn">
         <tr>
             <td>
+                <div class="card">
+                    <h2>Welcome to Amethyst's portfolio!</h2>
+                    <br><br>
+                    <p>I know, it's not a Google Site, it's not following the rules, but I was hoping you could make an exception because:</p>
+                    <p style="margin-left: 12px;"><span class="highlight">1)</span> I <span class="warning">do not use Instagram</span> because I am against the company that runs it.</p>
+                    <p style="margin-left: 12px;"><span class="highlight">2)</span> I <span class="warning">hate Google Sites</span> because it limits my creatvity, and I won't have nearly as much fun using it.</p>
+                    <p style="margin-left: 12px;"><span class="highlight">3)</span> I have experience making websites <i class="success">this way</i>, and I already own a domain that I can use.</p>
+                    <div class="card noStatic">
+                        <h2>Accessibility</h2>
+                        <p style="font-family: Helvetica, sans-serif; word-spacing: normal;">The design of this portfolio is based on <a href="https://amethystx.net/" target="_blank" rel="noopener noreferrer"><u>my own homepage</u></a>. It's very stylized, but I realize that some people may have trouble reading the text. If it's necessary, I can sacrifice æsthetics for more legible typefaces like this one.</p>
+                        <p style="font-family: Helvetica, sans-serif; word-spacing: normal;">Check this box to use a light background instead: <input id="theme-switcher-alt" type="checkbox"></p>
+                    </div>
+                    <script>
+                        const themeSwitcherAlt = document.getElementById("theme-switcher-alt");
+                        const themeSwitcher = document.getElementById("theme-switcher");
+                        themeSwitcherAlt.addEventListener("change", function (e) {
+                        if (e.currentTarget.checked === true) {
+                                themeSwitcher.checked = true;
+                            } else {
+                                themeSwitcher.checked = false;
+                            }
+                        });
+                    </script>
+                </div>
                 <div class="card highlightCard">
-                    <h2>Directory of /industrial-tech/</h2>
+                    <h2>Projects:</h2>
                     <br>
                     <div style="height: 20px;"></div>
                     <ul style="transform: translateX(25px);">
                         <li class="svgBullet folder"><a href="/.."><u>/..</u></a></li>
                         <ul style="transform: translateX(25px);">
                             <li class="svgBullet file"><a href="tensegrity.html"><u>TENSEGRITY</u></a></li>
-                            <li class="svgBullet file"><a href="index.html" class="success"><u>index.html</u></a><span class="caption">(You are here.)</span></li>
-                            <li class="svgBullet folder">/images/</li>
                         </ul>
                     </ul>
                     <div style="height: 20px;"></div>
