@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Archoblast";
+    src: url(fonts/Archoblast.woff2) format("woff2"),
+}
+@font-face {
+    font-family: "Blaster";
+    src: url(fonts/BlasterDisplay.woff2) format("woff2"),
+}
+@font-face {
+    font-family: "Conso";
+    src: url(fonts/Conso-Regular.ttf) format("truetype"),
+}
+@font-face {
+    font-family: "MicaValo";
+    src: url(fonts/MicaValo.woff2) format("woff2"),
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Conso";
+    font-size: 1.2rem;
+    overflow-x: hidden;
+}
+
+.readingColumn {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wideColumn {
+    width: 100vh;
+    padding: 0 40px;
+}
+
+.card {
+    padding: 20px 30px;
+    border: 2px solid #999;
+    box-shadow: 0 0 30px #ccc;
+    border-radius: 50px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.frosted {
+    backdrop-filter: blur(10px);
+}
+
+summary {
+    cursor: pointer;
+}
+
+h1 {
+    font-family: "MicaValo";
+    font-size: 10rem;
+    font-weight: 100;
+}
+h2 {
+    font-family: "Archoblast";
+    font-size: 4rem;
+    font-weight: 100;
+}
+h3 {
+    font-family: "MicaValo";
+    color: #666;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+h4 {
+    font-family: "MicaValo";
+    font-size: 1.5rem;
+    font-weight: 100;
+}

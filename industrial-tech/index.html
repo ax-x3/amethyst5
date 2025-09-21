@@ -2,107 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.35">
-    <link rel="stylesheet" href="/styles.css">
-    <script src="/app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="/images/amethystcrystal.png">
-    <title>/industrial-tech/</title>
+    <title>AX - INDTECH</title>
 </head>
-<input id="theme-switcher" type="checkbox">
-<div id="page">
 <body>
-    <div class="caption">
-        <span>profile:</span>
-        <span id="styleProfile">detecting</span>
+<header>
+    <div id="headercontainer" style="height: calc(100vh - 20px); width: calc(100vw - 40px); margin: 0 auto; background-image: url(images/IMG_9572.jpeg); background-size: cover; background-position-y: 0%; border-radius: 0 0 120px 120px; box-shadow: 0 0 30px #ccc;">
+        <div style="height: 10vh;"></div>
+        <div style="width: 1200px; margin: 0 auto; text-align: center;">
+            <h1 style="color: white;"><img src="/images/amethystcrystal.png" style="height: 1.2em; transform: translateY(36px);">&nbsp;AMETHYST</h1>
+            <h2 style="color: white;">Industrial Tech II, 2025</h2>
+        </div>
     </div>
-    <details>
-        <summary class="caption">
-            <a><u>Dev Tools</u></a>
-        </summary>
-        <div style="background-color: white; color: black">
-            Developer Tools >>> you can ignore this (or mess around idc) >>>
-            <button style="background-color: greenyellow;" name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
-            <button style="background-color: chocolate;" name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
-            <form style="display: inline-block;" action="https://amethystx.net/industrial-tech/index.html">
-                <button>[GO DEPLOYMENT]</button>
-            </form>
-            &nbsp;&nbsp;&nbsp;
-            <form style="display: inline-block;" action="http://localhost:5500/industrial-tech/index.html">
-                <button>[GO LOCAL]</button>
-            </form>
-        </div>
-    </details>
-    <header>
-        <div class="contentColumn">
-            <noscript>
-                <div class="card warningCard" id="JsDisabled">
-                    <h2 class="warning">Enable JavaScript!</h2>
-                    <p>Javascript is disabled on your browser.</p>
-                    <p>I'm not here to steal your data. Navigating this site requires you to allow JavaScript. <a href="https://javascript.amethystx.net/" target="_blank" rel="noopener noreferrer"><u>How?</u></a></p>
-                </div>
-            </noscript>
-        </div>
-        <div id="header-fetch" class="contentColumn">Loading</div>
-        <script>
-            fetch("/r/indtechHeader.html")
-                .then(response => response.text())
-                .then(content => {
-                    document.getElementById("header-fetch").innerHTML = content;
-                });
-        </script>
-    </header>
-    <table class="contentColumn">
-        <tr>
-            <td>
-                <div class="card">
-                    <h2>Welcome to Amethyst's portfolio!</h2>
-                    <br><br>
-                    <p>I know, it's not a Google Site, it's not following the rules, but I was hoping you could make an exception because:</p>
-                    <p style="margin-left: 12px;"><span class="highlight">1)</span> I <span class="warning">do not use Instagram</span> because I am against the company that runs it.</p>
-                    <p style="margin-left: 12px;"><span class="highlight">2)</span> I <span class="warning">hate Google Sites</span> because it limits my creatvity, and I won't have nearly as much fun using it.</p>
-                    <p style="margin-left: 12px;"><span class="highlight">3)</span> I have experience making websites <i class="success">this way</i>, and I already own a domain that I can use.</p>
-                    <div class="card noStatic">
-                        <h2>Accessibility</h2>
-                        <p style="font-family: Helvetica, sans-serif; word-spacing: normal;">The design of this portfolio is based on <a href="https://amethystx.net/" target="_blank" rel="noopener noreferrer"><u>my own homepage</u></a>. It's very stylized, but I realize that some people may have trouble reading the text. If it's necessary, I can sacrifice æsthetics for more legible typefaces like this one.</p>
-                        <p style="font-family: Helvetica, sans-serif; word-spacing: normal;">Check this box to use a light background instead: <input id="theme-switcher-alt" type="checkbox"></p>
-                    </div>
-                    <script>
-                        const themeSwitcherAlt = document.getElementById("theme-switcher-alt");
-                        const themeSwitcher = document.getElementById("theme-switcher");
-                        themeSwitcherAlt.addEventListener("change", function (e) {
-                        if (e.currentTarget.checked === true) {
-                                themeSwitcher.checked = true;
-                            } else {
-                                themeSwitcher.checked = false;
-                            }
-                        });
-                    </script>
-                </div>
-                <div class="card highlightCard">
-                    <h2>Projects:</h2>
-                    <br>
-                    <div style="height: 20px;"></div>
-                    <ul style="transform: translateX(25px);">
-                        <li class="svgBullet folder"><a href="/.."><u>/..</u></a></li>
-                        <ul style="transform: translateX(25px);">
-                            <li class="svgBullet file"><a href="tensegrity.html"><u>TENSEGRITY</u></a></li>
-                        </ul>
-                    </ul>
-                    <div style="height: 20px;"></div>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <footer>
-    <div class="contentColumn" id="footer-fetch">Loading</div>
     <script>
-        fetch("/r/footer.html")
-            .then(response => response.text())
-            .then(content => {
-                document.getElementById("footer-fetch").innerHTML = content;
-            });
+        const header = document.getElementById("headercontainer");
+        document.addEventListener("scroll", function (e) {
+            vh = window.outerHeight;
+            vs = window.scrollY;
+            header.style.backgroundPositionY = (vs / vh) * 100 + "%";
+            header.style.opacity = 1 - (vs / vh);
+        });
     </script>
+</header>
+<div style="height: 100px;"></div>
+<div class="card readingColumn">
+    <h3>Well,</h3>
+    <p>it's not a Google Site, but I was hoping you could make an exception because:</p>
+    <ol>
+        <li>Google Sites limits my creatvity, and I won't have nearly as much fun using it.</li>
+        <li>I do not use Instagram because I do not like the company that runs it.</li>
+        <li>I have experience making websites <i class="success">this way</i>, and I already own a domain that I can use.</li>
+    </ol>
+</div>
+<div style="height: 100px;"></div>
+<div class="readingColumn">
+    <h3>Projects</h3>
+    <h4><a href="tensegrity.html">01 - TENSEGRITY</a></h4>
+    
+</div>
+<div style="height: 300px;"></div>
+<footer>
+    <div style="height: calc(100vh - 20px); width: calc(100vw - 40px); margin: 0 auto; background-color: #ccc; border-radius: 120px 120px 0 0; box-shadow: 0 0 30px #ccc; box-sizing: border-box; padding: 120px;">
+        <img src="images/bordersvg.png" style="width: 300px; float: right; opacity: 0.75; transform: translate(120px, -120px);">
+        <h3>&nearr;&nbsp;<a href="https://amethystx.net/" target="_blank" rel="noopener noreferrer">site home</a></h3>
+        <h3>&nearr;&nbsp;<a href="https://amethystx.net/projects.html" target="_blank" rel="noopener noreferrer">external projects</a></h3>
+        <h3 style="opacity: 0.2;">&copy; amethystx.net 2025. All Rights Reserved.</h3>
+    </div>
 </footer>
 </body>
-</div>
 </html>
