@@ -42,8 +42,24 @@ body {
 .card {
     padding: 20px 30px;
     border: 2px solid #999;
-    box-shadow: 0 0 30px #ccc;
+    box-shadow: 0 0 30px #aaa;
     border-radius: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.clickable {
+    transition: 250ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    &:hover {
+        scale: 1.02;
+    transition: 250ms cubic-bezier(0.215, 0.610, 0.355, 1);
+        &.card {
+            box-shadow: 10px 10px 50px #aaa;
+        }
+    }
 }
 
 #navbar a {
@@ -52,7 +68,8 @@ body {
 }
 
 .frosted {
-    backdrop-filter: blur(10px);
+    backdrop-filter: brightness(2) blur(15px);
+    border: none;
 }
 
 summary {
