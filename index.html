@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,41 +12,105 @@
         gtag('config', 'G-8J44XQLHXF');
     </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.35">
-    <!-- <meta content="#9A10C8" name="theme-color"> -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
     <!-- HTML Meta Tags -->
-    <meta name="description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
+    <title>meowgen - advanced generative procedural communication</title>
+    <meta name="description" content="meow meow meow">
+
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://amethystx.net">
+    <meta property="og:url" content="https://meowgen.pages.dev">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="AMETHYSTX.net - Art, Projects, About Me, and More!">
-    <meta property="og:description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
-    <meta property="og:image" content="https://amethystx.net/images/aivi-preview-banner.png">
+    <meta property="og:title" content="meowgen - advanced generative procedural communication">
+    <meta property="og:description" content="meow meow meow">
+    <meta property="og:image" content="https://meowgen.pages.dev/meow.pngs">
+
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="amethystx.net">
-    <meta property="twitter:url" content="https://amethystx.net">
-    <meta name="twitter:title" content="AMETHYSTX.net - Art, Projects, About Me, and More!"">
-    <meta name="twitter:description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
-    <meta name="twitter:image" content="https://amethystx.net/images/aivi-preview-banner.png">
-    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+    <meta property="twitter:domain" content="meowgen.pages.dev">
+    <meta property="twitter:url" content="https://meowgen.pages.dev">
+    <meta name="twitter:title" content="meowgen - advanced generative procedural communication">
+    <meta name="twitter:description" content="meow meow meow">
+    <meta name="twitter:image" content="https://meowgen.pages.dev/meow.png">
 
-    <link rel="stylesheet" href="/styles.css">
-    <script src="/app.js"></script>
-    <link rel="icon" type="image/x-icon" href="/images/amethystcrystal.png">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
-    <!-- <script src="/scrobbler.js"></script> -->
-    <title>AMETHYSTX</title>
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+    <link rel="icon" type="image/x-icon" href="meow.png">
+    <link href="meowify.css" rel="stylesheet">
+    <script src="meower.js"></script>
+    <title>meowgen</title>
 </head>
-<input id="theme-switcher" type="checkbox">
-<div id="page">
-<body>
-    <div class="caption">
-        <span>profile:</span>
-        <span id="styleProfile">detecting</span>
+<body onload="load();">
+    <div style="height: 50px"></div>
+    <div class="column center main">
+        <div class="centertext">
+            <h1>meowgen</h1>
+            <sub><i>advanced generative procedural communication</i></sub>
+        </div>
+        <br><hr><br>
+        <div class="centertext">
+            <label for="preset">preset:</label>
+            <select id="preset" name="preset" class="preset">
+                <option value="custom" disabled>custom</option>
+                <option value="happy" selected>happy</option>
+                <option value="silly">silly</option>
+                <option value="eepy">eepy</option>
+                <option value="drunk">drunk</option>
+            </select>
+        </div>
+        <br><hr><br>
+        <div class="indent" id="form">
+            <label class="label" for="minlength">meow for</label>
+            <input class="short" id="minlength" name="minlength" type="number" min="2" max="100" placeholder="2-100" autocomplete="off" required>
+            <label for="maxlength">to</label>
+            <input class="short" id="maxlength" name="maxlength" type="number" min="2" max="100" placeholder="2-100" autocomplete="off" required>
+            letters
+            <br><br>
+            
+            <label class="label" for="meowlphabet">meowlphabet:</label>
+            <input id="meowlphabet" name="meowlphabet" type="text" placeholder="letters to meow" autocomplete="off" required>
+            <br>
+            <sub class="label">enter in expected meow order</sub>
+            <br><br>
+
+            <label class="label" for="start">start with</label>
+            <input class="short" id="start" name="start" type="text" maxlength="1" autocomplete="off">
+            <br><br>
+            <label class="label" for="purr">purr with</label>
+            <input class="short" id="purr" name="purr" type="text" maxlength="1" autocomplete="off" required>
+            <br><br>
+            <label class="label" for="end">end with</label>
+            <input class="short" id="end" name="end" type="text" maxlength="1" autocomplete="off">
+            <br><br>
+
+            <label class="label" for="sanitycoef">sanity:</label>
+            <input id="sanitycoef" name="sanitycoef" type="range" min="0" max="1" step="0.01" placeholder="0-1" required>
+            <span id="sanitycoefOut"></span>
+            <br>
+            <sub class="label">increase for more predictability</sub>
+            <br><br>
+            <label class="label" for="alertcoef">alertness:</label>
+            <input id="alertcoef" name="alertcoef" type="range" min="0" max="1" step="0.01" placeholder="0-1" required>
+            <span id="alertcoefOut"></span>
+            <br>
+            <sub class="label">increase for more vocalization</sub>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <button id="meow" name="meow" onclick="meowMain();">meow</button>
+        <input class="short" id="count" name="count" type="number" min="1" max="100" value="10" placeholder="1-100" required>
+        <label for="count">time(s)</label>
+        <br><br>
+        <textarea id="output"></textarea>
     </div>
-    
-</body>
-</div>
+    <br>
+    <div class="column center centertext">
+        <a href="https://amethystx.net/" target="_blank"><img src="https://amethystx.net/badges/88x31.gif"></a>
+        <br>
+        <sub>
+            &copy; amethyst 2025
+            <br>
+            all meows reserved
+        </sub>
+    </div>
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f6a27b5d2db94fc78fe4532c683e8eca"}'></script><!-- Cloudflare Pages Analytics --></body>
 </html>
