@@ -29,6 +29,15 @@
     <script src="/scrobbler.js"></script>
     <title>AMETHYST</title>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8J44XQLHXF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8J44XQLHXF');
+</script>
 <input id="theme-switcher" type="checkbox">
 <div id="page">
 <body>
@@ -238,10 +247,16 @@
                             <ul>
                                 <div style="margin: 30px 0; text-align: center;">
                                     <img style="width: 200px;" src="icons/embellishment.png">
+                                    <span class="highlight" style="vertical-align: 120%;">October 2025</span>
+                                    <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
+                                </div>
+                                <li><p><i class="highlight">[03]</i> Google Analytics testing. Reorganized credits, improved UD stats card.</p></li>
+                                <div style="margin: 30px 0; text-align: center;">
+                                    <img style="width: 200px;" src="icons/embellishment.png">
                                     <span class="highlight" style="vertical-align: 120%;">September 2025</span>
                                     <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                                 </div>
-                                <li><p><i class="highlight">[19]</i> Improved legibility of index header. Reduced file sizes of icon, static, and banner. Fixed double-static in footer. Removed clock desync re-assessment</p></li>
+                                <li><p><i class="highlight">[19]</i> Improved legibility of index header. Reduced file sizes of icon, static, and banner. Fixed double-static in footer. Removed clock desync re-assessment.</p></li>
                                 <li><p><i class="highlight">[15]</i> Added latest art back to index. Made local time clock autmatically synchronize upon loading.</p></li>
                                 <li><p><i class="highlight">[09]</i> Moved Enable Javascript! to a subdomain. Old file in /b/ still works just in case.</p></li>
                                 <li><p><i class="highlight">[07]</i> Replaced show/hide JavaScript with correct details and summary tag. Moved some stuff around. Completely reworked css variables and added an experimental light theme. Made dismissable elements stay hidden using localStorage. Fixed devtools. Corrected footer format. Renamed lots of things for clarity.</p></li>
