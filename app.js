@@ -95,18 +95,21 @@ function startClock() {
         minute: 'numeric',
         second: 'numeric'
     }, formatter = new Intl.DateTimeFormat([], clockOptions);
-    var localTime = formatter.format(Date.now() + 100);
+    // Get current time accurate to the minute.
+    var localTime = formatter.format(Date.now());
     localTimeEle.innerHTML = "<u>" + localTime.substring(0, 5) + "</u>" + '<span class="warning">:----</span>';
     clockStatusEle.innerHTML = "Calibrating...";
+    // Calculate offset and wait until the next second is about to tick.
     setTimeout(() => {
-        clockStatusEle.innerHTML = "Correcting desync...";
+        // Begin regular clock update with seconds.
         setTimeout(() => {
-            clockStatusEle.innerHTML = "Success! Accuracy: ±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms.";
+            clockStatusEle.innerHTML = "Done! Accuracy: ±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms.";
             setTimeout(() => {
                 clockStatusEle.hidden = true;
             }, 3000);
         }, 1000);
         setInterval(() => {
+            // Get time 500ms ahead to ensure early ticks do not show repeated or delayed time.
             localTime = formatter.format(Date.now() + 500);
             localTimeEle.innerHTML = "<u>" + localTime + "</u>";
         }, 1000);
