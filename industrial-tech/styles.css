@@ -41,9 +41,17 @@ body {
 
 .card {
     padding: 20px 30px;
-    border: 2px solid #999;
-    box-shadow: 0 0 30px #aaa;
-    border-radius: 50px;
+    box-shadow: 0 0 30px #999;
+    box-sizing: border-box;
+    /* border: 0px solid #999; */
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.photo {
+    box-shadow: 0 0 30px #999;
+    box-sizing: border-box;
+    border-radius: 40px;
 }
 
 a {
@@ -57,7 +65,8 @@ a {
         scale: 1.02;
     transition: 250ms cubic-bezier(0.215, 0.610, 0.355, 1);
         &.card {
-            box-shadow: 10px 10px 50px #aaa;
+            box-shadow: 20px 20px 50px #bbb;
+            /* border: 4px dashed #5a78ff; */
         }
     }
 }
@@ -82,7 +91,7 @@ h1 {
     font-weight: 100;
 }
 h2 {
-    font-family: "Archoblast";
+    font-family: "Blaster";
     font-size: 4rem;
     font-weight: 100;
 }
