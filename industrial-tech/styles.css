@@ -41,15 +41,14 @@ body {
 
 .card {
     padding: 20px 30px;
-    box-shadow: 0 0 30px #999;
+    box-shadow: 0 0 20px #ccc;
     box-sizing: border-box;
-    /* border: 0px solid #999; */
     border-radius: 40px;
     overflow: hidden;
 }
 
 .photo {
-    box-shadow: 0 0 30px #999;
+    box-shadow: 0 0 20px #ccc;
     box-sizing: border-box;
     border-radius: 40px;
 }
@@ -65,15 +64,19 @@ a {
         scale: 1.02;
     transition: 250ms cubic-bezier(0.215, 0.610, 0.355, 1);
         &.card {
-            box-shadow: 20px 20px 50px #bbb;
+            box-shadow: 10px 10px 50px #ddd;
             /* border: 4px dashed #5a78ff; */
         }
     }
 }
 
-#navbar a {
-    text-decoration: none;
-    color: inherit;
+.navbar {
+    height: 30px;
+    padding-bottom: 50px;
+    & a {
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 .frosted {
