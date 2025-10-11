@@ -9,7 +9,6 @@ var flickeringEnabled = true;
 var consoleTitle = "____ _  _ ____ ___ _  _ _   _ ____ ___ _  _  _  _ ____ ___\n|__| |\\/| |___  |  |__|  \\_/  [__   |   \\/   |\\ | |___  |\n|  | |  | |___  |  |  |   |   ___]  |  _/\\_ .| \\| |___  |";
 
 addEventListener("load", (event) => {
-    applyTheme();
     optimizeForBrowser();
     path = window.location.pathname;
     if (path == "/index.html" || path == "/") {
@@ -18,18 +17,6 @@ addEventListener("load", (event) => {
     }
     console.log(consoleTitle);
 });
-
-function applyTheme() {
-    const themeSwitch = document.getElementById("theme-switcher");
-    themeSwitch.checked = localStorage.getItem("lightTheme");
-    themeSwitch.addEventListener("change", function (e) {
-    if (e.currentTarget.checked === true) {
-            localStorage.setItem("lightTheme", true);
-        } else {
-            localStorage.removeItem("lightTheme");
-        }
-    });
-}
 
 function optimizeForBrowser() {
     if (isMobile()) {

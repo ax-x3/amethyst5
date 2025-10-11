@@ -78,39 +78,10 @@ html {
     /* Static */
     --static-vfx: static 2s infinite;
 }
-#theme-switcher:not(.specialInline) {
-    display: block;
-    z-index: 100;
-    position: absolute;
-    right: 0;
-}
-#theme-switcher:checked + #page { 
-    --text: var(--text-l);
-    --link: var(--link-l);
-    --accent: var(--accent-l);
-    --title: var(--title-l);
-    --accent-shadow: var(--accent-shadow-l);
-    --border: var(--border-l);
-    --notice: var(--notice-l);
-    --text-shadow: var(--text-shadow-l);
-    --background-image: var(--background-image-l);
-    --gradient-image: var(--gradient-image-l);
-    --success: var(--success-l);
-    --success-accent: var(--success-accent-l);
-    --danger: var(--danger-l);
-    --danger-accent: var(--danger-accent-l);
-}
 .contentColumn {
     width: 1030px;
     margin: 0 auto;
     padding: 2px 0 0 0;
-}
-#page {
-    color: var(--text);
-    background-image: var(--background-image);
-    background-size: 600px;
-    animation: scrollbg 120s linear infinite;
-    min-height: 100vh;
 }
 body {
     margin: 0;
@@ -119,6 +90,10 @@ body {
     -webkit-text-size-adjust: none;
     line-height: 110%;
     font-family: "SF Pixelate";
+    color: var(--text);
+    background-image: var(--background-image);
+    background-size: 600px;
+    animation: scrollbg 120s linear infinite;
 }
 footer {
     margin: 0;

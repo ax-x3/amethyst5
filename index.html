@@ -38,8 +38,6 @@
     <script src="/scrobbler.js"></script>
     <title>AMETHYSTX</title>
 </head>
-<input id="theme-switcher" type="checkbox">
-<div id="page">
 <body>
     <div class="caption">
         <span>profile:</span>
@@ -68,7 +66,7 @@
                 <div class="card warningCard" id="JsDisabled">
                     <h2 class="warning">Enable JavaScript!</h2>
                     <p>Javascript is disabled on your browser.</p>
-                    <p>I'm not here to steal your data. Navigating this site requires you to allow JavaScript. <a href="https://javascript.amethystx.net/" target="_blank" rel="noopener noreferrer"><u>How?</u></a></p>
+                    <p>I'm not here to steal your data. Navigating this site requires JavaScript. <a href="https://javascript.amethystx.net/" target="_blank" rel="noopener noreferrer"><u>Learn more.</u></a></p>
                 </div>
             </noscript>
         </div>
@@ -97,16 +95,16 @@
                             <span class="caption">Safari: <span class="highlight">cmd + opt + R</span>.</span>
                             <span class="caption">This loads up fresh files from the server rather than your cache.</span>
                         </div>
-                        <div class="card warningCard" id="inactiveNotice" hidden>
+                        <div class="card warningCard noStatic" id="inactiveNotice" hidden>
                             <h2>Last seen <span id="inactiveDuration">-- weeks ago</span>.</h2>
                             <p>In the event of an emergency, I'll try to leave a message here.</p>
                             <p class="warning"><i>No messages yet.</i></p>
                         </div>
-                        <div class="card warningCard" id="underConstruction" hidden>
+                        <div class="card warningCard noStatic" id="underConstruction" hidden>
                             <h2>Construction in Progress...</h2>
                             <p>This site is currently being worked on. Come back later!</p>
                         </div>
-                        <div class="card warningCard" id="usingMobile" hidden>
+                        <div class="card warningCard noStatic" id="usingMobile" hidden>
                             <button class="dismissCard" name="dismiss" onclick="dismissCard('usingMobile')">x</button>
                             <h2>Mobile detected!</h2>
                             <p>I've automatically simplified this website to run smoothly on your device, although you'd have a much better experience using a <span class="highlight">laptop</span> or <span class="highlight">monitor</span>.</p>
@@ -247,6 +245,7 @@
                                     <span class="highlight" style="vertical-align: 120%;">October 2025</span>
                                     <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                                 </div>
+                                <li><p><i class="highlight">[11]</i> Deleted light mode. Fixed long-standing issue of header text glow being cut off. Made index header actually fade out. Small wording changes to JS warning.</p></li>
                                 <li><p><i class="highlight">[06]</i> Added status card. Rewrote intro. Expanded software experience list.</p></li>
                                 <li><p><i class="highlight">[03]</i> Reorganized credits, improved UD stats card.</p></li>
                                 <div style="margin: 30px 0; text-align: center;">
@@ -488,7 +487,7 @@
                     <div class="card highlightCard">
                         <!-- upds -->
                         <p>Last updated</p>
-                        <br><h2>Oct 06, 2025</h2>
+                        <br><h2>Oct 11, 2025</h2>
                         <br><br>
                         <span class="caption">Created Oct 19, 2024</span>
                     </div>
@@ -540,5 +539,4 @@
     </script>
 </footer>
 </body>
-</div>
 </html>
