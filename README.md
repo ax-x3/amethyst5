@@ -2,7 +2,6 @@
 > Site permanently moved to amethystx.net as of February 2025. <br>'am3thystx.pages.dev' will continue to resolve.
 
 # AMETHYSTX.net - Art, Projects, About Me, and More!
-![site banner](./images/aivi-horiz-banner.png)
 
 ![site button](./badges/88x31.gif)
 ## Directories:
