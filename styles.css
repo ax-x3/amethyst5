@@ -76,7 +76,7 @@ html {
     --flicker-low-vfx: brightness(0.9);
     --flicker-high-vfx: brightness(1.1);
     /* Static */
-    --static-vfx: static 2s infinite;
+    --static-vfx: static 2s steps(1) infinite;
 }
 .contentColumn {
     width: 1030px;
@@ -394,78 +394,60 @@ img.bullet {
         filter: var(--flicker-low-vfx);
     }
 }
-/* @keyframes static {
-    0% {
-        mask-image: url(vfx/stat0.png);
-        mask-size: 64px;
-        mask-mode: luminance;
-    }
-    25% {
-        mask-image: url(vfx/stat1.png);
-        mask-size: 64px;
-        mask-mode: luminance;
-    }
-    50% {
-        mask-image: url(vfx/stat2.png);
-        mask-size: 64px;
-        mask-mode: luminance;
-    }
-    75% {
-        mask-image: url(vfx/stat3.png);
-        mask-size: 64px;
-        mask-mode: luminance;
-    }
-    100% {
-        mask-image: url(vfx/stat0.png);
-        mask-size: 64px;
-        mask-mode: luminance;
-    }
-} */
 @keyframes static {
     0% {
         mask-image: url(vfx/static0.png);
-        mask-size: 6px;
         mask-mode: luminance;
+        mask-size: 6px;
+        mask-position: 0 0px;
     }
     12.5% {
-        mask-image: url(vfx/static1.png);
-        mask-size: 6px;
+        mask-image: url(vfx/static0.png);
         mask-mode: luminance;
+        mask-size: 6px;
+        mask-position: 0 1.5px;
     }
     25% {
-        mask-image: url(vfx/static2.png);
-        mask-size: 6px;
+        mask-image: url(vfx/static0.png);
         mask-mode: luminance;
+        mask-size: 6px;
+        mask-position: 0 3px;
     }
     37.5% {
-        mask-image: url(vfx/static3.png);
-        mask-size: 6px;
+        mask-image: url(vfx/static1.png);
         mask-mode: luminance;
+        mask-size: 6px;
+        mask-position: 0 4.5px;
     }
     50% {
-        mask-image: url(vfx/static4.png);
-        mask-size: 6px;
+        mask-image: url(vfx/static1.png);
         mask-mode: luminance;
+        mask-size: 6px;
+        mask-position: 0 0px;
     }
     62.5% {
-        mask-image: url(vfx/static5.png);
-        mask-size: 6px;
+        mask-image: url(vfx/static0.png);
         mask-mode: luminance;
+        mask-size: 6px;
+        mask-position: 0 1.5px;
     }
     75% {
-        mask-image: url(vfx/static6.png);
-        mask-size: 6px;
+        mask-image: url(vfx/static1.png);
         mask-mode: luminance;
+        mask-size: 6px;
+        mask-position: 0 3px;
     }
     87.5% {
-        mask-image: url(vfx/static7.png);
-        mask-size: 6px;
+        mask-image: url(vfx/static0.png);
         mask-mode: luminance;
+        mask-size: 6px;
+        mask-position: 0 4.5px;
     }
     100% {
         mask-image: url(vfx/static0.png);
-        mask-size: 6px;
         mask-mode: luminance;
+        mask-size: 6px;
+        mask-position: 0 0px;
     }
 }
 @keyframes scrollbg {
