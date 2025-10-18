@@ -72,7 +72,7 @@
         </div>
         <div id="header-fetch" class="contentColumn">Loading</div>
         <script>
-            fetch("/r/indexHeader.html")
+            fetch("/r/indexAnniversaryHeader.html")
                 .then(response => response.text())
                 .then(content => {
                     document.getElementById("header-fetch").innerHTML = content;
@@ -245,6 +245,7 @@
                                     <span class="highlight" style="vertical-align: 120%;">October 2025</span>
                                     <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                                 </div>
+                                <li><p><i class="highlight">[17]</i> Swapped to anniversary header. Fixed titling error in credits.</p></li>
                                 <li><p><i class="highlight">[15]</i> Drastically decreased RAM usage when rendering static overlay, using only two highly compressed grayscale PNGs.</p></li>
                                 <li><p><i class="highlight">[11]</i> Deleted light mode. Fixed long-standing issue of header text glow being cut off. Made index header actually fade out. Small wording changes to JS warning.</p></li>
                                 <li><p><i class="highlight">[06]</i> Added status card. Rewrote intro. Expanded software experience list.</p></li>
@@ -488,7 +489,7 @@
                     <div class="card highlightCard">
                         <!-- upds -->
                         <p>Last updated</p>
-                        <br><h2>Oct 15, 2025</h2>
+                        <br><h2>Oct 17, 2025</h2>
                         <br><br>
                         <span class="caption">Created Oct 19, 2024</span>
                     </div>
