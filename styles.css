@@ -32,7 +32,7 @@ html {
     --accent-l: #a715ba;
     --title-l: #cc32ff;
     --accent-shadow-l: #cf9fe6;
-    --border-l: #0002;
+    --border-l: #0003;
     --notice-l: #bbb;
     --text-shadow-l: #fff;
     --background-image-l: url(/vfx/tilingBgL.png);
@@ -47,7 +47,7 @@ html {
     --accent-d: #ca50da;
     --title-d: #9a10c8;
     --accent-shadow-d: #611685;
-    --border-d: #fff2;
+    --border-d: #fff3;
     --notice-d: #222;
     --text-shadow-d: #000;
     --background-image-d: url(/vfx/tilingBg.png);
@@ -115,7 +115,7 @@ h1 {
     padding-right: 4px;
     font-size: 260%;
     color: var(--title);
-    text-shadow: 0.02em 0.02em var(--text), -0.02em 0.02em var(--text), -0.02em -0.02em var(--text), 0.02em -0.02em var(--text), 0 0 40px var(--accent);
+    text-shadow: 0.02em 0.02em var(--text), -0.02em 0.02em var(--text), -0.02em -0.02em var(--text), 0.02em -0.02em var(--text), 0.1em 0.1em var(--text-shadow), 0 0 40px var(--accent);
 } 
 h2 {
     font-size: 140%;
@@ -319,9 +319,9 @@ img.bullet {
 }
 .dismissCard {
     float: right;
-    transform: translate(14.5px, -14px);
+    transform: translate(14px, -14px);
     background-color: var(--notice);
-    border: 2px solid var(--border);
+    border: 2px solid var(--danger);
     border-radius: 0 10px 0 0;
     padding: 6px 24px;
     font-family: "SF Pixelate";
@@ -360,6 +360,7 @@ img.bullet {
 }
 .highlightCard {
     background-color: var(--notice) !important;
+    border-color: var(--accent-shadow);
 }
 .paper {
     background-color: #eeeeed !important;
