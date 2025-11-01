@@ -360,7 +360,7 @@ img.bullet {
 }
 .highlightCard {
     background-color: var(--notice) !important;
-    border-color: var(--accent-shadow);
+    border-color: var(--accent);
 }
 .paper {
     background-color: #eeeeed !important;
