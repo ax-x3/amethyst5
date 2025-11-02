@@ -32,7 +32,7 @@ html {
     --accent-l: #a715ba;
     --title-l: #cc32ff;
     --accent-shadow-l: #cf9fe6;
-    --border-l: #0003;
+    --border-l: #0004;
     --notice-l: #bbb;
     --text-shadow-l: #fff;
     --background-image-l: url(/vfx/tilingBgL.png);
@@ -47,7 +47,7 @@ html {
     --accent-d: #ca50da;
     --title-d: #9a10c8;
     --accent-shadow-d: #611685;
-    --border-d: #fff3;
+    --border-d: #fff4;
     --notice-d: #222;
     --text-shadow-d: #000;
     --background-image-d: url(/vfx/tilingBg.png);
@@ -124,7 +124,7 @@ h2 {
     word-spacing: 0.25em;
 }
 p, li, .plaintext {
-    text-shadow: 0.1em 0.1em var(--text-shadow), 0 0 16px var(--text);
+    text-shadow: 0.1em 0.1em var(--text-shadow), 0 0 12px var(--text);
     word-spacing: -0.2em;
     line-height: 150%;
 }
@@ -226,6 +226,12 @@ details[open] > summary {
     }
     &.more::before {
         content: url('/icons/more.svg');
+    }
+    &.close::before {
+        content: url('/icons/close.svg');
+    }
+    &.check::before {
+        content: url('/icons/check.svg');
     }
     &.Discord::before {
         content: url('/logos/discord.svg');
@@ -356,7 +362,7 @@ img.bullet {
 }
 .highlight {
     color: var(--accent);
-    text-shadow: 0.03em 0.03em var(--accent-shadow), -0.03em 0.03em var(--accent-shadow), -0.03em -0.03em var(--accent-shadow), 0.03em -0.03em var(--accent-shadow), 0.1em 0.1em var(--text-shadow), 0 0 16px var(--accent);
+    text-shadow: 0.03em 0.03em var(--accent-shadow), -0.03em 0.03em var(--accent-shadow), -0.03em -0.03em var(--accent-shadow), 0.03em -0.03em var(--accent-shadow), 0.1em 0.1em var(--text-shadow), 0 0 24px var(--accent);
 }
 .highlightCard {
     background-color: var(--notice) !important;
