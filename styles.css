@@ -124,7 +124,7 @@ h2 {
     word-spacing: 0.25em;
 }
 p, li, .plaintext {
-    text-shadow: 0.1em 0.1em var(--text-shadow), 0 0 12px var(--text);
+    text-shadow: 0.1em 0.1em var(--text-shadow), 0 0 8px var(--text);
     word-spacing: -0.2em;
     line-height: 150%;
 }
@@ -403,57 +403,57 @@ img.bullet {
 }
 @keyframes static {
     0% {
-        mask-image: url(vfx/static0.png);
+        mask-image: url(vfx/s0.png);
         mask-mode: luminance;
-        mask-size: 6px;
+        mask-size: 60px;
         mask-position: 0 0px;
     }
     12.5% {
-        mask-image: url(vfx/static0.png);
+        mask-image: url(vfx/s0.png);
         mask-mode: luminance;
-        mask-size: 6px;
+        mask-size: 60px;
         mask-position: 0 1.5px;
     }
     25% {
-        mask-image: url(vfx/static0.png);
+        mask-image: url(vfx/s0.png);
         mask-mode: luminance;
-        mask-size: 6px;
+        mask-size: 60px;
         mask-position: 0 3px;
     }
     37.5% {
-        mask-image: url(vfx/static1.png);
+        mask-image: url(vfx/s1.png);
         mask-mode: luminance;
-        mask-size: 6px;
+        mask-size: 60px;
         mask-position: 0 4.5px;
     }
     50% {
-        mask-image: url(vfx/static1.png);
+        mask-image: url(vfx/s1.png);
         mask-mode: luminance;
-        mask-size: 6px;
+        mask-size: 60px;
         mask-position: 0 0px;
     }
     62.5% {
-        mask-image: url(vfx/static0.png);
+        mask-image: url(vfx/s0.png);
         mask-mode: luminance;
-        mask-size: 6px;
+        mask-size: 60px;
         mask-position: 0 1.5px;
     }
     75% {
-        mask-image: url(vfx/static1.png);
+        mask-image: url(vfx/s1.png);
         mask-mode: luminance;
-        mask-size: 6px;
+        mask-size: 60px;
         mask-position: 0 3px;
     }
     87.5% {
-        mask-image: url(vfx/static0.png);
+        mask-image: url(vfx/s0.png);
         mask-mode: luminance;
-        mask-size: 6px;
+        mask-size: 60px;
         mask-position: 0 4.5px;
     }
     100% {
-        mask-image: url(vfx/static0.png);
+        mask-image: url(vfx/s0.png);
         mask-mode: luminance;
-        mask-size: 6px;
+        mask-size: 60px;
         mask-position: 0 0px;
     }
 }
