@@ -266,6 +266,9 @@ details[open] > summary {
     &.UDbounty::before {
         content: url('/icons/UDbounty.svg');
     }
+    &.female::before {
+        content: url('/icons/female.svg');
+    }
 }
 textarea {
     background-color: var(--notice);
@@ -405,55 +408,55 @@ img.bullet {
     0% {
         mask-image: url(vfx/s0.png);
         mask-mode: luminance;
-        mask-size: 60px;
+        mask-size: 40px;
         mask-position: 0 0px;
     }
     12.5% {
         mask-image: url(vfx/s0.png);
         mask-mode: luminance;
-        mask-size: 60px;
-        mask-position: 0 1.5px;
+        mask-size: 40px;
+        mask-position: 0 1px;
     }
     25% {
         mask-image: url(vfx/s0.png);
         mask-mode: luminance;
-        mask-size: 60px;
-        mask-position: 0 3px;
+        mask-size: 40px;
+        mask-position: 0 2px;
     }
     37.5% {
         mask-image: url(vfx/s1.png);
         mask-mode: luminance;
-        mask-size: 60px;
-        mask-position: 0 4.5px;
+        mask-size: 40px;
+        mask-position: 0 3px;
     }
     50% {
         mask-image: url(vfx/s1.png);
         mask-mode: luminance;
-        mask-size: 60px;
+        mask-size: 40px;
         mask-position: 0 0px;
     }
     62.5% {
         mask-image: url(vfx/s0.png);
         mask-mode: luminance;
-        mask-size: 60px;
-        mask-position: 0 1.5px;
+        mask-size: 40px;
+        mask-position: 0 1px;
     }
     75% {
         mask-image: url(vfx/s1.png);
         mask-mode: luminance;
-        mask-size: 60px;
-        mask-position: 0 3px;
+        mask-size: 40px;
+        mask-position: 0 2px;
     }
     87.5% {
         mask-image: url(vfx/s0.png);
         mask-mode: luminance;
-        mask-size: 60px;
-        mask-position: 0 4.5px;
+        mask-size: 40px;
+        mask-position: 0 3px;
     }
     100% {
         mask-image: url(vfx/s0.png);
         mask-mode: luminance;
-        mask-size: 60px;
+        mask-size: 40px;
         mask-position: 0 0px;
     }
 }
