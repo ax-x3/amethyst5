@@ -4,13 +4,12 @@
          url(fonts/atlantis/AtlantisHeadline-Bold.ttf) format("truetype");
 }
 @font-face {
-    font-family: "Atlantis Smallcaps";
-    src: url(fonts/atlantis/Atlantis-RegularSmallCaps.otf) format("opentype"),
-         url(fonts/atlantis/Atlantis-RegularSmallCaps.otf) format("truetype");
-}
-@font-face {
     font-family: "SF Pixelate";
     src: url(fonts/sf-pixelate/SFPixelate.ttf) format("truetype");
+}
+@font-face {
+    font-family: "437DOS";
+    src: url(fonts/437dos-termuni/437dos-termuni.otf) format("opentype");
 }
 #devToolbar{
     background-color: white;
@@ -102,7 +101,7 @@ footer {
 div.card:not(.noStatic), .static {
     animation: var(--static-vfx);
 }
-h1, h2, p {
+h1, h2 {
     line-height: 150%;
 }
 h1, h2 {
@@ -123,7 +122,7 @@ h2 {
     text-shadow: 0.03em 0.03em var(--accent-shadow), -0.03em 0.03em var(--accent-shadow), -0.03em -0.03em var(--accent-shadow), 0.03em -0.03em var(--accent-shadow), 0.1em 0.1em var(--text-shadow), 0 0 24px var(--accent);
     word-spacing: 0.25em;
 }
-p, li, .plaintext {
+p, li, .caption, .plaintext {
     text-shadow: 0.1em 0.1em var(--text-shadow), 0 0 8px var(--text);
     word-spacing: -0.2em;
     line-height: 150%;
